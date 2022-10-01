@@ -163,17 +163,17 @@ const RightNav = ({ open }) => {
   return (
     <Ul open={open}>
        <li className='nav-item'>
-            <Link to='/'>
+            <Link to='/imoveis/all'>
               Imóveis
             </Link>
           </li>
        <li className='nav-item'>
-            <Link to='/imoveis'>
+            <Link to='/imoveis/aluguel'>
             Aluguel
             </Link>
           </li>
           <li className='nav-item'>
-            <Link to='/imoveis' >
+            <Link to='/imoveis/venda' >
             Venda
             </Link>
           </li>

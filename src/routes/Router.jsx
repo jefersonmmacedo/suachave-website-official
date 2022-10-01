@@ -34,7 +34,7 @@ function PrivateRoute({children} ) {
             <Route path="/cadastrar" element={<ChooseYourAccount />}/>
             <Route path="/cadastro-profissional" element={<SignUpProfessional />}/>
             <Route path="/cadastro-cliente" element={<SignUpClient />}/>
-            <Route path="/imoveis" element={<Properties />}/>
+            <Route path="/imoveis/:status" element={<Properties />}/>
             <Route path="/minhas-propostas" element={<MyProposals />}/>
             <Route path="/favoritos" element={<Favorites />}/>
             <Route path="/orcamentos" element={<Budgets />}/>

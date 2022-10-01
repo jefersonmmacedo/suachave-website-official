@@ -121,7 +121,6 @@
     align-items: flex-start;
     justify-content: flex-start;
     width: 100%;
-    background-color: var(--Black);
 }
 .Featured .itens .block .text h2 {
     color: var(--Primary);

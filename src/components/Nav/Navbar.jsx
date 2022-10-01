@@ -3,7 +3,8 @@ import styled from 'styled-components';
 import Burger from './Burger';
 import LogoImg from '../../assets/images/Logo.png'
 import LogoSimbol from '../../assets/images/Simbol.png'
-import {IoDocumentTextOutline, IoPersonOutline, IoHeartOutline, IoNotificationsOutline, IoLogOutOutline, IoClipboardOutline, IoHomeOutline} from 'react-icons/io5'
+import {IoDocumentTextOutline, IoPersonOutline, IoHeartOutline, IoNotificationsOutline,
+  IoLogOutOutline, IoGridOutline, IoHomeOutline, IoChatboxEllipsesOutline} from 'react-icons/io5'
 import { Link } from 'react-router-dom';
 import ReactTooltip from 'react-tooltip';
 
@@ -152,7 +153,7 @@ function HandleOpenNotificaçõess(e) {
 
 const Navbar2 = () => {
   const logged = true;
-  const professional = false;
+  const professional = true;
   return (
     <Nav>
       <div className="logo">
@@ -176,41 +177,49 @@ const Navbar2 = () => {
 
 {professional === true ?
                 <>
-                               <button className='iconUnic' onClick={HandleOpenOrçamentos} data-tip data-for='Orçamentos'><IoHomeOutline/></button>
-                <ReactTooltip id='Orçamentos' place="bottom" type="dark" effect="solid">
-                     <span>Orçamentos</span>
+                <button className='iconUnic' onClick={HandleOpenOrçamentos} data-tip data-for='Imóveis'><IoHomeOutline/></button>
+                <ReactTooltip id='Imóveis' place="bottom" type="dark" effect="solid">
+                     <span>Imóveis</span>
                 </ReactTooltip>
 
-                </>
-:
-               <>
-                <button className='iconUnic' onClick={HandleOpenMInhasPropostas} data-tip data-for='Propostas'><IoDocumentTextOutline/></button>
-                <ReactTooltip id='Propostas' place="bottom" type="dark" effect="solid">
-                     <span>Propostas</span>
+                <button className='iconUnic' onClick={HandleOpenMInhasPropostas} data-tip data-for='Chat'><IoChatboxEllipsesOutline/></button>
+                <ReactTooltip id='Chat' place="bottom" type="dark" effect="solid">
+                     <span>Chat</span>
                 </ReactTooltip>
-               </>
-                  }
 
                 <button className='iconUnic' onClick={HandleOpenNotificaçõess} data-tip data-for='Notificações'><IoNotificationsOutline/></button>
                 <ReactTooltip id='Notificações' place="bottom" type="dark" effect="solid">
                      <span>Notificações</span>
                 </ReactTooltip>
 
-                {professional === true ?
-                ""
-                :
-                <>
+                <button className='iconUnic' onClick={HandleOpen} data-tip data-for='Administração'><IoGridOutline /></button>
+                <ReactTooltip id='Administração' place="bottom" type="dark" effect="solid">
+                     <span>Administração</span>
+                </ReactTooltip>
+                </>
+:
+               <>
+                <button className='iconUnic' onClick={HandleOpenMInhasPropostas} data-tip data-for='Chat'><IoChatboxEllipsesOutline/></button>
+                <ReactTooltip id='Chat' place="bottom" type="dark" effect="solid">
+                     <span>Chat</span>
+                </ReactTooltip>
+
+                <button className='iconUnic' onClick={HandleOpenNotificaçõess} data-tip data-for='Notificações'><IoNotificationsOutline/></button>
+                <ReactTooltip id='Notificações' place="bottom" type="dark" effect="solid">
+                     <span>Notificações</span>
+                </ReactTooltip>
+
                 <button className='iconUnic' onClick={HandleOpenFavorites} data-tip data-for='Favoritos'><IoHeartOutline/></button>
                 <ReactTooltip id='Favoritos' place="bottom" type="dark" effect="solid">
                      <span>Favoritos</span>
                 </ReactTooltip>
-                </>
-                  }
 
                 <button className='iconUnic' onClick={HandleOpen} data-tip data-for='Minha conta'><IoPersonOutline /></button>
                 <ReactTooltip id='Minha conta' place="bottom" type="dark" effect="solid">
                      <span>Minha conta</span>
                 </ReactTooltip>
+               </>
+                  }
 
                 <button className='iconOut' onClick={HandleOpen}><IoLogOutOutline /></button>
         </>
