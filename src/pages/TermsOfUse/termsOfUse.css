@@ -1,0 +1,33 @@
+﻿.TermsOfUse {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px 20px 20px;
+}
+
+.TermsOfUse h2 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+.TermsOfUse .text {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+}
+.TermsOfUse .text h4 {
+    font-weight: 700;
+    margin: 10px 0;
+    color: var(--Description)
+}
+.TermsOfUse .text p {
+    font-weight: 500;
+    margin: 5px 0;
+    color: var(--Description)
+}

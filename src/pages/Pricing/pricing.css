@@ -1,0 +1,26 @@
+﻿.Pricing {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Pricing h2 {
+    margin-top: 100px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.Pricing .img {
+    width: 50%;
+    margin: 40px 0;
+}
+
+@media (max-width: 750px) {
+    .Pricing .img {
+        width: 100%;
+        margin: 20px 0;
+    }
+}
