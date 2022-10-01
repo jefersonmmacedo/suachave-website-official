@@ -6,7 +6,6 @@ import { MyProposals } from '../pages/MyProposals/MyProposals';
 import { Notifications } from '../pages/Notifications/Notifications';
 import { Pricing } from '../pages/Pricing/Pricing';
 import { Profesisonals } from '../pages/Profesisonals/Profesisonals';
-import { Proposals } from '../pages/Proposals/Proposals';
 import { SignIn } from '../pages/SignIn/SignIn';
 import { ChooseYourAccount } from '../pages/ChooseYourAccount/ChooseYourAccount';
 import { SignUpClient } from '../pages/SignUpClient/SignUpClient';
@@ -17,6 +16,7 @@ import { ProposalPage } from '../pages/ProposalPage/ProposalPage';
 import { BudgetPage } from '../pages/BudgetPage/BudgetPage';
 import { Message } from '../pages/Message/Message';
 import { BudgetNew } from '../pages/BudgetNew/BudgetNew';
+import { Properties } from '../pages/Proposals/Properties';
 
 function Router () {
 const Local = localStorage.getItem("gpsbuscador");
@@ -34,7 +34,7 @@ function PrivateRoute({children} ) {
             <Route path="/cadastrar" element={<ChooseYourAccount />}/>
             <Route path="/cadastro-profissional" element={<SignUpProfessional />}/>
             <Route path="/cadastro-cliente" element={<SignUpClient />}/>
-            <Route path="/propostas" element={<Proposals />}/>
+            <Route path="/imoveis" element={<Properties />}/>
             <Route path="/minhas-propostas" element={<MyProposals />}/>
             <Route path="/favoritos" element={<Favorites />}/>
             <Route path="/orcamentos" element={<Budgets />}/>
