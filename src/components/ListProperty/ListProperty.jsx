@@ -1,15 +1,13 @@
-﻿import "./featured.css";
+﻿import "./listProperty.css";
 import {FaBed, FaShower, FaCar} from 'react-icons/fa';
 import {IoHeart, IoHeartOutline} from 'react-icons/io5';
 import ImageHouse from "../../assets/images/house.jpg";
 import ImageHouse1 from "../../assets/images/house1.jpg";
 import ImageHouse2 from "../../assets/images/house2.jpg";
 
-export function Featured() {
+export function ListProperty() {
     return (
-        <div className="Featured">
-            <h2>Imóveis em destaque</h2>  
-
+        <div className="ListProperty">
             <div className="itens">
             
             <div className="block">

@@ -36,7 +36,7 @@ const Nav = styled.nav`
   }
 
   .account {
-    width: 25%;
+    width: 240px;
     display: flex;
     flex-direction: row;
     align-items: center;

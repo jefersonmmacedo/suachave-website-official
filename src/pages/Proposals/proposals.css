@@ -4,169 +4,30 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding: 60px 20px 20px 20px;
+    padding: 60px 10px 10px 10px;
 }
-
-.Proposals h2 {
-    margin-top: 40px;
-    margin-bottom: 20px;
-    font-weight: bold;
-    text-align: center;
-}
-.Proposals .search {
+.Proposals .listPage {
+    width: 100%;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    width: 750px;
-    height: 40px;
-    border-radius: 20px;
-    background-color: var(--Border);
-    border: 1px solid var(--Border);
-}
-.Proposals .search h3 {
-    display: none;
-}
-.Proposals .search .primary {
-    width: 100%;
-    height: 36px;
-    border-radius: 20px 0 0 20px;
-}
-.Proposals .search .secundary {
-    width: 100%;
-    height: 36px;
-    border-radius: 0 20px 20px 0;
-}
-.Proposals .search input {
-    width: 100%;
-    height: 36px;
-    background-color: var(--White);
-    color: var(--Paragraph);
-    padding: 10px 20px;
-    font-weight: 700;
-    border:none;
-    border-right: 1px solid var(--Border);
-}
-.Proposals .search select {
-    width: 100%;
-    height: 36px;
-    background-color: var(--White);
-    color: var(--Paragraph);
-    padding: 10px 20px;
-    font-weight: 700;
-    border:none;
-    border-right: 1px solid var(--Border);
+    padding:60px 20px;
+    background-color: var(--Background);
 }
 
-.Proposals .search input::placeholder {
-    color: var(--Gray);
-    font-weight: 700;
+@media (max-width: 880px)  {
+    .Proposals .listPage {
+        padding:60px 1px;
 }
-.Proposals .search button {
-    width: 80%;
-    height: 36px;
-    border-radius: 0 20px 20px 0;
-    background-color: var(--Primary);
-    color: var(--White);
-    font-weight: 500;
-    border: none;
-}
-
-
-
-@media (max-width: 1200px) {
-    .Proposals .search {
+@media (max-width: 800px)  {
+    .Proposals .listPage {
         display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        width: 75%;
-        height: 40px;
-        border-radius: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding:60px 10px;
+        background-color: var(--Background);
     }
-
-    @media (max-width: 900px) {
-        .Proposals .search {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            width: 90%;
-            height: 40px;
-            border-radius: 20px;
-        }
-    
-        @media (max-width: 750px) {   
-
-           
-            .Proposals .search {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                width: 70%;
-                border: none;
-                background: none;
-            }
-
-            .Proposals .search h3 {
-                display:block;
-                font-weight: bold;
-                color: var(--White);
-                margin: 10px;
-            }
-            .Proposals .search .primary {
-                width: 100%;
-                height: 40px;
-                border: 1px solid var(--Border);
-                border-radius: 6px;
-            }
-            .Proposals .search .secundary {
-                width: 100%;
-                height: 40px;
-                border: 1px solid var(--Border);
-                border-radius: 6px;
-            }
-            .Proposals .search input {
-                width: 100%;
-                height: 40px;
-                margin: 5px;
-                border-radius: 6px;
-                border: 1px solid var(--Border);
-            }
-            
-            .Proposals .search select {
-                width: 100%;
-                height: 40px;
-                margin: 5px;
-                border-radius: 6px;
-                border: 1px solid var(--Border);
-            }
-            
-            .Proposals .search input::placeholder {
-                font-weight: 700;
-            }
-            .Proposals .search button {
-                width: 100%;
-                height: 36px;
-                padding: 15px;
-                margin: 5px;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                border-radius: 6px;
-            }
-
-            @media (max-width: 500px) {
-                .Proposals .search {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                    width: 90%;
-                }
-            }
-        }
-    }
+}
 }

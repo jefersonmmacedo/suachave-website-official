@@ -115,16 +115,24 @@
 
 
 
-.Featured .itens .block h2 {
+.Featured .itens .block .text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    background-color: var(--Black);
+}
+.Featured .itens .block .text h2 {
     color: var(--Primary);
     font-weight: 700;
     margin: 20px 10px 5px 10px;
 }
-.Featured .itens .block h4 {
+.Featured .itens .block .text h4 {
     color: var(--Gray);
     margin: 0 10px;
 }
-.Featured .itens .block .icons {
+.Featured .itens .block .text .icons {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -133,7 +141,7 @@
     margin: 10px 0;
 }
 
-.Featured .itens .block .icons .iconUnic {
+.Featured .itens .block .text .icons .iconUnic {
     width: 20%;
     display: flex;
     flex-direction: column;
@@ -145,11 +153,11 @@
     color: var(--Gray);
 }
 
-.Featured .itens .block .icons .iconUnic p {
+.Featured .itens .block .text .icons .iconUnic p {
     color: var(--Paragraph);
     font-weight: 700;
 }
-.Featured .itens .block .icons .iconUnic .simbol {
+.Featured .itens .block .text .icons .iconUnic .simbol {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -159,12 +167,12 @@
     margin-top: 5px;
 }
 
-.Featured .itens .block .icons .iconUnic .simbol svg {
+.Featured .itens .block .text .icons .iconUnic .simbol svg {
     font-size: 18px;
     margin-right: 10px;
     color: var(--Gray);
 }
-.Featured .itens .block .pricing {
+.Featured .itens .block .text .pricing {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -173,12 +181,12 @@
     text-align: flex-start;
 }
 
-.Featured .itens .block .pricing h5 {
+.Featured .itens .block .text .pricing h5 {
     color: var(--Paragraph);
     font-weight: 700;
     margin: 5px 10px;
 }
-.Featured .itens .block .pricing h2 {
+.Featured .itens .block .text .pricing h2 {
     color: var(--Primary);
     font-weight: 700;
     margin: 0 10px;
