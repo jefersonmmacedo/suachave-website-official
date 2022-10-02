@@ -21,17 +21,6 @@
     justify-content: center;
     margin: 20px 0;
 }
-.Property .main .data .infos {
-    width: 30%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--Border);
-    border-radius: 6px;
-    margin: 10px;
-    height: 400px;
-}
 
 
 .Property .main .data .block {
@@ -42,7 +31,7 @@
     justify-content: flex-start;
     background-color: var(--White);
     border-radius: 6px;
-    margin: 10px;
+    margin: 20px;
     padding-bottom: 20px;
 }
 
@@ -52,11 +41,11 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin: 10px;
-    padding: 10px 0;
+    padding: 10px;
+    flex-wrap: wrap;
 }
 
-.Property .main .data .block .featured {
+.Property .main .data .block .targets .featured {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -64,14 +53,15 @@
     background-color: var(--Primary);
     border-radius: 20px;
     padding: 10px 40px;
+    margin: 5px;
 }
 
-.Property .main .data .block .featured p {
+.Property .main .data .block .targets .featured p {
     color: var(--White);
     font-weight: 700;
 }
 
-.Property .main .data .block .status {
+.Property .main .data .block .targets .status {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -79,41 +69,58 @@
     background-color: var(--Secondary);
     border-radius: 6px;
     padding: 10px 20px;
+    margin: 5px;
 }
 
-.Property .main .data .block .status p {
+.Property .main .data .block .targets .status p {
     color: var(--White);
     font-weight: 700;
 }
 
-.Property .main .data .block .heart {
+.Property .main .data .block .targets .heart {
+    margin: 10px;
 }
 
-.Property .main .data .block .heart svg {
+.Property .main .data .block .targets .heart svg {
     color: var(--White);
     font-size: 30px;
     cursor: pointer;
 }
-.Property .main .data .block .heart svg:hover {
+.Property .main .data .block .targets .heart svg:hover {
     color: var(--Primary);
 }
 
-.Property .main .data .block .heart2 {
+.Property .main .data .block .targets .heart2 {
+    margin: 10px;
 }
 
-.Property .main .data .block .heart2 svg {
+.Property .main .data .block .targets .heart2 svg {
     color: var(--Primary);
     font-size: 24px;
     cursor: pointer;
 }
-.Property .main .data .block .heart svg:hover {
+.Property .main .data .block .targets .heart svg:hover {
     color: var(--Primary);
 }
 
-.Property .main .data .block .chat svg {
-    color: var(--Primary);
-    font-size: 24px;
+.Property .main .data .block .targets .chat {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Delete);
+    border-radius: 6px;
+    padding: 10px 20px;
+    color: var(--White);
     cursor: pointer;
+    margin: 5px;
+}
+.Property .main .data .block .targets .chat svg {
+    margin-right: 10px;
+}
+
+.Property .main .data .block .targets .chat:hover {
+    background-color: var(--Primary);
 }
 
 
@@ -245,4 +252,20 @@
     width: 100%;
     margin: 20px 0;
     border-radius: 6px;
+}
+
+
+@media (max-width: 850px) {
+    .Property .main .data {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 20px 0;
+    }
+    
+    .Property .main .data .block {
+        width: 90%;
+    }
 }

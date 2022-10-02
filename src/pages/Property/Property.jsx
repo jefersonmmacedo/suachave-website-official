@@ -9,6 +9,8 @@ import { SliderImages } from '../../components/SliderImages/SliderImages';
 import Navbar2 from "../../components/Nav/Navbar";
 import { FaBed, FaCar, FaShower } from "react-icons/fa";
 import { IoCrop, IoHeart, IoMove, IoCheckmarkSharp, IoChatboxEllipsesOutline } from "react-icons/io5";
+import { Footer } from "../../components/Footer/Footer";
+import { CompanyInfo } from "../../components/CompanyInfo/CompanyInfo";
 
 
 
@@ -76,6 +78,9 @@ export function Property() {
                     </div>
                     <div className="status">
                         <p>Aceita financiamento</p>
+                    </div>
+                    <div className="chat">
+<IoChatboxEllipsesOutline/><p>Enviar mensagem</p>
                     </div>
                      <div className="heart2">
                     <IoHeart />
@@ -162,11 +167,10 @@ export function Property() {
                     </div>
                 </div>
 
-                <div className="infos">
-
-                </div>
+                <CompanyInfo />
                 </div>
         </div>
+        <Footer />
        </div>
       )
 }
