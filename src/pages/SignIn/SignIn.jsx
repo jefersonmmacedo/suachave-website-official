@@ -18,7 +18,7 @@ export function SignIn() {
                             <p>Recuperar senha</p>
                         </div>
                         <button>Entrar</button>
-                        <button className="btn-signIn">Cadastre-se aqui!</button>
+                        <a href="/cadastrar">Cadastre-se aqui!</a>
 
                     </div>
                 </form>
