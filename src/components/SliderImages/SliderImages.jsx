@@ -16,16 +16,13 @@ import { useState } from "react";
   export function SliderImages() {
     const [isOpenModal, setIsOpenModa] = useState(false);
 
-    function handleOpenImages() {
-        setIsOpenModa(true)
-    }
-
     function handleOpenModal() {
         setIsOpenModa(true)
       }
     
       function handleCloseModal() {
         setIsOpenModa(false)
+        window.location.reload();
       }
 
     Modal.setAppElement('#root');
@@ -129,7 +126,7 @@ import { useState } from "react";
 
             {fadeImages.map((image) => {
                 return (
-                    <img src={image.url} width="100%" height="100%" onClick={handleOpenImages}/>
+                    <img src={image.url} width="100%" height="100%" onClick={handleOpenModal}/>
                 )
             })}
 
@@ -145,6 +142,7 @@ import { useState } from "react";
             <div className="itensModal">
                 <SliderImagesModal />
             </div>
+            <h5>Arraste para o lado</h5>
             </div>
             </Modal>
           </>

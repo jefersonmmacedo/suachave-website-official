@@ -75,6 +75,17 @@
               }
               },
           ]}
+          breakpoints={{
+            650: {
+              plugins: [
+                  'infinite',
+               {
+                 resolve: slidesToShowPlugin,
+                 options: {
+                  numberOfSlides: 1
+                 }
+               }]}
+              }}
           >
 
             {fadeImages.map((image) => {

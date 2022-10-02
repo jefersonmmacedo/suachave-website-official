@@ -11,63 +11,11 @@ import { FaBed, FaCar, FaShower } from "react-icons/fa";
 import { IoCrop, IoHeart, IoMove, IoCheckmarkSharp, IoChatboxEllipsesOutline } from "react-icons/io5";
 import { Footer } from "../../components/Footer/Footer";
 import { CompanyInfo } from "../../components/CompanyInfo/CompanyInfo";
-import { SliderImagesModal } from "../../components/SliderImagesModal/SliderImagesModal";
 
 
 
 
 export function Property() {
-
-  const fadeImages = [
-      {
-      url: ImageHouse1,
-      caption: 'First Slide'
-      },
-      {
-      url: ImageHouse2,
-      caption: 'Second Slide'
-      },
-      {
-      url: ImageHouse3,
-      caption: 'Third Slide'
-      },
-      {
-      url: ImageHouse4,
-      caption: 'First Slide'
-      },
-      {
-      url: ImageHouse5,
-      caption: 'Second Slide'
-      },
-      {
-      url: ImageHouse6,
-      caption: 'Third Slide'
-      },
-      {
-      url: ImageHouse1,
-      caption: 'First Slide'
-      },
-      {
-      url: ImageHouse2,
-      caption: 'Second Slide'
-      },
-      {
-      url: ImageHouse3,
-      caption: 'Third Slide'
-      },
-      {
-      url: ImageHouse4,
-      caption: 'First Slide'
-      },
-      {
-      url: ImageHouse5,
-      caption: 'Second Slide'
-      },
-      {
-      url: ImageHouse6,
-      caption: 'Third Slide'
-      },
-    ];
     return (
        <div className="Property">
         <Navbar2 />
@@ -174,6 +122,7 @@ export function Property() {
                 </div>
         </div>
         <Footer />
+
        </div>
       )
 }
