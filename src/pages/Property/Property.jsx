@@ -8,7 +8,7 @@ import ImageHouse6 from "../../assets/images/house6.jpg";
 import { SliderImages } from '../../components/SliderImages/SliderImages';
 import Navbar2 from "../../components/Nav/Navbar";
 import { FaBed, FaCar, FaShower } from "react-icons/fa";
-import { IoCrop, IoHeart, IoMove } from "react-icons/io5";
+import { IoCrop, IoHeart, IoMove, IoCheckmarkSharp, IoChatboxEllipsesOutline } from "react-icons/io5";
 
 
 
@@ -77,7 +77,7 @@ export function Property() {
                     <div className="status">
                         <p>Aceita financiamento</p>
                     </div>
-                    <div className="heart2">
+                     <div className="heart2">
                     <IoHeart />
                     </div>
             </div>
@@ -124,9 +124,40 @@ export function Property() {
                             </div>
                         </div>
                     </div>
+
+                    <div className="characteristics">
+                        <div className="item">
+                            <IoCheckmarkSharp /> <p>Piscina</p> 
+                        </div>
+                        <div className="item">
+                            <IoCheckmarkSharp /> <p>Sacada</p>
+                        </div>
+                        <div className="item">
+                            <IoCheckmarkSharp /> <p>Sala de estar</p>
+                        </div>
+                        <div className="item">
+                            <IoCheckmarkSharp /> <p>Suíte</p>
+                        </div>
+                        <div className="item">
+                            <IoCheckmarkSharp /> <p>Churrasqueira</p>
+                        </div>
+                        <div className="item">
+                            <IoCheckmarkSharp /> <p>Wifi</p>
+                        </div>
+                    </div>
                     <div className="pricing">
                         <h5>Aluguel</h5>
                         <h2>R$ 2.000,00 / Mês</h2>
+                    </div>
+
+                    <div className="video">
+                    <iframe width="100%" height="300" src="https://www.youtube.com/embed/vrLSiAbdXb4" title="YouTube video player" frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+
+                    <div className="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d12290.419599284141!2d-42.62790332892239!3d-22.711818016034076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1664680466523!5m2!1spt-BR!2sbr"
+                    width="100%" height="300" style={{border:"0px", borderRadius: "6px"}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                     </div>
                 </div>

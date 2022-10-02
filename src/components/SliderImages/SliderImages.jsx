@@ -75,6 +75,16 @@
               },
           ]}
           breakpoints={{
+            950: {
+              plugins: [
+                  'infinite',
+                  'centered',
+               {
+                 resolve: slidesToShowPlugin,
+                 options: {
+                  numberOfSlides: 4
+                 }
+               }]},
             800: {
               plugins: [
                   'infinite',

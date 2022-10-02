@@ -17,8 +17,9 @@
     width: 90%;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
+    margin: 20px 0;
 }
 .Property .main .data .infos {
     width: 30%;
@@ -26,7 +27,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background-color: var(--Gray);
+    background-color: var(--Border);
     border-radius: 6px;
     margin: 10px;
     height: 400px;
@@ -96,16 +97,23 @@
 .Property .main .data .block .heart svg:hover {
     color: var(--Primary);
 }
+
 .Property .main .data .block .heart2 {
 }
 
 .Property .main .data .block .heart2 svg {
     color: var(--Primary);
-    font-size: 30px;
+    font-size: 24px;
     cursor: pointer;
 }
 .Property .main .data .block .heart svg:hover {
     color: var(--Primary);
+}
+
+.Property .main .data .block .chat svg {
+    color: var(--Primary);
+    font-size: 24px;
+    cursor: pointer;
 }
 
 
@@ -179,6 +187,36 @@
     margin-right: 10px;
     color: var(--Gray);
 }
+
+.Property .main .data .block .text .characteristics {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+.Property .main .data .block .text .characteristics .item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 5px;
+    margin: 5px;
+    color: var(--Paragraph);
+}
+.Property .main .data .block .text .characteristics .item svg {
+    color: var(--Primary);
+    margin-right: 3px;
+}
+.Property .main .data .block .text .characteristics .item p {
+    color: var(--Paragraph);
+    font-weight: 700;
+}
+
+
 .Property .main .data .block .text .pricing {
     width: 100%;
     display: flex;
@@ -197,4 +235,14 @@
     color: var(--Primary);
     font-weight: 700;
     margin: 0 10px;
+}
+.Property .main .data .block .text .video {
+    width: 100%;
+    margin: 20px 0;
+    border-radius: 6px;
+}
+.Property .main .data .block .text .map {
+    width: 100%;
+    margin: 20px 0;
+    border-radius: 6px;
 }
