@@ -1,5 +1,5 @@
 ﻿  import Carousel, { slidesToShowPlugin, arrowsPlugin  } from '@brainhubeu/react-carousel';
-  import { IoArrowForwardCircleOutline, IoArrowBackCircleOutline  } from 'react-icons/io5';
+  import { IoArrowForwardCircleOutline, IoArrowBackCircleOutline, IoCloseOutline  } from 'react-icons/io5';
   import '@brainhubeu/react-carousel/lib/style.css';
   import ImageHouse1 from "../../assets/images/house.jpg";
   import ImageHouse2 from "../../assets/images/house1.jpg";
@@ -7,10 +7,28 @@
   import ImageHouse4 from "../../assets/images/house4.jpg";
   import ImageHouse5 from "../../assets/images/house5.jpg";
   import ImageHouse6 from "../../assets/images/house6.jpg";
+import { SliderImagesModal } from '../SliderImagesModal/SliderImagesModal';
+import Modal from 'react-modal';
+import { useState } from "react";
   
   
   
   export function SliderImages() {
+    const [isOpenModal, setIsOpenModa] = useState(false);
+
+    function handleOpenImages() {
+        setIsOpenModa(true)
+    }
+
+    function handleOpenModal() {
+        setIsOpenModa(true)
+      }
+    
+      function handleCloseModal() {
+        setIsOpenModa(false)
+      }
+
+    Modal.setAppElement('#root');
     const fadeImages = [
         {
         url: ImageHouse1,
@@ -62,6 +80,7 @@
         },
       ];
       return (
+        <>
           <Carousel
           plugins={[
               'infinite',
@@ -110,9 +129,24 @@
 
             {fadeImages.map((image) => {
                 return (
-                    <img src={image.url} width="100%" height="100%"/>
+                    <img src={image.url} width="100%" height="100%" onClick={handleOpenImages}/>
                 )
             })}
+
           </Carousel>
+
+          <Modal isOpen={isOpenModal} onRequestClose={handleCloseModal}
+            overlayClassName="react-modal-overlay"
+            className="react-modal-content">
+            <button type="button" className="react-modal-button" onClick={handleCloseModal}>
+            <IoCloseOutline /> 
+            </button>
+            <div className="content-modal">
+            <div className="itensModal">
+                <SliderImagesModal />
+            </div>
+            </div>
+            </Modal>
+          </>
         )
   }

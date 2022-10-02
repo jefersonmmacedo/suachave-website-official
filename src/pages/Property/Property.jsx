@@ -11,10 +11,13 @@ import { FaBed, FaCar, FaShower } from "react-icons/fa";
 import { IoCrop, IoHeart, IoMove, IoCheckmarkSharp, IoChatboxEllipsesOutline } from "react-icons/io5";
 import { Footer } from "../../components/Footer/Footer";
 import { CompanyInfo } from "../../components/CompanyInfo/CompanyInfo";
+import { SliderImagesModal } from "../../components/SliderImagesModal/SliderImagesModal";
+
 
 
 
 export function Property() {
+
   const fadeImages = [
       {
       url: ImageHouse1,
