@@ -80,6 +80,20 @@
     font-weight: 700;
     margin: 20px 0;
 }
+.SignIn .login form .data .btn-signIn {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Wite);
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    color: var(--Gray);
+    font-weight: 700;
+    margin: 20px 0;
+}
 
 .SignIn .professional {
     width: 50%;
