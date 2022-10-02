@@ -19,7 +19,7 @@
     .Properties .listPage {
         padding:60px 1px;
 }
-@media (max-width: 800px)  {
+@media (max-width: 600px)  {
     .Properties .listPage {
         display: flex;
         flex-direction: column;

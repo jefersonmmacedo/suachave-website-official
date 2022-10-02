@@ -114,20 +114,6 @@ export function SearchPropertyListing() {
                             <option value="9">9</option>       
                             <option value="10">10</option>       
                     </select>
-                    <div className="text">
-                        <p>Distancia(Km):</p>  
-                    </div>
-                    <div className="range">
-                        <div className="text">
-                        <p>0</p>
-                        </div>
-                    <input type="range" min={0} max={10000}/>
-                    <div className="text">
-                        <p>1.000</p>
-                    </div>
-                    </div>
-
-
             <select value={uf} onChange={handleSetectUf}> 
                             <option value="">Escolha seu estado</option>
                             <option value="AC">Acre</option>
