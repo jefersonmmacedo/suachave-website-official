@@ -152,7 +152,7 @@ function HandleOpenNotificaçõess(e) {
 
 
 const Navbar2 = () => {
-  const logged = true;
+  const logged = false;
   const professional = true;
   return (
     <Nav>

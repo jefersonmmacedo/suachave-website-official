@@ -1,0 +1,200 @@
+﻿.Property {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.Property .main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 65px 0;
+}
+.Property .main .data {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.Property .main .data .infos {
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Gray);
+    border-radius: 6px;
+    margin: 10px;
+    height: 400px;
+}
+
+
+.Property .main .data .block {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: var(--White);
+    border-radius: 6px;
+    margin: 10px;
+    padding-bottom: 20px;
+}
+
+.Property .main .data .block .targets {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 10px 0;
+}
+
+.Property .main .data .block .featured {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Primary);
+    border-radius: 20px;
+    padding: 10px 40px;
+}
+
+.Property .main .data .block .featured p {
+    color: var(--White);
+    font-weight: 700;
+}
+
+.Property .main .data .block .status {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Secondary);
+    border-radius: 6px;
+    padding: 10px 20px;
+}
+
+.Property .main .data .block .status p {
+    color: var(--White);
+    font-weight: 700;
+}
+
+.Property .main .data .block .heart {
+}
+
+.Property .main .data .block .heart svg {
+    color: var(--White);
+    font-size: 30px;
+    cursor: pointer;
+}
+.Property .main .data .block .heart svg:hover {
+    color: var(--Primary);
+}
+.Property .main .data .block .heart2 {
+}
+
+.Property .main .data .block .heart2 svg {
+    color: var(--Primary);
+    font-size: 30px;
+    cursor: pointer;
+}
+.Property .main .data .block .heart svg:hover {
+    color: var(--Primary);
+}
+
+
+
+
+.Property .main .data .block .text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+}
+.Property .main .data .block .text h2 {
+    color: var(--Primary);
+    font-weight: 700;
+    margin: 20px 10px 5px 10px;
+}
+.Property .main .data .block .text h4 {
+    color: var(--Paragraph);
+    margin:20px 10px;
+}
+.Property .main .data .block .text h3 {
+    color: var(--Paragraph);
+    font-weight: 700;
+    margin: 20px 10px 5px 10px;
+}
+.Property .main .data .block .text h5 {
+    color: var(--Gray);
+    margin: 0 10px;
+}
+.Property .main .data .block .text .icons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 10px 0;
+    flex-wrap: wrap;
+    border: none;
+    border-top: 1px solid var(--Border);
+}
+
+.Property .main .data .block .text .icons .iconUnic {
+    width: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+    color: var(--Gray);
+}
+
+.Property .main .data .block .text .icons .iconUnic p {
+    color: var(--Paragraph);
+    font-weight: 700;
+}
+.Property .main .data .block .text .icons .iconUnic .simbol {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.Property .main .data .block .text .icons .iconUnic .simbol svg {
+    font-size: 18px;
+    margin-right: 10px;
+    color: var(--Gray);
+}
+.Property .main .data .block .text .pricing {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: flex-start;
+}
+
+.Property .main .data .block .text .pricing h5 {
+    color: var(--Paragraph);
+    font-weight: 700;
+    margin: 5px 10px;
+}
+.Property .main .data .block .text .pricing h2 {
+    color: var(--Primary);
+    font-weight: 700;
+    margin: 0 10px;
+}

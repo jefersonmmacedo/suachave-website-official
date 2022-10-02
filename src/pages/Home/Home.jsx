@@ -7,6 +7,7 @@ import Navbar2 from "../../components/Nav/Navbar";
 
 import { SearchProperty } from "../../components/SearchProperty/SearchProperty";
 import { Slider } from "../../components/Slider/Slider";
+import { SliderImages } from "../../components/SliderImages/SliderImages";
 
 export function Home() {
     return (
@@ -17,6 +18,7 @@ export function Home() {
             <Featured />
             <Rent />
             <Sale />
+            <SliderImages />
             <Footer />
         </div>
     )

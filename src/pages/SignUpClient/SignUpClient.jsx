@@ -47,7 +47,7 @@ export function SignUpClient() {
                         <input type="text" placeholder="Whatsapp" />
                         <input type="password" placeholder="Senha" />
                         <input type="password" placeholder="Confirmar senha" />
-                        <button onClick={() => handleSelectStepe("2")}>Avançar</button>
+                        <button className="btn" onClick={() => handleSelectStepe("2")}>Avançar</button>
                         </>
                         : data === "2" ?
                          <>
@@ -63,7 +63,7 @@ export function SignUpClient() {
                          <input type="text" placeholder="UF" />
                          {/* <button >Avançar</button>
                          <button >Voltar</button> */}
-                        <button onClick={() => handleSelectStepe("1")}>Voltar</button>
+                        <button className="btn" onClick={() => handleSelectStepe("1")}>Voltar</button>
                         <button onClick={() => handleSelectStepe("2")}>Cadastrar</button>
                          </>
                          :""}

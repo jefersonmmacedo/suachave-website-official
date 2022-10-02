@@ -16,7 +16,8 @@ import { ProposalPage } from '../pages/ProposalPage/ProposalPage';
 import { BudgetPage } from '../pages/BudgetPage/BudgetPage';
 import { Message } from '../pages/Message/Message';
 import { BudgetNew } from '../pages/BudgetNew/BudgetNew';
-import { Properties } from '../pages/Proposals/Properties';
+import { Properties } from '../pages/Properties/Properties';
+import Example, { Property } from '../pages/Property/Property';
 
 function Router () {
 const Local = localStorage.getItem("gpsbuscador");
@@ -47,6 +48,7 @@ function PrivateRoute({children} ) {
             <Route path="/orcamento" element={<BudgetPage />}/>
             <Route path="/novo-orcamento" element={<BudgetNew />}/>
             <Route path="/mensagens" element={<Message />}/>
+            <Route path="/imovel" element={<Property />}/>
             
             {/* Rotas fechadas/login */}
             {/* <Route path="/activeplain"
