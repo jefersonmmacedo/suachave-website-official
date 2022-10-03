@@ -121,12 +121,29 @@
 
 
 @media (max-width: 600px) {
+
+  .each-slide-effect .imageTop {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 600px; /* You must set a specified height */
+  }
   .each-slide-effect .imageTop .block {
-      width: 100%;
+    width: 500px;
       margin: 10px;
       background-color: rgba(255, 255, 255, 0.9);
   }
+@media (max-width: 530px) {
+  .each-slide-effect .imageTop .block {
+    width: 450px;
+  }
   @media (max-width: 500px) {
+
+    .each-slide-effect .imageTop .block {
+      width: 400px;
+    }
       .each-slide-effect .imageTop .block .icons {
           width: 100%;
           flex-wrap: wrap;
@@ -134,5 +151,12 @@
       .each-slide-effect .imageTop .block .icons .iconUnic {
           width: 80px;
       }
+
+      @media (max-width: 430px) {
+        .each-slide-effect .imageTop .block {
+          width: 350px;
+        }
+        }
   }
+}
 }
