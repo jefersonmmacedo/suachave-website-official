@@ -190,3 +190,16 @@
     font-weight: 700;
     margin: 0 10px;
 }
+
+
+@media (max-width: 750px) {
+    .Featured {
+        margin: 350px 0 50px 0;
+    }
+
+    @media (max-width: 550px) {
+        .Featured {
+            margin: 400px 0 50px 0;
+        }
+    }
+}

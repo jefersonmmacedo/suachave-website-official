@@ -154,8 +154,7 @@
             .SearchProperty {
                 margin-top: 20px;
             }
-
-            
+          
             .SearchProperty .search {
                 display: flex;
                 flex-direction: column;
@@ -165,6 +164,7 @@
                 height: 100%;
                 border: none;
                 background: none;
+                box-shadow: none;
             }
 
             .SearchProperty .search h3 {
@@ -213,6 +213,10 @@
             }
             .SearchProperty .selectButtons .btn {
                 width: 100%;
+            }
+
+            .SearchProperty .icons .unic {
+                font-size: 14px;
             }
 
             @media (max-width: 500px) {
