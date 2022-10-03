@@ -5,14 +5,14 @@ import { Rent } from "../../components/Rent/Rent";
 import Navbar2 from "../../components/Nav/Navbar";
 
 import { SearchProperty } from "../../components/SearchProperty/SearchProperty";
-import { Slider } from "../../components/Slider/Slider";
 import { Footer } from "../../components/Footer/Footer";
+import { SliderHome } from "../../components/SliderHome/SliderHome";
 
 export function Home() {
     return (
         <div className="Home">
             <Navbar2 />
-            <Slider />
+            <SliderHome />
             <SearchProperty />
             <Featured />
             <Rent />
