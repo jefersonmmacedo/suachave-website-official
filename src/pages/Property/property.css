@@ -23,7 +23,7 @@
 }
 
 
-.Property .main .data .block {
+.Property .main .data .propertyUnic {
     width: 70%;
     display: flex;
     flex-direction: column;
@@ -35,7 +35,7 @@
     padding-bottom: 20px;
 }
 
-.Property .main .data .block .targets {
+.Property .main .data .propertyUnic .targets {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -45,7 +45,7 @@
     flex-wrap: wrap;
 }
 
-.Property .main .data .block .targets .featured {
+.Property .main .data .propertyUnic .targets .featured {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -56,12 +56,12 @@
     margin: 5px;
 }
 
-.Property .main .data .block .targets .featured p {
+.Property .main .data .propertyUnic .targets .featured p {
     color: var(--White);
     font-weight: 700;
 }
 
-.Property .main .data .block .targets .status {
+.Property .main .data .propertyUnic .targets .status {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -72,38 +72,38 @@
     margin: 5px;
 }
 
-.Property .main .data .block .targets .status p {
+.Property .main .data .propertyUnic .targets .status p {
     color: var(--White);
     font-weight: 700;
 }
 
-.Property .main .data .block .targets .heart {
+.Property .main .data .propertyUnic .targets .heart {
     margin: 10px;
 }
 
-.Property .main .data .block .targets .heart svg {
+.Property .main .data .propertyUnic .targets .heart svg {
     color: var(--White);
     font-size: 30px;
     cursor: pointer;
 }
-.Property .main .data .block .targets .heart svg:hover {
+.Property .main .data .propertyUnic .targets .heart svg:hover {
     color: var(--Primary);
 }
 
-.Property .main .data .block .targets .heart2 {
+.Property .main .data .propertyUnic .targets .heart2 {
     margin: 10px;
 }
 
-.Property .main .data .block .targets .heart2 svg {
+.Property .main .data .propertyUnic .targets .heart2 svg {
     color: var(--Primary);
     font-size: 24px;
     cursor: pointer;
 }
-.Property .main .data .block .targets .heart svg:hover {
+.Property .main .data .propertyUnic .targets .heart svg:hover {
     color: var(--Primary);
 }
 
-.Property .main .data .block .targets .chat {
+.Property .main .data .propertyUnic .targets .chat {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -115,43 +115,43 @@
     cursor: pointer;
     margin: 5px;
 }
-.Property .main .data .block .targets .chat svg {
+.Property .main .data .propertyUnic .targets .chat svg {
     margin-right: 10px;
 }
 
-.Property .main .data .block .targets .chat:hover {
+.Property .main .data .propertyUnic .targets .chat:hover {
     background-color: var(--Primary);
 }
 
 
 
 
-.Property .main .data .block .text {
+.Property .main .data .propertyUnic .text {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
     width: 100%;
 }
-.Property .main .data .block .text h2 {
+.Property .main .data .propertyUnic .text h2 {
     color: var(--Primary);
     font-weight: 700;
     margin: 20px 10px 5px 10px;
 }
-.Property .main .data .block .text h4 {
+.Property .main .data .propertyUnic .text h4 {
     color: var(--Paragraph);
     margin:20px 10px;
 }
-.Property .main .data .block .text h3 {
+.Property .main .data .propertyUnic .text h3 {
     color: var(--Paragraph);
     font-weight: 700;
     margin: 20px 10px 5px 10px;
 }
-.Property .main .data .block .text h5 {
+.Property .main .data .propertyUnic .text h5 {
     color: var(--Gray);
     margin: 0 10px;
 }
-.Property .main .data .block .text .icons {
+.Property .main .data .propertyUnic .text .icons {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -163,7 +163,7 @@
     border-top: 1px solid var(--Border);
 }
 
-.Property .main .data .block .text .icons .iconUnic {
+.Property .main .data .propertyUnic .text .icons .iconUnic {
     width: 90px;
     display: flex;
     flex-direction: column;
@@ -175,11 +175,11 @@
     color: var(--Gray);
 }
 
-.Property .main .data .block .text .icons .iconUnic p {
+.Property .main .data .propertyUnic .text .icons .iconUnic p {
     color: var(--Paragraph);
     font-weight: 700;
 }
-.Property .main .data .block .text .icons .iconUnic .simbol {
+.Property .main .data .propertyUnic .text .icons .iconUnic .simbol {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -189,13 +189,13 @@
     margin-top: 5px;
 }
 
-.Property .main .data .block .text .icons .iconUnic .simbol svg {
+.Property .main .data .propertyUnic .text .icons .iconUnic .simbol svg {
     font-size: 18px;
     margin-right: 10px;
     color: var(--Gray);
 }
 
-.Property .main .data .block .text .characteristics {
+.Property .main .data .propertyUnic .text .characteristics {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -205,7 +205,7 @@
     flex-wrap: wrap;
 }
 
-.Property .main .data .block .text .characteristics .item {
+.Property .main .data .propertyUnic .text .characteristics .item {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -214,17 +214,17 @@
     margin: 5px;
     color: var(--Paragraph);
 }
-.Property .main .data .block .text .characteristics .item svg {
+.Property .main .data .propertyUnic .text .characteristics .item svg {
     color: var(--Primary);
     margin-right: 3px;
 }
-.Property .main .data .block .text .characteristics .item p {
+.Property .main .data .propertyUnic .text .characteristics .item p {
     color: var(--Paragraph);
     font-weight: 700;
 }
 
 
-.Property .main .data .block .text .pricing {
+.Property .main .data .propertyUnic .text .pricing {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -233,22 +233,22 @@
     text-align: flex-start;
 }
 
-.Property .main .data .block .text .pricing h5 {
+.Property .main .data .propertyUnic .text .pricing h5 {
     color: var(--Paragraph);
     font-weight: 700;
     margin: 5px 10px;
 }
-.Property .main .data .block .text .pricing h2 {
+.Property .main .data .propertyUnic .text .pricing h2 {
     color: var(--Primary);
     font-weight: 700;
     margin: 0 10px;
 }
-.Property .main .data .block .text .video {
+.Property .main .data .propertyUnic .text .video {
     width: 100%;
     margin: 20px 0;
     border-radius: 6px;
 }
-.Property .main .data .block .text .map {
+.Property .main .data .propertyUnic .text .map {
     width: 100%;
     margin: 20px 0;
     border-radius: 6px;
@@ -265,7 +265,7 @@
         margin: 20px 0;
     }
     
-    .Property .main .data .block {
+    .Property .main .data .propertyUnic {
         width: 90%;
     }
 }

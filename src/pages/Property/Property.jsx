@@ -22,7 +22,7 @@ export function Property() {
         <div className="main">
           <SliderImages />
           <div className="data">
-          <div className="block">
+          <div className="propertyUnic">
             <div className="targets">
             <div className="featured">
                         <p>Novo</p>

@@ -1,4 +1,4 @@
-﻿import "./property.css";
+﻿import "./propertyCarroussel.css";
 import {FaBed, FaShower, FaCar} from 'react-icons/fa';
 import {IoHeart, IoHeartOutline} from 'react-icons/io5';
 import ImageHouse from "../../assets/images/house.jpg";
@@ -7,7 +7,7 @@ import ImageHouse2 from "../../assets/images/house2.jpg";
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
 
-export function Property() {
+export function PropertyCarroussel() {
     const buttonStyle = {
         display:'none'
     };
