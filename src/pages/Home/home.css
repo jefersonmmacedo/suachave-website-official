@@ -35,7 +35,25 @@
             width: 100%;
             margin: 0px auto;
         }
-        
+
+        @media (max-width: 750px) {
+            .Home .textFeature {
+                margin-top: 350px;
+                width: 100%;
+                text-align: center;
+            }
+
+            @media (max-width: 555px) {
+                .Home .textFeature {
+                    margin-top: 400px;
+                    width: 100%;
+                    text-align: center;
+                }
+         
+            }
+     
+        }
+ 
     }
     
 }

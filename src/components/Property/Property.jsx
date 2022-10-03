@@ -33,7 +33,7 @@ export function Property() {
             }
         },
         {
-            breakpoint: 380,
+            breakpoint: 250,
             settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1
