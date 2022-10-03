@@ -16,11 +16,13 @@ import { useState } from "react";
   export function SliderImages() {
     const [isOpenModal, setIsOpenModa] = useState(false);
 
-    function handleOpenModal() {
+    function handleOpenModal(e) {
+      e.preventDefault();
         setIsOpenModa(true)
       }
     
-      function handleCloseModal() {
+      function handleCloseModal(e) {
+        e.preventDefault();
         setIsOpenModa(false)
         window.location.reload();
       }
