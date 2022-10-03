@@ -147,7 +147,7 @@ const properties = {
           <div className="each-slide-effect">
           <div className="imageTop">
           <div className="image">
-                    <img src={images[0]} alt="" />
+                    <img src={images[2]} alt="" />
             </div>
                 <div className="block">
                     <div className="featured">
@@ -202,7 +202,7 @@ const properties = {
           <div className="each-slide-effect">
           <div className="imageTop">
           <div className="image">
-                    <img src={images[1]} alt="" />
+                    <img src={images[3]} alt="" />
             </div>
                 <div className="block">
                     <div className="featured">
