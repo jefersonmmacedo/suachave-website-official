@@ -8,6 +8,7 @@ import { SearchProperty } from "../../components/SearchProperty/SearchProperty";
 import { Footer } from "../../components/Footer/Footer";
 import { SliderHome } from "../../components/SliderHome/SliderHome";
 import { Property } from "../../components/Property/Property";
+import { DownloadApp } from "../../components/DownloadApp/DownloadApp";
 
 export function Home() {
     return (
@@ -33,6 +34,7 @@ export function Home() {
             <div className="carroussel">
             <Property />
             </div>
+            <DownloadApp />
             <Footer />
         </div>
     )
