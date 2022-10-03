@@ -8,12 +8,12 @@ export function Footer() {
     const date = new Date().getFullYear();
     return (
         <div className="Footer">
-                <div className="blocks">
-                        <div className="block">
+                <div className="sections">
+                        <div className="sectionUnic">
                             <img src={logo} alt="" />
                             <h5>Nós temos a chave do seu sonho!</h5>
                         </div>
-                        <div className="block">
+                        <div className="sectionUnic">
                             <h4><b>SUA CHAVE</b></h4>
                                 <h5>Sobre nós</h5>
                                 <h5>Blog</h5>
@@ -22,7 +22,7 @@ export function Footer() {
                                 <h5>Corretores</h5>
                                 <h5>Simulador</h5>
                         </div>
-                        <div className="block">
+                        <div className="sectionUnic">
                             <h4><b>CENTRAL DE AJUDA</b></h4>
                             <h5>Faq</h5>
                             <h5>Termos de uso</h5>
@@ -46,7 +46,7 @@ export function Footer() {
                                 </div>
                             </div>
                         </div>
-                        <div className="block">
+                        <div className="sectionUnic">
                             <h4><b>ATENDIMENTO</b></h4>
                             <h5>(21) 2222-2222</h5>
                             <h5>(21) 99999-9999</h5>

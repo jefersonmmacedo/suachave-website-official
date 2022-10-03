@@ -9,9 +9,10 @@
     border-top: 1px solid var(--Gray);
     background-color: var(--Black2);
     color: var(--White);
+    margin-top: 40px;
 }
 
-.Footer .blocks {
+.Footer .sections {
     display: flex;
     align-items: flex-start;
     justify-content:space-between;
@@ -21,7 +22,7 @@
     flex-wrap: wrap;
 }
 
-.Footer .blocks .block {
+.Footer .sections .sectionUnic {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
@@ -31,31 +32,31 @@
     text-align: left;
 }
 
-.Footer .blocks .block img {
+.Footer .sections .sectionUnic img {
     width: 150px;
     margin-bottom: 10px;
 }
 
-.Footer .blocks .block h4 {
+.Footer .sections .sectionUnic h4 {
     margin-bottom: 10px;
     font-weight:700;
 }
-.Footer .blocks .block p {
+.Footer .sections .sectionUnic p {
     margin-bottom: 10px;
     font-weight:700;
 }
-.Footer .blocks .block h5 {
+.Footer .sections .sectionUnic h5 {
     font-weight:700;
     margin-bottom: 5px;
 }
-.Footer .blocks .block .icons {
+.Footer .sections .sectionUnic .icons {
     display: flex;
     align-items: flex-start;
     justify-content:space-between;
     flex-direction: row;
     width: 100%;
 }
-.Footer .blocks .block .icons .icon {
+.Footer .sections .sectionUnic .icons .icon {
     display: flex;
     align-items: flex-start;
     justify-content:center;
@@ -63,18 +64,18 @@
     width: 50%;
 }
 
-.Footer .blocks .block .icons .icon .logos {
+.Footer .sections .sectionUnic .icons .icon .logos {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
     flex-direction: row;
     width: 100%;
 }
-.Footer .blocks .block .icons .icon .logos h2 {
+.Footer .sections .sectionUnic .icons .icon .logos h2 {
     margin-right: 10px;
     cursor: pointer;
 }
-.Footer .blocks .block .icons .icon .logos h2:hover {
+.Footer .sections .sectionUnic .icons .icon .logos h2:hover {
     color: var(--Primary);
 
 }
@@ -105,12 +106,12 @@
 }
 
 @media (max-width: 1280px) {
-    .Footer .blocks {
+    .Footer .sections {
         justify-content:space-between;
         width: 100%;
         padding: 40px 20px 20px 20px;
     }
-    .Footer .blocks .block {
+    .Footer .sections .sectionUnic {
         display: flex;
         align-items: flex-start;
         justify-content: flex-start;
@@ -121,11 +122,11 @@
     }
 
     @media (max-width: 900px) {
-        .Footer .blocks {
+        .Footer .sections {
             justify-content:space-around;
         }
     
-        .Footer .blocks .block {
+        .Footer .sections .sectionUnic {
             display: flex;
             align-items: flex-start;
             justify-content: flex-start;
