@@ -20,6 +20,7 @@
     align-items: flex-start;
     justify-content: center;
     margin: 20px 0;
+    flex-wrap: wrap;
 }
 
 .Rent .itens .block {

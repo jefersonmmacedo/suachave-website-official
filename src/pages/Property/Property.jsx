@@ -11,6 +11,8 @@ import { FaBed, FaCar, FaShower } from "react-icons/fa";
 import { IoCrop, IoHeart, IoMove, IoCheckmarkSharp, IoChatboxEllipsesOutline } from "react-icons/io5";
 import { Footer } from "../../components/Footer/Footer";
 import { CompanyInfo } from "../../components/CompanyInfo/CompanyInfo";
+import { PropertyCarroussel } from "../../components/PropertyCarroussel/PropertyCarroussel";
+import { Rent } from "../../components/Rent/Rent";
 
 
 
@@ -118,8 +120,10 @@ export function Property() {
                     </div>
                 </div>
 
+
                 <CompanyInfo />
                 </div>
+                <Rent />
         </div>
         <Footer />
 

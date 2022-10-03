@@ -8,7 +8,7 @@ import ImageHouse2 from "../../assets/images/house5.jpg";
 export function Rent() {
     return (
         <div className="Rent">
-            <h2>Imóveis para alugar</h2>  
+            <h2>Imóveis similares</h2>  
 
             <div className="itens">
             
@@ -96,6 +96,43 @@ export function Rent() {
                     <div className="pricing">
                         <h5>Venda</h5>
                         <h2>R$ 2.000.000,00</h2>
+                    </div>
+                </div>
+            <div className="block">
+                    <div className="image">
+                    <img src={ImageHouse2} alt="" />
+                    </div>
+                    <div className="heart">
+                    <IoHeartOutline />
+                    </div>
+                    <h2>Apartamentos em condomínio</h2>
+                    <h4>Centro - Rio Bonito - Rio de Janeiro</h4>
+                    <div className="icons">
+                        <div className="iconUnic">
+                            <p>Quartos</p>
+                            <div className="simbol">
+                                <FaBed />
+                                <p>3</p>
+                            </div>
+                        </div>
+                        <div className="iconUnic">
+                            <p>Banheiro</p>
+                            <div className="simbol">
+                                <FaShower />
+                                <p>3</p>
+                            </div>
+                        </div>
+                        <div className="iconUnic">
+                            <p>Garagem</p>
+                            <div className="simbol">
+                                <FaCar />
+                                <p>3</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="pricing">
+                        <h5>Venda</h5>
+                        <h2>R$ 5.000.000</h2>
                     </div>
                 </div>
             <div className="block">
