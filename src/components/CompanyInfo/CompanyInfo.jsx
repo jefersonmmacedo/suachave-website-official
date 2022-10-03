@@ -14,15 +14,15 @@ export function CompanyInfo() {
             <div className="contact">
                 <div className="info">
                     <IoCallOutline />
-                    <h4>(21) 2222-2222</h4>
+                    <h5>(21) 2222-2222</h5>
                 </div>
                 <div className="info">
                     <IoLogoWhatsapp />
-                    <h4>(21) 99999-9999</h4>
+                    <h5>(21) 99999-9999</h5>
                 </div>
                 <div className="info">
                     <IoMailOutline />
-                    <h4>contato@suachaveimoveis.com.br</h4>
+                    <h5>contato@suachaveimoveis.com.br</h5>
                 </div>
             </div>
                 <divo className="buttonsContact">

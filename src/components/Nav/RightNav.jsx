@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import {IoDocumentTextOutline, IoPersonOutline, IoHeartOutline, IoNotificationsOutline, IoLogOutOutline } from 'react-icons/io5';
+import {IoDocumentTextOutline, IoPersonOutline, IoHeartOutline, IoNotificationsOutline, IoLogOutOutline, IoChatboxEllipsesOutline, IoHomeOutline, IoGridOutline } from 'react-icons/io5';
 
 const Ul = styled.ul`
   list-style: none;
@@ -160,6 +160,7 @@ function HandleOpenNotificaçõess(e) {
 
 const RightNav = ({ open }) => {
   const logged = true;
+  const professional = false;
   return (
     <Ul open={open}>
        <li className='nav-item'>
@@ -205,8 +206,28 @@ const RightNav = ({ open }) => {
             </>
           :
           <>
-          <button className='btn' onClick={HandleOpenOrçamento}>
-            <IoDocumentTextOutline /> &nbsp; Orçamentos
+          {professional === true ?
+          <>
+                    <button className='btn' onClick={HandleOpenOrçamento}>
+            <IoHomeOutline /> &nbsp; Imóveis
+          </button>
+          <button className='btn' onClick={HandleOpenNotificaçõess}>
+            <IoChatboxEllipsesOutline /> &nbsp; Mensagens
+          </button>
+          <button className='btn' onClick={HandleOpenNotificaçõess}>
+            <IoNotificationsOutline /> &nbsp; Notificações
+          </button>
+          <button className='btn' onClick={HandleOpen}>
+            <IoGridOutline /> &nbsp; Administração
+          </button> 
+          <button onClick={HandleLogout}>
+            <IoLogOutOutline /> &nbsp; Sair
+          </button>
+          </>
+          :
+          <>
+                    <button className='btn' onClick={HandleOpenOrçamento}>
+            <IoChatboxEllipsesOutline /> &nbsp; Mensagens
           </button>
           <button className='btn' onClick={HandleOpenNotificaçõess}>
             <IoNotificationsOutline /> &nbsp; Notificações
@@ -220,6 +241,8 @@ const RightNav = ({ open }) => {
           <button onClick={HandleLogout}>
             <IoLogOutOutline /> &nbsp; Sair
           </button>
+          </>
+          }
           </>}
 
          

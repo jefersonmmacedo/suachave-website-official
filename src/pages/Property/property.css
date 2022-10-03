@@ -255,6 +255,10 @@
 }
 
 
+@media (max-width: 950px) {
+    .Property .main .data {
+        width: 100%;
+    }
 @media (max-width: 850px) {
     .Property .main .data {
         width: 100%;
@@ -263,9 +267,19 @@
         align-items: center;
         justify-content: flex-start;
         margin: 20px 0;
+        padding: 0 40px;
     }
     
     .Property .main .data .propertyUnic {
         width: 90%;
     }
+}
+
+@media (max-width: 750px) {
+    .Property .main .data {
+        padding: 0px;
+    }
+
+}
+
 }

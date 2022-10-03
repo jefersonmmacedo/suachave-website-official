@@ -152,8 +152,8 @@ function HandleOpenNotificaçõess(e) {
 
 
 const Navbar2 = () => {
-  const logged = false;
-  const professional = true;
+  const logged = true;
+  const professional = false;
   return (
     <Nav>
       <div className="logo">

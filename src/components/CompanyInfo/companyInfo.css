@@ -52,13 +52,13 @@
     margin: 3px 0;
 }
 
-.CompanyInfo .contact .info h4 {
+.CompanyInfo .contact .info h5 {
     color: var(--Paragraph);
-    font-weight: 700;
+    font-weight: 900;
+    margin-left: 5px;
 }
 .CompanyInfo .contact .info svg {
     color: var(--Primary);
-    margin-right: 5px;
 }
 
 .CompanyInfo .buttonsContact {
