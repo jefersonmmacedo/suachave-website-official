@@ -33,15 +33,15 @@ export function Footer() {
                                 <div className="icon">
                                 <h5>Clientes</h5>
                                 <div className="logos">
-                                <h3><AiFillAndroid /></h3>       
-                                <h3><AiFillApple /></h3>       
+                                <h2><AiFillAndroid /></h2>       
+                                <h2><AiFillApple /></h2>       
                                 </div>
                                 </div>
                                 <div className="icon">
                                 <h5>Imobiliária</h5>
                                 <div className="logos">
-                                <h3><AiFillAndroid /></h3>       
-                                <h3><AiFillApple /></h3>            
+                                <h2><AiFillAndroid /></h2>       
+                                <h2><AiFillApple /></h2>            
                                 </div>
                                 </div>
                             </div>

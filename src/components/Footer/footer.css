@@ -70,6 +70,14 @@
     flex-direction: row;
     width: 100%;
 }
+.Footer .blocks .block .icons .icon .logos h2 {
+    margin-right: 10px;
+    cursor: pointer;
+}
+.Footer .blocks .block .icons .icon .logos h2:hover {
+    color: var(--Primary);
+
+}
 
 .Footer .copy {
     display: flex;
