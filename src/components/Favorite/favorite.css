@@ -97,7 +97,7 @@
     height: 100%;
 }
 
-.ListProperty .listProperty .propertyUnicFavorite .text2 .heart {
+.ListProperty .listProperty .propertyUnicFavorite .text2 .heartFavorite {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -106,29 +106,30 @@
     height: 100%;
 }
 
-.ListProperty .listProperty .propertyUnicFavorite .text2 .heart svg {
+.ListProperty .listProperty .propertyUnicFavorite .text2 .heartFavorite svg {
     color: var(--White);
     font-size: 30px;
     cursor: pointer;
 }
-.ListProperty .listProperty .propertyUnicFavorite .text2 .heart svg:hover {
+.ListProperty .listProperty .propertyUnicFavorite .text2 .heartFavorite svg:hover {
     color: var(--Primary);
 }
-.ListProperty .listProperty .propertyUnicFavorite .text2 .heart2 {
+.ListProperty .listProperty .propertyUnicFavorite .text2 .heartFavorite2 {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100px;
+    width: 10%;
     height: 100%;
 }
 
-.ListProperty .listProperty .propertyUnicFavorite .text2 .heart2 svg {
+.ListProperty .listProperty .propertyUnicFavorite .text2 .heartFavorite2 svg {
     color: var(--Primary);
     font-size: 30px;
     cursor: pointer;
+    margin-right: 5px;
 }
-.ListProperty .listProperty .propertyUnicFavorite .text2 .heart svg:hover {
+.ListProperty .listProperty .propertyUnicFavorite .text2 .heartFavorite svg:hover {
     color: var(--Primary);
 }
 
@@ -205,7 +206,7 @@
         width: 90%;
     }
 
-    @media (max-width: 711px) {
+    @media (max-width: 800px) {
         .ListProperty .listProperty {
             width: 100%;
         }
@@ -214,6 +215,7 @@
             .ListProperty .listProperty .propertyUnicFavorite {
                 width: 100%;
             }
+
 
             @media (max-width: 585px) {
                 .ListProperty .listProperty .propertyUnicFavorite .image {
@@ -225,7 +227,7 @@
                     height: 150px;
                 }
 
-                .ListProperty .listProperty .propertyUnicFavorite .text2 .heart2 svg {
+                .ListProperty .listProperty .propertyUnicFavorite .text2 .heartFavorite2 svg {
                     font-size: 24px;
                 }
 
@@ -347,32 +349,32 @@
     font-weight: 700;
 }
 
-.ListProperty .listProperty .propertyUnicFavorite .heart {
+.ListProperty .listProperty .propertyUnicFavorite .heartFavorite {
     position: absolute;
     margin-top: 115px;
     margin-left: 215px;
 }
 
-.ListProperty .listProperty .propertyUnicFavorite .heart svg {
+.ListProperty .listProperty .propertyUnicFavorite .heartFavorite svg {
     color: var(--White);
     font-size: 24px;
     cursor: pointer;
 }
-.ListProperty .listProperty .propertyUnicFavorite .heart svg:hover {
+.ListProperty .listProperty .propertyUnicFavorite .heartFavorite svg:hover {
     color: var(--Primary);
 }
-.ListProperty .listProperty .propertyUnicFavorite .heart2 {
+.ListProperty .listProperty .propertyUnicFavorite .heartFavorite2 {
     position: absolute;
     margin-top: 115px;
     margin-left: 215px;
 }
 
-.ListProperty .listProperty .propertyUnicFavorite .heart2 svg {
+.ListProperty .listProperty .propertyUnicFavorite .heartFavorite2 svg {
     color: var(--Primary);
     font-size: 24px;
     cursor: pointer;
 }
-.ListProperty .listProperty .propertyUnicFavorite .heart svg:hover {
+.ListProperty .listProperty .propertyUnicFavorite .heartFavorite svg:hover {
     color: var(--Primary);
 }
 
