@@ -61,26 +61,6 @@
     font-weight: 700;
 }
 
-.Property .main .data .propertyUnic .targets .status {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--Secondary);
-    border-radius: 6px;
-    padding: 10px 20px;
-    margin: 5px;
-}
-
-.Property .main .data .propertyUnic .targets .status p {
-    color: var(--White);
-    font-weight: 700;
-}
-
-.Property .main .data .propertyUnic .targets .heart {
-    margin: 10px;
-}
-
 .Property .main .data .propertyUnic .targets .heart svg {
     color: var(--White);
     font-size: 30px;
@@ -118,6 +98,21 @@
 .Property .main .data .propertyUnic .targets .chat svg {
     margin-right: 10px;
 }
+.Property .main .data .propertyUnic .targets .calendar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Aproved);
+    border-radius: 6px;
+    padding: 10px 20px;
+    color: var(--White);
+    cursor: pointer;
+    margin: 5px;
+}
+.Property .main .data .propertyUnic .targets .calendar svg {
+    margin-right: 10px;
+}
 
 .Property .main .data .propertyUnic .targets .chat:hover {
     background-color: var(--Primary);
@@ -151,6 +146,27 @@
     color: var(--Gray);
     margin: 0 10px;
 }
+
+.Property .main .data .propertyUnic .text .status {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Secondary);
+    border-radius: 6px;
+    padding: 10px 20px;
+    margin: 5px;
+}
+
+.Property .main .data .propertyUnic .text .status p {
+    color: var(--White);
+    font-weight: 700;
+}
+
+.Property .main .data .propertyUnic .text .heart {
+    margin: 10px;
+}
+
 .Property .main .data .propertyUnic .text .icons {
     width: 100%;
     display: flex;

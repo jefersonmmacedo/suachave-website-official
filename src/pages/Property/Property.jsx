@@ -8,7 +8,7 @@ import ImageHouse6 from "../../assets/images/house6.jpg";
 import { SliderImages } from '../../components/SliderImages/SliderImages';
 import Navbar2 from "../../components/Nav/Navbar";
 import { FaBed, FaCar, FaShower } from "react-icons/fa";
-import { IoCrop, IoHeart, IoMove, IoCheckmarkSharp, IoChatboxEllipsesOutline } from "react-icons/io5";
+import { IoCrop, IoHeart, IoMove, IoCheckmarkSharp, IoChatboxEllipsesOutline, IoCalendarOutline } from "react-icons/io5";
 import { Footer } from "../../components/Footer/Footer";
 import { CompanyInfo } from "../../components/CompanyInfo/CompanyInfo";
 import { PropertyCarroussel } from "../../components/PropertyCarroussel/PropertyCarroussel";
@@ -29,11 +29,12 @@ export function Property() {
             <div className="featured">
                         <p>Novo</p>
                     </div>
-                    <div className="status">
-                        <p>Aceita financiamento</p>
-                    </div>
+
                     <div className="chat">
 <IoChatboxEllipsesOutline/><p>Enviar mensagem</p>
+                    </div>
+                    <div className="calendar">
+<IoCalendarOutline/><p>Agendar visita</p>
                     </div>
                      <div className="heart2">
                     <IoHeart />
@@ -42,7 +43,9 @@ export function Property() {
                 <div className="text">
                     <h2>Lindo apartamento luxuoso</h2>
                     <h5>Centro - Rio Bonito - Rio de Janeiro</h5>
-
+                    <div className="status">
+                        <p>Aceita financiamento</p>
+                    </div>
                     <h4>Massa tempor nec feugiat nisl pretium. Egestas fringilla phasellus faucibus scelerisque eleifend donec. Porta nibh venenatis cras sed felis eget velit aliquet. Neque volutpat ac tincidunt vitae semper quis lectus. Turpis in eu mi bibendum neque egestas congue quisque. Sed elementum tempus egestas sed sed risus pretium quam. Dignissim sodales ut eu sem. Nibh mauris cursus mattis molestie a iaculis at erat pellentesque. Id interdum velit laoreet id donec ultrices tincidunt.</h4>
 
                     <div className="icons">
