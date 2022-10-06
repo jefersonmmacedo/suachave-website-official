@@ -1,20 +1,13 @@
 ﻿import "./property.css"
-import ImageHouse1 from "../../assets/images/house.jpg";
-import ImageHouse2 from "../../assets/images/house1.jpg";
-import ImageHouse3 from "../../assets/images/house2.jpg";
-import ImageHouse4 from "../../assets/images/house4.jpg";
-import ImageHouse5 from "../../assets/images/house5.jpg";
-import ImageHouse6 from "../../assets/images/house6.jpg";
 import { SliderImages } from '../../components/SliderImages/SliderImages';
 import Navbar2 from "../../components/Nav/Navbar";
 import { FaBed, FaCar, FaShower } from "react-icons/fa";
-import { IoCrop, IoHeart, IoMove, IoCheckmarkSharp, IoChatboxEllipsesOutline, IoCalendarOutline } from "react-icons/io5";
+import { IoCrop, IoHeart, IoMove, IoCheckmarkSharp, IoLocationOutline } from "react-icons/io5";
 import { Footer } from "../../components/Footer/Footer";
 import { CompanyInfo } from "../../components/CompanyInfo/CompanyInfo";
-import { PropertyCarroussel } from "../../components/PropertyCarroussel/PropertyCarroussel";
 import { Rent } from "../../components/Rent/Rent";
-
-
+import { NewScheduling } from "../../components/NewScheduling/NewScheduling";
+import { NewMessageProperty } from "../../components/NewMessageProperty/NewMessageProperty";
 
 
 export function Property() {
@@ -30,19 +23,15 @@ export function Property() {
                         <p>Novo</p>
                     </div>
 
-                    <div className="chat">
-<IoChatboxEllipsesOutline/><p>Enviar mensagem</p>
-                    </div>
-                    <div className="calendar">
-<IoCalendarOutline/><p>Agendar visita</p>
-                    </div>
-                     <div className="heart2">
+                    <NewMessageProperty />
+                    <NewScheduling />
+                     <div className="heart">
                     <IoHeart />
                     </div>
             </div>
                 <div className="text">
                     <h2>Lindo apartamento luxuoso</h2>
-                    <h5>Centro - Rio Bonito - Rio de Janeiro</h5>
+                    <h5><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h5>
                     <div className="status">
                         <p>Aceita financiamento</p>
                     </div>

@@ -62,60 +62,12 @@
 }
 
 .Property .main .data .propertyUnic .targets .heart svg {
-    color: var(--White);
+    color: var(--Border);
     font-size: 30px;
     cursor: pointer;
 }
 .Property .main .data .propertyUnic .targets .heart svg:hover {
     color: var(--Primary);
-}
-
-.Property .main .data .propertyUnic .targets .heart2 {
-    margin: 10px;
-}
-
-.Property .main .data .propertyUnic .targets .heart2 svg {
-    color: var(--Primary);
-    font-size: 24px;
-    cursor: pointer;
-}
-.Property .main .data .propertyUnic .targets .heart svg:hover {
-    color: var(--Primary);
-}
-
-.Property .main .data .propertyUnic .targets .chat {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--Delete);
-    border-radius: 6px;
-    padding: 10px 20px;
-    color: var(--White);
-    cursor: pointer;
-    margin: 5px;
-}
-.Property .main .data .propertyUnic .targets .chat svg {
-    margin-right: 10px;
-}
-.Property .main .data .propertyUnic .targets .calendar {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--Aproved);
-    border-radius: 6px;
-    padding: 10px 20px;
-    color: var(--White);
-    cursor: pointer;
-    margin: 5px;
-}
-.Property .main .data .propertyUnic .targets .calendar svg {
-    margin-right: 10px;
-}
-
-.Property .main .data .propertyUnic .targets .chat:hover {
-    background-color: var(--Primary);
 }
 
 
@@ -145,6 +97,10 @@
 .Property .main .data .propertyUnic .text h5 {
     color: var(--Gray);
     margin: 0 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 .Property .main .data .propertyUnic .text .status {
