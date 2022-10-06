@@ -1,6 +1,7 @@
 ﻿import "./notifications.css"
 import Navbar2 from "../../components/Nav/Navbar";
 import { Notification } from "../../components/Notification/Notifications";
+import { Footer } from "../../components/Footer/Footer";
 
 export function Notifications() {
     return (
@@ -10,6 +11,9 @@ export function Notifications() {
             <h2>Notificações</h2>
 
             <Notification />
+            <Notification />
+            <Notification />
+            <Footer />
         </div>
     )
 }

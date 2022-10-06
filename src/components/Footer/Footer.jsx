@@ -10,38 +10,40 @@ export function Footer() {
         <div className="Footer">
                 <div className="sections">
                         <div className="sectionUnic">
-                            <img src={logo} alt="" />
+                        <a href="/"><img src={logo} alt="" /></a>
                             <h5>Nós temos a chave do seu sonho!</h5>
                         </div>
                         <div className="sectionUnic">
                             <h4><b>SUA CHAVE</b></h4>
-                                <h5>Sobre nós</h5>
-                                <h5>Blog</h5>
-                                <h5>Imóveis</h5>
-                                <h5>Imobiliárias</h5>
-                                <h5>Corretores</h5>
-                                <h5>Simulador</h5>
+                                <h5><a href="/">Sobre nós</a></h5>
+                                <h5><a href="/">Blog</a></h5>
+                                <h5><a href="/imoveis/all">Imóveis</a></h5>
+                                <h5><a href="/imobiliarias">Imobiliárias</a></h5>
+                                <h5><a href="/corretores">Corretores</a></h5>
+                                <h5><a href="/">Simulador</a></h5>
+                                <h5><a href="/planos">Preços</a></h5>
                         </div>
                         <div className="sectionUnic">
                             <h4><b>CENTRAL DE AJUDA</b></h4>
-                            <h5>Faq</h5>
-                            <h5>Termos de uso</h5>
-                            <h5>Fale conosco</h5>
+                            <h5><a href="/">Faq</a></h5>
+                            <h5><a href="/termos">Termos de uso</a></h5>
+                            <h5><a href="/privacidade">Política de privacidade</a></h5>
+                            <h5><a href="/">Fale conosco</a></h5>
                             <br />
                             <p><b>BAIXE AGORA:</b></p>
-                            <div className="icons">
-                                <div className="icon">
+                            <div className="apps">
+                                <div className="app">
                                 <h5>Clientes</h5>
                                 <div className="logos">
-                                <h2><AiFillAndroid /></h2>       
-                                <h2><AiFillApple /></h2>       
+                                <button><AiFillAndroid /></button>       
+                                <button><AiFillApple /></button>       
                                 </div>
                                 </div>
-                                <div className="icon">
+                                <div className="app">
                                 <h5>Imobiliária</h5>
                                 <div className="logos">
-                                <h2><AiFillAndroid /></h2>       
-                                <h2><AiFillApple /></h2>            
+                                <button><AiFillAndroid /></button>       
+                                <button><AiFillApple /></button>            
                                 </div>
                                 </div>
                             </div>

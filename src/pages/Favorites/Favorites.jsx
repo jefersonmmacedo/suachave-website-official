@@ -1,6 +1,7 @@
 ﻿import "./favorites.css"
 import Navbar2 from "../../components/Nav/Navbar";
 import { Favorite } from "../../components/Favorite/Favorite";
+import { Footer } from "../../components/Footer/Footer";
 
 export function Favorites() {
     return (
@@ -10,6 +11,7 @@ export function Favorites() {
             <h2>Meus favoritos</h2>
 
             <Favorite />
+            <Footer />
         </div>
     )
 }

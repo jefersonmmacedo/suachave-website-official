@@ -1,4 +1,4 @@
-﻿.ListProperty {
+﻿.BrokerList {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -6,15 +6,16 @@
     justify-content: center;
 }
 
-.ListProperty .listProperties {
+.BrokerList .listProperties {
     width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: 0 20px;
 }
 
-.ListProperty .listProperties .propertyUnicFavorite {
+.BrokerList .listProperties .propertyUnicFavorite {
     width: 700px;
     display: flex;
     flex-direction: row;
@@ -23,17 +24,17 @@
     background-color: var(--White);
     box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
     border-radius: 6px;
-    margin: 10px;
+    margin: 10px 20px;
     height: 150px;
 }
 
-.ListProperty .listProperties .propertyUnicFavorite .image {
+.BrokerList .listProperties .propertyUnicFavorite .image {
     width: 150px; 
     height: 150px;
     border-radius: 6px 0 0 6px;
     object-fit: cover;
 }
-.ListProperty .listProperties .propertyUnicFavorite .image img {
+.BrokerList .listProperties .propertyUnicFavorite .image img {
     width: 150px; 
     height: 150px;
     border-radius: 6px 0 0 6px;
@@ -41,7 +42,7 @@
 }
 
 
-.ListProperty .listProperties .propertyUnicFavorite .featured {
+.BrokerList .listProperties .propertyUnicFavorite .featured {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -54,12 +55,12 @@
     padding: 10px 40px;
 }
 
-.ListProperty .listProperties .propertyUnicFavorite .featured p {
+.BrokerList .listProperties .propertyUnicFavorite .featured p {
     color: var(--White);
     font-weight: 700;
 }
 
-.ListProperty .listProperties .propertyUnicFavorite .status {
+.BrokerList .listProperties .propertyUnicFavorite .status {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -72,7 +73,7 @@
     padding: 10px 20px;
 }
 
-.ListProperty .listProperties .propertyUnicFavorite .status p {
+.BrokerList .listProperties .propertyUnicFavorite .status p {
     color: var(--White);
     font-weight: 700;
 }
@@ -81,14 +82,15 @@
 
 
 
-.ListProperty .listProperties .propertyUnicFavorite .text {
+.BrokerList .listProperties .propertyUnicFavorite .text {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: flex-start;
+    justify-content: center;
     width: 100%;
+    height: 100%;
 }
-.ListProperty .listProperties .propertyUnicFavorite .text2 {
+.BrokerList .listProperties .propertyUnicFavorite .text2 {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -97,7 +99,7 @@
     height: 100%;
 }
 
-.ListProperty .listProperties .propertyUnicFavorite .text2 .heartFavorite {
+.BrokerList .listProperties .propertyUnicFavorite .text2 .heartFavorite {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -106,15 +108,15 @@
     height: 100%;
 }
 
-.ListProperty .listProperties .propertyUnicFavorite .text2 .heartFavorite svg {
+.BrokerList .listProperties .propertyUnicFavorite .text2 .heartFavorite svg {
     color: var(--White);
     font-size: 30px;
     cursor: pointer;
 }
-.ListProperty .listProperties .propertyUnicFavorite .text2 .heartFavorite svg:hover {
+.BrokerList .listProperties .propertyUnicFavorite .text2 .heartFavorite svg:hover {
     color: var(--Primary);
 }
-.ListProperty .listProperties .propertyUnicFavorite .text2 .heartFavorite2 {
+.BrokerList .listProperties .propertyUnicFavorite .text2 .heartFavorite2 {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -123,50 +125,50 @@
     height: 100%;
 }
 
-.ListProperty .listProperties .propertyUnicFavorite .text2 .heartFavorite2 svg {
+.BrokerList .listProperties .propertyUnicFavorite .text2 .heartFavorite2 svg {
     color: var(--Primary);
     font-size: 30px;
     cursor: pointer;
     margin-right: 5px;
 }
-.ListProperty .listProperties .propertyUnicFavorite .text2 .heartFavorite svg:hover {
+.BrokerList .listProperties .propertyUnicFavorite .text2 .heartFavorite svg:hover {
     color: var(--Primary);
 }
 
-.ListProperty .listProperties .propertyUnicFavorite .text h2 {
+.BrokerList .listProperties .propertyUnicFavorite .text h2 {
     color: var(--Primary);
     font-weight: 700;
     margin: 5px 10px;
 }
-.ListProperty .listProperties .propertyUnicFavorite .text h4 {
+.BrokerList .listProperties .propertyUnicFavorite .text h4 {
     color: var(--Gray);
     margin: 0 10px;
 }
-.ListProperty .listProperties .propertyUnicFavorite .text .icons {
+.BrokerList .listProperties .propertyUnicFavorite .text .icons {
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
     margin: 5px 0;
+    flex-wrap: wrap;
 }
 
-.ListProperty .listProperties .propertyUnicFavorite .text .icons .iconUnic {
-    width: 20%;
+.BrokerList .listProperties .propertyUnicFavorite .text .icons .iconUnic {
+    width: 45%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     text-align: center;
     margin: 0 10px;
-    color: var(--Gray);
 }
 
-.ListProperty .listProperties .propertyUnicFavorite .text .icons .iconUnic p {
+.BrokerList .listProperties .propertyUnicFavorite .text .icons .iconUnic p {
     color: var(--Paragraph);
     font-weight: 700;
 }
-.ListProperty .listProperties .propertyUnicFavorite .text .icons .iconUnic .simbol {
+.BrokerList .listProperties .propertyUnicFavorite .text .icons .iconUnic .simbol {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -175,13 +177,17 @@
     text-align: center;
     margin-top: 5px;
 }
+.BrokerList .listProperties .propertyUnicFavorite .text .icons .iconUnic .simbol p {
+    font-size: 14px;
+    color: var(--Paragraph);
+    font-weight: 700;
+}
 
-.ListProperty .listProperties .propertyUnicFavorite .text .icons .iconUnic .simbol svg {
-    font-size: 18px;
-    margin-right: 10px;
+.BrokerList .listProperties .propertyUnicFavorite .text .icons .iconUnic .simbol svg {
+    margin-right: 5px;
     color: var(--Gray);
 }
-.ListProperty .listProperties .propertyUnicFavorite .text .pricing {
+.BrokerList .listProperties .propertyUnicFavorite .text .pricing {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -190,78 +196,88 @@
     text-align: flex-start;
 }
 
-.ListProperty .listProperties .propertyUnicFavorite .text .pricing h5 {
+.BrokerList .listProperties .propertyUnicFavorite .text .pricing h5 {
     color: var(--Paragraph);
     font-weight: 700;
     margin: 0 10px;
 }
-.ListProperty .listProperties .propertyUnicFavorite .text .pricing h2 {
+.BrokerList .listProperties .propertyUnicFavorite .text .pricing h2 {
     color: var(--Primary);
     font-weight: 700;
     margin: 0 10px;
 }
 
 @media (max-width: 900px) {
-    .ListProperty .listProperties .propertyUnicFavorite {
+    .BrokerList .listProperties .propertyUnicFavorite {
         width: 90%;
     }
 
     @media (max-width: 800px) {
-        .ListProperty .listProperties {
-            width: 100%;
+        .BrokerList .listProperties {
+            width: 97%;
+            margin: 0 20px;
         }
 
         @media (max-width: 711px) {
-            .ListProperty .listProperties .propertyUnicFavorite {
+            .BrokerList .listProperties .propertyUnicFavorite {
                 width: 100%;
             }
 
 
             @media (max-width: 585px) {
-                .ListProperty .listProperties .propertyUnicFavorite .image {
+                .BrokerList .listProperties .propertyUnicFavorite .text .icons .iconUnic {
+                    width: 100%;
+                }
+
+                .BrokerList .listProperties .propertyUnicFavorite .image {
                     width: 100px; 
                     height: 150px;
                 }
-                .ListProperty .listProperties .propertyUnicFavorite .image img {
+                .BrokerList .listProperties .propertyUnicFavorite .image img {
                     width: 100px; 
                     height: 150px;
                 }
 
-                .ListProperty .listProperties .propertyUnicFavorite .text2 .heartFavorite2 svg {
+                .BrokerList .listProperties .propertyUnicFavorite .text2 .heartFavorite2 svg {
                     font-size: 24px;
                 }
 
-                .ListProperty .listProperties .propertyUnicFavorite .text2 {
+                .BrokerList .listProperties .propertyUnicFavorite .text2 {
                     width: 30px;
                 }
 
                 @media (max-width: 515px) {
-                    .ListProperty .listProperties .propertyUnicFavorite .text .pricing h5 {
+                    .BrokerList .listProperties .propertyUnicFavorite .text {
+                        justify-content: flex-start;
+                    }
+
+                    
+                    .BrokerList .listProperties .propertyUnicFavorite .text .pricing h5 {
                         display: none;
                     }
 
-                    .ListProperty .listProperties .propertyUnicFavorite .text h2 {
+                    .BrokerList .listProperties .propertyUnicFavorite .text h2 {
                         font-size: 24px;
                     }
 
                     @media (max-width: 450px) {
-                        .ListProperty .listProperties .propertyUnicFavorite .text h2 {
+                        .BrokerList .listProperties .propertyUnicFavorite .text h2 {
                             font-size: 20px;
                         }
-                        .ListProperty .listProperties .propertyUnicFavorite .text h4 {
+                        .BrokerList .listProperties .propertyUnicFavorite .text h4 {
                             font-size: 14px;
                         }
 
                         @media (max-width: 450px) {
-                            .ListProperty .listProperties .propertyUnicFavorite .text h4 {
+                            .BrokerList .listProperties .propertyUnicFavorite .text h4 {
                                 font-size: 12px;
                             }                            
                             
-                            .ListProperty .listProperties .propertyUnicFavorite .text .icons .iconUnic p {
+                            .BrokerList .listProperties .propertyUnicFavorite .text .icons .iconUnic p {
                                 font-size: 12px;
                             }
                             
-                            .ListProperty .listProperties .propertyUnicFavorite .text .icons .iconUnic .simbol svg {
+                            .BrokerList .listProperties .propertyUnicFavorite .text .icons .iconUnic .simbol svg {
                                 font-size: 14px;
                                 margin-right: 5px;
                             }
@@ -278,7 +294,7 @@
 /* 
 
 @media (max-width: 880px) {
-    .ListProperty .listProperties {
+    .BrokerList .listProperties {
         width: 100%;
         display: flex;
         flex-direction: row;
@@ -288,7 +304,7 @@
         flex-wrap: wrap;
     }
     
-    .ListProperty .listProperties .propertyUnicFavorite {
+    .BrokerList .listProperties .propertyUnicFavorite {
         width: 250px;
         display: flex;
         flex-direction: column;
@@ -301,19 +317,19 @@
         padding-bottom: 20px;
     }
 
-    .ListProperty .listProperties .propertyUnicFavorite .image {
+    .BrokerList .listProperties .propertyUnicFavorite .image {
         width: 100%; 
         height: 150px;
         border-radius: 6px 6px 0 0;
     }
-    .ListProperty .listProperties .propertyUnicFavorite .image img {
+    .BrokerList .listProperties .propertyUnicFavorite .image img {
         width: 100%; 
         height: 150px;
         border-radius: 6px 6px 0 0;
     }
     
     
-.ListProperty .listProperties .propertyUnicFavorite .featured {
+.BrokerList .listProperties .propertyUnicFavorite .featured {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -326,12 +342,12 @@
     padding: 10px 40px;
 }
 
-.ListProperty .listProperties .propertyUnicFavorite .featured p {
+.BrokerList .listProperties .propertyUnicFavorite .featured p {
     color: var(--White);
     font-weight: 700;
 }
 
-.ListProperty .listProperties .propertyUnicFavorite .status {
+.BrokerList .listProperties .propertyUnicFavorite .status {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -344,37 +360,37 @@
     padding: 10px 20px;
 }
 
-.ListProperty .listProperties .propertyUnicFavorite .status p {
+.BrokerList .listProperties .propertyUnicFavorite .status p {
     color: var(--White);
     font-weight: 700;
 }
 
-.ListProperty .listProperties .propertyUnicFavorite .heartFavorite {
+.BrokerList .listProperties .propertyUnicFavorite .heartFavorite {
     position: absolute;
     margin-top: 115px;
     margin-left: 215px;
 }
 
-.ListProperty .listProperties .propertyUnicFavorite .heartFavorite svg {
+.BrokerList .listProperties .propertyUnicFavorite .heartFavorite svg {
     color: var(--White);
     font-size: 24px;
     cursor: pointer;
 }
-.ListProperty .listProperties .propertyUnicFavorite .heartFavorite svg:hover {
+.BrokerList .listProperties .propertyUnicFavorite .heartFavorite svg:hover {
     color: var(--Primary);
 }
-.ListProperty .listProperties .propertyUnicFavorite .heartFavorite2 {
+.BrokerList .listProperties .propertyUnicFavorite .heartFavorite2 {
     position: absolute;
     margin-top: 115px;
     margin-left: 215px;
 }
 
-.ListProperty .listProperties .propertyUnicFavorite .heartFavorite2 svg {
+.BrokerList .listProperties .propertyUnicFavorite .heartFavorite2 svg {
     color: var(--Primary);
     font-size: 24px;
     cursor: pointer;
 }
-.ListProperty .listProperties .propertyUnicFavorite .heartFavorite svg:hover {
+.BrokerList .listProperties .propertyUnicFavorite .heartFavorite svg:hover {
     color: var(--Primary);
 }
 

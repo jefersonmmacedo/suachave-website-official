@@ -49,14 +49,23 @@
     font-weight:700;
     margin-bottom: 5px;
 }
-.Footer .sections .sectionUnic .icons {
+.Footer .sections .sectionUnic h5 a {
+    font-weight:700;
+    margin-bottom: 5px;
+    text-decoration: none;
+    color: var(--White);
+}
+.Footer .sections .sectionUnic h5 a:hover {
+    color: var(--Primary);
+}
+.Footer .sections .sectionUnic .apps {
     display: flex;
     align-items: flex-start;
     justify-content:space-between;
     flex-direction: row;
     width: 100%;
 }
-.Footer .sections .sectionUnic .icons .icon {
+.Footer .sections .sectionUnic .apps .app {
     display: flex;
     align-items: flex-start;
     justify-content:center;
@@ -64,20 +73,30 @@
     width: 50%;
 }
 
-.Footer .sections .sectionUnic .icons .icon .logos {
+.Footer .sections .sectionUnic .apps .app .logos {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
     flex-direction: row;
     width: 100%;
 }
-.Footer .sections .sectionUnic .icons .icon .logos h2 {
-    margin-right: 10px;
+.Footer .sections .sectionUnic .apps .app .logos button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    border: none;
+    border-radius: 6px;
+    padding: 5px;
     cursor: pointer;
-}
-.Footer .sections .sectionUnic .icons .icon .logos h2:hover {
+    background-color: var(--White);
     color: var(--Primary);
-
+    font-size: 20px;
+    margin-right: 5px;
+}
+.Footer .sections .sectionUnic .apps .app .logos button:hover {
+    background-color: var(--Primary);
+    color: var(--White);
 }
 
 .Footer .copy {

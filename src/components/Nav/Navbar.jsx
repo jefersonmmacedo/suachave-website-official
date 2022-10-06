@@ -140,9 +140,9 @@ function HandleOpenOrçamentos(e) {
   window.open("/orcamentos", "_self")
 }
 
-function HandleOpenMInhasPropostas(e) {
+function handleOpenMessages(e) {
   e.preventDefault();
-  window.open("/minhas-propostas", "_self")
+  window.open("/mensagens", "_self")
 }
 
 function HandleOpenNotificaçõess(e) {
@@ -182,7 +182,7 @@ const Navbar2 = () => {
                      <span>Imóveis</span>
                 </ReactTooltip>
 
-                <button className='iconUnic' onClick={HandleOpenMInhasPropostas} data-tip data-for='Chat'><IoChatboxEllipsesOutline/></button>
+                <button className='iconUnic' onClick={handleOpenMessages} data-tip data-for='Chat'><IoChatboxEllipsesOutline/></button>
                 <ReactTooltip id='Chat' place="bottom" type="dark" effect="solid">
                      <span>Chat</span>
                 </ReactTooltip>
@@ -199,7 +199,7 @@ const Navbar2 = () => {
                 </>
 :
                <>
-                <button className='iconUnic' onClick={HandleOpenMInhasPropostas} data-tip data-for='Chat'><IoChatboxEllipsesOutline/></button>
+                <button className='iconUnic' onClick={handleOpenMessages} data-tip data-for='Chat'><IoChatboxEllipsesOutline/></button>
                 <ReactTooltip id='Chat' place="bottom" type="dark" effect="solid">
                      <span>Chat</span>
                 </ReactTooltip>

@@ -1,5 +1,5 @@
 ﻿import "./newScheduling.css"
-import { IoCalendarOutline, IoCloseOutline, IoLocationOutline } from "react-icons/io5";
+import { IoCalendarOutline, IoCloseOutline, IoLocationOutline, IoBusinessOutline } from "react-icons/io5";
 import Modal from 'react-modal';
 import { useState } from "react";
 import ImageHouse1 from "../../assets/images/house.jpg";
@@ -171,7 +171,8 @@ export function NewScheduling() {
                         <p>Endereço de encontro</p>
                     </div>
                 <div className="address">
-                    <p><IoLocationOutline />Centro - Rio Bonito - RIo de Janeiro</p>
+                    <p><IoBusinessOutline />Imobiliária Sua Chave</p>
+                    <p><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</p>
                 </div>
                 <button className="btnSubmit">Enviar solicitação de agendamento</button>
                 </form>

@@ -8,7 +8,7 @@ import ImageHouse2 from "../../assets/images/house2.jpg";
 export function Favorite() {
     return (
         <div className="ListProperty">
-            <div className="listProperty">
+            <div className="listProperties">
             
             <div className="propertyUnicFavorite">
                     <div className="image">

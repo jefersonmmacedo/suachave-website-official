@@ -10,6 +10,7 @@ import { NewScheduling } from "../../components/NewScheduling/NewScheduling";
 import { NewMessageProperty } from "../../components/NewMessageProperty/NewMessageProperty";
 
 
+
 export function Property() {
     return (
        <div className="Property">

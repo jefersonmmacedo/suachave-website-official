@@ -42,9 +42,9 @@
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    width: 100%;
+    width: 500px;
     padding: 5px;
-    background-color: var(--Border);
+    background-color: var(--Background);
     border-radius: 6px;
 }
 .content-modal .itensModal .dataProperty .image {
@@ -75,7 +75,7 @@ object-fit: cover;
     justify-content: center;
     border: none;
     padding: 10px 20px;
-    background: var(--Border);
+    background: var(--Background);
     border-radius: 6px;
 }
 
@@ -92,14 +92,14 @@ object-fit: cover;
 .content-modal .itensModal form .buttonsDays button {
     width: 32px;
     height: 32px;
-    background: var(--Border);
+    background: var(--Background);
     color: var(--Paragraph);
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     padding: 5px;
-    border: 1px solid var(--BorderHover);
+    border: 1px solid var(--Background);
 }
 .content-modal .itensModal form .text {
     width: 100%;
@@ -160,12 +160,16 @@ object-fit: cover;
 .content-modal .itensModal form .address {
     width: 100%;
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: flex-start;
 }
 .content-modal .itensModal form .address p {
     font-weight: 500;
+    font-size: 12px;
+}
+.content-modal .itensModal form .address p svg {
+    margin-right: 5px;
 }
 
 
@@ -185,7 +189,7 @@ object-fit: cover;
 
 
   @media (max-width: 500px) {
-    .content-modal .itensModal {
-
+    .content-modal .itensModal .dataProperty {
+        width: 100%;
     }
   }

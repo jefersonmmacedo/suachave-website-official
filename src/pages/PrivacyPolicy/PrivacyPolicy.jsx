@@ -1,5 +1,6 @@
-﻿import "./privacyPolicy.css"
+import "./privacyPolicy.css"
 import Navbar2 from "../../components/Nav/Navbar";
+import { Footer } from "../../components/Footer/Footer";
 
 export function PrivacyPolicy() {
     return (
@@ -48,6 +49,7 @@ export function PrivacyPolicy() {
                 Envie um e-mail para suporte@GPS Buscador.com.br. Retornaremos sua solicitação o mais breve possível!
                 </p>
             </div>
+            <Footer />
         </div>
     )
 }

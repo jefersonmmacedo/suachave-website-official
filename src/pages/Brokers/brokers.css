@@ -1,4 +1,4 @@
-﻿.Favorites {
+﻿.Brokers {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -7,16 +7,9 @@
     padding: 60px 0px 0px 0px;
 }
 
-.Favorites h2 {
+.Brokers h2 {
     margin-top: 40px;
     margin-bottom: 20px;
     font-weight: bold;
 
-}
-
-@media (max-width: 450px) {
-    .Favorites {
-        padding: 60px 5px;
-    }
-    
 }

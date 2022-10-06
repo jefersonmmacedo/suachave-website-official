@@ -1,5 +1,6 @@
 ﻿import "./termsOfUse.css"
 import Navbar2 from "../../components/Nav/Navbar";
+import { Footer } from "../../components/Footer/Footer";
 
 export function TermsOfUse() {
     return (
@@ -50,6 +51,7 @@ export function TermsOfUse() {
                 Envie um e-mail para suporte@GPS Buscador.com.br. Retornaremos sua solicitação o mais breve possível!
                 </p>
             </div>
+            <Footer />
         </div>
     )
 }
