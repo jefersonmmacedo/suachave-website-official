@@ -21,6 +21,7 @@ import { Property } from '../pages/Property/Property';
 import { About } from '../pages/About/About';
 import { Companies } from '../pages/Companies/Companies';
 import { Brokers } from '../pages/Brokers/Brokers';
+import { Company } from '../pages/Company/Company';
 
 function Router () {
 const Local = localStorage.getItem("gpsbuscador");
@@ -53,6 +54,7 @@ function PrivateRoute({children} ) {
             <Route path="/mensagens" element={<Message />}/>
             <Route path="/imovel" element={<Property />}/>
             <Route path="/imobiliarias" element={<Companies />}/>
+            <Route path="/imobiliaria" element={<Company />}/>
             <Route path="/corretores" element={<Brokers />}/>
             <Route path="/test" element={<About />}/>
             

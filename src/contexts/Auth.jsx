@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import {toast} from 'react-toastify';
 import api from '../services/api';
 import apiGoogleReverse from '../services/apiGoogleReverse';
-import { socket } from '../services/websocket';
+// import { socket } from '../services/websocket';
 import {v4 as uuidv4} from 'uuid';
 import moment from 'moment';
 
@@ -1344,10 +1344,6 @@ async function updateUserOnline( id, idAccount, username, type ,nickname, avatar
       time = setTimeout(doSomething, 900000)
       //time = setTimeout(doSomething, 1000)
     }
-
-
-
-
 }
 
 
@@ -1389,7 +1385,7 @@ async function updateUserOnline( id, idAccount, username, type ,nickname, avatar
             deleteFollower,
             deleteFriendAndFollower,
             deleteLike,
-            socket,
+            // socket,
             creategroup,
             createMemberGroup,
             CreateInviteMail,

@@ -12,6 +12,8 @@ import { NewMessageProperty } from "../../components/NewMessageProperty/NewMessa
 
 
 export function Property() {
+    const data = new Date();
+
     return (
        <div className="Property">
         <Navbar2 />
@@ -33,6 +35,8 @@ export function Property() {
                 <div className="text">
                     <h2>Lindo apartamento luxuoso</h2>
                     <h5><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h5>
+                    {/* <h4>ID: 9fcb1vbb</h4> */}
+                    <h4>ID: IMOV-{data.getFullYear()}{data.getMonth()+1}{data.getDate()}{data.getHours()}{data.getMinutes()}</h4>
                     <div className="status">
                         <p>Aceita financiamento</p>
                     </div>

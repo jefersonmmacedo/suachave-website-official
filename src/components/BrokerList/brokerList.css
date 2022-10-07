@@ -6,7 +6,7 @@
     justify-content: center;
 }
 
-.BrokerList .listProperties {
+.BrokerList .listBroker {
     width: 90%;
     display: flex;
     flex-direction: column;
@@ -15,7 +15,7 @@
     margin: 0 20px;
 }
 
-.BrokerList .listProperties .propertyUnicFavorite {
+.BrokerList .listBroker .BrokerUnicFavorite {
     width: 700px;
     display: flex;
     flex-direction: row;
@@ -28,13 +28,13 @@
     height: 150px;
 }
 
-.BrokerList .listProperties .propertyUnicFavorite .image {
+.BrokerList .listBroker .BrokerUnicFavorite .image {
     width: 150px; 
     height: 150px;
     border-radius: 6px 0 0 6px;
     object-fit: cover;
 }
-.BrokerList .listProperties .propertyUnicFavorite .image img {
+.BrokerList .listBroker .BrokerUnicFavorite .image img {
     width: 150px; 
     height: 150px;
     border-radius: 6px 0 0 6px;
@@ -42,7 +42,7 @@
 }
 
 
-.BrokerList .listProperties .propertyUnicFavorite .featured {
+.BrokerList .listBroker .BrokerUnicFavorite .featured {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -55,12 +55,12 @@
     padding: 10px 40px;
 }
 
-.BrokerList .listProperties .propertyUnicFavorite .featured p {
+.BrokerList .listBroker .BrokerUnicFavorite .featured p {
     color: var(--White);
     font-weight: 700;
 }
 
-.BrokerList .listProperties .propertyUnicFavorite .status {
+.BrokerList .listBroker .BrokerUnicFavorite .status {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -73,7 +73,7 @@
     padding: 10px 20px;
 }
 
-.BrokerList .listProperties .propertyUnicFavorite .status p {
+.BrokerList .listBroker .BrokerUnicFavorite .status p {
     color: var(--White);
     font-weight: 700;
 }
@@ -82,7 +82,7 @@
 
 
 
-.BrokerList .listProperties .propertyUnicFavorite .text {
+.BrokerList .listBroker .BrokerUnicFavorite .text {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -90,7 +90,7 @@
     width: 100%;
     height: 100%;
 }
-.BrokerList .listProperties .propertyUnicFavorite .text2 {
+.BrokerList .listBroker .BrokerUnicFavorite .text2 {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -99,7 +99,7 @@
     height: 100%;
 }
 
-.BrokerList .listProperties .propertyUnicFavorite .text2 .heartFavorite {
+.BrokerList .listBroker .BrokerUnicFavorite .text2 .heartFavorite {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -108,15 +108,15 @@
     height: 100%;
 }
 
-.BrokerList .listProperties .propertyUnicFavorite .text2 .heartFavorite svg {
+.BrokerList .listBroker .BrokerUnicFavorite .text2 .heartFavorite svg {
     color: var(--White);
     font-size: 30px;
     cursor: pointer;
 }
-.BrokerList .listProperties .propertyUnicFavorite .text2 .heartFavorite svg:hover {
+.BrokerList .listBroker .BrokerUnicFavorite .text2 .heartFavorite svg:hover {
     color: var(--Primary);
 }
-.BrokerList .listProperties .propertyUnicFavorite .text2 .heartFavorite2 {
+.BrokerList .listBroker .BrokerUnicFavorite .text2 .heartFavorite2 {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -125,26 +125,26 @@
     height: 100%;
 }
 
-.BrokerList .listProperties .propertyUnicFavorite .text2 .heartFavorite2 svg {
+.BrokerList .listBroker .BrokerUnicFavorite .text2 .heartFavorite2 svg {
     color: var(--Primary);
     font-size: 30px;
     cursor: pointer;
     margin-right: 5px;
 }
-.BrokerList .listProperties .propertyUnicFavorite .text2 .heartFavorite svg:hover {
+.BrokerList .listBroker .BrokerUnicFavorite .text2 .heartFavorite svg:hover {
     color: var(--Primary);
 }
 
-.BrokerList .listProperties .propertyUnicFavorite .text h2 {
+.BrokerList .listBroker .BrokerUnicFavorite .text h2 {
     color: var(--Primary);
     font-weight: 700;
     margin: 5px 10px;
 }
-.BrokerList .listProperties .propertyUnicFavorite .text h4 {
+.BrokerList .listBroker .BrokerUnicFavorite .text h4 {
     color: var(--Gray);
     margin: 0 10px;
 }
-.BrokerList .listProperties .propertyUnicFavorite .text .icons {
+.BrokerList .listBroker .BrokerUnicFavorite .text .iconsBroker {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -154,7 +154,7 @@
     flex-wrap: wrap;
 }
 
-.BrokerList .listProperties .propertyUnicFavorite .text .icons .iconUnic {
+.BrokerList .listBroker .BrokerUnicFavorite .text .iconsBroker .iconBrokerUnic {
     width: 45%;
     display: flex;
     flex-direction: column;
@@ -164,11 +164,11 @@
     margin: 0 10px;
 }
 
-.BrokerList .listProperties .propertyUnicFavorite .text .icons .iconUnic p {
+.BrokerList .listBroker .BrokerUnicFavorite .text .iconsBroker .iconBrokerUnic p {
     color: var(--Paragraph);
     font-weight: 700;
 }
-.BrokerList .listProperties .propertyUnicFavorite .text .icons .iconUnic .simbol {
+.BrokerList .listBroker .BrokerUnicFavorite .text .iconsBroker .iconBrokerUnic .simbolBroker {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -177,17 +177,17 @@
     text-align: center;
     margin-top: 5px;
 }
-.BrokerList .listProperties .propertyUnicFavorite .text .icons .iconUnic .simbol p {
+.BrokerList .listBroker .BrokerUnicFavorite .text .iconsBroker .iconBrokerUnic .simbolBroker p {
     font-size: 14px;
     color: var(--Paragraph);
     font-weight: 700;
 }
 
-.BrokerList .listProperties .propertyUnicFavorite .text .icons .iconUnic .simbol svg {
+.BrokerList .listBroker .BrokerUnicFavorite .text .iconsBroker .iconBrokerUnic .simbolBroker svg {
     margin-right: 5px;
     color: var(--Gray);
 }
-.BrokerList .listProperties .propertyUnicFavorite .text .pricing {
+.BrokerList .listBroker .BrokerUnicFavorite .text .pricing {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -196,88 +196,88 @@
     text-align: flex-start;
 }
 
-.BrokerList .listProperties .propertyUnicFavorite .text .pricing h5 {
+.BrokerList .listBroker .BrokerUnicFavorite .text .pricing h5 {
     color: var(--Paragraph);
     font-weight: 700;
     margin: 0 10px;
 }
-.BrokerList .listProperties .propertyUnicFavorite .text .pricing h2 {
+.BrokerList .listBroker .BrokerUnicFavorite .text .pricing h2 {
     color: var(--Primary);
     font-weight: 700;
     margin: 0 10px;
 }
 
 @media (max-width: 900px) {
-    .BrokerList .listProperties .propertyUnicFavorite {
+    .BrokerList .listBroker .BrokerUnicFavorite {
         width: 90%;
     }
 
     @media (max-width: 800px) {
-        .BrokerList .listProperties {
+        .BrokerList .listBroker {
             width: 97%;
             margin: 0 20px;
         }
 
         @media (max-width: 711px) {
-            .BrokerList .listProperties .propertyUnicFavorite {
+            .BrokerList .listBroker .BrokerUnicFavorite {
                 width: 100%;
             }
 
 
             @media (max-width: 585px) {
-                .BrokerList .listProperties .propertyUnicFavorite .text .icons .iconUnic {
+                .BrokerList .listBroker .BrokerUnicFavorite .text .iconsBroker .iconBrokerUnic {
                     width: 100%;
                 }
 
-                .BrokerList .listProperties .propertyUnicFavorite .image {
+                .BrokerList .listBroker .BrokerUnicFavorite .image {
                     width: 100px; 
                     height: 150px;
                 }
-                .BrokerList .listProperties .propertyUnicFavorite .image img {
+                .BrokerList .listBroker .BrokerUnicFavorite .image img {
                     width: 100px; 
                     height: 150px;
                 }
 
-                .BrokerList .listProperties .propertyUnicFavorite .text2 .heartFavorite2 svg {
+                .BrokerList .listBroker .BrokerUnicFavorite .text2 .heartFavorite2 svg {
                     font-size: 24px;
                 }
 
-                .BrokerList .listProperties .propertyUnicFavorite .text2 {
+                .BrokerList .listBroker .BrokerUnicFavorite .text2 {
                     width: 30px;
                 }
 
                 @media (max-width: 515px) {
-                    .BrokerList .listProperties .propertyUnicFavorite .text {
+                    .BrokerList .listBroker .BrokerUnicFavorite .text {
                         justify-content: flex-start;
                     }
 
                     
-                    .BrokerList .listProperties .propertyUnicFavorite .text .pricing h5 {
+                    .BrokerList .listBroker .BrokerUnicFavorite .text .pricing h5 {
                         display: none;
                     }
 
-                    .BrokerList .listProperties .propertyUnicFavorite .text h2 {
+                    .BrokerList .listBroker .BrokerUnicFavorite .text h2 {
                         font-size: 24px;
                     }
 
                     @media (max-width: 450px) {
-                        .BrokerList .listProperties .propertyUnicFavorite .text h2 {
+                        .BrokerList .listBroker .BrokerUnicFavorite .text h2 {
                             font-size: 20px;
                         }
-                        .BrokerList .listProperties .propertyUnicFavorite .text h4 {
+                        .BrokerList .listBroker .BrokerUnicFavorite .text h4 {
                             font-size: 14px;
                         }
 
                         @media (max-width: 450px) {
-                            .BrokerList .listProperties .propertyUnicFavorite .text h4 {
+                            .BrokerList .listBroker .BrokerUnicFavorite .text h4 {
                                 font-size: 12px;
                             }                            
                             
-                            .BrokerList .listProperties .propertyUnicFavorite .text .icons .iconUnic p {
+                            .BrokerList .listBroker .BrokerUnicFavorite .text .iconsBroker .iconBrokerUnic p {
                                 font-size: 12px;
                             }
                             
-                            .BrokerList .listProperties .propertyUnicFavorite .text .icons .iconUnic .simbol svg {
+                            .BrokerList .listBroker .BrokerUnicFavorite .text .iconsBroker .iconBrokerUnic .simbolBroker svg {
                                 font-size: 14px;
                                 margin-right: 5px;
                             }
@@ -294,7 +294,7 @@
 /* 
 
 @media (max-width: 880px) {
-    .BrokerList .listProperties {
+    .BrokerList .listBroker {
         width: 100%;
         display: flex;
         flex-direction: row;
@@ -304,7 +304,7 @@
         flex-wrap: wrap;
     }
     
-    .BrokerList .listProperties .propertyUnicFavorite {
+    .BrokerList .listBroker .BrokerUnicFavorite {
         width: 250px;
         display: flex;
         flex-direction: column;
@@ -317,19 +317,19 @@
         padding-bottom: 20px;
     }
 
-    .BrokerList .listProperties .propertyUnicFavorite .image {
+    .BrokerList .listBroker .BrokerUnicFavorite .image {
         width: 100%; 
         height: 150px;
         border-radius: 6px 6px 0 0;
     }
-    .BrokerList .listProperties .propertyUnicFavorite .image img {
+    .BrokerList .listBroker .BrokerUnicFavorite .image img {
         width: 100%; 
         height: 150px;
         border-radius: 6px 6px 0 0;
     }
     
     
-.BrokerList .listProperties .propertyUnicFavorite .featured {
+.BrokerList .listBroker .BrokerUnicFavorite .featured {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -342,12 +342,12 @@
     padding: 10px 40px;
 }
 
-.BrokerList .listProperties .propertyUnicFavorite .featured p {
+.BrokerList .listBroker .BrokerUnicFavorite .featured p {
     color: var(--White);
     font-weight: 700;
 }
 
-.BrokerList .listProperties .propertyUnicFavorite .status {
+.BrokerList .listBroker .BrokerUnicFavorite .status {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -360,37 +360,37 @@
     padding: 10px 20px;
 }
 
-.BrokerList .listProperties .propertyUnicFavorite .status p {
+.BrokerList .listBroker .BrokerUnicFavorite .status p {
     color: var(--White);
     font-weight: 700;
 }
 
-.BrokerList .listProperties .propertyUnicFavorite .heartFavorite {
+.BrokerList .listBroker .BrokerUnicFavorite .heartFavorite {
     position: absolute;
     margin-top: 115px;
     margin-left: 215px;
 }
 
-.BrokerList .listProperties .propertyUnicFavorite .heartFavorite svg {
+.BrokerList .listBroker .BrokerUnicFavorite .heartFavorite svg {
     color: var(--White);
     font-size: 24px;
     cursor: pointer;
 }
-.BrokerList .listProperties .propertyUnicFavorite .heartFavorite svg:hover {
+.BrokerList .listBroker .BrokerUnicFavorite .heartFavorite svg:hover {
     color: var(--Primary);
 }
-.BrokerList .listProperties .propertyUnicFavorite .heartFavorite2 {
+.BrokerList .listBroker .BrokerUnicFavorite .heartFavorite2 {
     position: absolute;
     margin-top: 115px;
     margin-left: 215px;
 }
 
-.BrokerList .listProperties .propertyUnicFavorite .heartFavorite2 svg {
+.BrokerList .listBroker .BrokerUnicFavorite .heartFavorite2 svg {
     color: var(--Primary);
     font-size: 24px;
     cursor: pointer;
 }
-.BrokerList .listProperties .propertyUnicFavorite .heartFavorite svg:hover {
+.BrokerList .listBroker .BrokerUnicFavorite .heartFavorite svg:hover {
     color: var(--Primary);
 }
 

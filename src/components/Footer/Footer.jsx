@@ -1,6 +1,8 @@
 ﻿import "./footer.css";
 import logo from '../../assets/images/Logo2.png';
-import {AiFillAndroid, AiFillApple} from 'react-icons/ai'
+import {AiFillAndroid, AiFillApple} from 'react-icons/ai';
+import google from "../../assets/images/google.png";
+import apple from "../../assets/images/apple.png";
 
 
 export function Footer() {
@@ -35,15 +37,15 @@ export function Footer() {
                                 <div className="app">
                                 <h5>Clientes</h5>
                                 <div className="logos">
-                                <button><AiFillAndroid /></button>       
-                                <button><AiFillApple /></button>       
+                                <a href="/"><img src={google} alt="" /></a>       
+                                <a href="/"><img src={apple} alt="" /></a>       
                                 </div>
                                 </div>
                                 <div className="app">
                                 <h5>Imobiliária</h5>
                                 <div className="logos">
-                                <button><AiFillAndroid /></button>       
-                                <button><AiFillApple /></button>            
+                                <a href="/"><img src={google} alt="" /></a>       
+                                <a href="/"><img src={apple} alt="" /></a>         
                                 </div>
                                 </div>
                             </div>

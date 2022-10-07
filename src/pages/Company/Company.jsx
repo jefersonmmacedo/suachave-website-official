@@ -1,24 +1,19 @@
-﻿import "./company.css"
-import { SliderImages } from '../../components/SliderImages/SliderImages';
+﻿import "./company.css";
 import Navbar2 from "../../components/Nav/Navbar";
-import { FaBed, FaCar, FaShower } from "react-icons/fa";
-import { IoCrop, IoHeart, IoMove, IoCheckmarkSharp, IoChatboxEllipsesOutline } from "react-icons/io5";
+import { IoLocationOutline, IoCallOutline, IoLogoWhatsapp, IoMailOutline, IoGlobeOutline } from "react-icons/io5";
 import { Footer } from "../../components/Footer/Footer";
-import { CompanyInfo } from "../../components/CompanyInfo/CompanyInfo";
-import { Rent } from "../../components/Rent/Rent";
-
-
-
+import { BrokerList } from "../../components/BrokerList/BrokerList";
+import { Sale } from "../../components/Sale/Sale";
+import imobiliária from "../../assets/images/imob1.png";
 
 export function Company() {
     return (
        <div className="Company">
         <Navbar2 />
         <div className="main">
-          <SliderImages />
           <div className="data">
           <div className="CompanyUnic">
-            <div className="targets">
+            {/* <div className="targets">
             <div className="featured">
                         <p>Novo</p>
                     </div>
@@ -31,92 +26,55 @@ export function Company() {
                      <div className="heart2">
                     <IoHeart />
                     </div>
-            </div>
+            </div> */}
+                    <div className="title">
+                        <div className="image">
+                            <img src={imobiliária} alt="" />
+                        </div>
+                        <div className="textTitle">
+                    <h2>James Estate Agents</h2>
+                    <h5><IoLocationOutline /> Centro - Rio Bonito - Rio de Janeiro</h5>
+                        </div>
+                    </div>
                 <div className="text">
-                    <h2>Lindo apartamento luxuoso</h2>
-                    <h5>Centro - Rio Bonito - Rio de Janeiro</h5>
 
-                    <h4>Massa tempor nec feugiat nisl pretium. Egestas fringilla phasellus faucibus scelerisque eleifend donec. Porta nibh venenatis cras sed felis eget velit aliquet. Neque volutpat ac tincidunt vitae semper quis lectus. Turpis in eu mi bibendum neque egestas congue quisque. Sed elementum tempus egestas sed sed risus pretium quam. Dignissim sodales ut eu sem. Nibh mauris cursus mattis molestie a iaculis at erat pellentesque. Id interdum velit laoreet id donec ultrices tincidunt.</h4>
+                    <h4>A finalidade de uma imobiliária é bem simples: dar todo o suporte necessário em processos de compra, venda, locação ou qualquer outro tipo de transação imobiliária. É ela que vai garantir a segurança e a sua comodidade durante esses processos.
+                    <br />
+Para sua segurança é importante ressaltar que todas as imobiliárias devem possuir um CRECI que é um certificado emitido pelo Conselho Regional de Corretores de Imóveis.</h4>
 
-                    <div className="icons">
-                        <div className="iconUnic">
-                            <p>Quartos</p>
+<div className="iconsCompany">
+                        <div className="iconCompanyUnic">
                             <div className="simbol">
-                                <FaBed />
-                                <p>3</p>
+                                <IoCallOutline />
+                                <p>(21) 2222-2222</p>
                             </div>
                         </div>
-                        <div className="iconUnic">
-                            <p>Banheiro</p>
+                        <div className="iconCompanyUnic">
                             <div className="simbol">
-                                <FaShower />
-                                <p>3</p>
+                                <IoLogoWhatsapp />
+                                <p>(21) 99999-9999)</p>
                             </div>
                         </div>
-                        <div className="iconUnic">
-                            <p>Garagem</p>
+                        <div className="iconCompanyUnic">
                             <div className="simbol">
-                                <FaCar />
-                                <p>3</p>
+                                <IoMailOutline />
+                                <p>contato@suachave.com.br</p>
                             </div>
-                        </div>
-                        <div className="iconUnic">
-                            <p>Área total</p>
+                        </div>                        
+                        <div className="iconCompanyUnic">
                             <div className="simbol">
-                                <IoMove />
-                                <p>300 M2</p>
+                                <IoGlobeOutline />
+                                <p>www.suachave.com.br</p>
                             </div>
-                        </div>
-                        <div className="iconUnic">
-                            <p>Construção</p>
-                            <div className="simbol">
-                                <IoCrop />
-                                <p>150 M2</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="characteristics">
-                        <div className="item">
-                            <IoCheckmarkSharp /> <p>Piscina</p> 
-                        </div>
-                        <div className="item">
-                            <IoCheckmarkSharp /> <p>Sacada</p>
-                        </div>
-                        <div className="item">
-                            <IoCheckmarkSharp /> <p>Sala de estar</p>
-                        </div>
-                        <div className="item">
-                            <IoCheckmarkSharp /> <p>Suíte</p>
-                        </div>
-                        <div className="item">
-                            <IoCheckmarkSharp /> <p>Churrasqueira</p>
-                        </div>
-                        <div className="item">
-                            <IoCheckmarkSharp /> <p>Wifi</p>
-                        </div>
-                    </div>
-                    <div className="pricing">
-                        <h5>Aluguel</h5>
-                        <h2>R$ 2.000,00 / Mês</h2>
-                    </div>
-
-                    <div className="video">
-                    <iframe width="100%" height="300" src="https://www.youtube.com/embed/vrLSiAbdXb4" title="YouTube video player" frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-
-                    <div className="map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d12290.419599284141!2d-42.62790332892239!3d-22.711818016034076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1664680466523!5m2!1spt-BR!2sbr"
-                    width="100%" height="300" style={{border:"0px", borderRadius: "6px"}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                        </div>                        
                     </div>
                     </div>
+                    {/* <BrokerList /> */}
                 </div>
 
-
-                <CompanyInfo />
                 </div>
-                <Rent />
+                <Sale />
+                <button className="btnCompany">Mais imóveis de James Estate Agents</button>
         </div>
         <Footer />
 

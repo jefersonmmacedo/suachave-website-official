@@ -8,7 +8,7 @@ import ImageHouse2 from "../../assets/images/house8.jpg";
 export function Sale() {
     return (
         <div className="Sale">
-            <h2>Imóveis à venda</h2>  
+            <h2>Imóveis recentes de James Estate Agents</h2>  
 
             <div className="itens">
             

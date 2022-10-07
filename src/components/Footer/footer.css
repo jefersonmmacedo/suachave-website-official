@@ -18,7 +18,7 @@
     justify-content:space-between;
     flex-direction: row;
     width: 95%;
-    padding: 40px 20px 20px 20px;
+    padding: 40px 20px 60px 20px;
     flex-wrap: wrap;
 }
 
@@ -75,28 +75,14 @@
 
 .Footer .sections .sectionUnic .apps .app .logos {
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-direction: row;
-    width: 100%;
-}
-.Footer .sections .sectionUnic .apps .app .logos button {
-    display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: row;
-    border: none;
-    border-radius: 6px;
-    padding: 5px;
-    cursor: pointer;
-    background-color: var(--White);
-    color: var(--Primary);
-    font-size: 20px;
-    margin-right: 5px;
+    flex-direction: column;
+    width: 100%;
 }
-.Footer .sections .sectionUnic .apps .app .logos button:hover {
-    background-color: var(--Primary);
-    color: var(--White);
+.Footer .sections .sectionUnic .apps .app .logos img {
+    width: 80%;
+    margin: 3px;
 }
 
 .Footer .copy {
@@ -128,7 +114,6 @@
     .Footer .sections {
         justify-content:space-between;
         width: 100%;
-        padding: 40px 20px 20px 20px;
     }
     .Footer .sections .sectionUnic {
         display: flex;
