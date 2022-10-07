@@ -1,6 +1,6 @@
 ﻿import "./footer.css";
 import logo from '../../assets/images/Logo2.png';
-import {IoLogoFacebook, IoLogoInstagram, IoLogoTwitter, IoLogoLinkedin, IoLogoYoutube} from 'react-icons/io5';
+import {IoCallOutline, IoLogoWhatsapp, IoMailOutline, IoLogoFacebook, IoLogoInstagram, IoLogoTwitter, IoLogoLinkedin, IoLogoYoutube} from 'react-icons/io5';
 import google from "../../assets/images/google.png";
 import apple from "../../assets/images/apple.png";
 
@@ -33,9 +33,9 @@ export function Footer() {
                             <h5><a href="/">Fale conosco</a></h5>
                             <br />
                             <h3><b>ATENDIMENTO</b></h3>
-                            <h5>(21) 2222-2222</h5>
-                            <h5>(21) 99999-9999</h5>
-                            <h5>contato@suachave.com.br</h5>
+                            <h5><IoCallOutline />(21) 2222-2222</h5>
+                            <h5><IoLogoWhatsapp />(21) 99999-9999</h5>
+                            <h5><IoMailOutline />contato@suachave.com.br</h5>
                         </div>
                         <div className="sectionUnic">
                             <h3><b> SIGA-NOS</b></h3>

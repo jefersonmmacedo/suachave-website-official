@@ -47,12 +47,21 @@
 }
 .Footer .sections .sectionUnic h5 {
     font-weight:700;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
     margin-bottom: 5px;
 }
 .Footer .sections .sectionUnic h5 a {
     font-weight:700;
-    margin-bottom: 5px;
     text-decoration: none;
+    color: var(--White);
+}
+.Footer .sections .sectionUnic h5 svg {
+    font-weight:700;
+    margin-right: 5px;
     color: var(--White);
 }
 .Footer .sections .sectionUnic h5 a:hover {
