@@ -206,6 +206,13 @@
                 border-radius: 0 0 6px 6px;
             }
 
+            .SearchProperty .selectButtons .btn {
+                width: 100%;
+            }
+            .SearchProperty .selectButtons .btn2 {
+                width: 100%;
+            }
+
             .SearchProperty .selectButtons {
                 width: 70%;
             }

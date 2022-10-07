@@ -1,6 +1,6 @@
 ﻿import "./footer.css";
 import logo from '../../assets/images/Logo2.png';
-import {AiFillAndroid, AiFillApple} from 'react-icons/ai';
+import {IoLogoFacebook, IoLogoInstagram, IoLogoTwitter, IoLogoLinkedin, IoLogoYoutube} from 'react-icons/io5';
 import google from "../../assets/images/google.png";
 import apple from "../../assets/images/apple.png";
 
@@ -16,7 +16,7 @@ export function Footer() {
                             <h5>Nós temos a chave do seu sonho!</h5>
                         </div>
                         <div className="sectionUnic">
-                            <h4><b>SUA CHAVE</b></h4>
+                            <h3><b>SUA CHAVE</b></h3>
                                 <h5><a href="/">Sobre nós</a></h5>
                                 <h5><a href="/">Blog</a></h5>
                                 <h5><a href="/imoveis/all">Imóveis</a></h5>
@@ -26,13 +26,27 @@ export function Footer() {
                                 <h5><a href="/planos">Preços</a></h5>
                         </div>
                         <div className="sectionUnic">
-                            <h4><b>CENTRAL DE AJUDA</b></h4>
+                            <h3><b>CENTRAL DE AJUDA</b></h3>
                             <h5><a href="/">Faq</a></h5>
                             <h5><a href="/termos">Termos de uso</a></h5>
                             <h5><a href="/privacidade">Política de privacidade</a></h5>
                             <h5><a href="/">Fale conosco</a></h5>
                             <br />
-                            <p><b>BAIXE AGORA:</b></p>
+                            <h3><b>ATENDIMENTO</b></h3>
+                            <h5>(21) 2222-2222</h5>
+                            <h5>(21) 99999-9999</h5>
+                            <h5>contato@suachave.com.br</h5>
+                        </div>
+                        <div className="sectionUnic">
+                            <h3><b> SIGA-NOS</b></h3>
+                            <div className="network">
+                                <button className="networkButton"><IoLogoFacebook/></button>
+                                <button className="networkButton"><IoLogoInstagram/></button>
+                                <button className="networkButton"><IoLogoTwitter/></button>
+                                <button className="networkButton"><IoLogoLinkedin/></button>
+                                <button className="networkButton"><IoLogoYoutube/></button>
+                            </div>
+                            <h3><b>BAIXE AGORA:</b></h3>
                             <div className="apps">
                                 <div className="app">
                                 <h5>Clientes</h5>
@@ -49,12 +63,6 @@ export function Footer() {
                                 </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className="sectionUnic">
-                            <h4><b>ATENDIMENTO</b></h4>
-                            <h5>(21) 2222-2222</h5>
-                            <h5>(21) 99999-9999</h5>
-                            <h5>contato@suachave.com.br</h5>
                         </div>
                 </div>
                 <div className="copy">
