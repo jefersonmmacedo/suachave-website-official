@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import {IoDocumentTextOutline, IoPersonOutline, IoHeartOutline, IoNotificationsOutline, IoLogOutOutline, IoChatboxEllipsesOutline, IoHomeOutline, IoGridOutline } from 'react-icons/io5';
+import {IoDocumentTextOutline, IoPersonOutline, IoHeartOutline, IoNotificationsOutline, IoLogOutOutline, IoChatboxEllipsesOutline, IoHomeOutline, IoGridOutline, IoCalendarOutline } from 'react-icons/io5';
 
 const Ul = styled.ul`
   list-style: none;
@@ -155,6 +155,10 @@ function HandleOpenNotificaçõess(e) {
   e.preventDefault();
   window.open("/notificacoes", "_self")
 }
+function handleOpenAgendamentos(e) {
+  e.preventDefault();
+  window.open("/agendamentos", "_self")
+}
 
 
 
@@ -163,11 +167,11 @@ const RightNav = ({ open }) => {
   const professional = false;
   return (
     <Ul open={open}>
-       <li className='nav-item'>
+       {/* <li className='nav-item'>
             <Link to='/imoveis/all'>
               Imóveis
             </Link>
-          </li>
+          </li> */}
        <li className='nav-item'>
             <Link to='/imoveis/aluguel'>
             Aluguel
@@ -189,7 +193,7 @@ const RightNav = ({ open }) => {
             </Link>
           </li>
           <li className='nav-item'>
-            <Link to='/planos' >
+            <Link to='/simulador' >
             Simulador
             </Link>
           </li>
@@ -228,6 +232,9 @@ const RightNav = ({ open }) => {
           <>
                     <button className='btn' onClick={HandleOpenOrçamento}>
             <IoChatboxEllipsesOutline /> &nbsp; Mensagens
+          </button>
+                    <button className='btn' onClick={handleOpenAgendamentos}>
+            <IoCalendarOutline /> &nbsp; Agendamentos
           </button>
           <button className='btn' onClick={HandleOpenNotificaçõess}>
             <IoNotificationsOutline /> &nbsp; Notificações

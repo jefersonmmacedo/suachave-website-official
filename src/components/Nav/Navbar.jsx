@@ -4,7 +4,7 @@ import Burger from './Burger';
 import LogoImg from '../../assets/images/Logo.png'
 import LogoSimbol from '../../assets/images/Simbol.png'
 import {IoDocumentTextOutline, IoPersonOutline, IoHeartOutline, IoNotificationsOutline,
-  IoLogOutOutline, IoGridOutline, IoHomeOutline, IoChatboxEllipsesOutline} from 'react-icons/io5'
+  IoLogOutOutline, IoGridOutline, IoHomeOutline, IoChatboxEllipsesOutline, IoCalendarOutline} from 'react-icons/io5'
 import { Link } from 'react-router-dom';
 import ReactTooltip from 'react-tooltip';
 
@@ -108,19 +108,27 @@ const Nav = styled.nav`
   padding: 0 10px;
   .account {
     margin-right: 110px;
-    width: 15%;
+    width: 20%;
     justify-content: center;
   }
 
 
   @media (max-width: 650px) {
 
+  .logo a img {
+    height: 30px;
+  }
+
+  @media (max-width: 600px) {
+    .account {
+      margin-right: 110px;
+      width: 15%;
+      justify-content: center;
+    }
     .account .iconOut {
       display: none;
   }
 
-  .logo a img {
-    height: 30px;
   }
   }
 }
@@ -148,6 +156,11 @@ function handleOpenMessages(e) {
 function HandleOpenNotificaçõess(e) {
   e.preventDefault();
   window.open("/notificacoes", "_self")
+}
+
+function handleOpenAgendamentos(e) {
+  e.preventDefault();
+  window.open("/agendamentos", "_self")
 }
 
 
@@ -203,6 +216,10 @@ const Navbar2 = () => {
                 <ReactTooltip id='Chat' place="bottom" type="dark" effect="solid">
                      <span>Chat</span>
                 </ReactTooltip>
+                <button className='iconUnic' onClick={handleOpenAgendamentos} data-tip data-for='Agendamentos'><IoCalendarOutline/></button>
+                <ReactTooltip id='Agendamentos' place="bottom" type="dark" effect="solid">
+                     <span>Agendamentos</span>
+                </ReactTooltip>
 
                 <button className='iconUnic' onClick={HandleOpenNotificaçõess} data-tip data-for='Notificações'><IoNotificationsOutline/></button>
                 <ReactTooltip id='Notificações' place="bottom" type="dark" effect="solid">
@@ -214,13 +231,13 @@ const Navbar2 = () => {
                      <span>Favoritos</span>
                 </ReactTooltip>
 
-                <button className='iconUnic' onClick={HandleOpen} data-tip data-for='Minha conta'><IoPersonOutline /></button>
-                <ReactTooltip id='Minha conta' place="bottom" type="dark" effect="solid">
-                     <span>Minha conta</span>
-                </ReactTooltip>
                </>
                   }
 
+                <button className='iconOut' onClick={HandleOpen} data-tip data-for='Minha conta'><IoPersonOutline /></button>
+                <ReactTooltip id='Minha conta' place="bottom" type="dark" effect="solid">
+                     <span>Minha conta</span>
+                </ReactTooltip>
                 <button className='iconOut' onClick={HandleOpen}><IoLogOutOutline /></button>
         </>
         : ""

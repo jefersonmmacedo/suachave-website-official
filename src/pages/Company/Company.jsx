@@ -38,9 +38,9 @@ export function Company() {
                     </div>
                 <div className="text">
 
-                    <h4>A finalidade de uma imobiliária é bem simples: dar todo o suporte necessário em processos de compra, venda, locação ou qualquer outro tipo de transação imobiliária. É ela que vai garantir a segurança e a sua comodidade durante esses processos.
+                    {/* <h4>A finalidade de uma imobiliária é bem simples: dar todo o suporte necessário em processos de compra, venda, locação ou qualquer outro tipo de transação imobiliária. É ela que vai garantir a segurança e a sua comodidade durante esses processos.
                     <br />
-Para sua segurança é importante ressaltar que todas as imobiliárias devem possuir um CRECI que é um certificado emitido pelo Conselho Regional de Corretores de Imóveis.</h4>
+Para sua segurança é importante ressaltar que todas as imobiliárias devem possuir um CRECI que é um certificado emitido pelo Conselho Regional de Corretores de Imóveis.</h4> */}
 
 <div className="iconsCompany">
                         <div className="iconCompanyUnic">
