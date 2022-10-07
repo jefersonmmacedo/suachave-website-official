@@ -1,5 +1,5 @@
 ﻿import "./newScheduling.css"
-import { IoCalendarOutline, IoCloseOutline, IoLocationOutline, IoBusinessOutline } from "react-icons/io5";
+import { IoCalendar, IoCloseOutline, IoLocationOutline, IoBusinessOutline } from "react-icons/io5";
 import Modal from 'react-modal';
 import { useState } from "react";
 import ImageHouse1 from "../../assets/images/house.jpg";
@@ -20,7 +20,7 @@ export function NewScheduling() {
     Modal.setAppElement('#root');
     return (
         <>
-        <button className="buttonScheduling" onClick={handleOpenModal}><IoCalendarOutline/> Agendar visita</button>
+        <button className="buttonScheduling" onClick={handleOpenModal}><IoCalendar/> Agendar visita</button>
 
         <Modal isOpen={isOpenModal} onRequestClose={handleCloseModal}
             overlayClassName="react-modal-overlay"

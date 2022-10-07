@@ -46,7 +46,9 @@ export function PropertyCarroussel() {
             <Slide slidesToScroll={3} slidesToShow={3} indicators={true} {...properties} responsive={responsiveSettings}>
             <div className="block">
                     <div className="image">
+                        <a href="/imovel">
                     <img src={ImageHouse} alt="" />
+                        </a>
                     </div>
                     <div className="featured">
                         <p>Novo</p>
@@ -58,7 +60,9 @@ export function PropertyCarroussel() {
                     <IoHeart />
                     </div>
                     <div className="text">
+                        <a href="/imovel">
                     <h2>Lindo apartamento luxuoso</h2>
+                        </a>
                     <h4>Centro - Rio Bonito - Rio de Janeiro</h4>
                     <div className="icons">
                         <div className="iconUnic">
@@ -91,7 +95,9 @@ export function PropertyCarroussel() {
                 </div>
             <div className="block">
                     <div className="image">
+                        <a href="/imovel">
                     <img src={ImageHouse} alt="" />
+                        </a>
                     </div>
                     <div className="featured">
                         <p>Novo</p>
@@ -103,7 +109,9 @@ export function PropertyCarroussel() {
                     <IoHeart />
                     </div>
                     <div className="text">
+                        <a href="/imovel">
                     <h2>Lindo apartamento luxuoso</h2>
+                        </a>
                     <h4>Centro - Rio Bonito - Rio de Janeiro</h4>
                     <div className="icons">
                         <div className="iconUnic">
@@ -136,7 +144,9 @@ export function PropertyCarroussel() {
                 </div>
             <div className="block">
                     <div className="image">
+                        <a href="/imovel">
                     <img src={ImageHouse} alt="" />
+                        </a>
                     </div>
                     <div className="featured">
                         <p>Novo</p>
@@ -148,7 +158,9 @@ export function PropertyCarroussel() {
                     <IoHeart />
                     </div>
                     <div className="text">
+                        <a href="/imovel">
                     <h2>Lindo apartamento luxuoso</h2>
+                        </a>
                     <h4>Centro - Rio Bonito - Rio de Janeiro</h4>
                     <div className="icons">
                         <div className="iconUnic">
@@ -181,7 +193,9 @@ export function PropertyCarroussel() {
                 </div>
             <div className="block">
                     <div className="image">
+                        <a href="/imovel">
                     <img src={ImageHouse} alt="" />
+                        </a>
                     </div>
                     <div className="featured">
                         <p>Novo</p>
@@ -193,7 +207,9 @@ export function PropertyCarroussel() {
                     <IoHeart />
                     </div>
                     <div className="text">
+                        <a href="/imovel">
                     <h2>Lindo apartamento luxuoso</h2>
+                        </a>
                     <h4>Centro - Rio Bonito - Rio de Janeiro</h4>
                     <div className="icons">
                         <div className="iconUnic">
@@ -226,7 +242,9 @@ export function PropertyCarroussel() {
                 </div>
             <div className="block">
                     <div className="image">
+                        <a href="/imovel">
                     <img src={ImageHouse} alt="" />
+                        </a>
                     </div>
                     <div className="featured">
                         <p>Novo</p>
@@ -238,7 +256,9 @@ export function PropertyCarroussel() {
                     <IoHeart />
                     </div>
                     <div className="text">
+                        <a href="/imovel">
                     <h2>Lindo apartamento luxuoso</h2>
+                        </a>
                     <h4>Centro - Rio Bonito - Rio de Janeiro</h4>
                     <div className="icons">
                         <div className="iconUnic">
@@ -271,7 +291,9 @@ export function PropertyCarroussel() {
                 </div>
             <div className="block">
                     <div className="image">
+                        <a href="/imovel">
                     <img src={ImageHouse} alt="" />
+                        </a>
                     </div>
                     <div className="featured">
                         <p>Novo</p>
@@ -283,7 +305,9 @@ export function PropertyCarroussel() {
                     <IoHeart />
                     </div>
                     <div className="text">
+                        <a href="/imovel">
                     <h2>Lindo apartamento luxuoso</h2>
+                        </a>
                     <h4>Centro - Rio Bonito - Rio de Janeiro</h4>
                     <div className="icons">
                         <div className="iconUnic">

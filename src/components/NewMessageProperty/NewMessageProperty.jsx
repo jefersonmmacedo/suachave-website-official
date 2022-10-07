@@ -1,10 +1,10 @@
 ﻿import "./newMessageProperty.css"
-import { IoChatboxEllipsesOutline } from "react-icons/io5";
+import { IoChatboxEllipses } from "react-icons/io5";
 
 export function NewMessageProperty() {
     return (
         <>
-        <button className="buttonMessage"><IoChatboxEllipsesOutline/> Envar mensagem</button>
+        <button className="buttonMessage"><IoChatboxEllipses/> Envar mensagem</button>
         </>
     )
 }

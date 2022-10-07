@@ -23,7 +23,7 @@ export function Footer() {
                                 <h5><a href="/imobiliarias">Imobiliárias</a></h5>
                                 <h5><a href="/corretores">Corretores</a></h5>
                                 <h5><a href="/">Simulador</a></h5>
-                                <h5><a href="/planos">Preços</a></h5>
+                                <h5><a href="/planos">Planos</a></h5>
                         </div>
                         <div className="sectionUnic">
                             <h3><b>CENTRAL DE AJUDA</b></h3>

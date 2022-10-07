@@ -37,13 +37,17 @@ const properties = {
           <div className="each-slide-effect">
           <div className="imageTop">
             <div className="image">
+                <a href="/imovel">
                     <img src={images[0]} alt="" />
+                </a>
             </div>
                 <div className="block">
                     <div className="featured">
                         <p>Novo</p>
                     </div>
+                    <a href="/imovel">
                     <h2>Apartamento luxuoso</h2>
+                    </a>
                     <h4>Centro - Rio Bonito - Rio de Janeiro</h4>
                     <div className="icons">
                         <div className="iconUnic">
@@ -92,13 +96,17 @@ const properties = {
           <div className="each-slide-effect">
           <div className="imageTop">
           <div className="image">
+            <a href="/imovel">
                     <img src={images[1]} alt="" />
+            </a>
             </div>
                 <div className="block">
                     <div className="featured">
                         <p>Novo</p>
                     </div>
+                    <a href="/imovel">
                     <h2>Apartamento luxuoso</h2>
+                    </a>
                     <h4>Centro - Rio Bonito - Rio de Janeiro</h4>
                     <div className="icons">
                         <div className="iconUnic">
@@ -147,13 +155,17 @@ const properties = {
           <div className="each-slide-effect">
           <div className="imageTop">
           <div className="image">
+            <a href="/imovel">
                     <img src={images[2]} alt="" />
+            </a>
             </div>
                 <div className="block">
                     <div className="featured">
                         <p>Novo</p>
                     </div>
+                    <a href="/imovel">
                     <h2>Apartamento luxuoso</h2>
+                    </a>
                     <h4>Centro - Rio Bonito - Rio de Janeiro</h4>
                     <div className="icons">
                         <div className="iconUnic">
@@ -202,13 +214,17 @@ const properties = {
           <div className="each-slide-effect">
           <div className="imageTop">
           <div className="image">
+            <a href="/imovel">
                     <img src={images[3]} alt="" />
+            </a>
             </div>
                 <div className="block">
                     <div className="featured">
                         <p>Novo</p>
                     </div>
+                    <a href="/imovel">
                     <h2>Apartamento luxuoso</h2>
+                    </a>
                     <h4>Centro - Rio Bonito - Rio de Janeiro</h4>
                     <div className="icons">
                         <div className="iconUnic">
