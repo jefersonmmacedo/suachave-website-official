@@ -31,10 +31,6 @@ export function SignUpClient() {
     }
     return (
         <div className="SignUpClient">
-            <div className="Client">
-                <div className="block">
-                </div>
-            </div>
             <div className="login">
                 <form action="">
                 <img src={Logo} alt="Logo GPS Buscador" />
@@ -74,6 +70,10 @@ export function SignUpClient() {
                     </div>
                 </form>
 
+            </div>
+            <div className="Client">
+                <div className="block">
+                </div>
             </div>
         </div>
     )

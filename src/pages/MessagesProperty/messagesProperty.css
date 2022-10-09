@@ -11,6 +11,7 @@
     margin-top: 40px;
     margin-bottom: 20px;
     font-weight: bold;
+    text-align: center;
 
 }
 .MessagesProperty .text {
@@ -26,7 +27,8 @@
 
 .MessagesProperty .text h3 {
     font-weight: 700;
-    color: var(--Paragraph)
+    color: var(--Paragraph);
+    text-align: center;
 }
 .MessagesProperty .text h3 svg{
     font-size: 45px;

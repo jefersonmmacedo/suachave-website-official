@@ -6,10 +6,19 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import './Global.css';
 import { useContext } from 'react';
+import { useEffect } from 'react';
 
 
 function App() {
+  const suachave = "lá mundo";
   const {logout} = useContext(AuthContext);
+
+  useEffect(() => {
+    function newSetData() {
+      localStorage.setItem("suachave", JSON.stringify(suachave));
+    }
+    newSetData()
+  }, [])
   return (
     <BrowserRouter>
     <AuthProvider>

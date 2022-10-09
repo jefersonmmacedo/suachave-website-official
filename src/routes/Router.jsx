@@ -25,13 +25,15 @@ import { Company } from '../pages/Company/Company';
 import { Schedules } from '../pages/Schedules/Schedules';
 import { MessagesProperty } from '../pages/MessagesProperty/MessagesProperty';
 import { Simulator } from '../pages/Simulator/Simulator';
+import { SignInCompany } from '../pages/SignInCompany/SignInCompany';
+import { Dashboard } from '../pages/Adm/Dashboard/Dashboard';
 
 function Router () {
-const Local = localStorage.getItem("gpsbuscador");
+const Local = localStorage.getItem("suachave");
 const userLocal = JSON.parse(Local)
 
 function PrivateRoute({children} ) {
-    return userLocal !== null ? children : <Navigate to="/"/>
+    return userLocal !== null ? children : <Navigate to="/entrar"/>
 }
 
     return (
@@ -39,33 +41,48 @@ function PrivateRoute({children} ) {
             {/* Rotas abertas */}
             <Route path="/" element={<Home />}/>
             <Route path="/entrar" element={<SignIn />}/>
+            <Route path="/entrar-empresa" element={<SignInCompany />}/>
             <Route path="/cadastrar" element={<ChooseYourAccount />}/>
             <Route path="/cadastro-profissional" element={<SignUpProfessional />}/>
             <Route path="/cadastro-cliente" element={<SignUpClient />}/>
             <Route path="/imoveis/:status" element={<Properties />}/>
             <Route path="/minhas-propostas" element={<MyProposals />}/>
-            <Route path="/favoritos" element={<Favorites />}/>
             <Route path="/orcamentos" element={<Budgets />}/>
-            <Route path="/notificacoes" element={<Notifications />}/>
             <Route path="/profissionais" element={<Profesisonals />}/>
-            <Route path="/planos" element={<Pricing />}/>
             <Route path="/privacidade" element={<PrivacyPolicy />}/>
             <Route path="/termos" element={<TermsOfUse />}/>
             <Route path="/proposta" element={<ProposalPage />}/>
             <Route path="/orcamento" element={<BudgetPage />}/>
             <Route path="/novo-orcamento" element={<BudgetNew />}/>
-            <Route path="/mensagens" element={<MessagesProperty />}/>
             <Route path="/imovel" element={<Property />}/>
             <Route path="/imobiliarias" element={<Companies />}/>
             <Route path="/imobiliaria" element={<Company />}/>
             <Route path="/corretores" element={<Brokers />}/>
             <Route path="/test" element={<About />}/>
-            <Route path="/agendamentos" element={<Schedules />}/>
             <Route path="/simulador" element={<Simulator />}/>
+
+
+            {/* <Route path="/planos" element={<Pricing />}/>
+            <Route path="/mensagens" element={<MessagesProperty />}/>
+            <Route path="/favoritos" element={<Favorites />}/>
+            <Route path="/notificacoes" element={<Notifications />}/>
+            <Route path="/agendamentos" element={<Schedules />}/> */}
+
+            {/* <Route path="/adm/dashboard" element={<Dashboard />}/> */}
             
             {/* Rotas fechadas/login */}
-            {/* <Route path="/activeplain"
-                    element={ <PrivateRoute> <ActivePlain /> </PrivateRoute>} /> */}
+            <Route path="/planos"
+                    element={ <PrivateRoute> <Pricing /> </PrivateRoute>} />
+            <Route path="/mensagens"
+                    element={ <PrivateRoute> <MessagesProperty /> </PrivateRoute>} />
+            <Route path="/favoritos"
+                    element={ <PrivateRoute> <Favorites /> </PrivateRoute>} />
+            <Route path="/notificacoes"
+                    element={ <PrivateRoute> <Notifications /> </PrivateRoute>} />
+            <Route path="/agendamentos"
+                    element={ <PrivateRoute> <Schedules /> </PrivateRoute>} />
+            <Route path="/adm/dashboard"
+                    element={ <PrivateRoute> <Dashboard /> </PrivateRoute>} />
             </Routes>
            
     )
