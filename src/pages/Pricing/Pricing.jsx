@@ -8,7 +8,8 @@ export function Pricing() {
     return (
         <div className="Pricing">
             <Navbar2 />
-            <h2>Planos</h2>
+            <h2>Escolha o <span>plano ideal</span> para o seu negócio</h2>
+            <h4>Cada plano atende a uma necessidade, de acordo com as ferramentas oferecidas. <br/>Você poderá alterar a qualquer momento.</h4>
 
             <Plains />
 

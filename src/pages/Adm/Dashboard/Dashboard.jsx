@@ -7,53 +7,19 @@ export function Dashboard() {
         <div className="Dashboard">
             <NavbarAdm />
             <ToolBar />
-                <h2>Área administrativa</h2>
-                <h2>Área administrativa</h2>
-                <h2>Área administrativa</h2>
-                <h2>Área administrativa</h2>
-                <h2>Área administrativa</h2>
-                <h2>Área administrativa</h2>
-                <h2>Área administrativa</h2>
-                <h2>Área administrativa</h2>
-                <h2>Área administrativa</h2>
-                <h2>Área administrativa</h2>
-                <h2>Área administrativa</h2>
-                <h2>Área administrativa</h2>
-                <h2>Área administrativa</h2>
-                <h2>Área administrativa</h2>
-                <h2>Área administrativa</h2>
-                <h2>Área administrativa</h2>
-                <h2>Área administrativa</h2>
-                <h2>Área administrativa</h2>
-                <h2>Área administrativa</h2>
-                <h2>Área administrativa</h2>
-                <h2>Área administrativa</h2>
-                <h2>Área administrativa</h2>
-                <h2>Área administrativa</h2>
-                <h2>Área administrativa</h2>
-                <h2>Área administrativa</h2>
-                <h2>Área administrativa</h2>
-                <h2>Área administrativa</h2>
-                <h2>Área administrativa</h2>
-                <h2>Área administrativa</h2>
-                <h2>Área administrativa</h2>
-                <h2>Área administrativa</h2>
-                <h2>Área administrativa</h2>
-                <h2>Área administrativa</h2>
-                <h2>Área administrativa</h2>
-                <h2>Área administrativa</h2>
-                <h2>Área administrativa</h2>
-                <h2>Área administrativa</h2>
-                <h2>Área administrativa</h2>
-                <h2>Área administrativa</h2>
-                <h2>Área administrativa</h2>
-                <h2>Área administrativa</h2>
-                <h2>Área administrativa</h2>
-                <h2>Área administrativa</h2>
-                <h2>Área administrativa</h2>
-                <h2>Área administrativa</h2>
-                <h2>Área administrativa</h2>
-                <h2>Área administrativa</h2>
+            <div className="aside">
+                <h3>Olá, Sua Chave. Seja bem vindo!</h3>
+            <div className="informations">
+                <div className="infoData">
+                </div>
+                <div className="infoData">
+                </div>
+                <div className="infoData">
+                </div>
+                <div className="infoData">
+                </div>
+            </div>
+            </div>
         </div>
     )
 }

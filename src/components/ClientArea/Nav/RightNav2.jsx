@@ -27,8 +27,9 @@ const UlAdm = styled.ul`
     justify-content: center;
     text-decoration: none;
     font-weight: 700;
-    color: var(--White);
+    color: var(--Black2);
     padding: 5px 10px;
+    background-color: var(--BorderHover);
     border-radius: 6px;
     margin-left: -15px;
   }
@@ -117,8 +118,9 @@ const UlAdm = styled.ul`
       justify-content: flex-start;
       text-decoration: none;
       font-weight: 700;
-      color: var(--White);
+      color: var(--Primary);
       padding: 10px 20px;
+      background-color: var(--White);
       border-radius: 6px;
       margin: 5px;
     }

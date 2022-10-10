@@ -27,6 +27,7 @@ import { MessagesProperty } from '../pages/MessagesProperty/MessagesProperty';
 import { Simulator } from '../pages/Simulator/Simulator';
 import { SignInCompany } from '../pages/SignInCompany/SignInCompany';
 import { Dashboard } from '../pages/Adm/Dashboard/Dashboard';
+import { NewProperty } from '../pages/Adm/NewProperty/NewProperty';
 
 function Router () {
 const Local = localStorage.getItem("suachave");
@@ -81,8 +82,10 @@ function PrivateRoute({children} ) {
                     element={ <PrivateRoute> <Notifications /> </PrivateRoute>} />
             <Route path="/agendamentos"
                     element={ <PrivateRoute> <Schedules /> </PrivateRoute>} />
-            <Route path="/adm/dashboard"
+            <Route path="/adm/painel"
                     element={ <PrivateRoute> <Dashboard /> </PrivateRoute>} />
+            <Route path="/adm/painel/novoimovel"
+                    element={ <PrivateRoute> <NewProperty /> </PrivateRoute>} />
             </Routes>
            
     )

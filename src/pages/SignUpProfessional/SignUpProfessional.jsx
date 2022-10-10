@@ -64,7 +64,7 @@ export function SignUpProfessional() {
                         </>
 
                         }
-                        <input type="text" placeholder="CRECI-J" />
+                        <input type="text" placeholder="CRECI" />
                         <input type="email" placeholder="E-mail" />
                         <input type="text" placeholder="Telefone" />
                         <input type="text" placeholder="Whatsapp" />
@@ -73,6 +73,14 @@ export function SignUpProfessional() {
                         <button className="btn" onClick={() => handleSelectStepe("2")}>Avançar</button>
                         </>
                         : data === "2" ?
+                        <>
+                         <input type="text" placeholder="Nome Responsável" />
+                        <input type="email" placeholder="E-mail" />
+                        <input type="text" placeholder="Whatsapp" />
+                        <button className="btn" onClick={() => handleSelectStepe("1")}>Voltar</button>
+                        <button className="btn" onClick={() => handleSelectStepe("3")}>Avançar</button>
+                        </>
+                        : data === "3" ?
                          <>
                         <label className="label-avatar">
                             <span><FiUpload color="#f65" size={25} /></span>
@@ -88,8 +96,8 @@ export function SignUpProfessional() {
                          <input type="text" placeholder="UF" />
                          {/* <button >Avançar</button>
                          <button >Voltar</button> */}
-                        <button className="btn" onClick={() => handleSelectStepe("1")}>Voltar</button>
-                        <button onClick={() => handleSelectStepe("2")}>Cadastrar</button>
+                        <button className="btn" onClick={() => handleSelectStepe("2")}>Voltar</button>
+                        <button onClick={() => handleSelectStepe("4")}>Cadastrar</button>
                          </>
                          :""}
                         {/* <div className="links">

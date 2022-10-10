@@ -8,6 +8,16 @@ import imobiliária3 from "../../assets/images/corretor3.jpg";
 export function BrokerList() {
     return (
         <div className="BrokerList">
+            <div className="searchBrokers">
+                <input type="text" placeholder="Busque pelo nome"/>
+                <select name="" id="">
+                    <option value="">Estado</option>
+                </select>
+                <select name="" id="">
+                    <option value="">Cidade</option>
+                </select>
+            </div>
+
             <div className="listBroker">
             
             <div className="BrokerUnicFavorite">

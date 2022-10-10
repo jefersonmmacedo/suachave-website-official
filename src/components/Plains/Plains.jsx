@@ -14,7 +14,7 @@ export function Plains() {
                 <div className="text">
                     <p><IoCheckbox /> Imóveis ilimitadas</p>
                     <p><IoCheckbox /> 20 fotos por imóvel</p>
-                    <p><IoCheckbox /> Sem vídeo por imóvel</p>
+                    <p><IoCheckbox /> Sem vídeo </p>
                     <p><IoCheckbox /> Área administrativa</p>
                     <p><IoCheckbox /> App administrativo</p>
                     <p><IoCheckbox /> Imóveis no site e app sua chave</p>
@@ -30,7 +30,7 @@ export function Plains() {
                 <div className="text">
                     <p><IoCheckbox /> Imóveis ilimitadas</p>
                     <p><IoCheckbox /> 40 fotos por imóvel</p>
-                    <p><IoCheckbox /> Até 1 vídeo por imóvel</p>
+                    <p><IoCheckbox /> Até 1 vídeo</p>
                     <p><IoCheckbox /> Área administrativa</p>
                     <p><IoCheckbox /> App administrativo</p>
                     <p><IoCheckbox /> Site individual para sua empresa</p>
@@ -49,7 +49,7 @@ export function Plains() {
                 <div className="text">
                     <p><IoCheckbox /> Imóveis ilimitadas</p>
                     <p><IoCheckbox /> 40 fotos por imóvel</p>
-                    <p><IoCheckbox /> Até 2 vídeos por imóvel</p>
+                    <p><IoCheckbox /> Até 2 vídeos</p>
                     <p><IoCheckbox /> Área administrativa</p>
                     <p><IoCheckbox /> App administrativo</p>
                     <p><IoCheckbox /> Site e app individual para sua empresa</p>

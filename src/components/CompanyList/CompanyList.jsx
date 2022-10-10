@@ -7,6 +7,15 @@ import imobiliária2 from "../../assets/images/imob2.png";
 export function CompanyList() {
     return (
         <div className="CompanyList">
+            <div className="searchCompanies">
+                <input type="text" placeholder="Busque pelo nome"/>
+                <select name="" id="">
+                    <option value="">Estado</option>
+                </select>
+                <select name="" id="">
+                    <option value="">Cidade</option>
+                </select>
+            </div>
             <div className="listProperties">
             
             <div className="propertyUnicFavorite">

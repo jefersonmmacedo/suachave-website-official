@@ -6,6 +6,33 @@
     justify-content: center;
 }
 
+
+.BrokerList .searchBrokers {
+    width: 700px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.BrokerList .searchBrokers input {
+    width: 100%;
+    height: 40px;
+    padding: 10px 20px;
+    border: 1px solid var(--Border);
+    border-radius: 6px;
+    margin: 2px;
+}
+.BrokerList .searchBrokers select {
+    width: 100%;
+    height: 40px;
+    padding: 10px 20px;
+    border: 1px solid var(--Border);
+    border-radius: 6px;
+    margin: 2px;
+}
+
 .BrokerList .listBroker {
     width: 90%;
     display: flex;
@@ -212,6 +239,15 @@
         width: 90%;
     }
 
+    .BrokerList .searchBrokers {
+        width: 85%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin: 10px 0;
+    }
+
     @media (max-width: 800px) {
         .BrokerList .listBroker {
             width: 97%;
@@ -221,6 +257,15 @@
         @media (max-width: 711px) {
             .BrokerList .listBroker .BrokerUnicFavorite {
                 width: 100%;
+            }
+
+            .BrokerList .searchBrokers {
+                width: 98%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                margin: 10px 0;
             }
 
 
@@ -247,6 +292,16 @@
                 }
 
                 @media (max-width: 515px) {
+
+                    .BrokerList .searchBrokers {
+                        width: 98%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        margin: 10px 0;
+                    }
+
                     .BrokerList .listBroker .BrokerUnicFavorite .text {
                         justify-content: flex-start;
                     }

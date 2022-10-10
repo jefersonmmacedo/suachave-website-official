@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import Burger from './Burger';
-import LogoImg from '../../../assets/images/Logo2.png'
+import LogoImg from '../../../assets/images/Logo.png'
 import LogoSimbol from '../../../assets/images/Simbol.png'
-import {IoHeart, IoNotifications} from 'react-icons/io5'
+import {IoHeartOutline, IoNotificationsOutline} from 'react-icons/io5'
 import { Link } from 'react-router-dom';
 import ReactTooltip from 'react-tooltip';
 
@@ -18,7 +18,7 @@ const Nav = styled.nav`
   position: fixed;
   top: 0;
   z-index: 97;
-  background-color: #d51942;
+  background: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(4px);
   font-size: 14px;
   color: var(--Description)
@@ -88,7 +88,7 @@ const Nav = styled.nav`
     background-color: rgba(238,238,238,0.5);
     font-weight:600;
     color: var(--Primary);
-    font-size:20px;
+    font-size:18px;
     margin:5px 5px;
 }
 
@@ -136,11 +136,11 @@ const Nav = styled.nav`
     border: none;
     border-radius: 50%;
     padding: 10px;
-    background-color: #ed2737;
+    background-color: rgba(238,238,238,0.5);
     font-weight:600;
-    color: var(--White);
+    color: var(--Primary);
     font-size:18px;
-    margin:5px;
+    margin:5px 5px;
 }
 
 
@@ -186,12 +186,12 @@ const NavbarAdm = () => {
       <div className="account2">
 
 
-                <button className='iconUnic2' data-tip data-for='Chat'><IoHeart/></button>
+                <button className='iconUnic2' data-tip data-for='Chat'><IoHeartOutline/></button>
                 <ReactTooltip id='Chat' place="bottom" type="dark" effect="solid">
                      <span>Chat</span>
                 </ReactTooltip>
 
-                <button className='iconUnic2' data-tip data-for='Notificações'><IoNotifications/></button>
+                <button className='iconUnic2' data-tip data-for='Notificações'><IoNotificationsOutline/></button>
                 <ReactTooltip id='Notificações' place="bottom" type="dark" effect="solid">
                      <span>Notificações</span>
                 </ReactTooltip>

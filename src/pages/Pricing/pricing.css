@@ -8,10 +8,18 @@
 
 .Pricing h2 {
     margin-top: 100px;
-    margin-bottom: 20px;
     font-weight: bold;
     text-align: center;
 }
+.Pricing h2 span {
+    color: var(--Primary);
+}
+.Pricing h4 {
+    text-align: center;
+    margin: 5px 0;
+    color: var(--Paragraph);
+}
+
 
 .Pricing .img {
     width: 50%;
