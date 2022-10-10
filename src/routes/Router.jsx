@@ -28,6 +28,7 @@ import { Simulator } from '../pages/Simulator/Simulator';
 import { SignInCompany } from '../pages/SignInCompany/SignInCompany';
 import { Dashboard } from '../pages/Adm/Dashboard/Dashboard';
 import { NewProperty } from '../pages/Adm/NewProperty/NewProperty';
+import { MyAccount } from '../pages/MyAccount/MyAccount';
 
 function Router () {
 const Local = localStorage.getItem("suachave");
@@ -74,6 +75,8 @@ function PrivateRoute({children} ) {
             {/* Rotas fechadas/login */}
             <Route path="/planos"
                     element={ <PrivateRoute> <Pricing /> </PrivateRoute>} />
+            <Route path="/minhaconta"
+                    element={ <PrivateRoute> <MyAccount /> </PrivateRoute>} />
             <Route path="/mensagens"
                     element={ <PrivateRoute> <MessagesProperty /> </PrivateRoute>} />
             <Route path="/favoritos"

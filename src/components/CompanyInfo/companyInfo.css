@@ -50,6 +50,9 @@
     justify-content: center;
     white-space: pre-line;
     margin: 3px 0;
+    background-color: var(--BorderInput);
+    padding: 10px;
+    border-radius: 6px;
 }
 
 .CompanyInfo .contact .info h5 {
@@ -58,7 +61,7 @@
     margin-left: 5px;
 }
 .CompanyInfo .contact .info svg {
-    color: var(--Gray);
+    color: var(--Primary);
 }
 
 .CompanyInfo .buttonsContact {
@@ -67,7 +70,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 10px 0;
+    margin-bottom: 10px;
 }
 .CompanyInfo .buttonsContact button {
     width: 100%;

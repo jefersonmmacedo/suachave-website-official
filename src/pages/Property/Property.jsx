@@ -1,7 +1,7 @@
 ﻿import "./property.css"
 import { SliderImages } from '../../components/SliderImages/SliderImages';
 import Navbar2 from "../../components/Nav/Navbar";
-import { FaBed, FaCar, FaShower } from "react-icons/fa";
+import { FaBed, FaCar, FaShower, FaBath } from "react-icons/fa";
 import { IoCrop, IoHeart, IoMove, IoCheckmarkSharp, IoLocationOutline } from "react-icons/io5";
 import { Footer } from "../../components/Footer/Footer";
 import { CompanyInfo } from "../../components/CompanyInfo/CompanyInfo";
@@ -47,6 +47,13 @@ export function Property() {
                             <p>Quartos</p>
                             <div className="simbol">
                                 <FaBed />
+                                <p>3</p>
+                            </div>
+                        </div>
+                        <div className="iconUnic">
+                            <p>Suítes</p>
+                            <div className="simbol">
+                                <FaBath />
                                 <p>3</p>
                             </div>
                         </div>

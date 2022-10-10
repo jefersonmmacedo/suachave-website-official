@@ -135,6 +135,10 @@ const Nav = styled.nav`
 
 `
 
+function HandleOpenAccount(e) {
+  e.preventDefault();
+  window.open("/minhaconta", "_self")
+}
 function HandleOpen(e) {
   e.preventDefault();
   window.open("/entrar", "_self")
@@ -234,7 +238,7 @@ const Navbar2 = () => {
                </>
                   }
 
-                <button className='iconOut' onClick={HandleOpen} data-tip data-for='Minha conta'><IoPersonOutline /></button>
+                <button className='iconOut' onClick={HandleOpenAccount} data-tip data-for='Minha conta'><IoPersonOutline /></button>
                 <ReactTooltip id='Minha conta' place="bottom" type="dark" effect="solid">
                      <span>Minha conta</span>
                 </ReactTooltip>

@@ -147,9 +147,9 @@ function HandleLogout(e) {
   e.preventDefault();
   window.open("/entrar", "_self")
 }
-function HandleOpenMInhasPropostas(e) {
+function HandleOpenAccount(e) {
   e.preventDefault();
-  window.open("/minhas-propostas", "_self")
+  window.open("/minhaconta", "_self")
 }
 function HandleOpenNotificaçõess(e) {
   e.preventDefault();
@@ -242,7 +242,7 @@ const RightNav = ({ open }) => {
           <button className='btn' onClick={HandleOpen}>
             <IoHeartOutline /> &nbsp; Favoritos
           </button>
-          <button className='btn' onClick={HandleOpen}>
+          <button className='btn' onClick={HandleOpenAccount}>
             <IoPersonOutline /> &nbsp; Minha conta
           </button> 
           <button onClick={HandleLogout}>
