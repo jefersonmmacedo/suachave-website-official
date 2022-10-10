@@ -1,5 +1,5 @@
 ﻿import "./downloadApp.css";
-import {IoLogoWhatsapp, IoLogoApple} from 'react-icons/io5';
+import {IoLogoAndroid, IoLogoApple} from 'react-icons/io5';
 import iphone from '../../assets/images/iphone.png'
 import iphone2 from '../../assets/images/iphone2.png'
 
@@ -13,7 +13,7 @@ export function DownloadApp() {
                 <div className="Apps">
                 <div className="buttonsApps">
                     <div className="iconApp">
-                        <IoLogoWhatsapp />
+                        <IoLogoAndroid />
                     </div>
                     <div className="TextApp">
                         <h6>Disponível no</h6>

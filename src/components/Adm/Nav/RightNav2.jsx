@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import {IoSpeedometer, IoPerson, IoHeart, IoNotifications, IoLogOutOutline, IoChatboxEllipses, IoHome, IoLaptopOutline, IoCalendar } from 'react-icons/io5';
+import {IoSpeedometer, IoPerson, IoHeart, IoNotifications, IoLogOutOutline, IoChatboxEllipses, IoHome, IoLaptopOutline, IoCalendar, IoOptions } from 'react-icons/io5';
 
 const UlAdm = styled.ul`
   list-style: none;
@@ -16,6 +16,9 @@ const UlAdm = styled.ul`
     padding:2px 10px;
     font-weight: 700;
   }
+  .nav-item2 {
+    display: none;
+  }
   li a{
     width: 80px;
     display: flex;
@@ -24,9 +27,9 @@ const UlAdm = styled.ul`
     justify-content: center;
     text-decoration: none;
     font-weight: 700;
-    color: var(--White);
+    color: var(--Black2);
     padding: 5px 10px;
-    background-color: var(--Black2);
+    background-color: var(--BorderHover);
     border-radius: 6px;
     margin-left: -15px;
   }
@@ -96,7 +99,7 @@ const UlAdm = styled.ul`
 
   @media (max-width: 900px) {
     flex-flow: column nowrap;
-    background: rgba(0, 0, 0, 0.95);
+    background: rgba(237, 50, 55, 0.95);
     backdrop-filter: blur(4px);
     position: fixed;
     transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
@@ -107,7 +110,6 @@ const UlAdm = styled.ul`
     padding-top: 3.5rem;
     transition: transform 0.3s ease-in-out;
 
-
     li a{
       width: 80%;
       display: flex;
@@ -116,9 +118,9 @@ const UlAdm = styled.ul`
       justify-content: flex-start;
       text-decoration: none;
       font-weight: 700;
-      color: var(--White);
+      color: var(--Primary);
       padding: 10px 20px;
-      background-color: var(--Black2);
+      background-color: var(--White);
       border-radius: 6px;
       margin: 5px;
     }
@@ -176,6 +178,14 @@ const UlAdm = styled.ul`
     .btn:hover{
       background-color: var(--Blue);
     }
+
+    @media (max-width: 700px) {
+      .nav-item2 {
+        display: block;
+        margin-left: 23px;
+        width: 100%;
+      }
+    }
   }
 
   }
@@ -226,6 +236,11 @@ const RightNav2 = ({ open }) => {
           <li className='nav-item'>
             <Link to='/simulador' >
            <IoLaptopOutline /> <p>Site/App</p> 
+            </Link>
+          </li> 
+          <li className='nav-item2'>
+            <Link to='/simulador' >
+           <IoOptions /> <p>Mais opções</p> 
             </Link>
           </li> 
           <div className="account">

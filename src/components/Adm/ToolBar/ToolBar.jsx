@@ -29,32 +29,32 @@ export function ToolBar() {
                     <IoCalendar /><p>Agenda</p>
                     </a>
                 </div>
-                <div className="ToolUnic">
+                <div className="ToolUnic2">
                    <a href="/adm/dashboard">
                     <IoHeart /><p>Favoritos</p>
                     </a>
                 </div>
-                <div className="ToolUnic">
+                <div className="ToolUnic2">
                    <a href="/adm/dashboard">
                     <IoNotifications /><p>Alertas</p>
                     </a>
                 </div>
-                <div className="ToolUnic">
+                <div className="ToolUnic2">
                    <a href="/adm/dashboard">
                     <IoQrCode /><p>Meu plano</p>
                     </a>
                 </div>
-                <div className="ToolUnic">
+                <div className="ToolUnic2">
                    <a href="/adm/dashboard">
                     <IoPeople /><p>Corretores</p>
                     </a>
                 </div>
                 <div className="ToolUnic">
                    <a href="/adm/dashboard">
-                    <IoPerson /><p>Minha conta</p>
+                    <IoPerson /><p>Conta</p>
                     </a>
                 </div>
-                <div className="ToolUnic">
+                <div className="ToolUnic2">
                    <a href="/adm/dashboard">
                     <IoLaptopOutline /><p>Site/App</p>
                     </a>

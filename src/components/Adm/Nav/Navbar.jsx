@@ -1,10 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import Burger from './Burger';
-import LogoImg from '../../../assets/images/Logo2.png'
+import LogoImg from '../../../assets/images/Logo.png'
 import LogoSimbol from '../../../assets/images/Simbol.png'
-import {IoDocumentTextOutline, IoPersonOutline, IoHeartOutline, IoNotificationsOutline,
-  IoLogOutOutline, IoGridOutline, IoHomeOutline, IoChatboxEllipsesOutline, IoCalendarOutline} from 'react-icons/io5'
+import {IoHeartOutline, IoNotificationsOutline} from 'react-icons/io5'
 import { Link } from 'react-router-dom';
 import ReactTooltip from 'react-tooltip';
 
@@ -19,7 +18,7 @@ const Nav = styled.nav`
   position: fixed;
   top: 0;
   z-index: 97;
-  background: rgba(0, 0, 0);
+  background: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(4px);
   font-size: 14px;
   color: var(--Description)
@@ -46,6 +45,10 @@ const Nav = styled.nav`
     text-decoration: none;
     list-style: none;
   }
+  .account2 {
+    display: none;
+  }
+
 
   .account li {
     padding: 18px 10px;
@@ -73,6 +76,7 @@ const Nav = styled.nav`
     font-weight:600;
     color: var(--White);
 }
+
   .account .iconUnic {
     display: flex;
     flex-direction: row;
@@ -87,6 +91,7 @@ const Nav = styled.nav`
     font-size:18px;
     margin:5px 5px;
 }
+
   .account .iconOut {
     display: flex;
     flex-direction: row;
@@ -110,6 +115,34 @@ const Nav = styled.nav`
     width: 100%;
     justify-content: center;
   }
+
+  .account2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    font-weight:600;
+    color: var(--White);
+    text-decoration: none;
+    list-style: none;
+    margin: 20px 40px;
+    width: 100%;
+  }
+  .account2 .iconUnic2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: rgba(238,238,238,0.5);
+    font-weight:600;
+    color: var(--Primary);
+    font-size:18px;
+    margin:5px 5px;
+}
+
 
   .account button {
     width: 80%;
@@ -146,10 +179,24 @@ const NavbarAdm = () => {
     <Nav>
       <div className="logo">
         <a href="/">
-      <img src={LogoImg} alt="Logo CPA Educacional" />
+      <img src={LogoImg} alt="Logo Sua Chave" />
         </a>
       </div>
       <Burger />
+      <div className="account2">
+
+
+                <button className='iconUnic2' data-tip data-for='Chat'><IoHeartOutline/></button>
+                <ReactTooltip id='Chat' place="bottom" type="dark" effect="solid">
+                     <span>Chat</span>
+                </ReactTooltip>
+
+                <button className='iconUnic2' data-tip data-for='Notificações'><IoNotificationsOutline/></button>
+                <ReactTooltip id='Notificações' place="bottom" type="dark" effect="solid">
+                     <span>Notificações</span>
+                </ReactTooltip>
+
+      </div>
     </Nav>
   )
 }
