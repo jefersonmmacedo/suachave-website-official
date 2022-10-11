@@ -10,7 +10,9 @@ import { useEffect } from 'react';
 
 
 function App() {
-  const suachave = "lá mundo";
+  const suachave = {
+    type: "company"
+  };
   const {logout} = useContext(AuthContext);
 
   useEffect(() => {

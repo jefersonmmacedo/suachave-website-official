@@ -4,7 +4,7 @@ import Burger from './Burger';
 import LogoImg from '../../assets/images/Logo.png'
 import LogoSimbol from '../../assets/images/Simbol.png'
 import {IoDocumentTextOutline, IoPersonOutline, IoHeartOutline, IoNotificationsOutline,
-  IoLogOutOutline, IoGridOutline, IoHomeOutline, IoChatboxEllipsesOutline, IoCalendarOutline} from 'react-icons/io5'
+  IoLogOutOutline, IoSpeedometerOutline, IoHomeOutline, IoChatboxEllipsesOutline, IoCalendarOutline} from 'react-icons/io5'
 import { Link } from 'react-router-dom';
 import ReactTooltip from 'react-tooltip';
 
@@ -170,7 +170,7 @@ function handleOpenAgendamentos(e) {
 
 const Navbar2 = () => {
   const logged = true;
-  const professional = false;
+  const professional = true;
   return (
     <Nav>
       <div className="logo">
@@ -209,7 +209,7 @@ const Navbar2 = () => {
                      <span>Notificações</span>
                 </ReactTooltip>
 
-                <button className='iconUnic' onClick={HandleOpen} data-tip data-for='Administração'><IoGridOutline /></button>
+                <button className='iconUnic' onClick={HandleOpen} data-tip data-for='Administração'><IoSpeedometerOutline /></button>
                 <ReactTooltip id='Administração' place="bottom" type="dark" effect="solid">
                      <span>Administração</span>
                 </ReactTooltip>
@@ -234,14 +234,14 @@ const Navbar2 = () => {
                 <ReactTooltip id='Favoritos' place="bottom" type="dark" effect="solid">
                      <span>Favoritos</span>
                 </ReactTooltip>
-
-               </>
-                  }
-
                 <button className='iconOut' onClick={HandleOpenAccount} data-tip data-for='Minha conta'><IoPersonOutline /></button>
                 <ReactTooltip id='Minha conta' place="bottom" type="dark" effect="solid">
                      <span>Minha conta</span>
                 </ReactTooltip>
+
+               </>
+                  }
+
                 <button className='iconOut' onClick={HandleOpen}><IoLogOutOutline /></button>
         </>
         : ""

@@ -29,6 +29,14 @@ import { SignInCompany } from '../pages/SignInCompany/SignInCompany';
 import { Dashboard } from '../pages/Adm/Dashboard/Dashboard';
 import { NewProperty } from '../pages/Adm/NewProperty/NewProperty';
 import { MyAccount } from '../pages/MyAccount/MyAccount';
+import { PlainsAdm } from '../pages/Adm/PlainsAdm/PlainsAdm';
+import { ChatAdm } from '../pages/Adm/ChatAdm/ChatAdm';
+import { NotificationsAdm } from '../pages/Adm/NotificationsAdm/NotificationsAdm';
+import { SchedulesAdm } from '../pages/Adm/SchedulesAdm/SchedulesAdm';
+import { BrokersAdm } from '../pages/Adm/BrokersAdm/BrokersAdm';
+import { WebApp } from '../pages/Adm/WebApp/WebApp';
+import { MyAccountAdm } from '../pages/Adm/MyAccountAdm/MyAccountAdm';
+import { MenuAdm } from '../pages/Adm/MenuAdm/MenuAdm';
 
 function Router () {
 const Local = localStorage.getItem("suachave");
@@ -63,16 +71,8 @@ function PrivateRoute({children} ) {
             <Route path="/test" element={<About />}/>
             <Route path="/simulador" element={<Simulator />}/>
 
-
-            {/* <Route path="/planos" element={<Pricing />}/>
-            <Route path="/mensagens" element={<MessagesProperty />}/>
-            <Route path="/favoritos" element={<Favorites />}/>
-            <Route path="/notificacoes" element={<Notifications />}/>
-            <Route path="/agendamentos" element={<Schedules />}/> */}
-
-            {/* <Route path="/adm/dashboard" element={<Dashboard />}/> */}
             
-            {/* Rotas fechadas/login */}
+            /* Rotas fechadas/login */
             <Route path="/planos"
                     element={ <PrivateRoute> <Pricing /> </PrivateRoute>} />
             <Route path="/minhaconta"
@@ -85,10 +85,26 @@ function PrivateRoute({children} ) {
                     element={ <PrivateRoute> <Notifications /> </PrivateRoute>} />
             <Route path="/agendamentos"
                     element={ <PrivateRoute> <Schedules /> </PrivateRoute>} />
-            <Route path="/adm/painel"
+            <Route path="/painel"
                     element={ <PrivateRoute> <Dashboard /> </PrivateRoute>} />
-            <Route path="/adm/painel/novoimovel"
+            <Route path="/painel/novoimovel"
                     element={ <PrivateRoute> <NewProperty /> </PrivateRoute>} />
+            <Route path="/painel/planos"
+                    element={ <PrivateRoute> <PlainsAdm /> </PrivateRoute>} />
+            <Route path="/painel/chat"
+                    element={ <PrivateRoute> <ChatAdm /> </PrivateRoute>} />
+            <Route path="/painel/notificacoes"
+                    element={ <PrivateRoute> <NotificationsAdm /> </PrivateRoute>} />
+            <Route path="/painel/agendamentos"
+                    element={ <PrivateRoute> <SchedulesAdm /> </PrivateRoute>} />
+            <Route path="/painel/corretores"
+                    element={ <PrivateRoute> <BrokersAdm /> </PrivateRoute>} />
+            <Route path="/painel/minhaconta"
+                    element={ <PrivateRoute> <MyAccountAdm /> </PrivateRoute>} />
+            <Route path="/painel/web"
+                    element={ <PrivateRoute> <WebApp /> </PrivateRoute>} />
+            <Route path="/painel/menu"
+                    element={ <PrivateRoute> <MenuAdm /> </PrivateRoute>} />
             </Routes>
            
     )

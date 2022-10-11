@@ -1,6 +1,6 @@
 ﻿import "./toolBar.css";
 import LogoImg from '../../../assets/images/imob1.png'
-import {IoSpeedometer, IoPerson, IoHeart, IoNotifications, IoLogOutOutline, IoChatboxEllipses,
+import {IoSpeedometer, IoPerson,  IoNotifications, IoLogOutOutline, IoChatboxEllipses,
     IoHome, IoLaptopOutline, IoCalendar, IoLogoWhatsapp, IoQrCode, IoPeople } from 'react-icons/io5';
 export function ToolBar() {
     return (
@@ -10,52 +10,47 @@ export function ToolBar() {
             </div>
             <div className="Tools">
                 <div className="ToolUnic">
-                   <a href="/adm/dashboard">
+                   <a href="/painel">
                     <IoSpeedometer /><p>Painel</p>                    
                     </a>
                 </div>
                 <div className="ToolUnic">
-                   <a href="/adm/dashboard">
+                   <a href="/painel/chat">
+                    <IoChatboxEllipses /><p>Chat</p>
+                    </a>
+                </div>
+                <div className="ToolUnic3">
+                   <a href="/painel/novoimovel">
                     <IoHome /><p>Imóveis</p>
                     </a>
                 </div>
                 <div className="ToolUnic">
-                   <a href="/adm/dashboard">
-                    <IoChatboxEllipses /><p>Chat</p>
-                    </a>
-                </div>
-                <div className="ToolUnic">
-                   <a href="/adm/dashboard">
+                   <a href="/painel/agendamentos">
                     <IoCalendar /><p>Agenda</p>
                     </a>
                 </div>
                 <div className="ToolUnic2">
-                   <a href="/adm/dashboard">
-                    <IoHeart /><p>Favoritos</p>
-                    </a>
-                </div>
-                <div className="ToolUnic2">
-                   <a href="/adm/dashboard">
+                   <a href="/painel/notificacoes">
                     <IoNotifications /><p>Alertas</p>
                     </a>
                 </div>
                 <div className="ToolUnic2">
-                   <a href="/adm/dashboard">
+                   <a href="/painel/planos">
                     <IoQrCode /><p>Meu plano</p>
                     </a>
                 </div>
                 <div className="ToolUnic2">
-                   <a href="/adm/dashboard">
+                   <a href="/painel/corretores">
                     <IoPeople /><p>Corretores</p>
                     </a>
                 </div>
                 <div className="ToolUnic">
-                   <a href="/adm/dashboard">
+                   <a href="/painel/minhaconta">
                     <IoPerson /><p>Conta</p>
                     </a>
                 </div>
                 <div className="ToolUnic2">
-                   <a href="/adm/dashboard">
+                   <a href="/painel/web">
                     <IoLaptopOutline /><p>Site/App</p>
                     </a>
                 </div>

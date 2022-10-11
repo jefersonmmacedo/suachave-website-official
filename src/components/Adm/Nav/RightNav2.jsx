@@ -197,47 +197,43 @@ const RightNav2 = ({ open }) => {
     <UlAdm open={open}>
 
        <li className='nav-item'>
-            <Link to='/imoveis/aluguel'>
+            <Link to='/painel'>
            <IoSpeedometer /> <p>Painel</p> 
             </Link>
           </li>
           <li className='nav-item'>
-            <Link to='/imoveis/venda' >
+            <Link to='/painel/novoimovel' >
            <IoHome /> <p>Imóveis</p>
             </Link>
           </li>
           <li className='nav-item'>
-            <Link to='/corretores' >
+            <Link to='/painel/chat' >
            <IoChatboxEllipses /> <p>Chat</p> 
             </Link>
           </li>
           <li className='nav-item'>
-            <Link to='/imobiliarias' >
+            <Link to='/painel/agendamentos' >
            <IoCalendar /> <p>Agenda</p> 
             </Link>
           </li>
+
           <li className='nav-item'>
-            <Link to='/simulador' >
-            <IoHeart /> <p>Favoritos</p> 
-            </Link>
-          </li> 
-          <li className='nav-item'>
-            <Link to='/simulador' >
+            <Link to='/painel/notificacoes' >
             <IoNotifications /> <p>Alertas</p> 
             </Link>
           </li> 
           <li className='nav-item'>
-            <Link to='/simulador' >
+            <Link to='/painel/minhaconta' >
            <IoPerson /> <p>Perfil</p> 
             </Link>
           </li> 
           <li className='nav-item'>
-            <Link to='/simulador' >
+            <Link to='/painel/web' >
            <IoLaptopOutline /> <p>Site/App</p> 
             </Link>
           </li> 
           <li className='nav-item2'>
-            <Link to='/simulador' >
+            <Link to='/painel/menu' >
            <IoOptions /> <p>Mais opções</p> 
             </Link>
           </li> 

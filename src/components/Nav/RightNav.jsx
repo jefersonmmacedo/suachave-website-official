@@ -164,7 +164,7 @@ function handleOpenAgendamentos(e) {
 
 const RightNav = ({ open }) => {
   const logged = true;
-  const professional = false;
+  const professional = true;
   return (
     <Ul open={open}>
        {/* <li className='nav-item'>

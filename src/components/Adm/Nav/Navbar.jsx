@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Burger from './Burger';
 import LogoImg from '../../../assets/images/Logo2.png'
 import LogoSimbol from '../../../assets/images/Simbol.png'
-import {IoHeart, IoNotifications} from 'react-icons/io5'
+import {IoHome, IoNotifications, IoChatboxEllipses, IoCalendar} from 'react-icons/io5'
 import { Link } from 'react-router-dom';
 import ReactTooltip from 'react-tooltip';
 
@@ -178,7 +178,7 @@ const NavbarAdm = () => {
   return (
     <Nav>
       <div className="logo">
-        <a href="/">
+        <a href="/painel">
       <img src={LogoImg} alt="Logo Sua Chave" />
         </a>
       </div>
@@ -186,9 +186,17 @@ const NavbarAdm = () => {
       <div className="account2">
 
 
-                <button className='iconUnic2' data-tip data-for='Chat'><IoHeart/></button>
+                <button className='iconUnic2' data-tip data-for='Novo Imóvel'><IoHome/></button>
+                <ReactTooltip id='Novo Imóvel' place="bottom" type="dark" effect="solid">
+                     <span>Novo Imóvel</span>
+                </ReactTooltip>
+                <button className='iconUnic2' data-tip data-for='Chat'><IoChatboxEllipses/></button>
                 <ReactTooltip id='Chat' place="bottom" type="dark" effect="solid">
                      <span>Chat</span>
+                </ReactTooltip>
+                <button className='iconUnic2' data-tip data-for='Agendamento'><IoCalendar/></button>
+                <ReactTooltip id='Agendamento' place="bottom" type="dark" effect="solid">
+                     <span>Agendamento</span>
                 </ReactTooltip>
 
                 <button className='iconUnic2' data-tip data-for='Notificações'><IoNotifications/></button>
