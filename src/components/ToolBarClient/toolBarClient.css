@@ -109,6 +109,9 @@
 
 @media (max-width: 700px) {
     .ToolBarClient {
+        display: none;
+    }
+    /* .ToolBarClient {
         width: 100%;
         display: flex;
         flex-direction: row;
@@ -116,9 +119,9 @@
         justify-content: center;
         padding: 0px;
         background-color: none;
-    }
+    } */
 
-    .ToolBarClient .image {
+    /* .ToolBarClient .image {
         display: none;
     }
 
@@ -165,5 +168,5 @@ width: 150px;
 
     .ToolBarClient .ToolsClient button {
         display: none; 
-    }
+    } */
 }

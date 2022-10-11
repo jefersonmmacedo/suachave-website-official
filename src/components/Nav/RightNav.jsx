@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import {IoDocumentTextOutline, IoPersonOutline, IoHeartOutline, IoNotificationsOutline, IoLogOutOutline, IoChatboxEllipsesOutline, IoHomeOutline, IoGridOutline, IoCalendarOutline } from 'react-icons/io5';
+import {IoDocumentTextOutline, IoPersonOutline, IoHeartOutline, IoNotificationsOutline, IoLogOutOutline, IoChatboxEllipsesOutline, IoHomeOutline, IoSpeedometerOutline, IoCalendarOutline } from 'react-icons/io5';
 
 const Ul = styled.ul`
   list-style: none;
@@ -135,36 +135,15 @@ const Ul = styled.ul`
   }
 `;
 
-function HandleOpen(e) {
-  e.preventDefault();
-  window.open("https://wa.me/5522999942800?text=Olá. Gostaria de saber mais detalhes sobre cursos")
-}
-function HandleOpenOrçamento(e) {
-  e.preventDefault();
-  window.open("orcamentos", "_self")
-}
-function HandleLogout(e) {
-  e.preventDefault();
-  window.open("/entrar", "_self")
-}
-function HandleOpenAccount(e) {
-  e.preventDefault();
-  window.open("/minhaconta", "_self")
-}
-function HandleOpenNotificaçõess(e) {
-  e.preventDefault();
-  window.open("/notificacoes", "_self")
-}
-function handleOpenAgendamentos(e) {
-  e.preventDefault();
-  window.open("/agendamentos", "_self")
-}
 
+function HandleOpenLink(data) {
+  window.open(`${data}`, "_self")
+}
 
 
 const RightNav = ({ open }) => {
-  const logged = true;
-  const professional = true;
+  const Local = localStorage.getItem("suachave");
+  const user = JSON.parse(Local);
   return (
     <Ul open={open}>
        {/* <li className='nav-item'>
@@ -197,9 +176,9 @@ const RightNav = ({ open }) => {
             Simulador
             </Link>
           </li>
-          {logged === false ? 
+          {user === "" ? 
             <>
-            <button onClick={HandleLogout}>
+            <button onClick={() => HandleOpenLink("/entrar")}>
               <IoLogOutOutline /> &nbsp; Entrar
             </button>
             <li className='nav-item'>
@@ -210,42 +189,42 @@ const RightNav = ({ open }) => {
             </>
           :
           <>
-          {professional === true ?
+          {user.type === "company" ?
           <>
-                    <button className='btn' onClick={HandleOpenOrçamento}>
+                    <button className='btn' onClick={() => HandleOpenLink("/painel/novoimovel")}>
             <IoHomeOutline /> &nbsp; Imóveis
           </button>
-          <button className='btn' onClick={HandleOpenNotificaçõess}>
+          <button className='btn' onClick={() => HandleOpenLink("/painel/chat")}>
             <IoChatboxEllipsesOutline /> &nbsp; Mensagens
           </button>
-          <button className='btn' onClick={HandleOpenNotificaçõess}>
+          <button className='btn' onClick={() => HandleOpenLink("/painel/notificacoes")}>
             <IoNotificationsOutline /> &nbsp; Notificações
           </button>
-          <button className='btn' onClick={HandleOpen}>
-            <IoGridOutline /> &nbsp; Administração
+          <button className='btn' onClick={() => HandleOpenLink("/painel")}>
+            <IoSpeedometerOutline /> &nbsp; Painel
           </button> 
-          <button onClick={HandleLogout}>
+          <button onClick={() => HandleOpenLink("/entrar")}>
             <IoLogOutOutline /> &nbsp; Sair
           </button>
           </>
           :
           <>
-                    <button className='btn' onClick={HandleOpenOrçamento}>
-            <IoChatboxEllipsesOutline /> &nbsp; Mensagens
+                    <button className='btn' onClick={() => HandleOpenLink("/mensagens")}>
+            <IoChatboxEllipsesOutline /> &nbsp; Chat
           </button>
-                    <button className='btn' onClick={handleOpenAgendamentos}>
-            <IoCalendarOutline /> &nbsp; Agendamentos
+                    <button className='btn' onClick={() => HandleOpenLink("/agendamentos")}>
+            <IoCalendarOutline /> &nbsp; Agenda
           </button>
-          <button className='btn' onClick={HandleOpenNotificaçõess}>
+          <button className='btn' onClick={() => HandleOpenLink("/notificacoes")}>
             <IoNotificationsOutline /> &nbsp; Notificações
           </button>
-          <button className='btn' onClick={HandleOpen}>
+          <button className='btn' onClick={() => HandleOpenLink("/favoritos")}>
             <IoHeartOutline /> &nbsp; Favoritos
           </button>
-          <button className='btn' onClick={HandleOpenAccount}>
+          <button className='btn' onClick={() => HandleOpenLink("/minhaconta")}>
             <IoPersonOutline /> &nbsp; Minha conta
           </button> 
-          <button onClick={HandleLogout}>
+          <button onClick={() => HandleOpenLink("/entrar")}>
             <IoLogOutOutline /> &nbsp; Sair
           </button>
           </>

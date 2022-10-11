@@ -71,4 +71,28 @@
         align-items: center;
         justify-content: flex-start;
     }
+
+    .MyAccount .main .text form{
+        width: 100%;
+    }
+
+    .MyAccount .main .text {
+        width: 100%;
+        padding: 20px 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 6px;
+        background-color: var(--BorderHover);
+        margin: 10px;
+    }
+
+    @media (max-width: 450px) {
+   
+        .MyAccount .main .text {
+            padding: 5px;
+            margin: 5px;
+        }
+    }
 }
