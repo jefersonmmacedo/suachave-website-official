@@ -169,8 +169,9 @@ function handleOpenAgendamentos(e) {
 
 
 const Navbar2 = () => {
-  const logged = true;
-  const professional = true;
+  const Local = localStorage.getItem("suachave");
+  const user = JSON.parse(Local);
+
   return (
     <Nav>
       <div className="logo">
@@ -180,7 +181,7 @@ const Navbar2 = () => {
       </div>
       <Burger />
       <div className="account">
-        {logged === false ?
+        {user === "" ?
         <>
                 <button onClick={HandleOpen}>Entrar</button>
                 <li className='nav-item'>
@@ -189,10 +190,10 @@ const Navbar2 = () => {
                   </Link>
                 </li>
         </>
-      : logged ===  true ?
+      : user !==  "" ?
         <>
 
-{professional === true ?
+{user.type === "company" ?
                 <>
                 <button className='iconUnic' onClick={HandleOpenOrçamentos} data-tip data-for='Imóveis'><IoHomeOutline/></button>
                 <ReactTooltip id='Imóveis' place="bottom" type="dark" effect="solid">
