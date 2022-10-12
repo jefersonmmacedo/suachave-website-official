@@ -1,6 +1,6 @@
 ﻿import "./listProperty.css";
 import {FaBed, FaShower, FaCar} from 'react-icons/fa';
-import {IoCrop, IoHeart, IoHeartOutline, IoMove} from 'react-icons/io5';
+import {IoCrop, IoHeart, IoHeartOutline, IoLocationOutline} from 'react-icons/io5';
 import ImageHouse from "../../assets/images/house.jpg";
 import ImageHouse1 from "../../assets/images/house1.jpg";
 import ImageHouse2 from "../../assets/images/house2.jpg";
@@ -24,8 +24,8 @@ export function ListProperty() {
                     <IoHeart />
                     </div>
                     <div className="text">
-                    <h2>Lindo apartamento luxuoso</h2>
-                    <h4>Centro - Rio Bonito - Rio de Janeiro</h4>
+                    <h3>Lindo apartamento luxuoso</h3>
+                    <h5><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h5>
                     <div className="icons">
                         <div className="iconUnic">
                             <p>Quartos</p>
@@ -69,8 +69,8 @@ export function ListProperty() {
                     <IoHeartOutline />
                     </div>
                     <div className="text">
-                    <h2>Linda cobertura em Copacabana</h2>
-                    <h4>Centro - Rio Bonito - Rio de Janeiro</h4>
+                    <h3>Lindo apartamento luxuoso</h3>
+                    <h5><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h5>
                     <div className="icons">
                         <div className="iconUnic">
                             <p>Quartos</p>
@@ -111,8 +111,8 @@ export function ListProperty() {
                     <IoHeartOutline />
                     </div>
                     <div className="text">
-                    <h2>Mansão em condomínio de luxo</h2>
-                    <h4>Centro - Rio Bonito - Rio de Janeiro</h4>
+                    <h3>Lindo apartamento luxuoso</h3>
+                    <h5><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h5>
                     <div className="icons">
                         <div className="iconUnic">
                             <p>Quartos</p>
@@ -156,8 +156,8 @@ export function ListProperty() {
                     <IoHeart />
                     </div>
                     <div className="text">
-                    <h2>Lindo apartamento luxuoso</h2>
-                    <h4>Centro - Rio Bonito - Rio de Janeiro</h4>
+                    <h3>Lindo apartamento luxuoso</h3>
+                    <h5><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h5>
                     <div className="icons">
                         <div className="iconUnic">
                             <p>Quartos</p>
@@ -201,8 +201,8 @@ export function ListProperty() {
                     <IoHeartOutline />
                     </div>
                     <div className="text">
-                    <h2>Linda cobertura em Copacabana</h2>
-                    <h4>Centro - Rio Bonito - Rio de Janeiro</h4>
+                    <h3>Lindo apartamento luxuoso</h3>
+                    <h5><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h5>
                     <div className="icons">
                         <div className="iconUnic">
                             <p>Quartos</p>
@@ -243,8 +243,8 @@ export function ListProperty() {
                     <IoHeartOutline />
                     </div>
                     <div className="text">
-                    <h2>Mansão em condomínio de luxo</h2>
-                    <h4>Centro - Rio Bonito - Rio de Janeiro</h4>
+                    <h3>Lindo apartamento luxuoso</h3>
+                    <h5><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h5>
                     <div className="icons">
                         <div className="iconUnic">
                             <p>Quartos</p>
@@ -288,8 +288,8 @@ export function ListProperty() {
                     <IoHeart />
                     </div>
                     <div className="text">
-                    <h2>Lindo apartamento luxuoso</h2>
-                    <h4>Centro - Rio Bonito - Rio de Janeiro</h4>
+                    <h3>Lindo apartamento luxuoso</h3>
+                    <h5><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h5>
                     <div className="icons">
                         <div className="iconUnic">
                             <p>Quartos</p>
@@ -333,8 +333,8 @@ export function ListProperty() {
                     <IoHeartOutline />
                     </div>
                     <div className="text">
-                    <h2>Linda cobertura em Copacabana</h2>
-                    <h4>Centro - Rio Bonito - Rio de Janeiro</h4>
+                    <h3>Lindo apartamento luxuoso</h3>
+                    <h5><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h5>
                     <div className="icons">
                         <div className="iconUnic">
                             <p>Quartos</p>
@@ -375,8 +375,8 @@ export function ListProperty() {
                     <IoHeartOutline />
                     </div>
                     <div className="text">
-                    <h2>Mansão em condomínio de luxo</h2>
-                    <h4>Centro - Rio Bonito - Rio de Janeiro</h4>
+                    <h3>Lindo apartamento luxuoso</h3>
+                    <h5><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h5>
                     <div className="icons">
                         <div className="iconUnic">
                             <p>Quartos</p>
@@ -420,8 +420,8 @@ export function ListProperty() {
                     <IoHeart />
                     </div>
                     <div className="text">
-                    <h2>Lindo apartamento luxuoso</h2>
-                    <h4>Centro - Rio Bonito - Rio de Janeiro</h4>
+                    <h3>Lindo apartamento luxuoso</h3>
+                    <h5><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h5>
                     <div className="icons">
                         <div className="iconUnic">
                             <p>Quartos</p>
@@ -465,8 +465,8 @@ export function ListProperty() {
                     <IoHeartOutline />
                     </div>
                     <div className="text">
-                    <h2>Linda cobertura em Copacabana</h2>
-                    <h4>Centro - Rio Bonito - Rio de Janeiro</h4>
+                    <h3>Lindo apartamento luxuoso</h3>
+                    <h5><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h5>
                     <div className="icons">
                         <div className="iconUnic">
                             <p>Quartos</p>
@@ -507,8 +507,8 @@ export function ListProperty() {
                     <IoHeartOutline />
                     </div>
                     <div className="text">
-                    <h2>Mansão em condomínio de luxo</h2>
-                    <h4>Centro - Rio Bonito - Rio de Janeiro</h4>
+                    <h3>Lindo apartamento luxuoso</h3>
+                    <h5><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h5>
                     <div className="icons">
                         <div className="iconUnic">
                             <p>Quartos</p>

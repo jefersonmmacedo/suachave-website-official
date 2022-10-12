@@ -25,8 +25,8 @@ export function BrokerList() {
                     <img src={imobiliária} alt="" />
                     </div>
                     <div className="text">
-                    <h2>James Summer</h2>
-                    <h4><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h4>
+                    <h3>James Summer</h3>
+                    <h5><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h5>
                     <div className="iconsBroker">
                         <div className="iconBrokerUnic">
                             <div className="simbolBroker">
@@ -60,8 +60,8 @@ export function BrokerList() {
                     <img src={imobiliária3} alt="" />
                     </div>
                     <div className="text">
-                    <h2>James Summer</h2>
-                    <h4><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h4>
+                    <h3>James Summer</h3>
+                    <h5><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h5>
                     <div className="iconsBroker">
                         <div className="iconBrokerUnic">
                             <div className="simbolBroker">
@@ -95,8 +95,8 @@ export function BrokerList() {
                     <img src={imobiliária2} alt="" />
                     </div>
                     <div className="text">
-                    <h2>James Summer</h2>
-                    <h4><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h4>
+                    <h3>James Summer</h3>
+                    <h5><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h5>
                     <div className="iconsBroker">
                         <div className="iconBrokerUnic">
                             <div className="simbolBroker">

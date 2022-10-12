@@ -24,7 +24,6 @@
     align-items: center;
     justify-content: center;
     border-radius: 6px;
-    background-color: var(--BorderHover);
     margin: 10px;
 }
 
@@ -57,13 +56,105 @@
     flex-direction: row;
     margin: 20px 0;
 }
+.MessagesProperty .main .text .chat{
+    width: 550px;
+    border-radius: 10px;
+    background-color: var(--BorderInput);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    margin: 10px;
+}
+.MessagesProperty .main .text .chat .image{
+    border-radius: 10px 0 0 10px;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+.MessagesProperty .main .text .chat .image img{
+    border-radius: 10px 0 0 10px;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
 
-@media (max-width: 700px) {
-    .MessagesProperty .main {
-        margin-top: 50px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
+.MessagesProperty .main .text .chat .textChat{
+    border-radius: 10px;
+    background-color: var(--BorderInput);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px;
+    text-align:left;
+}
+.MessagesProperty .main .text .chat .textChat h3 {
+    color: var(--Primary);
+    font-weight: 700;
+    margin: 0 10px;
+    text-align:left;
+  }
+
+  .MessagesProperty .main .text .chat .textChat h5 {
+    color: var(--Paragraph);
+    margin: 0 10px;
+    text-align:left;
+  }
+  .MessagesProperty .main .text .chat .textChat h6 {
+    color: var(--Gray);
+    margin: 5px 10px 0 10px;
+    text-align:left;
+  }
+
+@media (max-width: 800px) {
+    .MessagesProperty .main .text .chat{
+        width: 500px;
+        margin: 5px;
+    }
+
+    @media (max-width: 700px) {
+        .MessagesProperty .main {
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .MessagesProperty .main .text {
+            width: 100%;
+            padding: 0px;
+        }
+        
+        @media (max-width: 530px) {
+
+            .MessagesProperty .main .text .chat{
+                width: 100%;
+            }
+    
+            .MessagesProperty .main .text .chat .textChat h3 {
+                font-size: 16px;
+              }
+            
+              .MessagesProperty .main .text .chat .textChat h5 {
+                font-size: 12px;
+              }
+              .MessagesProperty .main .text .chat .textChat h6 {
+                font-size: 10px;
+              }
+
+              .MessagesProperty .main .text .chat .image{
+                width: 80px;
+                height: 100px;
+            }
+            .MessagesProperty .main .text .chat .image img{
+                width: 80px;
+                height: 100px;
+            }
+        }
+
+
     }
 }
+

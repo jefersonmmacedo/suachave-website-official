@@ -1,6 +1,6 @@
 ﻿import "./sliderHome.css"
-import {FaBed, FaShower, FaCar} from 'react-icons/fa';
-import {IoCrop, IoMove, IoArrowBack, IoArrowForward} from 'react-icons/io5';
+import {FaBed, FaShower, FaCar, FaBath} from 'react-icons/fa';
+import {IoCrop, IoMove, IoArrowBack, IoArrowForward, IoLocationOutline} from 'react-icons/io5';
 import ImageHouse1 from "../../assets/images/house.jpg";
 import ImageHouse2 from "../../assets/images/house1.jpg";
 import ImageHouse3 from "../../assets/images/house2.jpg";
@@ -41,19 +41,26 @@ const properties = {
                     <img src={images[0]} alt="" />
                 </a>
             </div>
-                <div className="block">
+                <div className="blockSlider">
                     <div className="featured">
                         <p>Novo</p>
                     </div>
                     <a href="/imovel">
-                    <h2>Apartamento luxuoso</h2>
+                    <h3>Apartamento de luxo</h3>
                     </a>
-                    <h4>Centro - Rio Bonito - Rio de Janeiro</h4>
+                    <h5><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h5>
                     <div className="icons">
                         <div className="iconUnic">
                             <p>Quartos</p>
                             <div className="simbol">
                                 <FaBed />
+                                <p>3</p>
+                            </div>
+                        </div>
+                        <div className="iconUnic">
+                            <p>Suítes</p>
+                            <div className="simbol">
+                                <FaBath />
                                 <p>3</p>
                             </div>
                         </div>
@@ -100,19 +107,26 @@ const properties = {
                     <img src={images[1]} alt="" />
             </a>
             </div>
-                <div className="block">
+                <div className="blockSlider">
                     <div className="featured">
                         <p>Novo</p>
                     </div>
                     <a href="/imovel">
-                    <h2>Apartamento luxuoso</h2>
+                    <h3>Apartamento luxuoso</h3>
                     </a>
-                    <h4>Centro - Rio Bonito - Rio de Janeiro</h4>
+                    <h5><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h5>
                     <div className="icons">
                         <div className="iconUnic">
                             <p>Quartos</p>
                             <div className="simbol">
                                 <FaBed />
+                                <p>3</p>
+                            </div>
+                        </div>
+                        <div className="iconUnic">
+                            <p>Suítes</p>
+                            <div className="simbol">
+                                <FaBath />
                                 <p>3</p>
                             </div>
                         </div>
@@ -159,19 +173,26 @@ const properties = {
                     <img src={images[2]} alt="" />
             </a>
             </div>
-                <div className="block">
+                <div className="blockSlider">
                     <div className="featured">
                         <p>Novo</p>
                     </div>
                     <a href="/imovel">
-                    <h2>Apartamento luxuoso</h2>
+                    <h3>Apartamento luxuoso</h3>
                     </a>
-                    <h4>Centro - Rio Bonito - Rio de Janeiro</h4>
+                    <h5><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h5>
                     <div className="icons">
                         <div className="iconUnic">
                             <p>Quartos</p>
                             <div className="simbol">
                                 <FaBed />
+                                <p>3</p>
+                            </div>
+                        </div>
+                        <div className="iconUnic">
+                            <p>Suítes</p>
+                            <div className="simbol">
+                                <FaBath />
                                 <p>3</p>
                             </div>
                         </div>
@@ -218,19 +239,26 @@ const properties = {
                     <img src={images[3]} alt="" />
             </a>
             </div>
-                <div className="block">
+                <div className="blockSlider">
                     <div className="featured">
                         <p>Novo</p>
                     </div>
                     <a href="/imovel">
-                    <h2>Apartamento luxuoso</h2>
+                    <h3>Apartamento luxuoso</h3>
                     </a>
-                    <h4>Centro - Rio Bonito - Rio de Janeiro</h4>
+                    <h5><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h5>
                     <div className="icons">
                         <div className="iconUnic">
                             <p>Quartos</p>
                             <div className="simbol">
                                 <FaBed />
+                                <p>3</p>
+                            </div>
+                        </div>
+                        <div className="iconUnic">
+                            <p>Suítes</p>
+                            <div className="simbol">
+                                <FaBath />
                                 <p>3</p>
                             </div>
                         </div>

@@ -34,6 +34,14 @@ export function NewScheduling() {
                     <div className="image">
                     <img src={ImageHouse1} alt="" />
                     </div>
+                    <div className="textProperty">
+                    <h3>Apartamento luxuoso</h3>
+                    <h5><IoLocationOutline />Centro - Rio Bonito - RJ</h5>
+                    <div className="pricing">
+                        <h6>Aluguel</h6>
+                        <h3>R$ 2.000,00 / Mês</h3>
+                    </div>
+                    </div>
                 </div>
                 <form action="">
                     <div className="text">

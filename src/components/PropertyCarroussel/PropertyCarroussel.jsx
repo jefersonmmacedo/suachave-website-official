@@ -1,6 +1,6 @@
 ﻿import "./propertyCarroussel.css";
 import {FaBed, FaShower, FaCar} from 'react-icons/fa';
-import {IoHeart, IoHeartOutline} from 'react-icons/io5';
+import {IoHeart, IoLocationOutline} from 'react-icons/io5';
 import ImageHouse from "../../assets/images/house.jpg";
 import ImageHouse1 from "../../assets/images/house1.jpg";
 import ImageHouse2 from "../../assets/images/house2.jpg";
@@ -64,9 +64,9 @@ export function PropertyCarroussel() {
                     </div>
                     <div className="text">
                         <a href="/imovel">
-                    <h2>Lindo apartamento luxuoso</h2>
+                    <h3>Lindo apartamento luxuoso</h3>
                         </a>
-                    <h4>Centro - Rio Bonito - Rio de Janeiro</h4>
+                    <h5><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h5>
                     <div className="icons">
                         <div className="iconUnic">
                             <p>Quartos</p>
@@ -113,9 +113,9 @@ export function PropertyCarroussel() {
                     </div>
                     <div className="text">
                         <a href="/imovel">
-                    <h2>Lindo apartamento luxuoso</h2>
+                    <h3>Lindo apartamento luxuoso</h3>
                         </a>
-                    <h4>Centro - Rio Bonito - Rio de Janeiro</h4>
+                    <h5><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h5>
                     <div className="icons">
                         <div className="iconUnic">
                             <p>Quartos</p>
@@ -162,9 +162,9 @@ export function PropertyCarroussel() {
                     </div>
                     <div className="text">
                         <a href="/imovel">
-                    <h2>Lindo apartamento luxuoso</h2>
+                    <h3>Lindo apartamento luxuoso</h3>
                         </a>
-                    <h4>Centro - Rio Bonito - Rio de Janeiro</h4>
+                    <h5><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h5>
                     <div className="icons">
                         <div className="iconUnic">
                             <p>Quartos</p>
@@ -211,9 +211,9 @@ export function PropertyCarroussel() {
                     </div>
                     <div className="text">
                         <a href="/imovel">
-                    <h2>Lindo apartamento luxuoso</h2>
+                    <h3>Lindo apartamento luxuoso</h3>
                         </a>
-                    <h4>Centro - Rio Bonito - Rio de Janeiro</h4>
+                    <h5><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h5>
                     <div className="icons">
                         <div className="iconUnic">
                             <p>Quartos</p>
@@ -260,9 +260,9 @@ export function PropertyCarroussel() {
                     </div>
                     <div className="text">
                         <a href="/imovel">
-                    <h2>Lindo apartamento luxuoso</h2>
+                    <h3>Lindo apartamento luxuoso</h3>
                         </a>
-                    <h4>Centro - Rio Bonito - Rio de Janeiro</h4>
+                    <h5><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h5>
                     <div className="icons">
                         <div className="iconUnic">
                             <p>Quartos</p>
@@ -309,9 +309,9 @@ export function PropertyCarroussel() {
                     </div>
                     <div className="text">
                         <a href="/imovel">
-                    <h2>Lindo apartamento luxuoso</h2>
+                    <h3>Lindo apartamento luxuoso</h3>
                         </a>
-                    <h4>Centro - Rio Bonito - Rio de Janeiro</h4>
+                    <h5><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h5>
                     <div className="icons">
                         <div className="iconUnic">
                             <p>Quartos</p>
@@ -358,9 +358,9 @@ export function PropertyCarroussel() {
                     </div>
                     <div className="text">
                         <a href="/imovel">
-                    <h2>Lindo apartamento luxuoso</h2>
+                    <h3>Lindo apartamento luxuoso</h3>
                         </a>
-                    <h4>Centro - Rio Bonito - Rio de Janeiro</h4>
+                    <h5><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h5>
                     <div className="icons">
                         <div className="iconUnic">
                             <p>Quartos</p>
@@ -407,9 +407,9 @@ export function PropertyCarroussel() {
                     </div>
                     <div className="text">
                         <a href="/imovel">
-                    <h2>Lindo apartamento luxuoso</h2>
+                    <h3>Lindo apartamento luxuoso</h3>
                         </a>
-                    <h4>Centro - Rio Bonito - Rio de Janeiro</h4>
+                    <h5><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h5>
                     <div className="icons">
                         <div className="iconUnic">
                             <p>Quartos</p>
@@ -456,9 +456,9 @@ export function PropertyCarroussel() {
                     </div>
                     <div className="text">
                         <a href="/imovel">
-                    <h2>Lindo apartamento luxuoso</h2>
+                    <h3>Lindo apartamento luxuoso</h3>
                         </a>
-                    <h4>Centro - Rio Bonito - Rio de Janeiro</h4>
+                    <h5><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h5>
                     <div className="icons">
                         <div className="iconUnic">
                             <p>Quartos</p>
@@ -505,9 +505,9 @@ export function PropertyCarroussel() {
                     </div>
                     <div className="text">
                         <a href="/imovel">
-                    <h2>Lindo apartamento luxuoso</h2>
+                    <h3>Lindo apartamento luxuoso</h3>
                         </a>
-                    <h4>Centro - Rio Bonito - Rio de Janeiro</h4>
+                    <h5><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h5>
                     <div className="icons">
                         <div className="iconUnic">
                             <p>Quartos</p>
@@ -554,9 +554,9 @@ export function PropertyCarroussel() {
                     </div>
                     <div className="text">
                         <a href="/imovel">
-                    <h2>Lindo apartamento luxuoso</h2>
+                    <h3>Lindo apartamento luxuoso</h3>
                         </a>
-                    <h4>Centro - Rio Bonito - Rio de Janeiro</h4>
+                    <h5><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h5>
                     <div className="icons">
                         <div className="iconUnic">
                             <p>Quartos</p>
@@ -603,9 +603,9 @@ export function PropertyCarroussel() {
                     </div>
                     <div className="text">
                         <a href="/imovel">
-                    <h2>Lindo apartamento luxuoso</h2>
+                    <h3>Lindo apartamento luxuoso</h3>
                         </a>
-                    <h4>Centro - Rio Bonito - Rio de Janeiro</h4>
+                    <h5><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h5>
                     <div className="icons">
                         <div className="iconUnic">
                             <p>Quartos</p>

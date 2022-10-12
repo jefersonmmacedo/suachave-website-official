@@ -9,39 +9,36 @@
 .ListProperty .listProperties {
     width: 90%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
 }
-
-.ListProperty .listProperties .propertyUnicFavorite {
-    width: 700px;
+.ListProperty .listProperties .blockFavorite {
+    width: 300px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
     background-color: var(--White);
     box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
     border-radius: 6px;
     margin: 10px;
-    height: 150px;
+    padding-bottom: 20px;
 }
 
-.ListProperty .listProperties .propertyUnicFavorite .image {
-    width: 150px; 
+.ListProperty .listProperties .blockFavorite .image {
+    width: 100%; 
     height: 150px;
-    border-radius: 6px 0 0 6px;
-    object-fit: cover;
+    border-radius: 6px 6px 0 0;
 }
-.ListProperty .listProperties .propertyUnicFavorite .image img {
-    width: 150px; 
+.ListProperty .listProperties .blockFavorite .image img {
+    width: 100%; 
     height: 150px;
-    border-radius: 6px 0 0 6px;
-    object-fit: cover;
+    border-radius: 6px 6px 0 0;
 }
 
 
-.ListProperty .listProperties .propertyUnicFavorite .featured {
+.ListProperty .listProperties .blockFavorite .featured {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -54,284 +51,12 @@
     padding: 10px 40px;
 }
 
-.ListProperty .listProperties .propertyUnicFavorite .featured p {
+.ListProperty .listProperties .blockFavorite .featured p {
     color: var(--White);
     font-weight: 700;
 }
 
-.ListProperty .listProperties .propertyUnicFavorite .status {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--Secondary);
-    border-radius: 6px;
-    position: absolute;
-    margin-top: 160px;
-    margin-left: 5px;
-    padding: 10px 20px;
-}
-
-.ListProperty .listProperties .propertyUnicFavorite .status p {
-    color: var(--White);
-    font-weight: 700;
-}
-
-
-
-
-
-.ListProperty .listProperties .propertyUnicFavorite .text {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    width: 100%;
-}
-.ListProperty .listProperties .propertyUnicFavorite .text2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
-    height: 100%;
-}
-
-.ListProperty .listProperties .propertyUnicFavorite .text2 .heartFavorite {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100px;
-    height: 100%;
-}
-
-.ListProperty .listProperties .propertyUnicFavorite .text2 .heartFavorite svg {
-    color: var(--White);
-    font-size: 30px;
-    cursor: pointer;
-}
-.ListProperty .listProperties .propertyUnicFavorite .text2 .heartFavorite svg:hover {
-    color: var(--Primary);
-}
-.ListProperty .listProperties .propertyUnicFavorite .text2 .heartFavorite2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 10%;
-    height: 100%;
-}
-
-.ListProperty .listProperties .propertyUnicFavorite .text2 .heartFavorite2 svg {
-    color: var(--Primary);
-    font-size: 30px;
-    cursor: pointer;
-    margin-right: 5px;
-}
-.ListProperty .listProperties .propertyUnicFavorite .text2 .heartFavorite svg:hover {
-    color: var(--Primary);
-}
-
-.ListProperty .listProperties .propertyUnicFavorite .text h2 {
-    color: var(--Primary);
-    font-weight: 700;
-    margin: 5px 10px;
-}
-.ListProperty .listProperties .propertyUnicFavorite .text h4 {
-    color: var(--Gray);
-    margin: 0 10px;
-}
-.ListProperty .listProperties .propertyUnicFavorite .text .icons {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    margin: 5px 0;
-}
-
-.ListProperty .listProperties .propertyUnicFavorite .text .icons .iconUnic {
-    width: 20%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    text-align: center;
-    margin: 0 10px;
-    color: var(--Gray);
-}
-
-.ListProperty .listProperties .propertyUnicFavorite .text .icons .iconUnic p {
-    color: var(--Paragraph);
-    font-weight: 700;
-}
-.ListProperty .listProperties .propertyUnicFavorite .text .icons .iconUnic .simbol {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    text-align: center;
-    margin-top: 5px;
-}
-
-.ListProperty .listProperties .propertyUnicFavorite .text .icons .iconUnic .simbol svg {
-    font-size: 18px;
-    margin-right: 10px;
-    color: var(--Gray);
-}
-.ListProperty .listProperties .propertyUnicFavorite .text .pricing {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    text-align: flex-start;
-}
-
-.ListProperty .listProperties .propertyUnicFavorite .text .pricing h5 {
-    color: var(--Paragraph);
-    font-weight: 700;
-    margin: 0 10px;
-}
-.ListProperty .listProperties .propertyUnicFavorite .text .pricing h2 {
-    color: var(--Primary);
-    font-weight: 700;
-    margin: 0 10px;
-}
-
-@media (max-width: 900px) {
-    .ListProperty .listProperties .propertyUnicFavorite {
-        width: 90%;
-    }
-
-    @media (max-width: 800px) {
-        .ListProperty .listProperties {
-            width: 100%;
-        }
-
-        @media (max-width: 711px) {
-            .ListProperty .listProperties .propertyUnicFavorite {
-                width: 100%;
-            }
-
-
-            @media (max-width: 585px) {
-                .ListProperty .listProperties .propertyUnicFavorite .image {
-                    width: 100px; 
-                    height: 150px;
-                }
-                .ListProperty .listProperties .propertyUnicFavorite .image img {
-                    width: 100px; 
-                    height: 150px;
-                }
-
-                .ListProperty .listProperties .propertyUnicFavorite .text2 .heartFavorite2 svg {
-                    font-size: 24px;
-                }
-
-                .ListProperty .listProperties .propertyUnicFavorite .text2 {
-                    width: 30px;
-                }
-
-                @media (max-width: 515px) {
-                    .ListProperty .listProperties .propertyUnicFavorite .text .pricing h5 {
-                        display: none;
-                    }
-
-                    .ListProperty .listProperties .propertyUnicFavorite .text h2 {
-                        font-size: 24px;
-                    }
-
-                    @media (max-width: 450px) {
-                        .ListProperty .listProperties .propertyUnicFavorite .text h2 {
-                            font-size: 20px;
-                        }
-                        .ListProperty .listProperties .propertyUnicFavorite .text h4 {
-                            font-size: 14px;
-                        }
-
-                        @media (max-width: 450px) {
-                            .ListProperty .listProperties .propertyUnicFavorite .text h4 {
-                                font-size: 12px;
-                            }                            
-                            
-                            .ListProperty .listProperties .propertyUnicFavorite .text .icons .iconUnic p {
-                                font-size: 12px;
-                            }
-                            
-                            .ListProperty .listProperties .propertyUnicFavorite .text .icons .iconUnic .simbol svg {
-                                font-size: 14px;
-                                margin-right: 5px;
-                            }
-                        }
-                    }
-                }
-            }
-            }
-        }
-    }
-
-
-
-/* 
-
-@media (max-width: 880px) {
-    .ListProperty .listProperties {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        justify-content: center;
-        padding: 5px;
-        flex-wrap: wrap;
-    }
-    
-    .ListProperty .listProperties .propertyUnicFavorite {
-        width: 250px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        background-color: var(--White);
-        box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
-        border-radius: 6px;
-        margin:20px;
-        padding-bottom: 20px;
-    }
-
-    .ListProperty .listProperties .propertyUnicFavorite .image {
-        width: 100%; 
-        height: 150px;
-        border-radius: 6px 6px 0 0;
-    }
-    .ListProperty .listProperties .propertyUnicFavorite .image img {
-        width: 100%; 
-        height: 150px;
-        border-radius: 6px 6px 0 0;
-    }
-    
-    
-.ListProperty .listProperties .propertyUnicFavorite .featured {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--Primary);
-    border-radius: 20px;
-    position: absolute;
-    margin-top: -15px;
-    margin-left: 10px;
-    padding: 10px 40px;
-}
-
-.ListProperty .listProperties .propertyUnicFavorite .featured p {
-    color: var(--White);
-    font-weight: 700;
-}
-
-.ListProperty .listProperties .propertyUnicFavorite .status {
+.ListProperty .listProperties .blockFavorite .status {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -344,38 +69,126 @@
     padding: 10px 20px;
 }
 
-.ListProperty .listProperties .propertyUnicFavorite .status p {
+.ListProperty .listProperties .blockFavorite .status p {
     color: var(--White);
     font-weight: 700;
 }
 
-.ListProperty .listProperties .propertyUnicFavorite .heartFavorite {
+.ListProperty .listProperties .blockFavorite .heart {
     position: absolute;
     margin-top: 115px;
-    margin-left: 215px;
+    margin-left: 245px;
 }
 
-.ListProperty .listProperties .propertyUnicFavorite .heartFavorite svg {
+.ListProperty .listProperties .blockFavorite .heart svg {
     color: var(--White);
     font-size: 24px;
     cursor: pointer;
 }
-.ListProperty .listProperties .propertyUnicFavorite .heartFavorite svg:hover {
+.ListProperty .listProperties .blockFavorite .heart svg:hover {
     color: var(--Primary);
 }
-.ListProperty .listProperties .propertyUnicFavorite .heartFavorite2 {
+.ListProperty .listProperties .blockFavorite .heart2 {
     position: absolute;
     margin-top: 115px;
-    margin-left: 215px;
+    margin-left: 245px;
 }
 
-.ListProperty .listProperties .propertyUnicFavorite .heartFavorite2 svg {
+.ListProperty .listProperties .blockFavorite .heart2 svg {
     color: var(--Primary);
     font-size: 24px;
     cursor: pointer;
 }
-.ListProperty .listProperties .propertyUnicFavorite .heartFavorite svg:hover {
+.ListProperty .listProperties .blockFavorite .heart svg:hover {
     color: var(--Primary);
 }
 
-} */
+
+
+
+.ListProperty .listProperties .blockFavorite .textFavorite {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+}
+.ListProperty .listProperties .blockFavorite .textFavorite h3 {
+    color: var(--Primary);
+    font-weight: 700;
+    margin: 20px 10px 5px 10px;
+}
+.ListProperty .listProperties .blockFavorite .textFavorite h2 {
+    color: var(--Primary);
+    font-weight: 700;
+    margin: 20px 10px 5px 10px;
+}
+.ListProperty .listProperties .blockFavorite .textFavorite h4 {
+    color: var(--Gray);
+    margin: 0 10px;
+}
+.ListProperty .listProperties .blockFavorite .textFavorite h5 {
+    color: var(--Gray);
+    margin: 0 10px;
+}
+.ListProperty .listProperties .blockFavorite .textFavorite .icons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 10px 0;
+}
+
+.ListProperty .listProperties .blockFavorite .textFavorite .icons .iconUnic {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    textFavorite-align: center;
+    padding: 5px;
+    margin: 5px;
+    color: var(--Gray);
+}
+
+.ListProperty .listProperties .blockFavorite .textFavorite .icons .iconUnic p {
+    color: var(--Paragraph);
+    font-weight: 700;
+}
+.ListProperty .listProperties .blockFavorite .textFavorite .icons .iconUnic .simbol {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    textFavorite-align: center;
+    margin-top: 5px;
+}
+
+.ListProperty .listProperties .blockFavorite .textFavorite .icons .iconUnic .simbol svg {
+    font-size: 18px;
+    margin-right: 10px;
+    color: var(--Gray);
+}
+.ListProperty .listProperties .blockFavorite .textFavorite .pricing {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    textFavorite-align: flex-start;
+}
+
+.ListProperty .listProperties .blockFavorite .textFavorite .pricing h5 {
+    color: var(--Paragraph);
+    font-weight: 700;
+    margin: 5px 10px;
+}
+.ListProperty .listProperties .blockFavorite .textFavorite .pricing h2 {
+    color: var(--Primary);
+    font-weight: 700;
+    margin: 0 10px;
+    font-size: 20px;
+}
+

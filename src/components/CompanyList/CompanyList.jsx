@@ -23,8 +23,8 @@ export function CompanyList() {
                     <img src={imobiliária2} alt="" />
                     </div>
                     <div className="text">
-                    <h2>Alice State Agency</h2>
-                    <h4><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h4>
+                    <h3>Alice State Agency</h3>
+                    <h5><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h5>
                     <div className="icons">
                         <div className="iconUnic">
                             <div className="simbol">
@@ -58,8 +58,8 @@ export function CompanyList() {
                     <img src={imobiliária} alt="" />
                     </div>
                     <div className="text">
-                    <h2>James State Agency</h2>
-                    <h4><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h4>
+                    <h3>James State Agency</h3>
+                    <h5><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h5>
                     <div className="icons">
                         <div className="iconUnic">
                             <div className="simbol">

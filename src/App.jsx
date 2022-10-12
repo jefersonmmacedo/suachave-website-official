@@ -11,7 +11,7 @@ import { useEffect } from 'react';
 
 function App() {
   const suachave = {
-    type: "company"
+    type: "client"
   };
 
   // const suachave = ""

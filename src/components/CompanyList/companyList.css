@@ -161,12 +161,12 @@
     color: var(--Primary);
 }
 
-.CompanyList .listProperties .propertyUnicFavorite .text h2 {
+.CompanyList .listProperties .propertyUnicFavorite .text h3 {
     color: var(--Primary);
     font-weight: 700;
     margin: 5px 10px;
 }
-.CompanyList .listProperties .propertyUnicFavorite .text h4 {
+.CompanyList .listProperties .propertyUnicFavorite .text h5 {
     color: var(--Gray);
     margin: 0 10px;
 }
@@ -204,13 +204,13 @@
     margin-top: 5px;
 }
 .CompanyList .listProperties .propertyUnicFavorite .text .icons .iconUnic .simbol p {
-    font-size: 14px;
+    font-size: 13px;
     color: var(--Paragraph);
     font-weight: 700;
 }
 
 .CompanyList .listProperties .propertyUnicFavorite .text .icons .iconUnic .simbol svg {
-    margin-right: 5px;
+    margin-right: 3px;
     color: var(--Gray);
 }
 .CompanyList .listProperties .propertyUnicFavorite .text .pricing {

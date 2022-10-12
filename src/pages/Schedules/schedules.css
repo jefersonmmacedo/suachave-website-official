@@ -24,7 +24,6 @@
     align-items: center;
     justify-content: center;
     border-radius: 6px;
-    background-color: var(--BorderHover);
     margin: 10px;
 }
 
@@ -57,13 +56,104 @@
     flex-direction: row;
     margin: 20px 0;
 }
+.Schedules .main .text .chat{
+    width: 550px;
+    border-radius: 10px;
+    background-color: var(--BorderInput);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    margin: 10px;
+}
+.Schedules .main .text .chat .image{
+    border-radius: 10px 0 0 10px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    border: none;
+    border-right: 3px solid var(--White);
+}
+.Schedules .main .text .chat .image svg{
+    font-size: 70px;
+    color: var(--Primary);
+}
+.Schedules .main .text .chat .image h3{
+    color: var(--White);
+        position: absolute;
+        margin-top: 2px;
+        font-size: 16px;
+}
+.Schedules .main .text .chat .image h4{
+    color: var(--White);
+        position: absolute;
+        margin-top: 35px;
+        font-size: 18px;
+        font-weight: 900;
+}
+.Schedules .main .text .chat .textChat{
+    border-radius: 10px;
+    background-color: var(--BorderInput);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px;
+    text-align:left;
+}
+.Schedules .main .text .chat .textChat h3 {
+    color: var(--Primary);
+    font-weight: 700;
+    margin: 0 10px;
+    text-align:left;
+  }
 
-@media (max-width: 700px) {
-    .Schedules .main {
-        margin-top: 50px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
+  .Schedules .main .text .chat .textChat h5 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: row;
+    color: var(--Paragraph);
+    margin: 3px 8px;
+    text-align:left;
+    font-weight: 700;
+  }
+  .Schedules .main .text .chat .textChat h6 {
+    color: var(--Gray);
+    margin: 5px 10px 0 10px;
+    text-align:left;
+    font-weight: 700;
+  }
+
+@media (max-width: 800px) {
+    .Schedules .main .text .chat{
+        width: 500px;
+        margin: 5px;
+    }
+
+    @media (max-width: 700px) {
+        .Schedules .main {
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .Schedules .main .text {
+            width: 100%;
+            padding: 0px;
+        }
+
+        @media (max-width: 700px) {
+            .Schedules .main .text .chat{
+                width: 98%;
+            }
+        }
+        
     }
 }
+
