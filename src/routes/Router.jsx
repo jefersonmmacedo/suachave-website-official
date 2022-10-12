@@ -39,6 +39,7 @@ import { MyAccountAdm } from '../pages/Adm/MyAccountAdm/MyAccountAdm';
 import { MenuAdm } from '../pages/Adm/MenuAdm/MenuAdm';
 import { Scheduling } from '../pages/Scheduling/Scheduling';
 import { SchedulingAdm } from '../pages/Adm/SchedulingAdm/SchedulingAdm';
+import { ComingSoon } from '../pages/CommingSoom/ComingSoon';
 
 function Router () {
 const Local = localStorage.getItem("suachave");
@@ -51,7 +52,8 @@ function PrivateRoute({children} ) {
     return (
             <Routes>
             {/* Rotas abertas */}
-            <Route path="/" element={<Home />}/>
+            <Route path="/" element={<ComingSoon />}/>
+            {/* <Route path="/" element={<Home />}/> */}
             <Route path="/entrar" element={<SignIn />}/>
             <Route path="/entrar-empresa" element={<SignInCompany />}/>
             <Route path="/cadastrar" element={<ChooseYourAccount />}/>
