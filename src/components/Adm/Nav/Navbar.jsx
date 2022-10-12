@@ -125,7 +125,7 @@ const Nav = styled.nav`
     color: var(--White);
     text-decoration: none;
     list-style: none;
-    margin: 20px 40px;
+    margin-right: 40px;
     width: 100%;
   }
   .account2 .iconUnic2 {

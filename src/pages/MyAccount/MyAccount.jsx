@@ -26,7 +26,7 @@ export function MyAccount() {
              }
          }
      }
-     
+
     return (
         <div className="MyAccount">
             <Navbar2 />
@@ -57,13 +57,15 @@ export function MyAccount() {
                         <input type="text" placeholder="UF" />
                         </div>
 
+                        <button>Atualizar Dados</button>
+
                         <div className="dataInputs">               
                         <input type="password" placeholder="Senha Atual" />
                         <input type="password" placeholder="Nova senha" />
                         <input type="password" placeholder="Confirmar nova senha" />
                         </div>
 
-                        <button>Atualizar</button>
+                        <button>Atualizar Senha</button>
                     </form>
                 </div>
             </div>

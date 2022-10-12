@@ -1,4 +1,5 @@
-﻿import NavbarAdm from "../../../components/Adm/Nav/Navbar";
+﻿import { IoCalendarClear, IoLocationOutline } from "react-icons/io5";
+import NavbarAdm from "../../../components/Adm/Nav/Navbar";
 import { ToolBar } from "../../../components/Adm/ToolBar/ToolBar";
 import "./schedulesAdm.css"
 
@@ -10,13 +11,41 @@ export function SchedulesAdm() {
             <div className="aside">
                 <h3>Agendamentos</h3>
             <div className="informations">
-                <div className="infoData">
+            <div className="chat">
+                    <div className="image">
+                        <IoCalendarClear/>
+                        <h3>22</h3>
+                        <h4>Nov</h4>
+                    </div>
+                    <div className="textChat">
+                    <h3>Imobiliária LXZ</h3>
+                    <h5><IoLocationOutline />Centro - Rio Bonito - RJ</h5>
+                    <h6>Horário de agendamento: 16:45h</h6>
+                    </div>
                 </div>
-                <div className="infoData">
+                <div className="chat">
+                    <div className="image">
+                        <IoCalendarClear/> 
+                        <h3>15</h3>
+                        <h4>Dez</h4>                       
+                    </div>
+                    <div className="textChat">
+                    <h3>Imobiliária LXZ</h3>
+                    <h5><IoLocationOutline />Centro - Rio Bonito - RJ</h5>
+                    <h6>Horário de agendamento: 16:45h</h6>
+                    </div>
                 </div>
-                <div className="infoData">
-                </div>
-                <div className="infoData">
+                <div className="chat">
+                    <div className="image">
+                        <IoCalendarClear/>
+                        <h3>05</h3>
+                        <h4>Jan</h4>                     
+                    </div>
+                    <div className="textChat">
+                    <h3>Imobiliária LXZ</h3>
+                    <h5><IoLocationOutline />Centro - Rio Bonito - RJ</h5>
+                    <h6>Horário de agendamento: 16:45h</h6>
+                    </div>
                 </div>
             </div>
             </div>
