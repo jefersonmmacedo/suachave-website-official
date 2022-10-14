@@ -8,7 +8,7 @@
 
 .Pricing h2 {
     margin-top: 100px;
-    font-weight: bold;
+    font-weight: 700;
     text-align: center;
 }
 .Pricing h2 span {
@@ -20,15 +20,57 @@
     color: var(--Paragraph);
 }
 
-
-.Pricing .img {
-    width: 50%;
-    margin: 40px 0;
+.Pricing .marketing {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to bottom, var(--Delete), var(--Primary));
+    padding: 40px 20px;
 }
 
-@media (max-width: 750px) {
-    .Pricing .img {
-        width: 100%;
-        margin: 20px 0;
-    }
+.Pricing .marketing .imageMarketing {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.Pricing .marketing .imageMarketing img {
+    width: 150px;
+}
+.Pricing .marketing .textMarketing {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Pricing .marketing .textMarketing h3{
+    font-weight: 700;
+    text-align: center;
+    color: var(--White);
+    font-size: 28px;
+}
+
+.Pricing .marketing .textMarketing h4 {
+    text-align: center;
+    margin: 10px 0;
+    color: var(--White);
+}
+.Pricing .marketing .textMarketing a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    text-align: center;
+    margin: 10px 0;
+    color: var(--Description);
+    padding: 10px 20px;
+    border-radius: 6px;
+    background-color: var(--White);
+    font-weight: 700;
 }

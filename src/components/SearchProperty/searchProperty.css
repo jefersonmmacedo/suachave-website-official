@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    margin-top: -70px;
+    margin-top: -80px;
     z-index: 10;
     position: absolute;
 }
@@ -72,29 +72,22 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    width: 100px;
-    padding: 15px 25px;
+    width: 120px;
+    padding: 15px 30px;
     Background-color: rgba(0,0,0,0.6);
     color: var(--White);
     font-weight: 500;
     border: none;
-    margin: 0 1px;
+    margin: 5px;
+    border-radius: 25px;
+}
+.SearchProperty .selectButtons button:hover {
+    background-color: var(--Primary);
 }
 .SearchProperty .selectButtons .btn {
     width: 100px;
     padding: 15px 25px;
-    border-radius: 6px 0 0 0;
     background-color: var(--Primary);
-    border: 1px solid var(--Gray);
-    color: var(--White);
-    font-weight: 500;
-    border: none;
-}
-.SearchProperty .selectButtons .btn2 {
-    width: 100px;
-    padding: 15px 25px;
-    border-radius: 0 6px 0 0;
-    Background-color: rgba(0,0,0,0.6);
     border: 1px solid var(--Gray);
     color: var(--White);
     font-weight: 500;
@@ -227,7 +220,7 @@
                 font-size: 14px;
             }
 
-            @media (max-width: 500px) {
+            @media (max-width: 550px) {
                 .SearchProperty .search {
                     display: flex;
                     flex-direction: column;

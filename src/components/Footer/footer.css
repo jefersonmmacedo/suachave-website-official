@@ -6,10 +6,8 @@
     width: 100%;
     padding: 20px;
     border: none;
-    border-top: 1px solid var(--Gray);
     background-color: var(--Black2);
     color: var(--White);
-    margin-top: 40px;
 }
 
 .Footer .sections {

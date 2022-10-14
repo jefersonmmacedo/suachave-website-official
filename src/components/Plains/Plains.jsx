@@ -13,13 +13,13 @@ export function Plains() {
                 </div>
                 <div className="text">
                     <p><IoCheckbox /> Imóveis ilimitadas</p>
-                    <p><IoCheckbox /> 20 fotos por imóvel</p>
-                    <p><IoCheckbox /> Sem vídeo </p>
                     <p><IoCheckbox /> Área administrativa</p>
-                    <p><IoCheckbox /> App administrativo</p>
-                    <p><IoCheckbox /> Imóveis no site e app sua chave</p>
+                    <p><IoCheckbox /> App administrativo [Breve]</p>
+                    <p><IoCheckbox /> Imóveis no site Sua Chave</p>
+                    <p><IoCheckbox /> Imóveis no app Sua Chave [Breve]</p>
+                    <p><IoCheckbox /> Plano sem fidelidade</p>
                 </div>
-                <button>Seu plano atual</button>
+                <a href="/plano">Seu plano atual</a>
             </div>
             <div className="plain2">
                 <h3>Plano Web</h3>
@@ -29,34 +29,36 @@ export function Plains() {
                 </div>
                 <div className="text">
                     <p><IoCheckbox /> Imóveis ilimitadas</p>
-                    <p><IoCheckbox /> 40 fotos por imóvel</p>
-                    <p><IoCheckbox /> Até 1 vídeo</p>
                     <p><IoCheckbox /> Área administrativa</p>
-                    <p><IoCheckbox /> App administrativo</p>
+                    <p><IoCheckbox /> App administrativo [Breve]</p>
                     <p><IoCheckbox /> Site individual para sua empresa</p>
                     <p><IoCheckbox /> Imóveis em seu site</p>
-                    <p><IoCheckbox /> Imóveis no site e app sua chave</p>
+                    <p><IoCheckbox /> Imóveis no site Sua Chave</p>
+                    <p><IoCheckbox /> Imóveis no app Sua Chave [Breve]</p>
+                    <p><IoCheckbox /> Plano sem fidelidade</p>
                 </div>
-                <button>Selecionar plano</button>
+                <a href="/plano">Selecionar plano</a>
                 <p>Mais procurado</p>
             </div>
             <div className="plain3">
-                <h3>Plano WebApp</h3>
+                <h3>Plano WebApp [Breve]</h3>
                 <div className="title">
                 <h1>R$ 449,99</h1>
                 <h4>/ mês</h4>
                 </div>
                 <div className="text">
                     <p><IoCheckbox /> Imóveis ilimitadas</p>
-                    <p><IoCheckbox /> 40 fotos por imóvel</p>
-                    <p><IoCheckbox /> Até 2 vídeos</p>
                     <p><IoCheckbox /> Área administrativa</p>
-                    <p><IoCheckbox /> App administrativo</p>
-                    <p><IoCheckbox /> Site e app individual para sua empresa</p>
-                    <p><IoCheckbox /> Imóveis em seu site e app</p>
-                    <p><IoCheckbox /> Imóveis no site e app sua chave</p>
+                    <p><IoCheckbox /> App administrativo [Breve]</p>
+                    <p><IoCheckbox /> Site individual para sua empresa</p>
+                    <p><IoCheckbox /> App individual para sua empresa [Breve]</p>
+                    <p><IoCheckbox /> Imóveis no seu site</p>
+                    <p><IoCheckbox /> Imóveis no seu app [Breve]</p>
+                    <p><IoCheckbox /> Imóveis no site Sua Chave</p>
+                    <p><IoCheckbox /> Imóveis no app Sua Chave [Breve]</p>
+                    <p><IoCheckbox /> Plano sem fidelidade</p>
                 </div>
-                <button>Selecionar plano</button>
+                <a href="/plano">Selecionar plano</a>
             </div>
 
 

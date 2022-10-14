@@ -176,7 +176,7 @@ const RightNav = ({ open }) => {
             Simulador
             </Link>
           </li>
-          {user === "" ? 
+          {user === "" || user === null || user === undefined ? 
             <>
             <button onClick={() => HandleOpenLink("/entrar")}>
               <IoLogOutOutline /> &nbsp; Entrar
@@ -189,7 +189,7 @@ const RightNav = ({ open }) => {
             </>
           :
           <>
-          {user.type === "company" ?
+          {user.type === "company" && user !== null && user !== undefined && user !== "" ?
           <>
                     <button className='btn' onClick={() => HandleOpenLink("/painel/novoimovel")}>
             <IoHomeOutline /> &nbsp; Imóveis

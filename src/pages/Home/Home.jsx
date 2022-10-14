@@ -6,6 +6,8 @@ import { Footer } from "../../components/Footer/Footer";
 import { SliderHome } from "../../components/SliderHome/SliderHome";
 import {  PropertyCarroussel } from "../../components/PropertyCarroussel/PropertyCarroussel";
 import { DownloadApp } from "../../components/DownloadApp/DownloadApp";
+import { Cities } from "../../components/Cities/Cities";
+import { ExploreIconsProperties } from "../../components/ExploreIconsProperties/ExploreIconsProperties";
 
 export function Home() {
     return (
@@ -31,7 +33,9 @@ export function Home() {
             <div className="carroussel">
             <PropertyCarroussel />
             </div>
-            <DownloadApp />
+            <ExploreIconsProperties />
+            <Cities />
+            {/* <DownloadApp /> */}
             <Footer />
         </div>
     )

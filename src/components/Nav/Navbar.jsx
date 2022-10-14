@@ -153,7 +153,7 @@ const Navbar2 = () => {
       </div>
       <Burger />
       <div className="account">
-        {user === "" ?
+        {user === "" || user === null || user === undefined ?
         <>
                 <button onClick={() => HandleOpenLink("/entrar")}>Entrar</button>
                 <li className='nav-item'>
@@ -162,10 +162,10 @@ const Navbar2 = () => {
                   </Link>
                 </li>
         </>
-      : user !==  "" ?
+      : user !== "" || user !== null || user !== undefined ?
         <>
 
-{user.type === "company" ?
+{user.type === "company" && user !== null && user !== undefined && user !== "" ?
                 <>
                 <button className='iconUnic' onClick={() => HandleOpenLink("/painel/novoimovel")} data-tip data-for='Imóveis'><IoHomeOutline/></button>
                 <ReactTooltip id='Imóveis' place="bottom" type="dark" effect="solid">

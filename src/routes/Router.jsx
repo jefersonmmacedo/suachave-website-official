@@ -40,6 +40,8 @@ import { MenuAdm } from '../pages/Adm/MenuAdm/MenuAdm';
 import { Scheduling } from '../pages/Scheduling/Scheduling';
 import { SchedulingAdm } from '../pages/Adm/SchedulingAdm/SchedulingAdm';
 import { ComingSoon } from '../pages/CommingSoom/ComingSoon';
+import { Checkout } from '../pages/Checkout/Checkout';
+import { PaymentCompleted } from '../pages/PaymentCompleted/PaymentCompleted';
 
 function Router () {
 const Local = localStorage.getItem("suachave");
@@ -74,7 +76,6 @@ function PrivateRoute({children} ) {
             <Route path="/corretores" element={<Brokers />}/>
             <Route path="/test" element={<About />}/>
             <Route path="/simulador" element={<Simulator />}/>
-
             
             /* Rotas fechadas/login */
             <Route path="/planos"
@@ -94,9 +95,11 @@ function PrivateRoute({children} ) {
             <Route path="/painel"
                     element={ <PrivateRoute> <Dashboard /> </PrivateRoute>} />
             <Route path="/painel/novoimovel"
-                    element={ <PrivateRoute> <NewProperty /> </PrivateRoute>} />
-            <Route path="/painel/planos"
                     element={ <PrivateRoute> <PlainsAdm /> </PrivateRoute>} />
+            <Route path="/plano"
+                    element={ <PrivateRoute> <Checkout /> </PrivateRoute>} />
+            <Route path="/pagamentofinalizado"
+                    element={ <PrivateRoute> <PaymentCompleted /> </PrivateRoute>} />
             <Route path="/painel/chat"
                     element={ <PrivateRoute> <ChatAdm /> </PrivateRoute>} />
             <Route path="/painel/notificacoes"
