@@ -6,13 +6,16 @@ import {FaHome, FaBuilding, FaStore} from "react-icons/fa";
 import {IoBusiness} from "react-icons/io5";
 
 export function SearchProperty() {
-    const uf2 = "RJ";
-    const city2 = "Rio Bonito"
-    const [city, setCity] = useState(city2);
+    const LocalCity = localStorage.getItem("suachavecity");
+    const userCity = JSON.parse(LocalCity);
+    const [uf, setUf] = useState(userCity === null || userCity === undefined || userCity === ""? "" : userCity.uf);
+    const [city, setCity] = useState(userCity === null || userCity === undefined || userCity === ""? "" : userCity.city);
     const [districtAll, setDistrictAll] = useState([]);
-    const [uf, setUf] = useState(uf2);
     const [professional, setProfessional] = useState("");
 
+
+    console.log(uf)
+    console.log(city)
     async function handleSearchDistrict(ufSelect) {
         console.log(ufSelect)
         try {
@@ -23,7 +26,7 @@ export function SearchProperty() {
             return;
           }catch{
             console.log("error")
-            toast.error("Escolha um estado e clica em buscar cidades")
+            toast.error("Escolha um estado e clica em buscar cidades");
         }
         return
     }
@@ -49,9 +52,14 @@ export function SearchProperty() {
         handleSearchDistrict(e.target.value)
       }
       function handleSearchProfessional(e) {
-        setUf(e.target.value)
         console.log(e.target.value)
         toast.info(`Você escolheu: ${professional}, na cidade ${city} - ${uf}`)
+        const suachave = {
+            city: city,
+            uf: uf,
+          };
+
+        localStorage.setItem("suachavecity", JSON.stringify(suachave));
       }
     return (
         <div className="SearchProperty">
@@ -113,7 +121,6 @@ export function SearchProperty() {
                     <option value={city}>{city}</option>
                     :
                     <>
-                    <option value="">Escolha sua cidade</option>
                     {districtAll?.map((district) => {
                             return (
                                 <option autocomplete="off" key={district.id} value={district.nome}>{district.nome}</option>

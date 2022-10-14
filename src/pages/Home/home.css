@@ -24,6 +24,121 @@
     margin: 0px auto;
 }
 
+
+.content-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-radius: 8px;
+    background-color: #BB0000;
+}
+.content-modal .itensModal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    overflow:auto; 
+    max-height: 500px;
+    margin: 20px 10px;
+}
+
+.content-modal .itensModal img {
+    width: 150px;
+    margin: 20px;
+}
+.content-modal .itensModal h2 {
+    font-weight: 700;
+    color: var(--White);
+    margin: 10px
+}
+
+.content-modal .itensModal form {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 20px 0;
+}
+
+.content-modal .itensModal form .dataButtons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; 
+}
+.content-modal .itensModal form .dataButtons button {
+    width: 150px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--White);
+    color: var(--Primary);
+    margin: 5px;
+    font-weight: 700;
+}
+
+.content-modal .itensModal form h3 {
+    font-weight: 700;
+    color: var(--White);
+    margin-top: 10px;
+}
+
+.content-modal .itensModal form select {
+    margin: 5px;
+    font-weight: 700;
+}
+
+.content-modal .itensModal form button {
+    width: 150px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--White);
+    color: var(--Primary);
+    margin: 10px;
+    font-weight: 700;
+}
+.content-modal .itensModal .loginAccount {
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid var(--BorderHover);
+    margin: 20px;
+    padding: 10px;
+}
+
+.content-modal .itensModal .loginAccount a {
+    width: 150px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--White);
+    color: var(--Primary);
+    margin: 5px;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 14px;
+}
+
 @media (max-width: 1030px) {
     .Home .carroussel {
         width: 95%;
@@ -48,6 +163,22 @@
                     margin-top: 400px;
                     width: 100%;
                     text-align: center;
+                }
+
+                @media (max-width: 400px) {
+
+                    .content-modal .itensModal {
+                        padding: 20px;
+                    }
+                    .content-modal .itensModal form {
+                        width: 100%;
+                    }
+
+                    .content-modal .itensModal .loginAccount {
+                        width: 100%;
+                        margin: 20px 0 0 0;
+                    }
+                    
                 }
          
             }

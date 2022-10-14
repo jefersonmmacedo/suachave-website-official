@@ -141,7 +141,6 @@ button {
   width: 100%;
   max-width: 700px;
   background-color: var(--BorderHover);
-  padding: 20px 10px;
   position: relative;
   border-radius: 8px;
   border: none;

@@ -95,8 +95,10 @@ function PrivateRoute({children} ) {
             <Route path="/painel"
                     element={ <PrivateRoute> <Dashboard /> </PrivateRoute>} />
             <Route path="/painel/novoimovel"
-                    element={ <PrivateRoute> <PlainsAdm /> </PrivateRoute>} />
+                    element={ <PrivateRoute> <NewProperty /> </PrivateRoute>} />
             <Route path="/plano"
+                    element={ <PrivateRoute> <Checkout /> </PrivateRoute>} />
+            <Route path="/painel/planos"
                     element={ <PrivateRoute> <Checkout /> </PrivateRoute>} />
             <Route path="/pagamentofinalizado"
                     element={ <PrivateRoute> <PaymentCompleted /> </PrivateRoute>} />

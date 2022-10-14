@@ -4,11 +4,11 @@ import buscaDistrito from '../../services/api-buscaDistrito';
 import { toast } from 'react-toastify';
 
 export function SearchPropertyListing() {
-    const uf2 = "RJ";
-    const city2 = "Rio Bonito"
-    const [city, setCity] = useState(city2);
+    const LocalCity = localStorage.getItem("suachavecity");
+    const userCity = JSON.parse(LocalCity);
+    const [uf, setUf] = useState(userCity === null || userCity === undefined || userCity === ""? "" : userCity.uf);
+    const [city, setCity] = useState(userCity === null || userCity === undefined || userCity === ""? "" : userCity.city);
     const [districtAll, setDistrictAll] = useState([]);
-    const [uf, setUf] = useState(uf2);
     const [professional, setProfessional] = useState("");
 
     async function handleSearchDistrict(ufSelect) {
@@ -47,9 +47,13 @@ export function SearchPropertyListing() {
         handleSearchDistrict(e.target.value)
       }
       function handleSearchProfessional(e) {
-        setUf(e.target.value)
         console.log(e.target.value)
-        toast.info(`Você escolheu: ${professional}, na cidade ${city} - ${uf}`)
+        const suachave = {
+            city: city,
+            uf: uf,
+          };
+
+        localStorage.setItem("suachavecity", JSON.stringify(suachave));
       }
     return (
         <div className="SearchPropertyListing">

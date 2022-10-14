@@ -10,6 +10,7 @@
 import { SliderImagesModal } from '../SliderImagesModal/SliderImagesModal';
 import Modal from 'react-modal';
 import { useState } from "react";
+import "./sliderImages.css"
   
   
   
@@ -143,8 +144,8 @@ import { useState } from "react";
             <div className="content-modal">
             <div className="itensModal">
                 <SliderImagesModal />
-            </div>
             <h5>Arraste para o lado</h5>
+            </div>
             </div>
             </Modal>
           </>

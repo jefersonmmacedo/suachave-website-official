@@ -10,19 +10,11 @@ import { useEffect } from 'react';
 
 
 function App() {
-  const suachave = {
-    type: "company"
-  };
+
 
   // const suachave = ""
   const {logout} = useContext(AuthContext);
 
-  useEffect(() => {
-    function newSetData() {
-      localStorage.setItem("suachave", JSON.stringify(suachave));
-    }
-    newSetData()
-  }, [])
   return (
     <BrowserRouter>
     <AuthProvider>
