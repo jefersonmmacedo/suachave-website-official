@@ -194,10 +194,11 @@ export function Home() {
                     }     
                     </select>
 
-                    <button onClick={HandleNewClientBrowser}>Voltar ao site</button>
+                    <button onClick={HandleNewClientBrowser}>Definir localização</button>
                 </form>
                 <div className="loginAccount">
                     <a href="/entrar">Ja possuo conta</a>
+                    <a href="/cadastrar">Cadastrar</a>
                 </div>
             </div>
             </div>
