@@ -8,7 +8,7 @@ export function Faq() {
         {
             id: 1,
             question: "O que é o Sua Chave?",
-            reply: "Somos um marketplace ára imobiliárias e corretores, com foco em conectar seus imóveis a clientes interessados."
+            reply: "Somos um marketplace para imobiliárias e corretores, com foco em conectar seus imóveis a clientes interessados."
         },
         {
             id: 2,
