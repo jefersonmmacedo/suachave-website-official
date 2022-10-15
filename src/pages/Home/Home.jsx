@@ -147,7 +147,7 @@ export function Home() {
             <div className="itensModal">
                 <img src={LogoImg} alt="" />
                 <form action="">
-                    <h3>Escolha sua cidade / Estado</h3>
+                    <h3>Escolha seu estado e cidade</h3>
                     <select value={uf} onChange={handleSetectUf}> 
                             <option value="">Escolha seu estado</option>
                             <option value="AC">Acre</option>
