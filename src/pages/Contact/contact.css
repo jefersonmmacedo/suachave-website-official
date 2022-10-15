@@ -1,0 +1,87 @@
+﻿.Contact {
+    width: 100%;
+    text-align: center;
+    align-itens: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.Contact .main {
+    width: 100%;
+    text-align: center;
+    align-itens: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 100px 20px 40px 20px;
+}
+
+.Contact .main h2 {
+    font-weight: 700;
+    color: var(--Primary);
+}
+.Contact .main h2 span {
+    color: var(--Primary);
+}
+.Contact .main h4 {
+    font-weight: 600;
+    color: var(--Gray);
+}
+
+.Contact .main .form {
+        width: 550px;
+        text-align: center;
+        align-itens: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 40px auto;
+}
+
+.Contact .main .form .inputsContact {
+    width: 100%;
+    align-itens: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.Contact .main .form .inputsContact input {
+    border: none;
+    background-color: var(--BorderInput);
+    width: 265px;
+    margin: 5px;
+    padding: 10px 20px;
+    border-radius: 6px;
+}
+.Contact .main .form select {
+    border: none;
+    background-color: var(--BorderInput);
+    width: 98%;
+    margin: 5px;
+    padding: 10px 20px;
+    border-radius: 6px;
+}
+.Contact .main .form textarea {
+    border: none;
+    background-color: var(--BorderInput);
+    width: 98%;
+    margin: 5px;
+    padding: 10px 20px;
+    border-radius: 6px;
+    resize: none;
+}
+.Contact .main .form button {
+    border: none;
+    background-color: var(--Primary);
+    color: var(--White);
+    font-weight: 700;
+    width: 98%;
+    margin: 5px;
+    padding: 10px 20px;
+    border-radius: 6px;
+}
+
+
+.Contact .main .BlocksContact {
+    width: 1000px;
+    flex-direction: row;
+        margin: 0 auto;
+        background-color: var(--BorderInput);
+}

@@ -51,7 +51,7 @@ const Ul = styled.ul`
     align-items: center;
     justify-content: center;
     padding: 5px 10px;
-    background-color: var(--Yellow);
+    background-color: rgba(237, 50, 55, 0.95);
     border-radius: 6px;
     margin: 5px 0;
     color: var(--White);
@@ -118,7 +118,7 @@ const Ul = styled.ul`
       flex-direction: row;
       align-items: center;
       justify-content: center;
-      background-color:  var(--Secondary);
+      background-color:  rgba(237, 50, 55, 0.1);
       margin-left: 10px;
       margin-right: 10px;
       padding: 10px 0;
@@ -181,11 +181,9 @@ const RightNav = ({ open }) => {
             <button onClick={() => HandleOpenLink("/entrar")}>
               <IoLogOutOutline /> &nbsp; Entrar
             </button>
-            <li className='nav-item'>
-              <Link to='/cadastrar' >
-              Cadastrar
-              </Link>
-            </li>
+            <button className='btn' onClick={() => HandleOpenLink("/entrar")}>
+              &nbsp; Cadastrar
+            </button>
             </>
           :
           <>

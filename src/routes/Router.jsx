@@ -42,6 +42,7 @@ import { SchedulingAdm } from '../pages/Adm/SchedulingAdm/SchedulingAdm';
 import { ComingSoon } from '../pages/CommingSoom/ComingSoon';
 import { Checkout } from '../pages/Checkout/Checkout';
 import { PaymentCompleted } from '../pages/PaymentCompleted/PaymentCompleted';
+import { Contact } from '../pages/Contact/Contact';
 
 function Router () {
 const Local = localStorage.getItem("suachave");
@@ -76,10 +77,11 @@ function PrivateRoute({children} ) {
             <Route path="/corretores" element={<Brokers />}/>
             <Route path="/test" element={<About />}/>
             <Route path="/simulador" element={<Simulator />}/>
+            <Route path="/sobre" element={<About />}/>
+            <Route path="/planos" element={<Pricing />}/>
+            <Route path="/faleconosco" element={<Contact />}/>
             
             /* Rotas fechadas/login */
-            <Route path="/planos"
-                    element={ <PrivateRoute> <Pricing /> </PrivateRoute>} />
             <Route path="/minhaconta"
                     element={ <PrivateRoute> <MyAccount /> </PrivateRoute>} />
             <Route path="/mensagens"

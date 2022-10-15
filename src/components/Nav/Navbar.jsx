@@ -161,6 +161,7 @@ const Navbar2 = () => {
                   Cadastrar
                   </Link>
                 </li>
+                
         </>
       : user !== "" || user !== null || user !== undefined ?
         <>

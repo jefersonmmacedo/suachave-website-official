@@ -17,8 +17,8 @@ export function Footer() {
                         </div>
                         <div className="sectionUnic">
                             <h3><b>SUA CHAVE</b></h3>
-                                <h5><a href="/">Sobre nós</a></h5>
-                                <h5><a href="/">Blog</a></h5>
+                                <h5><a href="/sobre">Sobre nós</a></h5>
+                                {/* <h5><a href="/sobre">Blog</a></h5> */}
                                 <h5><a href="/imoveis/all">Imóveis</a></h5>
                                 <h5><a href="/imobiliarias">Imobiliárias</a></h5>
                                 <h5><a href="/corretores">Corretores</a></h5>
@@ -27,10 +27,10 @@ export function Footer() {
                         </div>
                         <div className="sectionUnic">
                             <h3><b>CENTRAL DE AJUDA</b></h3>
-                            <h5><a href="/">Faq</a></h5>
+                            {/* <h5><a href="/">Faq</a></h5> */}
                             <h5><a href="/termos">Termos de uso</a></h5>
                             <h5><a href="/privacidade">Política de privacidade</a></h5>
-                            <h5><a href="/">Fale conosco</a></h5>
+                            <h5><a href="/faleconosco">Fale conosco</a></h5>
                             <br />
                             <h3><b>ATENDIMENTO</b></h3>
                             <h5><IoCallOutline />(21) 2222-2222</h5>
