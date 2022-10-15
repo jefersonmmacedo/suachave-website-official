@@ -2,11 +2,27 @@
 import Navbar2 from "../../components/Nav/Navbar";
 import { Footer } from "../../components/Footer/Footer";
 import {IoPlayCircle, IoHome, IoQrCodeOutline, IoIdCardOutline, IoPhonePortraitOutline,
-        IoLayersOutline, IoChatbubblesOutline, IoCropOutline, IoLaptopOutline} from "react-icons/io5"
+        IoLayersOutline, IoChatbubblesOutline, IoCropOutline, IoLaptopOutline, IoMailOpenOutline, IoCallOutline, IoCloseOutline} from "react-icons/io5"
 import { Plains } from "../../components/Plains/Plains";
-import SmartPhone from "../../assets/images/iphone.png"
+import SmartPhone from "../../assets/images/iphone.png";
+import Modal from 'react-modal';
+import { useState } from "react";
 
 export function About() {
+    const [isOpenModal, setIsOpenModa] = useState(false);
+
+    function handleOpenModal(e) {
+      e.preventDefault();
+        setIsOpenModa(true)
+      }
+    
+      function handleCloseModal(e) {
+        e.preventDefault();
+        setIsOpenModa(false);
+      }
+
+    Modal.setAppElement('#root');
+
     return (
 <div className="About">
     <Navbar2 />
@@ -23,7 +39,7 @@ export function About() {
                     </div>
                 </div>
                 <div className="imageAbout">
-                    <IoPlayCircle />
+                    <IoPlayCircle onClick={handleOpenModal}/>
                 </div>
             </div>
         </div>
@@ -39,7 +55,7 @@ export function About() {
                     </div>
                     <div className="IconsWhyText">
                     <h2>Totalmente funcional</h2>
-                    <h4>Design moderno, fácil utilização com foto nas imagens e informações</h4>
+                    <h4>Design moderno, fácil utilização com foco nas imagens e informações</h4>
                     </div>
                 </div>
                 <div className="IconsWhyChooseUnic">
@@ -123,8 +139,47 @@ export function About() {
         <h4>Cada plano atende a uma necessidade, de acordo com as ferramentas oferecidas. <br/>Você poderá alterar a qualquer momento.</h4>
     </div>
         <Plains />
+        <div className="textPricing">
+        <h1><span>Fale conosco</span></h1>
+        <h4>Entre em contato conosco, estamos prontos para atendê-lo.</h4>
+    </div>
+        <div className="BlocksContact">
+                <div className="blockContact">
+                        <h3><IoMailOpenOutline /> Email</h3>
+                        <h5>contato@suachave.com.br</h5>
+
+                        <button>Enviar e-mail</button>
+                </div>
+                <div className="blockContact">
+                        <h3><IoCallOutline  /> Telefone</h3>
+                        <h5>21 97168-4632</h5>
+
+                        <button>Ligar</button>
+                </div>
+                <div className="blockContact">
+                    <h3><IoPhonePortraitOutline /> Whatsapp </h3>
+                    <h5>21 97168-4632</h5>
+                    <button>Enviar mensagem</button>
+                </div>
+            </div> 
     </div>
     <Footer />
+
+
+    <Modal isOpen={isOpenModal} onRequestClose={handleCloseModal}
+            overlayClassName="react-modal-overlay"
+            className="react-modal-content">
+            <button type="button" className="react-modal-button" onClick={handleCloseModal}>
+            <IoCloseOutline /> 
+            </button>
+            <div className="content-modal">
+   
+    <iframe width="100%" height="400" src="https://www.youtube-nocookie.com/embed/YODMbyiUng4" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+
+            </div>
+            </Modal>
+
+
 </div>
     )
 }

@@ -1,5 +1,6 @@
 ﻿.About {
     width: 100%;
+    display: flex;
     text-align: center;
     align-itens: center;
     justify-content: center;
@@ -8,6 +9,7 @@
 
 .About .MainAbout {
     width: 100%;
+    display: flex;
     text-align: center;
     align-itens: center;
     justify-content: center;
@@ -69,7 +71,8 @@
 
 .About .MainAbout .topRotate .bloco .textAbout .buttonsText button {
     background-color: var(--White);
-    padding: 10px 20px;
+    padding: 15px 20px;
+    font-size: 16px;
     border: none;
     border-radius: 6px;
     display: flex;
@@ -88,7 +91,8 @@
 
 .About .MainAbout .topRotate .bloco .textAbout .buttonsText .btn {
     background-color: rgba(255, 255, 255, 0);
-    padding: 10px 20px;
+    padding: 15px 20px;
+    font-size: 16px;
     border: none;
     border-radius: 6px;
     display: flex;
@@ -111,6 +115,10 @@
 .About .MainAbout .topRotate .bloco .imageAbout svg {
     color: var(--White);
     font-size: 120px;
+    cursor: pointer;
+}
+.About .MainAbout .topRotate .bloco .imageAbout svg:hover {
+    color: var(--ButtonDisabled);
 }
 
 .About .MainAbout .WhyChoose {
@@ -246,6 +254,79 @@
     color: var(--Paragraph);
 }
 
+
+.About .MainAbout .BlocksContact {
+    width: 1000px;
+    display: flex;
+    text-align: center;
+    align-itens: center;
+    justify-content: space-around;
+    flex-direction: row;
+    padding: 20px;
+    margin: 20px auto;
+    flex-wrap: wrap;
+}
+
+.About .MainAbout .BlocksContact .blockContact {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-itens: center;
+    justify-content: flex-start;
+    background-color: var(--BorderInput);
+    padding: 20px;
+    border-radius: 6px;
+    margin: 10px;
+}
+.About .MainAbout .BlocksContact .blockContact:hover {
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+    background-color: var(--White);
+}
+
+.About .MainAbout .BlocksContact .blockContact h3 {
+    display: flex;
+    flex-direction: row;
+    align-itens: center;
+    justify-content: center;
+    font-weight: 700;
+    color: var(--Paragraph);
+    margin:5px;
+    text-align: center;
+}
+
+.About .MainAbout .BlocksContact .blockContact h3 svg {
+    margin-right: 5px;
+}
+
+.About .MainAbout .BlocksContact .blockContact h5 {
+    display: flex;
+    flex-direction: row;
+    align-itens: center;
+    justify-content: center;
+    font-weight: 700;
+    color: var(--Paragraph);
+    text-align: center;
+}
+
+.About .MainAbout .BlocksContact .blockContact button {
+    display: flex;
+    flex-direction: row;
+    align-itens: center;
+    justify-content: center;
+    border: none;
+    background-color: var(--Primary);
+    color: var(--White);
+    font-weight: 700;
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 6px;
+}
+.About .MainAbout .BlocksContact .blockContact button:hover {
+    background-color: var(--White);
+    color: var(--Primary);
+}
+
 @media (max-width: 1000px) {
     .About .MainAbout .howItWorks .iconsWorks {
         width: 100%;
@@ -253,6 +334,12 @@
         flex-wrap: wrap;
         justify-content: center;
     }
+
+    .About .MainAbout .BlocksContact {
+        width: 100%;
+        justify-content: center;
+    }
+
 
     @media (max-width: 920px) {
         .About .MainAbout .WhyChoose {

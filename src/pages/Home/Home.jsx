@@ -14,6 +14,7 @@ import { useEffect } from "react";
 import LogoImg from '../../assets/images/Logo2.png';
 import buscaDistrito from '../../services/api-buscaDistrito';
 import { toast } from 'react-toastify';
+import { ToHire } from "../../components/ToHire/ToHire";
 
 export function Home() {
     const LocalCity = localStorage.getItem("suachavecity");
@@ -131,6 +132,7 @@ export function Home() {
             </div>
             <ExploreIconsProperties />
             <Cities />
+            <ToHire />
             {/* <DownloadApp /> */}
             <Footer />
 
