@@ -30,8 +30,9 @@ export function About() {
         <div className="topRotate">
             <div className="bloco">
                 <div className="textAbout">
-                    <h1>Somos a <span>Sua Chave</span></h1>
-                    <h3>Temos a chave perfeita para abrir as portas para seus clientes</h3>
+                    <h1>Seja bem vindo ao <span>Sua Chave</span></h1>
+                    <h3>Somos um marketplace voltado para o setor imobiliário,<br />
+                        oferecendo serciços como site, aplicativos e marketing <br /> para imobiliárias e corretores.</h3>
 
                     <div className="buttonsText">
                         <button>Fale conosco</button>
