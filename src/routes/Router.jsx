@@ -43,6 +43,7 @@ import { ComingSoon } from '../pages/CommingSoom/ComingSoon';
 import { Checkout } from '../pages/Checkout/Checkout';
 import { PaymentCompleted } from '../pages/PaymentCompleted/PaymentCompleted';
 import { Contact } from '../pages/Contact/Contact';
+import { Faq } from '../pages/Faq/Faq';
 
 function Router () {
 const Local = localStorage.getItem("suachave");
@@ -80,6 +81,7 @@ function PrivateRoute({children} ) {
             <Route path="/sobre" element={<About />}/>
             <Route path="/planos" element={<Pricing />}/>
             <Route path="/faleconosco" element={<Contact />}/>
+            <Route path="/faq" element={<Faq />}/>
             
             /* Rotas fechadas/login */
             <Route path="/minhaconta"

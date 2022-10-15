@@ -27,7 +27,7 @@ export function Footer() {
                         </div>
                         <div className="sectionUnic">
                             <h3><b>CENTRAL DE AJUDA</b></h3>
-                            {/* <h5><a href="/">Faq</a></h5> */}
+                            <h5><a href="/faq">Faq</a></h5>
                             <h5><a href="/termos">Termos de uso</a></h5>
                             <h5><a href="/privacidade">Política de privacidade</a></h5>
                             <h5><a href="/faleconosco">Fale conosco</a></h5>

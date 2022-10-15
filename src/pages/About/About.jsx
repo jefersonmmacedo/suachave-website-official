@@ -31,8 +31,8 @@ export function About() {
             <div className="bloco">
                 <div className="textAbout">
                     <h1>Seja bem vindo ao <span>Sua Chave</span></h1>
-                    <h3>Somos um marketplace voltado para o setor imobiliário,<br />
-                        oferecendo serciços como site, aplicativos e marketing <br /> para imobiliárias e corretores.</h3>
+                    <h3>Somos um marketplace pára imobiliárias e corretores, <br />
+                    com foco em conectar seus imóveis a clientes interessados.</h3>
 
                     <div className="buttonsText">
                         <button>Fale conosco</button>
