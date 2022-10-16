@@ -77,6 +77,10 @@
     margin: 10px;
     text-align:left;
 }
+.SchedulesAdm .informations .chat .textChat a{
+    text-decoration: none;
+    color: var(--Primary);
+}
 .SchedulesAdm .informations .chat .textChat h3 {
     color: var(--Primary);
     font-weight: 700;

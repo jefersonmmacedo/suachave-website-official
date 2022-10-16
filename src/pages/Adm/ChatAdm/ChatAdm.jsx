@@ -15,7 +15,9 @@ export function ChatAdm() {
             <div className="informations">
             <div className="chat">
                     <div className="image">
+                        <a href="/conversa">
                         <img src={ImageHouse} alt="" />
+                        </a>
                     </div>
                     <div className="textChat">
                     <h3>Lindo apartamento luxuoso</h3>
@@ -25,7 +27,9 @@ export function ChatAdm() {
                 </div>
                 <div className="chat">
                     <div className="image">
+                    <a href="/conversa">
                         <img src={ImageHouse1} alt="" />
+                        </a>
                     </div>
                     <div className="textChat">
                     <h3>Lindo apartamento luxuoso</h3>
@@ -35,7 +39,9 @@ export function ChatAdm() {
                 </div>
                 <div className="chat">
                     <div className="image">
+                    <a href="/conversa">
                         <img src={ImageHouse2} alt="" />
+                        </a>
                     </div>
                     <div className="textChat">
                     <h3>Lindo apartamento luxuoso</h3>

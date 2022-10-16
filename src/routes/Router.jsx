@@ -34,7 +34,6 @@ import { ChatAdm } from '../pages/Adm/ChatAdm/ChatAdm';
 import { NotificationsAdm } from '../pages/Adm/NotificationsAdm/NotificationsAdm';
 import { SchedulesAdm } from '../pages/Adm/SchedulesAdm/SchedulesAdm';
 import { BrokersAdm } from '../pages/Adm/BrokersAdm/BrokersAdm';
-import { WebApp } from '../pages/Adm/WebApp/WebApp';
 import { MyAccountAdm } from '../pages/Adm/MyAccountAdm/MyAccountAdm';
 import { MenuAdm } from '../pages/Adm/MenuAdm/MenuAdm';
 import { Scheduling } from '../pages/Scheduling/Scheduling';
@@ -44,6 +43,7 @@ import { Checkout } from '../pages/Checkout/Checkout';
 import { PaymentCompleted } from '../pages/PaymentCompleted/PaymentCompleted';
 import { Contact } from '../pages/Contact/Contact';
 import { Faq } from '../pages/Faq/Faq';
+import { WebApp } from '../pages/Adm/WebApp/WebApp';
 
 function Router () {
 const Local = localStorage.getItem("suachave");
@@ -82,6 +82,7 @@ function PrivateRoute({children} ) {
             <Route path="/planos" element={<Pricing />}/>
             <Route path="/faleconosco" element={<Contact />}/>
             <Route path="/faq" element={<Faq />}/>
+            <Route path="/conversa" element={<Message />}/>
             
             /* Rotas fechadas/login */
             <Route path="/minhaconta"
@@ -103,7 +104,7 @@ function PrivateRoute({children} ) {
             <Route path="/plano"
                     element={ <PrivateRoute> <Checkout /> </PrivateRoute>} />
             <Route path="/painel/planos"
-                    element={ <PrivateRoute> <Checkout /> </PrivateRoute>} />
+                    element={ <PrivateRoute> <PlainsAdm /> </PrivateRoute>} />
             <Route path="/pagamentofinalizado"
                     element={ <PrivateRoute> <PaymentCompleted /> </PrivateRoute>} />
             <Route path="/painel/chat"

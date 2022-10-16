@@ -9,7 +9,7 @@
 
 .Contact h2 {
     margin-top: 40px;
-    font-weight: bold;
+    font-weight: 700;
     color: var(--Primary);
     text-align: center;
 }
@@ -24,10 +24,7 @@
     margin:10px;
     text-align: center;
 }
-.Contact h2 {
-    font-weight: 700;
-    color: var(--Primary);
-}
+
 
 .Contact .form {
         width: 550px;

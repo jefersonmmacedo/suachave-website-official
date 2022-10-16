@@ -172,6 +172,10 @@ const Navbar2 = () => {
                 <ReactTooltip id='Imóveis' place="bottom" type="dark" effect="solid">
                      <span>Imóveis</span>
                 </ReactTooltip>
+                <button className='iconUnic' onClick={() => HandleOpenLink("/painel/agendamentos")} data-tip data-for='Agendamentos'><IoCalendarOutline/></button>
+                <ReactTooltip id='Agendamentos' place="bottom" type="dark" effect="solid">
+                     <span>Agendamentos</span>
+                </ReactTooltip>
 
                 <button className='iconUnic' onClick={() => HandleOpenLink("/painel/chat")} data-tip data-for='Chat'><IoChatboxEllipsesOutline/></button>
                 <ReactTooltip id='Chat' place="bottom" type="dark" effect="solid">
@@ -183,10 +187,10 @@ const Navbar2 = () => {
                      <span>Notificações</span>
                 </ReactTooltip>
 
-                <button className='iconUnic' onClick={() => HandleOpenLink("/painel")} data-tip data-for='Painel'><IoSpeedometerOutline /></button>
+                {/* <button className='iconUnic' onClick={() => HandleOpenLink("/painel")} data-tip data-for='Painel'><IoSpeedometerOutline /></button>
                 <ReactTooltip id='Painel' place="bottom" type="dark" effect="solid">
                      <span>Painel</span>
-                </ReactTooltip>
+                </ReactTooltip> */}
                 </>
 :
                <>

@@ -54,9 +54,9 @@ export function ToolBar() {
                     <IoLaptopOutline /><p>Site/App</p>
                     </a>
                 </div>
-                   <button className="btnToolBar"><IoLogoWhatsapp />Suporte</button>
-                <button className="btnToolBar"><IoLogoWhatsapp />Financeiro</button>
-                <button className="btnToolBar"><IoLogoWhatsapp />Comercial</button>
+                   <button className="btnToolBar">Atendimento</button>
+                {/* <button className="btnToolBar"><IoLogoWhatsapp />Financeiro</button>
+                <button className="btnToolBar"><IoLogoWhatsapp />Comercial</button> */}
                 <button><IoLogOutOutline />Sair</button>
             </div>
         </div>

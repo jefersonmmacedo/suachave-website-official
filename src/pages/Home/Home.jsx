@@ -53,8 +53,14 @@ export function Home() {
             city: city,
             uf: uf,
           };
+        const suachave2 = {
+            type: "company",
+            city: city,
+            uf: uf,
+          };
 
         localStorage.setItem("suachavecity", JSON.stringify(suachave));
+        localStorage.setItem("suachave", JSON.stringify(suachave2));
     }
     function handleOpenModal(e) {
       e.preventDefault();

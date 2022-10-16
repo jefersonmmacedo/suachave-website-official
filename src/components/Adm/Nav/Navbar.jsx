@@ -172,6 +172,11 @@ const Nav = styled.nav`
 
 `
 
+function HandleOpenLink(data) {
+  window.open(`${data}`, "_self")
+}
+
+
 const NavbarAdm = () => {
 
   
@@ -186,20 +191,20 @@ const NavbarAdm = () => {
       <div className="account2">
 
 
-                <button className='iconUnic2' data-tip data-for='Novo Imóvel'><IoHome/></button>
+                <button className='iconUnic2' data-tip data-for='Novo Imóvel' onClick={() => HandleOpenLink("/painel/novoimovel")}><IoHome/></button>
                 <ReactTooltip id='Novo Imóvel' place="bottom" type="dark" effect="solid">
                      <span>Novo Imóvel</span>
                 </ReactTooltip>
-                <button className='iconUnic2' data-tip data-for='Chat'><IoChatboxEllipses/></button>
+                <button className='iconUnic2' data-tip data-for='Chat' onClick={() => HandleOpenLink("/painel/chat")}><IoChatboxEllipses/></button>
                 <ReactTooltip id='Chat' place="bottom" type="dark" effect="solid">
                      <span>Chat</span>
                 </ReactTooltip>
-                <button className='iconUnic2' data-tip data-for='Agendamento'><IoCalendar/></button>
+                <button className='iconUnic2' data-tip data-for='Agendamento' onClick={() => HandleOpenLink("/painel/agendamentos")}><IoCalendar/></button>
                 <ReactTooltip id='Agendamento' place="bottom" type="dark" effect="solid">
                      <span>Agendamento</span>
                 </ReactTooltip>
 
-                <button className='iconUnic2' data-tip data-for='Notificações'><IoNotifications/></button>
+                <button className='iconUnic2' data-tip data-for='Notificações' onClick={() => HandleOpenLink("/painel/notificacoes")}><IoNotifications/></button>
                 <ReactTooltip id='Notificações' place="bottom" type="dark" effect="solid">
                      <span>Notificações</span>
                 </ReactTooltip>
