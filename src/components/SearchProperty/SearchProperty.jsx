@@ -3,7 +3,7 @@ import { useState } from "react";
 import buscaDistrito from '../../services/api-buscaDistrito';
 import { toast } from 'react-toastify';
 import {FaHome, FaBuilding, FaStore} from "react-icons/fa";
-import {IoBusiness} from "react-icons/io5";
+import {IoBusiness, IoLocationOutline} from "react-icons/io5";
 
 export function SearchProperty() {
     const LocalCity = localStorage.getItem("suachavecity");
@@ -78,14 +78,38 @@ export function SearchProperty() {
                             <option value="">Lotes</option>       
                     </select>
             <select> 
-                            <option value="">Escolha</option>   
+                            <option value="">Subtipo</option>   
                             <option value="">Casa</option>   
                             <option value="">Apartamento</option>   
                             <option value="">Cobertura</option>   
                             <option value="">Kitnet</option>   
                             <option value="">Condomínio</option>       
                     </select>
-            <select value={uf} onChange={handleSetectUf}> 
+            <select> 
+                            <option value="">Quarto</option>   
+                            <option value="">Casa</option>   
+                            <option value="">Apartamento</option>   
+                            <option value="">Cobertura</option>   
+                            <option value="">Kitnet</option>   
+                            <option value="">Condomínio</option>       
+                    </select>
+            <select> 
+                            <option value="">Banheiro</option>   
+                            <option value="">Casa</option>   
+                            <option value="">Apartamento</option>   
+                            <option value="">Cobertura</option>   
+                            <option value="">Kitnet</option>   
+                            <option value="">Condomínio</option>       
+                    </select>
+            <select> 
+                            <option value="">Garagem</option>   
+                            <option value="">Casa</option>   
+                            <option value="">Apartamento</option>   
+                            <option value="">Cobertura</option>   
+                            <option value="">Kitnet</option>   
+                            <option value="">Condomínio</option>       
+                    </select>
+            {/* <select value={uf} onChange={handleSetectUf}> 
                             <option value="">Escolha seu estado</option>
                             <option value="AC">Acre</option>
                             <option value="AL">Alagoas</option>
@@ -128,9 +152,20 @@ export function SearchProperty() {
                         })}
                     </>
                     }     
-                    </select>
+                    </select> */}
                      <button onClick={handleSearchProfessional}>Buscar</button>
             </div>
+
+            {userCity !== null || userCity !== undefined || userCity !== "" ? 
+            <div className="textLocation">
+                <h4><IoLocationOutline /> {city} - {uf}</h4> 
+                <button>Alterar</button>
+            </div>
+             : 
+            <div className="textLocation">
+                <button>Definir cidade</button>
+            </div>
+             }
             <div className="icons">
                 <div className="unic">
                     <FaHome />

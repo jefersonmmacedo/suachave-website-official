@@ -14,7 +14,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    width: 80%;
+    width: 950px;
     height: 60px;
     border-radius: 6px;
     box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
@@ -93,6 +93,42 @@
     font-weight: 500;
     border: none;
 }
+
+.SearchProperty .textLocation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+.SearchProperty .textLocation h4 {
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: var(--Gray);
+}
+
+.SearchProperty .textLocation button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 15px;
+    Background-color: rgba(0,0,0,0.6);
+    color: var(--White);
+    font-weight: 500;
+    border: none;
+    margin: 5px;
+    border-radius: 25px;
+}
+
+
+
 .SearchProperty .icons {
     display: flex;
     flex-direction: row;
@@ -129,9 +165,13 @@
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        width: 75%;
         border-radius: 20px;
     }
+
+    @media (max-width: 1000px) {
+        .SearchProperty .search {
+            width: 90%;
+        }
 
     @media (max-width: 900px) {
         .SearchProperty .search {
@@ -233,5 +273,6 @@
                 }
             }
         }
+    }
     }
 }

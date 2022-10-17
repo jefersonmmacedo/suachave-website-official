@@ -1,5 +1,5 @@
 ﻿.block {
-    width: 300px;
+    width: 240px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -8,7 +8,7 @@
     box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
     border-radius: 6px;
     margin: 20px auto;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 }
 
 .block .image {
@@ -62,7 +62,7 @@
 .block .heart {
     position: absolute;
     margin-top: 115px;
-    margin-left: 265px;
+    margin-left: 210px;
 }
 
 .block .heart svg {
@@ -76,7 +76,7 @@
 .block .heart2 {
     position: absolute;
     margin-top: 115px;
-    margin-left: 265px;
+    margin-left: 210px;
 }
 
 .block .heart2 svg {
@@ -106,7 +106,7 @@
 .block .text h3 {
     color: var(--Primary);
     font-weight: 700;
-    margin: 20px 10px 5px 10px;
+    margin: 10px 10px 5px 10px;
 }
 
 .block .text a {
@@ -124,13 +124,21 @@
     color: var(--Gray);
     margin: 0 10px;
 }
+.block .text h6 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    color: var(--Gray);
+    margin: 0 10px;
+    font-weight: 700;
+}
 .block .text .icons {
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
-    margin: 10px 0;
 }
 
 .block .text .icons .iconUnic {
@@ -176,12 +184,12 @@
 .block .text .pricing h5 {
     color: var(--Paragraph);
     font-weight: 700;
-    margin: 5px 10px;
+    margin: 0 10px;
 }
 .block .text .pricing h2 {
     color: var(--Primary);
     font-weight: 700;
-    margin: 0 10px;
+    margin: 5px 10px;
     font-size: 20px;
 }
 

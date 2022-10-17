@@ -8,7 +8,7 @@ export function Plains() {
             <div className="plain">
                 <h3>Plano Básico</h3>
                 <div className="title">
-                <h1>R$ 149,99</h1>
+                <h1>R$ 199,99</h1>
                 {/* <h4>/ mês</h4> */}
                 </div>
                 <div className="text">
