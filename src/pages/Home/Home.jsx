@@ -149,8 +149,8 @@ export function Home() {
             <button type="button" className="react-modal-button" onClick={handleCloseModal}>
             <IoCloseOutline /> 
             </button>
-            <div className="content-modal">
-            <div className="itensModal">
+            <div className="content-modal-home">
+            <div className="itensModalHome">
                 <img src={LogoImg} alt="" />
                 <form action="">
                     <h3>Escolha seu estado e cidade</h3>
