@@ -28,6 +28,7 @@
     justify-content: center;
     width: 100%;
     border-radius: 8px;
+
 }
 .content-modal .itensModal {
     display: flex;
@@ -37,7 +38,7 @@
     width: 100%;
     overflow:auto; 
     max-height: 500px;
-    margin: 20px 10px;
+    padding: 20px;
 }
 
 .content-modal .itensModal .dataProperty {
@@ -226,7 +227,7 @@ object-fit: cover;
   }
 
 
-  @media (max-width: 500px) {
+  @media (max-width: 550px) {
     .content-modal .itensModal .dataProperty {
         width: 100%;
     }
