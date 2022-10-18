@@ -35,7 +35,7 @@ export function About() {
                     </div>
                 </div>
                 <div className="textAbout">
-                    <h1>Seja-bem vindo.<br /><span>O Sua Chave é para você</span></h1>
+                    <h1>Seja bem-vindo.<br /><span>O Sua Chave é para você</span></h1>
                     <h3>Fomos criados para imobiliárias e corretores, <br />
                     com foco em conectar seus imóveis a seus clientes.</h3>
 
@@ -45,7 +45,7 @@ export function About() {
                 </div>
         </div>
         <div className="textPricing">
-        <h1>Porque escolher o <span>Sua Chave </span> ?</h1>
+        <h1>Porque escolher o <span>Sua Chave</span>?</h1>
         <h4>Veja os motivos que faz nossos clientes nos escolherem e o que podemos agregar ao seu negócio.</h4>
     </div>
         <div className="WhyChoose">

@@ -12,6 +12,8 @@ export function SearchProperty() {
     const [city, setCity] = useState(userCity === null || userCity === undefined || userCity === ""? "" : userCity.city);
     const [districtAll, setDistrictAll] = useState([]);
     const [professional, setProfessional] = useState("");
+    const [code, setCode] = useState(false);
+    const [status, setStatus] = useState("aluguel");
 
 
     console.log(uf)
@@ -61,14 +63,21 @@ export function SearchProperty() {
 
         localStorage.setItem("suachavecity", JSON.stringify(suachave));
       }
+
+      function handleActiveCode(data, status) {
+        setCode(data)
+        setStatus(status)
+      }
     return (
         <div className="SearchProperty">
             <div className="selectButtons">
-            <button className="btn">Aluguel</button>
-            <button>Venda</button>
-            <button>Temporada</button>
+            <button className={status === "aluguel" ? "btn" : ""} onClick={() => handleActiveCode(false, "aluguel")}>Aluguel</button>
+            <button className={status === "venda" ? "btn" : ""} onClick={() => handleActiveCode(false, "venda")}>Venda</button>
+            <button className={status === "codigo" ? "btn" : ""} onClick={() => handleActiveCode(true, "codigo")}>Código</button>
                 </div>   
             <div className="search">
+                {code === false ?
+                <>
             <select className="primary"> 
                             <option value="">Tipo</option>   
                             <option value="">Comercial</option>   
@@ -109,6 +118,10 @@ export function SearchProperty() {
                             <option value="">Kitnet</option>   
                             <option value="">Condomínio</option>       
                     </select>
+                </>
+                    :
+                    <input type="text" className="primary" placeholder="Digite o código" />
+                }
             {/* <select value={uf} onChange={handleSetectUf}> 
                             <option value="">Escolha seu estado</option>
                             <option value="AC">Acre</option>

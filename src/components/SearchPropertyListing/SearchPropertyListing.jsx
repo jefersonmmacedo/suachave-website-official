@@ -2,6 +2,7 @@
 import { useState } from "react";
 import buscaDistrito from '../../services/api-buscaDistrito';
 import { toast } from 'react-toastify';
+import { IoLocationOutline } from "react-icons/io5";
 
 export function SearchPropertyListing() {
     const LocalCity = localStorage.getItem("suachavecity");
@@ -57,6 +58,18 @@ export function SearchPropertyListing() {
       }
     return (
         <div className="SearchPropertyListing">
+        {userCity === null || userCity === undefined || userCity === "" ? 
+        <div className="textLocation">
+            <button>Definir cidade</button>
+        </div>
+         : 
+         <div className="textLocation">
+         <h5><IoLocationOutline /> {city} - {uf}</h5> 
+         <button>Alterar</button>
+     </div>
+         }
+
+
             <div className="selectButtonsStatus">
             <button className="btn">Aluguel</button>
             <button>Venda</button>
@@ -118,7 +131,7 @@ export function SearchPropertyListing() {
                             <option value="9">9</option>       
                             <option value="10">10</option>       
                     </select>
-            <select value={uf} onChange={handleSetectUf}> 
+            {/* <select value={uf} onChange={handleSetectUf}> 
                             <option value="">Escolha seu estado</option>
                             <option value="AC">Acre</option>
                             <option value="AL">Alagoas</option>
@@ -162,7 +175,7 @@ export function SearchPropertyListing() {
                         })}
                     </>
                     }     
-                    </select>
+                    </select> */}
                      <button onClick={handleSearchProfessional}>Buscar</button>
             </div>
         </div>

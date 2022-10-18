@@ -3,20 +3,21 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background-color: var(--Aproved);
+    background-color: var(--White);
+    border: 1px solid var(--Primary);
+    color: var(--Primary);
     border-radius: 6px;
     padding: 10px 20px;
-    color: var(--White);
     cursor: pointer;
     margin: 5px;
-    border: none;
 }
 .buttonScheduling svg {
     margin-right: 10px;
 }
 
 .buttonScheduling:hover {
-    background-color: var(--AprovedHover);
+    background-color: var(--Primary);
+    color: var(--White);
 }
 
 

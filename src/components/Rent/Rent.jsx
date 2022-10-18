@@ -25,8 +25,8 @@ export function Rent() {
                     <div className="heart">
                     <IoHeartOutline />
                     </div>
-                    <h2>Fazenda para plantio</h2>
-                    <h4>Centro - Rio Bonito - Rio de Janeiro</h4>
+                    <h3>Fazenda para plantio</h3>
+                    <h5>Centro - Rio Bonito - Rio de Janeiro</h5>
                     <div className="icons">
                         <div className="iconUnic">
                             <p>Quartos</p>
@@ -52,7 +52,7 @@ export function Rent() {
                     </div>
                     <div className="pricing">
                         <h5>Aluguel</h5>
-                        <h2>R$ 2.000,00 / Mês</h2>
+                        <h3>R$ 2.000,00 / Mês</h3>
                     </div>
                 </div>
             <div className="block">
@@ -68,8 +68,8 @@ export function Rent() {
                     <div className="heart2">
                     <IoHeart />
                     </div>
-                    <h2>Xácara com piscina</h2>
-                    <h4>Centro - Rio Bonito - Rio de Janeiro</h4>
+                    <h3>Xácara com piscina</h3>
+                    <h5>Centro - Rio Bonito - Rio de Janeiro</h5>
                     <div className="icons">
                         <div className="iconUnic">
                             <p>Quartos</p>
@@ -95,7 +95,7 @@ export function Rent() {
                     </div>
                     <div className="pricing">
                         <h5>Venda</h5>
-                        <h2>R$ 2.000.000,00</h2>
+                        <h3>R$ 2.000.000,00</h3>
                     </div>
                 </div>
             <div className="block">
@@ -105,8 +105,8 @@ export function Rent() {
                     <div className="heart">
                     <IoHeartOutline />
                     </div>
-                    <h2>Apartamentos em condomínio</h2>
-                    <h4>Centro - Rio Bonito - Rio de Janeiro</h4>
+                    <h3>Apartamentos em condomínio</h3>
+                    <h5>Centro - Rio Bonito - Rio de Janeiro</h5>
                     <div className="icons">
                         <div className="iconUnic">
                             <p>Quartos</p>
@@ -132,7 +132,7 @@ export function Rent() {
                     </div>
                     <div className="pricing">
                         <h5>Venda</h5>
-                        <h2>R$ 5.000.000</h2>
+                        <h3>R$ 5.000.000</h3>
                     </div>
                 </div>
             <div className="block">
@@ -142,8 +142,8 @@ export function Rent() {
                     <div className="heart">
                     <IoHeartOutline />
                     </div>
-                    <h2>Apartamentos em condomínio</h2>
-                    <h4>Centro - Rio Bonito - Rio de Janeiro</h4>
+                    <h3>Apartamentos em condomínio</h3>
+                    <h5>Centro - Rio Bonito - Rio de Janeiro</h5>
                     <div className="icons">
                         <div className="iconUnic">
                             <p>Quartos</p>
@@ -169,7 +169,7 @@ export function Rent() {
                     </div>
                     <div className="pricing">
                         <h5>Venda</h5>
-                        <h2>R$ 5.000.000</h2>
+                        <h3>R$ 5.000.000</h3>
                     </div>
                 </div>
                 

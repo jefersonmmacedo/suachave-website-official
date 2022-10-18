@@ -90,6 +90,11 @@
     color: var(--Paragraph);
     margin:20px 10px;
 }
+.Property .main .data .propertyUnic .text .description {
+    font-weight: 400;
+    color: var(--Paragraph);
+    margin:5px 10px;
+}
 .Property .main .data .propertyUnic .text h3 {
     color: var(--Paragraph);
     font-weight: 700;
@@ -103,6 +108,7 @@
     align-items: center;
     justify-content: center;
 }
+
 
 .Property .main .data .propertyUnic .text .status {
     display: flex;

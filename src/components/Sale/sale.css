@@ -23,7 +23,7 @@
 }
 
 .Sale .itens .block {
-    width: 300px;
+    width: 240px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -115,12 +115,12 @@
 
 
 
-.Sale .itens .block h2 {
+.Sale .itens .block h3 {
     color: var(--Primary);
     font-weight: 700;
     margin: 20px 10px 5px 10px;
 }
-.Sale .itens .block h4 {
+.Sale .itens .block h5 {
     color: var(--Gray);
     margin: 0 10px;
 }
@@ -134,7 +134,7 @@
 }
 
 .Sale .itens .block .icons .iconUnic {
-    width: 20%;
+    width: 33%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -176,7 +176,7 @@
 .Sale .itens .block .pricing h5 {
     color: var(--Paragraph);
     font-weight: 700;
-    margin: 5px 10px;
+    margin: 0px 10px -10px 10px;
 }
 .Sale .itens .block .pricing h2 {
     color: var(--Primary);
