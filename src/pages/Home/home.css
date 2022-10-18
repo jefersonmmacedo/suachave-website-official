@@ -165,14 +165,14 @@
 
         @media (max-width: 750px) {
             .Home .textFeature {
-                margin-top: 420px;
+                margin-top: 470px;
                 width: 100%;
                 text-align: center;
             }
 
             @media (max-width: 555px) {
                 .Home .textFeature {
-                    margin-top: 450px;
+                    margin-top: 500px;
                     width: 100%;
                     text-align: center;
                 }

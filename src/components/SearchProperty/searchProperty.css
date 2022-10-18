@@ -257,10 +257,12 @@
                 width: 70%;
             }
             .SearchProperty .selectButtons button {
-                width: 100%;
+                width: 30%;
+                margin: 0 5px;
             }
             .SearchProperty .selectButtons .btn {
-                width: 100%;
+                width: 30%;
+                margin: 0 5px;
             }
 
             .SearchProperty .icons .unic {
