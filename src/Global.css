@@ -15,6 +15,7 @@
   --Gray: #999999;
   --Border: #E6E7E8;
   --BorderInput: #F1F1F1;
+  --BorderInput2: #F4F4F4;
   --BorderHover: #F8F8F8;
   --Link: #f91942;
   --LinkHover: #d51942;
@@ -81,7 +82,7 @@ body, input, textarea, button {
   
 }
 body, input, textarea, button :focus{
-  outline: none;
+  outline-color: var(--Primary);
   }
 
   body::-webkit-scrollbar {

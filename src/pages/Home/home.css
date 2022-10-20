@@ -2,22 +2,24 @@
     width: 100%;
 }
 .Home .textHome {
-    margin-top: 40px;
-    width: 100%;
-    text-align: center;
+    margin: 40px auto 0 auto;
+    width: 1090px;
+    text-align: left;
 }
 .Home .textFeature {
-    margin-top: 200px;
-    width: 100%;
-    text-align: center;
+    width: 1090px;
+    text-align: left;
+    margin: 200px auto 0 auto;
 }
 .Home .textHome h2 {
-    margin: 20px;
-    font-weight: bold;
+    margin: 20px 40px;
+    font-weight: 800;
+    color: var(--Paragraph);
 }
 .Home .textFeature h2 {
-    margin: 20px;
-    font-weight: bold;
+    margin: 20px 40px;
+    font-weight: 800;
+    color: var(--Paragraph);
 }
 .Home .carroussel {
     width: 1030px;
@@ -173,6 +175,11 @@
             @media (max-width: 555px) {
                 .Home .textFeature {
                     margin-top: 500px;
+                    width: 100%;
+                    text-align: center;
+                }
+
+                .Home .textHome {
                     width: 100%;
                     text-align: center;
                 }

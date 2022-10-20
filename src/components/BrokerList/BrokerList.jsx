@@ -11,6 +11,10 @@ export function BrokerList() {
             <div className="searchBrokers">
                 <input type="text" placeholder="Busque pelo nome"/>
                 <select name="" id="">
+                    <option value="">Individual</option>
+                    <option value="">De imobiliária</option>
+                </select>
+                <select name="" id="">
                     <option value="">Estado</option>
                 </select>
                 <select name="" id="">

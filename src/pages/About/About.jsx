@@ -36,8 +36,8 @@ export function About() {
                 </div>
                 <div className="textAbout">
                     <h1>Seja bem-vindo.<br /><span>O Sua Chave é para você</span></h1>
-                    <h3>Fomos criados para imobiliárias e corretores, <br />
-                    com foco em conectar seus imóveis a seus clientes.</h3>
+                    <h3>Somos uma start-up criada para imobiliárias e corretores, <br />
+                    com foco em conectar seus imóveis a novos clientes.</h3>
 
                     <div className="buttonsText">
                         <button onClick={handleOpenModal}><IoPlayCircle /> dê um play na nossa história</button>
@@ -114,7 +114,7 @@ export function About() {
 
     <div className="howItWorks">
         <h1>Como funciona o Sua Chave ?</h1>
-        <h4>Somos um marketplace para imobiliárias e corretores, com foco em conectar seus imóveis a clientes interessados.
+        <h4>Nossos serviços tem como foco conectar os imóveis de nossos parceiros a clientes interessados.
             <br />
         Utilizando ferramentas de marketing, geolocalização e integrações, trazendo mais objetividade nas ofertas de propriedades.</h4>
         <div className="iconsWorks">

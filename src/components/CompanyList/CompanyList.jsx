@@ -1,6 +1,6 @@
 ﻿import "./companyList.css";
 import {FaBed, FaShower, FaCar} from 'react-icons/fa';
-import {IoCallOutline, IoLogoWhatsapp, IoMailOutline, IoGlobeOutline, IoLocationOutline} from 'react-icons/io5'
+import {IoCallOutline, IoLogoWhatsapp, IoMailOutline, IoGlobeOutline, IoLocationOutline, IoHome} from 'react-icons/io5'
 import imobiliária from "../../assets/images/imob1.png";
 import imobiliária2 from "../../assets/images/imob2.png";
 
@@ -25,6 +25,7 @@ export function CompanyList() {
                     <div className="text">
                     <h3>Alice State Agency</h3>
                     <h5><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h5>
+
                     <div className="icons">
                         <div className="iconUnic">
                             <div className="simbol">
@@ -51,6 +52,7 @@ export function CompanyList() {
                             </div>
                         </div>                        
                     </div>
+                    <h5><IoHome />55 Anuncios</h5>
                     </div>
                 </div> 
             <div className="propertyUnicFavorite">
@@ -86,6 +88,7 @@ export function CompanyList() {
                             </div>
                         </div>                        
                     </div>
+                    <h5><IoHome />73 Anuncios</h5>
                     </div>
                 </div> 
 

@@ -12,7 +12,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 0 20px;
+    margin:0 20px 40px 20px;
 }
 
 .CompanyList .searchCompanies {
@@ -166,17 +166,33 @@
     font-weight: 700;
     margin: 5px 10px;
 }
-.CompanyList .listProperties .propertyUnicFavorite .text h5 {
+.CompanyList .listProperties .propertyUnicFavorite .text h6 {
     color: var(--Gray);
     margin: 0 10px;
+    font-weight: 700;
 }
+.CompanyList .listProperties .propertyUnicFavorite .text h5 {
+    color: var(--Gray);
+    margin:0 10px;
+    font-weight: 700;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.CompanyList .listProperties .propertyUnicFavorite .text h5 svg {
+    margin-right: 5px;
+}
+
+
 .CompanyList .listProperties .propertyUnicFavorite .text .icons {
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
-    margin: 5px 0;
+    margin: 7px 0;
     flex-wrap: wrap;
 }
 

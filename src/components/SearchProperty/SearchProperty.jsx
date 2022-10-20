@@ -13,7 +13,7 @@ export function SearchProperty() {
     const [districtAll, setDistrictAll] = useState([]);
     const [professional, setProfessional] = useState("");
     const [code, setCode] = useState(false);
-    const [status, setStatus] = useState("aluguel");
+    const [status, setStatus] = useState("venda");
 
 
     console.log(uf)
@@ -71,8 +71,8 @@ export function SearchProperty() {
     return (
         <div className="SearchProperty">
             <div className="selectButtons">
-            <button className={status === "aluguel" ? "btn" : ""} onClick={() => handleActiveCode(false, "aluguel")}>Aluguel</button>
             <button className={status === "venda" ? "btn" : ""} onClick={() => handleActiveCode(false, "venda")}>Venda</button>
+            <button className={status === "aluguel" ? "btn" : ""} onClick={() => handleActiveCode(false, "aluguel")}>Aluguel</button>
             <button className={status === "codigo" ? "btn" : ""} onClick={() => handleActiveCode(true, "codigo")}>Código</button>
                 </div>   
             <div className="search">

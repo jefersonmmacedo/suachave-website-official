@@ -119,19 +119,13 @@ export function Home() {
             <SliderHome />
             <SearchProperty />
             <div className="textFeature">
-            <h2>Imóveis em Destaque</h2>
+            <h2>Imóveis à venda</h2>
             </div>
             <div className="carroussel">
             <PropertyCarroussel />
             </div>
             <div className="textHome">
             <h2>Imóveis para alugar</h2>
-            </div>
-            <div className="carroussel">
-            <PropertyCarroussel />
-            </div>
-            <div className="textHome">
-            <h2>Imóveis à venda</h2>
             </div>
             <div className="carroussel">
             <PropertyCarroussel />

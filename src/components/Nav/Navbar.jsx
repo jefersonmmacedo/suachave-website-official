@@ -168,9 +168,9 @@ const Navbar2 = () => {
 
 {user.type === "company" && user !== null && user !== undefined && user !== "" ?
                 <>
-                <button className='iconUnic' onClick={() => HandleOpenLink("/painel/novoimovel")} data-tip data-for='Imóveis'><IoHomeOutline/></button>
-                <ReactTooltip id='Imóveis' place="bottom" type="dark" effect="solid">
-                     <span>Imóveis</span>
+                <button className='iconUnic' onClick={() => HandleOpenLink("/painel/novoimovel")} data-tip data-for='Novo imóvel'><IoHomeOutline/></button>
+                <ReactTooltip id='Novo imóvel' place="bottom" type="dark" effect="solid">
+                     <span>Novo imóvel</span>
                 </ReactTooltip>
                 <button className='iconUnic' onClick={() => HandleOpenLink("/painel/agendamentos")} data-tip data-for='Agendamentos'><IoCalendarOutline/></button>
                 <ReactTooltip id='Agendamentos' place="bottom" type="dark" effect="solid">

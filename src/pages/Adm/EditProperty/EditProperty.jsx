@@ -1,14 +1,14 @@
 ﻿import NavbarAdm from "../../../components/Adm/Nav/Navbar"
 import { ToolBar } from "../../../components/Adm/ToolBar/ToolBar"
-import "./newProperty.css"
+import "./editProperty.css"
 
-export function NewProperty() {
+export function EditProperty() {
     return (
-        <div className="NewProperty">
+        <div className="EditProperty">
             <NavbarAdm />
             <ToolBar />
             <div className="aside">
-                <h3>Novo imóvel</h3>
+                <h3>Editar imóvel</h3>
                 <div className="form">
                     <input type="text" placeholder="Título"/>
                     <textarea name="" id="" cols="30" rows="10" placeholder="Descrição"></textarea>
@@ -102,6 +102,7 @@ export function NewProperty() {
                         <button>Piscina</button>
                         <button>Churrasqueira</button>
                         <button>2 Ambientes</button>
+                        <button>Sala de Estar</button>
                         <button>Jardim</button>
                         <button>Lavanderia</button>
                         <button>Banheiro Social</button>
@@ -114,13 +115,7 @@ export function NewProperty() {
                         <button>Próx. Supermercado</button>
                         <button>Área Externa</button>
                         <button>Cozinha Ampla</button>
-                        <button>Ciclovia</button>
-                        <button>Closet</button>
-                        <button>Entrada independente</button>
-                        <button>Sistema de Segurança</button>
-                        <button>Terraço</button>
-                        <button>Wifi</button>
-                        <button>Sala de Estar</button>
+
                         <button>Sala de Jogos</button>
                         <button>Salão de Jogos</button>
                         <button>Sacada</button>

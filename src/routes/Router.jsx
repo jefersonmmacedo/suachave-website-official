@@ -44,6 +44,8 @@ import { PaymentCompleted } from '../pages/PaymentCompleted/PaymentCompleted';
 import { Contact } from '../pages/Contact/Contact';
 import { Faq } from '../pages/Faq/Faq';
 import { WebApp } from '../pages/Adm/WebApp/WebApp';
+import { MyPropertiesList } from '../pages/Adm/MyPropertiesList/MyPropertiesList';
+import { EditProperty } from '../pages/Adm/EditProperty/EditProperty';
 
 function Router () {
 const Local = localStorage.getItem("suachave");
@@ -101,6 +103,10 @@ function PrivateRoute({children} ) {
                     element={ <PrivateRoute> <Dashboard /> </PrivateRoute>} />
             <Route path="/painel/novoimovel"
                     element={ <PrivateRoute> <NewProperty /> </PrivateRoute>} />
+            <Route path="/painel/editarimovel"
+                    element={ <PrivateRoute> <EditProperty /> </PrivateRoute>} />
+            <Route path="/painel/imoveis"
+                    element={ <PrivateRoute> <MyPropertiesList /> </PrivateRoute>} />
             <Route path="/plano"
                     element={ <PrivateRoute> <Checkout /> </PrivateRoute>} />
             <Route path="/painel/planos"
