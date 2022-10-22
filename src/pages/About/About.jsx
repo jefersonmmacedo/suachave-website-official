@@ -39,9 +39,9 @@ export function About() {
                     <h3>Somos uma start-up criada para imobiliárias e corretores, <br />
                     com foco em conectar seus imóveis a novos clientes.</h3>
 
-                    <div className="buttonsText">
+                    {/* <div className="buttonsText">
                         <button onClick={handleOpenModal}><IoPlayCircle /> dê um play na nossa história</button>
-                    </div>
+                    </div> */}
                 </div>
         </div>
         <div className="textPricing">
@@ -74,7 +74,7 @@ export function About() {
                     </div>
                     <div className="IconsWhyText">
                     <h2>Design responsivo</h2>
-                    <h4>Você e seu cliente acessa o nosso marketplace de qualquer dispositivo facilmente</h4>
+                    <h4>Você e seu cliente acessam o nosso site de qualquer dispositivo facilmente</h4>
                     </div>
                 </div>
             </div>
@@ -88,7 +88,7 @@ export function About() {
                     </div>
                     <div className="IconsWhyText">
                         <h2>Aplicativo Administrativo</h2>
-                        <h4>Controle seu negócio de qualquer lugar a qualquer hora</h4>
+                        <h4>Controle seu negócio de qualquer lugar a qualquer hora [Em breve...]</h4>
                     </div>
                 </div>
                 <div className="IconsWhyChooseUnic">
@@ -97,7 +97,7 @@ export function About() {
                     </div>
                     <div className="IconsWhyText">
                     <h2>Site para o seu negócio</h2>
-                    <h4>Tenha o site do seu negócio totalmente integrado ao nosso marketplace</h4>
+                    <h4>Tenha o site do seu negócio totalmente integrado ao nosso site</h4>
                     </div>
                 </div>
                 <div className="IconsWhyChooseUnic">
@@ -106,7 +106,7 @@ export function About() {
                     </div>
                     <div className="IconsWhyText">
                     <h2>Aplicatico para o seu negócio</h2>
-                    <h4>Tenha o Aplicativo do seu negócio totalmente integrado ao nosso marketplace</h4>
+                    <h4>Tenha o Aplicativo do seu negócio totalmente integrado ao nosso site [Em breve...]</h4>
                     </div>
                 </div>
             </div>
@@ -131,7 +131,7 @@ export function About() {
             <div className="iconWork">
                 <IoHome />
                 <h3>Adicione seus imóveis</h3>
-                <h4>Cadastre seus imóveis e aproveite nossas ferramentas para alcancar mais clientes</h4>
+                <h4>Cadastre seus imóveis e aproveite nossas ferramentas para alcancar mais clientes </h4>
             </div>
         </div>
     </div>

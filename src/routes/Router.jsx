@@ -46,6 +46,7 @@ import { Faq } from '../pages/Faq/Faq';
 import { WebApp } from '../pages/Adm/WebApp/WebApp';
 import { MyPropertiesList } from '../pages/Adm/MyPropertiesList/MyPropertiesList';
 import { EditProperty } from '../pages/Adm/EditProperty/EditProperty';
+import { ChatAdmList } from '../pages/Adm/ChatAdmList/ChatAdmList';
 
 function Router () {
 const Local = localStorage.getItem("suachave");
@@ -114,6 +115,8 @@ function PrivateRoute({children} ) {
             <Route path="/pagamentofinalizado"
                     element={ <PrivateRoute> <PaymentCompleted /> </PrivateRoute>} />
             <Route path="/painel/chat"
+                    element={ <PrivateRoute> <ChatAdmList /> </PrivateRoute>} />
+            <Route path="/painel/chat-client"
                     element={ <PrivateRoute> <ChatAdm /> </PrivateRoute>} />
             <Route path="/painel/notificacoes"
                     element={ <PrivateRoute> <NotificationsAdm /> </PrivateRoute>} />

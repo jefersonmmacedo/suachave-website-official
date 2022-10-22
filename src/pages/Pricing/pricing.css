@@ -4,10 +4,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
 }
 
 .Pricing h2 {
-    margin-top: 100px;
+    margin: 100px 20px 0px 20px;
     font-weight: 700;
     text-align: center;
 }
@@ -16,7 +17,7 @@
 }
 .Pricing h4 {
     text-align: center;
-    margin: 5px 0;
+    margin: 5px 20px;
     color: var(--Paragraph);
 }
 

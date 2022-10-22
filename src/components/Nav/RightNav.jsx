@@ -151,14 +151,14 @@ const RightNav = ({ open }) => {
               Imóveis
             </Link>
           </li> */}
-       <li className='nav-item'>
-            <Link to='/imoveis/aluguel'>
-            Aluguel
-            </Link>
-          </li>
           <li className='nav-item'>
             <Link to='/imoveis/venda' >
             Venda
+            </Link>
+          </li>
+       <li className='nav-item'>
+            <Link to='/imoveis/aluguel'>
+            Aluguel
             </Link>
           </li>
           <li className='nav-item'>

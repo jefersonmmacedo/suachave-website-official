@@ -32,11 +32,11 @@
 
 
 .MyAccountAdm .informations form{
-    width: 500px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     margin: 20px 0 40px 0;
 }
 
@@ -78,18 +78,34 @@
     box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
 }
 
+.MyAccountAdm .informations form .textDataInputs {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.MyAccountAdm .informations form .textDataInputs h4 {
+    font-weight: 700;
+    color: var(--Gray);
+}
 
 
 .MyAccountAdm .informations form .dataInputs{
-    width: 100%;
+    width: 700px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
-    margin: 15px 0;
+    justify-content: center;
+    margin: 5px 0;
+    flex-wrap: wrap;
 }
+
+
 .MyAccountAdm .informations form input{
-    width: 100%;
+    width: 200px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -101,7 +117,6 @@
     border: none;
 }
 .MyAccountAdm .informations form button{
-    width: 100%;
     padding: 10px 20px;
     display: flex;
     flex-direction: row;
@@ -115,19 +130,36 @@
     font-weight: 700;
 }
 
+@media (max-width: 800px) {
+    .MyAccountAdm .informations form .dataInputs{
+        width: 100%;
+    }
 @media (max-width: 700px) {
     .MyAccountAdm .informations {
-        padding-bottom: 100px;
+        padding-bottom: 80px;
     }
     .MyAccountAdm .aside {
         padding-left: 20px;
         padding-right: 20px;
     }
 
+    
+
+
     @media (max-width: 500px) {
         .MyAccountAdm .informations form{
             width: 100%;
         }
+
+        
+        
+        .MyAccountAdm .informations form input{
+            width: 100%;
+        }
+        .MyAccountAdm .informations form button{
+            width: 100%;
+        }
         
     }
+}
 }

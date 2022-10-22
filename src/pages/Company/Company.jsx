@@ -1,6 +1,6 @@
 ﻿import "./company.css";
 import Navbar2 from "../../components/Nav/Navbar";
-import { IoLocationOutline, IoCallOutline, IoLogoWhatsapp, IoMailOutline, IoGlobeOutline } from "react-icons/io5";
+import { IoLocationOutline, IoCallOutline, IoLogoWhatsapp, IoMailOutline, IoGlobeOutline, IoLogoFacebook, IoLogoInstagram, IoLogoLinkedin, IoLogoYoutube } from "react-icons/io5";
 import { Footer } from "../../components/Footer/Footer";
 import { BrokerList } from "../../components/BrokerList/BrokerList";
 import { Sale } from "../../components/Sale/Sale";
@@ -46,6 +46,12 @@ export function Company() {
                             </div>
                         </div>                        
                     </div>
+                    <div className="network">
+                                <button className="networkButton"><IoLogoFacebook/></button>
+                                <button className="networkButton"><IoLogoInstagram/></button>
+                                <button className="networkButton"><IoLogoLinkedin/></button>
+                                <button className="networkButton"><IoLogoYoutube/></button>
+                            </div>
                     <div className="buttonsContactCompany">
                         <button className="btnWhats"><IoLogoWhatsapp />Whatsapp</button>
                         <button className="btnPhone"><IoCallOutline />Ligar</button>

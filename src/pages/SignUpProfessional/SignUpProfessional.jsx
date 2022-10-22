@@ -77,10 +77,20 @@ export function SignUpProfessional() {
                          <input type="text" placeholder="Nome Responsável" />
                         <input type="email" placeholder="E-mail" />
                         <input type="text" placeholder="Whatsapp" />
-                        <button className="btn" onClick={() => handleSelectStepe("1")}>Voltar</button>
+                        <button className="btn3" onClick={() => handleSelectStepe("1")}>Voltar</button>
                         <button className="btn" onClick={() => handleSelectStepe("3")}>Avançar</button>
                         </>
                         : data === "3" ?
+                        <>
+                        <input type="text" placeholder="Webisite" />
+                        <input type="text" placeholder="Facebook" />
+                        <input type="text" placeholder="Instagram" />
+                        <input type="text" placeholder="Linkedin" />
+                        <input type="text" placeholder="Youtube" />
+                        <button className="btn3" onClick={() => handleSelectStepe("2")}>Voltar</button>
+                        <button className="btn" onClick={() => handleSelectStepe("4")}>Avançar</button>
+                        </>
+                        : data === "4" ?
                          <>
                         <label className="label-avatar">
                             <span><FiUpload color="#f65" size={25} /></span>
@@ -94,10 +104,9 @@ export function SignUpProfessional() {
                          <input type="text" placeholder="Bairro" />
                          <input type="text" placeholder="Cidade" />
                          <input type="text" placeholder="UF" />
-                         {/* <button >Avançar</button>
-                         <button >Voltar</button> */}
-                        <button className="btn" onClick={() => handleSelectStepe("2")}>Voltar</button>
-                        <button onClick={() => handleSelectStepe("4")}>Cadastrar</button>
+
+                        <button className="btn3" onClick={() => handleSelectStepe("3")}>Voltar</button>
+                        <button className="btn1" onClick={() => handleSelectStepe("4")}>Cadastrar</button>
                          </>
                          :""}
                         {/* <div className="links">

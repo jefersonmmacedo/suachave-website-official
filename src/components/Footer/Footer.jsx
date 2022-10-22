@@ -13,7 +13,7 @@ export function Footer() {
                 <div className="sections">
                         <div className="sectionUnic">
                         <a href="/"><img src={logo} alt="" /></a>
-                            <h5>Nós temos a chave do seu sonho!</h5>
+                            <h5>Enconte imóveis, imobiliárias e corretores em poucos cliques!</h5>
                         </div>
                         <div className="sectionUnic">
                             <h3><b>SUA CHAVE</b></h3>
@@ -33,7 +33,7 @@ export function Footer() {
                             <h5><a href="/faleconosco">Fale conosco</a></h5>
                             <br />
                             <h3><b>ATENDIMENTO</b></h3>
-                            <h5><IoCallOutline />(21) 2222-2222</h5>
+                            {/* <h5><IoCallOutline />(21) 2222-2222</h5> */}
                             <h5><IoLogoWhatsapp />(21) 99999-9999</h5>
                             <h5><IoMailOutline />contato@suachave.com.br</h5>
                         </div>

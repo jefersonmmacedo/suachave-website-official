@@ -202,7 +202,7 @@ const RightNav2 = ({ open }) => {
             </Link>
           </li>
           <li className='nav-item'>
-            <Link to='/painel/novoimovel' >
+            <Link to='/painel/imoveis' >
            <IoHome /> <p>Imóveis</p>
             </Link>
           </li>
@@ -227,7 +227,7 @@ const RightNav2 = ({ open }) => {
            <IoPerson /> <p>Perfil</p> 
             </Link>
           </li> 
-          <li className='nav-item'>
+          <li className='nav-item2'>
             <Link to='/painel/web' >
            <IoLaptopOutline /> <p>Site/App</p> 
             </Link>

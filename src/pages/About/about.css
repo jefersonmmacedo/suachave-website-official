@@ -298,6 +298,7 @@
 
 .About .MainAbout .BlocksContact .blockContact h3 svg {
     margin-right: 5px;
+    color: var(--Primary);
 }
 
 .About .MainAbout .BlocksContact .blockContact h5 {

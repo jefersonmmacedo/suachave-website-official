@@ -15,7 +15,7 @@ export function Checkout() {
                     <div className="plain">
                         <h4><span>Plano</span> Básico</h4>
 
-                        <a href="/">Alterar plano</a>
+                        <a href="/planos">Alterar plano</a>
                     </div>
 
                     <div className="text">

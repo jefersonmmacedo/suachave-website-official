@@ -17,7 +17,7 @@ export function PlainsAdm() {
                     <div className="plain">
                         <h4><span>Plano</span> Básico</h4>
 
-                        <a href="/">Alterar plano</a>
+                        <a href="/planos">Alterar plano</a>
                     </div>
 
                     <div className="text">
@@ -37,7 +37,7 @@ export function PlainsAdm() {
             </div>
 
             <div className="PaymentPlayn">
-                <a href="/">Novo Pagamento</a>
+                <a href="/plano">Novo Pagamento</a>
             </div>
             </div>
             </div>

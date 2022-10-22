@@ -39,23 +39,41 @@ export function MyAccountAdm() {
                         <img src={avatarUrl === null ? profile : avatarUrl} alt="Avatar" height={100} width={100}/>
                     </label>
 
-                    <div className="dataInputs">               
+                    <div className="textDataInputs">
+                    <h4>Cadastro</h4>
+                    </div>             
+                    <div className="dataInputs">  
                     <input type="text" placeholder="CNPJ" />
                     <input type="text" placeholder="Razão Social" />
                     <input type="text" placeholder="Nome Fantasia" />
                     <input type="text" placeholder="CRECI" />
+                    </div>
+                    <div className="textDataInputs">
+                    <h4>Contato</h4>
+                    </div>             
+                    <div className="dataInputs">  
                     <input type="email" placeholder="E-mail" />
                     <input type="text" placeholder="Telefone" />
                     <input type="text" placeholder="Whatsapp" />
+                    <input type="text" placeholder="Facebook" />
+                    <input type="text" placeholder="Instagram" />
+                    <input type="text" placeholder="Linkedin" />
+                    <input type="text" placeholder="Youtube" />
                     </div>
 
-                    <div className="dataInputs">               
+                    <div className="textDataInputs">
+                    <h4>Responsável</h4>
+                    </div>               
+                    <div className="dataInputs"> 
                     <input type="text" placeholder="Nome Responsável" />
                     <input type="email" placeholder="E-mail" />
                     <input type="text" placeholder="Whatsapp" />
                     </div>
 
-                    <div className="dataInputs">               
+                    <div className="textDataInputs">
+                    <h4>Endereço</h4>
+                    </div>              
+                    <div className="dataInputs">   
                     <input type="text" placeholder="CEP" />
                     <input type="text" placeholder="Rua" />
                     <input type="text" placeholder="Número" />

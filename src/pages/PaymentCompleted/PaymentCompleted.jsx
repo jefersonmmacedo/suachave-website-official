@@ -42,7 +42,7 @@ export function PaymentCompleted() {
                 <h5>Obs.: O pagamento será confirmado em até 48h, você receberá um e-mail de confirmação. <br />
                 Não se preocupe, seu acesso ja está liberado!</h5>
 
-                <a href="/">Ir para o meu painel</a>
+                <a href="/painel/planos">Ir para o meu painel</a>
             </div>
             </div>
             <Footer />

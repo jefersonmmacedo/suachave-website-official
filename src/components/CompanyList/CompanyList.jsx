@@ -20,7 +20,9 @@ export function CompanyList() {
             
             <div className="propertyUnicFavorite">
                     <div className="image">
+                        <a href="/imobiliaria">
                     <img src={imobiliária2} alt="" />
+                        </a>
                     </div>
                     <div className="text">
                     <h3>Alice State Agency</h3>
@@ -57,7 +59,9 @@ export function CompanyList() {
                 </div> 
             <div className="propertyUnicFavorite">
                     <div className="image">
+                    <a href="/imobiliaria">
                     <img src={imobiliária} alt="" />
+                        </a>
                     </div>
                     <div className="text">
                     <h3>James State Agency</h3>

@@ -14,7 +14,7 @@
     align-items: center;
     justify-content: flex-start;
     padding-left: 170px;
-    padding-top: 80px;
+    padding-top: 100px;
 }
 .MyPropertiesList .aside h3 {
     font-weight: bold;
@@ -75,10 +75,10 @@
     justify-content: center;
 }
 
-.MyPropertiesList .informations .chat{
-    width: 700px;
+.MyPropertiesList .informations .propertyListAdm{
+    width: 90%;
     border-radius: 4px;
-    background-color: var(--BorderInput);
+    background-color: var(--BorderHover);
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -86,38 +86,49 @@
     margin: 5px 10px;
     box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
 }
-.MyPropertiesList .informations .chat .image{
+.MyPropertiesList .informations .propertyListAdm .image{
     border-radius: 4px 0 0 4px;
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: 100%;
     object-fit: cover;
 }
-.MyPropertiesList .informations .chat .image img{
+.MyPropertiesList .informations .propertyListAdm .image img{
     border-radius: 4px 0 0 4px;
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: 100%;
     object-fit: cover;
 }
 
-.MyPropertiesList .informations .chat .textChat{
+.MyPropertiesList .informations .propertyListAdm .textpropertyListAdm{
 
     background-color: var(--BorderInput);
     display: flex;
     align-items: flex-start;
-    justify-content: flex-start;
+    justify-content: space-between;
     flex-direction: column;
-    margin: 10px;
+    padding: 10px;
     text-align:left;
     width: 100%;
+    height: 100%;
+    background-color: var(--BorderHover);
 }
-.MyPropertiesList .informations .chat .textChat h3 {
+.MyPropertiesList .informations .propertyListAdm .textpropertyListAdm .textDatapropertyListAdm{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    text-align:left;
+    width: 100%;
+    height: 100%;
+}
+.MyPropertiesList .informations .propertyListAdm .textpropertyListAdm .textDatapropertyListAdm h3 {
     color: var(--Primary);
     font-weight: 700;
     margin: 0 10px;
     text-align:left;
   }
 
-  .MyPropertiesList .informations .chat .textChat h5 {
+  .MyPropertiesList .informations .propertyListAdm .textpropertyListAdm .textDatapropertyListAdm h5 {
     color: var(--Gray);
     margin: 0 9px;
     text-align:left;
@@ -127,23 +138,62 @@
     flex-direction: row;
     font-weight: 700;
   }
-  .MyPropertiesList .informations .chat .textChat h6 {
+  .MyPropertiesList .informations .propertyListAdm .textpropertyListAdm .textDatapropertyListAdm h6 {
     color: var(--Gray);
     margin: 5px 10px 0 10px;
     text-align:left;
   }
-
-  .MyPropertiesList .informations .chat .buttons{
-    background-color: var(--BorderInput);
+  .MyPropertiesList .informations .propertyListAdm .textpropertyListAdm h4 {
+    margin: 5px 10px 0 10px;
+    text-align:center;
+    padding: 3px 5px;
+    background-color: var(--Aproved);
+    color: var(--White);
+    border-radius: 3px;
+  }
+  .MyPropertiesList .informations .propertyListAdm .infosContactData {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: flex-start;
     flex-direction: row;
-    margin: 10px;
+    padding: 10px 0;
     width: 100%;
+    flex-wrap: wrap;
+  }
+  .MyPropertiesList .informations .propertyListAdm .infosContactData .infoUnicData {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 6px;
+    border: 1px solid var(--Border);
+  }
+
+  .MyPropertiesList .informations .propertyListAdm .infosContactData .infoUnicData svg {
+    color: var(--Gray);
+    margin-right: 5px;
+  }
+  .MyPropertiesList .informations .propertyListAdm .infosContactData .infoUnicData  h5 {
+    font-weight: 600;
+    color: var(--Gray);
+  }
+
+  .MyPropertiesList .informations .propertyListAdm .infosContactData .infoUnicData:hover {
+    background-color: var(--BorderInput2);
+  }
+
+  .MyPropertiesList .informations .propertyListAdm .buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    border-left: 1px solid var(--Border);
 }
 
-.MyPropertiesList .informations .chat .buttons .linkEdit {
+.MyPropertiesList .informations .propertyListAdm .buttons .linkEdit {
   padding: 10px;
   border: none;
   border-radius: 6px;
@@ -153,7 +203,7 @@
   font-size: 16px;
   font-weight: 700;
 }
-.MyPropertiesList .informations .chat .buttons .delete {
+.MyPropertiesList .informations .propertyListAdm .buttons .delete {
   padding: 10px;
   border: none;
   border-radius: 6px;
@@ -163,7 +213,7 @@
   font-size: 16px;
   font-weight: 700;
 }
-.MyPropertiesList .informations .chat .buttons .notView {
+.MyPropertiesList .informations .propertyListAdm .buttons .notView {
   padding: 10px;
   border: none;
   border-radius: 6px;
@@ -177,9 +227,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  margin: 10px;
-  width: 500px;
+  flex-direction: row;
+  margin: 30px 10px;
+  width: 90%;
 }
 .MyPropertiesList .aside .search .selection {
   display: flex;
@@ -191,7 +241,7 @@
 
 
 .MyPropertiesList .aside .search input {
-  width: 100%;
+  width: 50%;
   height: 40px;
   padding: 10px 20px;
   border: 1px solid var(--Border);
@@ -208,36 +258,19 @@
 }
 
 
-@media (max-width: 900px) {
-  .MyPropertiesList .informations .chat{
-    width: 600px;
-}
-
-.MyPropertiesList .informations .chat{
-  width: 500px;
-}
-.MyPropertiesList .informations .chat .buttons .linkEdit {
-  padding: 10px;
-  font-size: 12px;
-    margin: 3px;
-}
-.MyPropertiesList .informations .chat .buttons .delete {
-  padding: 10px;
-  font-size: 12px;
-    margin: 3px;
-}
-.MyPropertiesList .informations .chat .buttons .notView {
-  padding: 10px;
-  font-size: 12px;
-  margin: 3px;
-}
-
-.MyPropertiesList .informations .chat .image{
-  height: 100%;
-}
-.MyPropertiesList .informations .chat .image img{
-  height: 100%;
-}
+@media(max-width: 850px) {
+  .MyPropertiesList .aside .search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 90%;
+  }
+  
+  
+  .MyPropertiesList .aside .search input {
+    width: 100%;
+  }
 
 
 @media (max-width: 700px) {
@@ -252,33 +285,37 @@
 
     @media (max-width: 570px) {
 
-          .MyPropertiesList .informations .chat{
+          .MyPropertiesList .informations .propertyListAdm{
             width: 100%;
-            margin:5px;
+            margin:20px 5px;
+
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-direction: column;
         }
 
-          .MyPropertiesList .informations .chat .textChat h3 {
-            font-size: 16px;
-          }
-        
-            .MyPropertiesList .informations .chat .textChat h5 {
-            font-size: 12px;
-          }
-            .MyPropertiesList .informations .chat .textChat h6 {
-            font-size: 10px;
-          }
-
-            .MyPropertiesList .informations .chat .image{
-            width: 80px;
+            .MyPropertiesList .informations .propertyListAdm .image{
+            width: 100%;
+            height: 100px;
         }
-          .MyPropertiesList .informations .chat .image img{
-            width: 80px;
+          .MyPropertiesList .informations .propertyListAdm .image img{
+            width: 100%;
+            height: 100px;
         }
 
-        .MyPropertiesList .informations .chat .buttons{
-          justify-content: center;
-          flex-direction: column;
-          width: 50px;
+        .MyPropertiesList .informations .propertyListAdm .infosContactData .infoUnicData {
+          padding: 5px;
+        }
+      
+
+        .MyPropertiesList .informations .propertyListAdm .buttons{
+          justify-content: space-evenly;
+          flex-direction: row;
+          width: 100%;
+          border-left:none;
+          border-top: 1px solid var(--Border);
+          padding: 5px;
       }
 
       .MyPropertiesList .aside .search {
@@ -289,6 +326,14 @@
       .MyPropertiesList .aside .search .selection {
         flex-direction: column;
         width: 100%;
+      }
+
+      .MyPropertiesList .aside .infoData .textInfo {
+        padding: 5px 10px;
+        margin: 3px;
+      }
+      .MyPropertiesList .aside .infoData .textInfo h5 {
+        font-size: 12px;
       }
       
     }

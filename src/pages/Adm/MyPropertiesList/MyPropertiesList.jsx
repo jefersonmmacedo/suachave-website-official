@@ -4,7 +4,7 @@ import "./myPropertiesList.css";
 import ImageHouse from "../../../assets/images/house.jpg";
 import ImageHouse1 from "../../../assets/images/house1.jpg";
 import ImageHouse2 from "../../../assets/images/house2.jpg";
-import {IoFileTrayFullOutline, IoTrashOutline, IoCreateOutline, IoLocationOutline} from 'react-icons/io5';
+import {IoFileTrayFullOutline, IoTrashOutline, IoCreateOutline, IoLocationOutline, IoEyeOutline, IoHeartOutline, IoLogoWhatsapp, IoCallOutline} from 'react-icons/io5';
 import ReactTooltip from 'react-tooltip';
 
 export function MyPropertiesList() {
@@ -57,17 +57,42 @@ export function MyPropertiesList() {
                     </div>
                 </div>
             <div className="informations">
-            <div className="chat">
+            <div className="propertyListAdm">
                     <div className="image">
                         <a href="/conversa">
                         <img src={ImageHouse} alt="" />
                         </a>
                     </div>
-                    <div className="textChat">
+                    <div className="textpropertyListAdm">
+                        <div className="textDatapropertyListAdm">
                     <h3>Lindo apartamento luxuoso</h3>
                     <h5><IoLocationOutline />Centro - Rio Bonito - RJ</h5>
                     <h6>15/10/2022 16:45h</h6>
+                        </div>
+                        <h4>Disponível</h4>
+                    <div className="infosContactData">
+                        <div className="infoUnicData">
+                        <IoEyeOutline />
+                            <h5> 157 Visualizações</h5>
+                        </div>
+                        <div className="infoUnicData">
+                        <IoHeartOutline />
+                            <h5> 78 Salvos</h5>
+                        </div>
+                        <div className="infoUnicData">
+                        <IoLogoWhatsapp />
+                            <h5> 37 Whatsapp</h5>
+                        </div>
+                        <div className="infoUnicData">
+                        <IoCallOutline />
+                            <h5>25 Ligações</h5>
+                        </div>
                     </div>
+                    </div>
+
+
+
+
                     <div className="buttons">
                     <a href="/painel/editarimovel" className="linkEdit" data-tip data-for='Editar'><IoCreateOutline /></a>
                     <ReactTooltip id='Editar' place="bottom" type="dark" effect="solid">
@@ -86,17 +111,42 @@ export function MyPropertiesList() {
 
                     </div>
                 </div>
-            <div className="chat">
+            <div className="propertyListAdm">
                     <div className="image">
                         <a href="/conversa">
                         <img src={ImageHouse1} alt="" />
                         </a>
                     </div>
-                    <div className="textChat">
+                    <div className="textpropertyListAdm">
+                        <div className="textDatapropertyListAdm">
                     <h3>Lindo apartamento luxuoso</h3>
                     <h5><IoLocationOutline />Centro - Rio Bonito - RJ</h5>
                     <h6>15/10/2022 16:45h</h6>
+                        </div>
+                        <h4>Disponível</h4>
+                    <div className="infosContactData">
+                        <div className="infoUnicData">
+                        <IoEyeOutline />
+                            <h5> 157 Visualizações</h5>
+                        </div>
+                        <div className="infoUnicData">
+                        <IoHeartOutline />
+                            <h5> 78 Salvos</h5>
+                        </div>
+                        <div className="infoUnicData">
+                        <IoLogoWhatsapp />
+                            <h5> 37 Whatsapp</h5>
+                        </div>
+                        <div className="infoUnicData">
+                        <IoCallOutline />
+                            <h5>25 Ligações</h5>
+                        </div>
                     </div>
+                    </div>
+
+
+
+
                     <div className="buttons">
                     <a href="/painel/editarimovel" className="linkEdit" data-tip data-for='Editar'><IoCreateOutline /></a>
                     <ReactTooltip id='Editar' place="bottom" type="dark" effect="solid">
@@ -115,17 +165,42 @@ export function MyPropertiesList() {
 
                     </div>
                 </div>
-            <div className="chat">
+            <div className="propertyListAdm">
                     <div className="image">
                         <a href="/conversa">
                         <img src={ImageHouse2} alt="" />
                         </a>
                     </div>
-                    <div className="textChat">
+                    <div className="textpropertyListAdm">
+                        <div className="textDatapropertyListAdm">
                     <h3>Lindo apartamento luxuoso</h3>
                     <h5><IoLocationOutline />Centro - Rio Bonito - RJ</h5>
                     <h6>15/10/2022 16:45h</h6>
+                        </div>
+                        <h4>Disponível</h4>
+                    <div className="infosContactData">
+                        <div className="infoUnicData">
+                        <IoEyeOutline />
+                            <h5> 157 Visualizações</h5>
+                        </div>
+                        <div className="infoUnicData">
+                        <IoHeartOutline />
+                            <h5> 78 Salvos</h5>
+                        </div>
+                        <div className="infoUnicData">
+                        <IoLogoWhatsapp />
+                            <h5> 37 Whatsapp</h5>
+                        </div>
+                        <div className="infoUnicData">
+                        <IoCallOutline />
+                            <h5>25 Ligações</h5>
+                        </div>
                     </div>
+                    </div>
+
+
+
+
                     <div className="buttons">
                     <a href="/painel/editarimovel" className="linkEdit" data-tip data-for='Editar'><IoCreateOutline /></a>
                     <ReactTooltip id='Editar' place="bottom" type="dark" effect="solid">
@@ -144,6 +219,115 @@ export function MyPropertiesList() {
 
                     </div>
                 </div>
+            <div className="propertyListAdm">
+                    <div className="image">
+                        <a href="/conversa">
+                        <img src={ImageHouse} alt="" />
+                        </a>
+                    </div>
+                    <div className="textpropertyListAdm">
+                        <div className="textDatapropertyListAdm">
+                    <h3>Lindo apartamento luxuoso</h3>
+                    <h5><IoLocationOutline />Centro - Rio Bonito - RJ</h5>
+                    <h6>15/10/2022 16:45h</h6>
+                        </div>
+                        <h4>Disponível</h4>
+                    <div className="infosContactData">
+                        <div className="infoUnicData">
+                        <IoEyeOutline />
+                            <h5> 157 Visualizações</h5>
+                        </div>
+                        <div className="infoUnicData">
+                        <IoHeartOutline />
+                            <h5> 78 Salvos</h5>
+                        </div>
+                        <div className="infoUnicData">
+                        <IoLogoWhatsapp />
+                            <h5> 37 Whatsapp</h5>
+                        </div>
+                        <div className="infoUnicData">
+                        <IoCallOutline />
+                            <h5>25 Ligações</h5>
+                        </div>
+                    </div>
+                    </div>
+
+
+
+
+                    <div className="buttons">
+                    <a href="/painel/editarimovel" className="linkEdit" data-tip data-for='Editar'><IoCreateOutline /></a>
+                    <ReactTooltip id='Editar' place="bottom" type="dark" effect="solid">
+                     <span>Editar</span>
+                    </ReactTooltip>
+
+                    <button className="delete" data-tip data-for='Deletar'><IoTrashOutline /></button>
+                    <ReactTooltip id='Deletar' place="bottom" type="dark" effect="solid">
+                     <span>Deletar</span>
+                    </ReactTooltip>
+
+                    <button className="notView" data-tip data-for='Vendido/Alugado'><IoFileTrayFullOutline /></button>
+                    <ReactTooltip id='Vendido/Alugado' place="bottom" type="dark" effect="solid">
+                     <span>Vendido/Alugado</span>
+                    </ReactTooltip>
+
+                    </div>
+                </div>
+            <div className="propertyListAdm">
+                    <div className="image">
+                        <a href="/conversa">
+                        <img src={ImageHouse1} alt="" />
+                        </a>
+                    </div>
+                    <div className="textpropertyListAdm">
+                        <div className="textDatapropertyListAdm">
+                    <h3>Lindo apartamento luxuoso</h3>
+                    <h5><IoLocationOutline />Centro - Rio Bonito - RJ</h5>
+                    <h6>15/10/2022 16:45h</h6>
+                        </div>
+                        <h4>Disponível</h4>
+                    <div className="infosContactData">
+                        <div className="infoUnicData">
+                        <IoEyeOutline />
+                            <h5> 157 Visualizações</h5>
+                        </div>
+                        <div className="infoUnicData">
+                        <IoHeartOutline />
+                            <h5> 78 Salvos</h5>
+                        </div>
+                        <div className="infoUnicData">
+                        <IoLogoWhatsapp />
+                            <h5> 37 Whatsapp</h5>
+                        </div>
+                        <div className="infoUnicData">
+                        <IoCallOutline />
+                            <h5>25 Ligações</h5>
+                        </div>
+                    </div>
+                    </div>
+
+
+
+
+                    <div className="buttons">
+                    <a href="/painel/editarimovel" className="linkEdit" data-tip data-for='Editar'><IoCreateOutline /></a>
+                    <ReactTooltip id='Editar' place="bottom" type="dark" effect="solid">
+                     <span>Editar</span>
+                    </ReactTooltip>
+
+                    <button className="delete" data-tip data-for='Deletar'><IoTrashOutline /></button>
+                    <ReactTooltip id='Deletar' place="bottom" type="dark" effect="solid">
+                     <span>Deletar</span>
+                    </ReactTooltip>
+
+                    <button className="notView" data-tip data-for='Vendido/Alugado'><IoFileTrayFullOutline /></button>
+                    <ReactTooltip id='Vendido/Alugado' place="bottom" type="dark" effect="solid">
+                     <span>Vendido/Alugado</span>
+                    </ReactTooltip>
+
+                    </div>
+                </div>
+
 
             </div>
             </div>

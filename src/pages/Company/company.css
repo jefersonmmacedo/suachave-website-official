@@ -90,7 +90,7 @@
     align-items: flex-start;
     justify-content: flex-start;
     margin: 10px 0;
-    padding: 10px 0;
+    padding: 5px 0;
     flex-wrap: wrap;
     border: none;
     border-top: 1px solid var(--BorderInput);
@@ -98,14 +98,13 @@
 }
 
 .Company .mainCompany .CompanyUnic .title .textTitle .iconsCompany .iconCompanyUnic {
-    width: 300px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     text-align: center;
-    padding: 3px;
-    margin: 3px;
+    padding: 5px;
+    margin: 0 3px;
     color: var(--Gray);
 }
 
@@ -127,6 +126,34 @@
     margin-right: 5px;
     color: var(--Gray);
     font-size: 18px;
+}
+
+.Company .mainCompany .CompanyUnic .title .textTitle .network {
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    flex-direction: row;
+    width: 100%;
+    margin: -10px 0 10px 0;
+}
+.Company .mainCompany .CompanyUnic .title .textTitle .network button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    border: none;
+    border-radius: 6px;
+    padding: 7px;
+    cursor: pointer;
+    background-color: var(--BorderHover);
+    border: 1px solid var(--BorderInput);
+    color: var(--Gray);
+    font-size: 20px;
+    margin-right: 5px;
+}
+.Company .mainCompany .CompanyUnic .title .textTitle .network button:hover {
+    background-color: var(--Primary);
+    color: var(--White);
 }
 
 .Company .mainCompany .CompanyUnic .title .textTitle .buttonsContactCompany {
@@ -316,6 +343,13 @@ margin-right: 5px;
         .Company .mainCompany .CompanyUnic .title .textTitle .buttonsContactCompany {
             justify-content: center;
 
+        }
+
+        .Company .mainCompany .CompanyUnic .title .textTitle .network {
+            display: flex;
+            align-items: center;
+            justify-content:center;
+            flex-direction: row;
         }
 
         .Company .mainCompany .CompanyUnic .title .image {
