@@ -32,7 +32,7 @@
     box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
     border-radius: 6px;
     margin-top: 20px;
-    background-color: var(--White);
+    background-color: var(--BorderInput2);
 }
 
 .NewProperty .aside .form input{
@@ -44,13 +44,16 @@
     padding: 10px;
     margin: 5px;
     border-radius: 6px;
-    background-color: var(--BorderHover);
-    border: 1px solid var(--Border);
+    background-color: var(--White);
+    border: none;
     font-weight: 600;
     color: var(--Description);
 }
 .NewProperty .aside .form input::placeholder{
-    color: var(--Description);
+    color: var(--Gray2);
+}
+.NewProperty .aside .form textarea::placeholder{
+    color: var(--Gray2);
 }
 .NewProperty .aside .form select{
     width: 100%;
@@ -61,10 +64,10 @@
     padding: 10px;
     margin: 5px;
     border-radius: 6px;
-    background-color: var(--BorderHover);
-    border: 1px solid var(--Border);
+    background-color: var(--White);
+    border: none;
     font-weight: 600;
-    color: var(--Description);
+    color: var(--Gray2);
 }
 .NewProperty .aside .form select option {
     margin: 40px;
@@ -81,15 +84,15 @@
     padding: 10px;
     margin: 5px;
     border-radius: 6px;
-    background-color: var(--BorderHover);
-    border: 1px solid var(--Border);
+    background-color: var(--White);
+    border: none;
     font-weight: 600;
     resize: none;
     color: var(--Description);
 }
 
 .NewProperty .aside .form textarea::placeholder{
-    color: var(--Description);
+    color: var(--Gray2);
 }
 
 .NewProperty .aside .form .data {
@@ -110,13 +113,13 @@
 
 .NewProperty .aside .form .Check button {
     padding: 10px 20px;
-    border: 1px solid var(--Border);
+    border: none;
     font-weight: 600;
     border-radius: 25px;
-    color: var(--Paragraph);
+    color: var(--Gray2);
     margin: 5px;
     font-size: 14px;
-    background-color: var(--BorderHover);
+    background-color: var(--White);
 }
 
 .NewProperty .aside .form .data input{
@@ -128,8 +131,8 @@
     padding: 10px;
     margin: 5px;
     border-radius: 6px;
-    background-color: var(--BorderHover);
-    border: 1px solid var(--Border);
+    background-color: var(--White);
+    border: none;
     font-weight: 600;
 }
 .NewProperty .aside .form .data select{
@@ -141,8 +144,8 @@
     padding: 10px;
     margin: 5px;
     border-radius: 6px;
-    background-color: var(--BorderHover);
-    border: 1px solid var(--Border);
+    background-color: var(--White);
+    border: none;
     font-weight: 600;
 }
 

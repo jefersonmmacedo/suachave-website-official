@@ -11,13 +11,14 @@ export function NewProperty() {
                 <h3>Novo imóvel</h3>
                 <div className="form">
                     <input type="text" placeholder="Título"/>
+                    <input type="text" placeholder="Endereço"/>
                     <textarea name="" id="" cols="30" rows="10" placeholder="Descrição"></textarea>
-                    <div className="data">
+                    {/* <div className="data">
                     <input type="text" placeholder="Rua"/>
                     <input type="text" placeholder="Bairro"/>
                     <input type="text" placeholder="Cidade"/>
                     <input type="text" placeholder="Estado"/>
-                    </div>
+                    </div> */}
                     <div className="data">
                     <select name="" id="">
                         <option value="">Tipo</option>
@@ -29,16 +30,19 @@ export function NewProperty() {
                         <option value="">Casa</option>
                         <option value="">Apartamento</option>
                     </select>
-                    </div>
-                    <div className="data">
                     <select name="" id="">
-                        <option value="">Status</option>
+                        <option value="">Estado</option>
                         <option value="">Alugel</option>
                         <option value="">Venda</option>
                         <option value="">Temporada</option>
                     </select>
-                    <input type="text" placeholder="Preço"/>
-                    <input type="text" placeholder="Texto após preço"/>
+                    <select name="" id="">
+                        <option value="">Disponibilidade</option>
+                        <option value="">Disponível</option>
+                        <option value="">Insponível</option>
+                        <option value="">Alugado</option>
+                        <option value="">Vendido</option>
+                    </select>
                     </div>
                     <div className="data">
                     <select name="" id="">
@@ -94,6 +98,26 @@ export function NewProperty() {
                         <option value="">10</option>
                     </select>
                     </div>
+                    <div className="data">
+                    <input type="text" placeholder="Preço R$"/>
+                    <input type="text" placeholder="Texto após preço"/>
+                    <input type="text" placeholder="Ano de construção"/>
+                    </div>
+                    <div className="data">
+                    <input type="text" placeholder="Área total"/>
+                    <select name="" id="">
+                        <option value="">M2</option>
+                        <option value="">Km</option>
+                        <option value="">Eq</option>
+                    </select>
+                    <input type="text" placeholder="Área de construção"/>
+                    <select name="" id="">
+                        <option value="">M2</option>
+                        <option value="">Km</option>
+                        <option value="">Eq</option>
+                    </select>
+                    </div>
+
                     </div>
 
                     <div className="form">
@@ -143,7 +167,7 @@ export function NewProperty() {
                     <div className="form">
                     <div className="data">
                     <select name="" id="">
-                        <option value="">Slide inicial?</option>
+                        <option value="">Slide inicial? (Apenas no site individual)</option>
                         <option value="">Sim</option>
                         <option value="">Não</option>
                     </select>

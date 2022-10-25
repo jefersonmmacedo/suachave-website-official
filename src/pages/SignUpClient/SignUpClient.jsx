@@ -54,7 +54,6 @@ export function SignUpClient() {
                         </label>
 
                          <input type="text" placeholder="CEP" />
-                         <input type="text" placeholder="Bairro" />
                          <input type="text" placeholder="Cidade" />
                          <input type="text" placeholder="UF" />
                          {/* <button >Avançar</button>
