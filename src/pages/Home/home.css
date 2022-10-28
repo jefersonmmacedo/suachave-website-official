@@ -11,15 +11,15 @@
     text-align: left;
     margin: 200px auto 0 auto;
 }
-.Home .textHome h2 {
+.Home .textHome h3 {
     margin: 20px 40px;
     font-weight: 700;
-    color: var(--Paragraph);
+    color: var(--Gray);
 }
-.Home .textFeature h2 {
+.Home .textFeature h3 {
     margin: 20px 40px;
     font-weight: 700;
-    color: var(--Paragraph);
+    color: var(--Gray);
 }
 .Home .carroussel {
     width: 1030px;

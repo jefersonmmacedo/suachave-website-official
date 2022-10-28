@@ -9,7 +9,6 @@ export function SignUpClient() {
     const [imageAvatar, setImageAvatar] = useState('');
     const profile = "https://firebasestorage.googleapis.com/v0/b/foursome4-b925c.appspot.com/o/avatar.png?alt=media&token=f3b1f0bc-3885-4296-8363-ec1c3d43e240"
 
-
     function handleFile(e) {
         // console.log(e.target.files[0])
         if(e.target.files[0]){
