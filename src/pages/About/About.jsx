@@ -1,13 +1,15 @@
 ﻿import "./about.css"
 import Navbar2 from "../../components/Nav/Navbar";
 import { Footer } from "../../components/Footer/Footer";
-import {IoPlayCircle, IoHome, IoQrCodeOutline, IoIdCardOutline, IoPhonePortraitOutline,
-        IoLayersOutline, IoChatbubblesOutline, IoCropOutline, IoLaptopOutline, IoMailOpenOutline, IoCallOutline, IoCloseOutline} from "react-icons/io5"
+import {IoPlayCircle, IoLogoWhatsapp, IoHome, IoQrCodeOutline, IoIdCardOutline, IoPhonePortraitOutline,
+        IoLayersOutline, IoChatbubblesOutline, IoCropOutline, IoLaptopOutline, IoMailOpenOutline, IoCallOutline, IoCloseOutline, IoCalendarOutline, IoHomeOutline, IoOptionsOutline, IoChatboxEllipsesOutline} from "react-icons/io5"
 import { Plains } from "../../components/Plains/Plains";
 import SmartPhone from "../../assets/images/iphone.png";
 import Modal from 'react-modal';
 import { useState } from "react";
 import imgFamily from "../../assets/images/background2.jpg"
+import Mackbook from "../../assets/images/Mockup.png"
+import { FaHouseUser } from "react-icons/fa";
 
 export function About() {
     const [isOpenModal, setIsOpenModa] = useState(false);
@@ -39,9 +41,10 @@ export function About() {
                     <h3>Somos uma start-up criada para imobiliárias e corretores, <br />
                     com foco em conectar seus imóveis a novos clientes.</h3>
 
-                    {/* <div className="buttonsText">
-                        <button onClick={handleOpenModal}><IoPlayCircle /> dê um play na nossa história</button>
-                    </div> */}
+                    <div className="buttonsText">
+                        {/* <button onClick={handleOpenModal}><IoPlayCircle /> Clique e conheça nossa empresa</button> */}
+                        <button className="btn" onClick={handleOpenModal}><IoLogoWhatsapp /> Entre em contato com nossa equipe</button>
+                    </div>
                 </div>
         </div>
         <div className="textPricing">
@@ -135,11 +138,48 @@ export function About() {
             </div>
         </div>
     </div>
+
+    <div className="beneficies">
+        <div className="imageDashboard">
+            <img src={Mackbook} alt="" />
+        </div>
+        <div className="textDashboardAbout">
+        <h2>Controle <span>completo</span> <br /> para sua <span>imobiliária</span>:</h2>
+                <div className="itensToHireAbout">
+                    <div className="ToHireUnicAbout">
+                    <IoHomeOutline />
+                        <h4>Anúncios ilimitados</h4>
+                    </div>
+                    <div className="ToHireUnicAbout">
+                    <IoCalendarOutline />
+                        <h4>Agenda de visitas</h4>
+                    </div>
+                    <div className="ToHireUnicAbout">
+                        <IoOptionsOutline />
+                        <h4>Controle de alugueis e vendas</h4>
+                    </div>
+                    <div className="ToHireUnicAbout">
+                        <IoHomeOutline />
+                        <h4>Imóveis para avaliação</h4>
+                    </div>
+                    <div className="ToHireUnicAbout">
+                    <IoChatboxEllipsesOutline />
+                        <h4>Chat único por anúncio</h4>
+                    </div>
+                    <div className="ToHireUnicAbout">
+                    <IoLaptopOutline />
+                        <h4>Controle do site e app</h4>
+                    </div>
+                </div>
+        </div>
+    </div>
     <div className="textPricing">
         <h1>Escolha o <span>plano ideal</span> para o seu negócio</h1>
         <h4>Cada plano atende a uma necessidade, de acordo com as ferramentas oferecidas. <br/>Você poderá alterar a qualquer momento.</h4>
     </div>
-        <Plains />
+    <div className="buttonsPlainsAbout">
+        <a href="/planos"><IoQrCodeOutline /> Conheça nossos planos</a>
+    </div>
         <div className="textPricing">
         <h1>Fale <span>conosco</span></h1>
         <h4>Entre em contato conosco, estamos prontos para atendê-lo.</h4>
