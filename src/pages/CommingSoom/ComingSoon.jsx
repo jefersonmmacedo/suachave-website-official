@@ -13,8 +13,8 @@ export function ComingSoon() {
 
             <img src={Notebook} alt="Notebook" />
 
-            <div className="image">
-            </div>
+            {/* <div className="image">
+            </div> */}
 
             <div className="coming">
                 <h3>EM BREVE!</h3>
