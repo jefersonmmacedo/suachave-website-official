@@ -80,11 +80,15 @@
     font-size: 22px;
 }
 
-.ToHire .textToHire h3 {
+.ToHire .textToHire h2 {
     font-weight: 700;
-    color: var(--Primary);
+    color: var(--Paragraph);
     margin:10px 0;
     text-align: left;
+}
+
+.ToHire .textToHire h2 span{
+    color: var(--Primary);
 }
 
 .ToHire .textToHire a {
