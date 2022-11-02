@@ -31,17 +31,17 @@ export function ToolBar() {
                     </a>
                 </div>
                 <div className="ToolUnic2">
-                   <a href="/painel/notificacoes">
+                   <a href="/painel/alugueis">
                     <IoKey /><p>Aluguéis</p>
                     </a>
                 </div>
                 <div className="ToolUnic2">
-                   <a href="/painel/notificacoes">
+                   <a href="/painel/vendas">
                     <IoRocket /><p>Vendas</p>
                     </a>
                 </div>
                 <div className="ToolUnic2">
-                   <a href="/painel/notificacoes">
+                   <a href="/painel/avaliacoes">
                     <FaHouseUser /><p>Avaliações</p>
                     </a>
                 </div>

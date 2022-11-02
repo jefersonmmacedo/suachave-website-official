@@ -18,19 +18,7 @@
     width: 450px;
     margin: 10px;
 }
-.ComingSoon .image {
-    width: 371px;
-    height: 235px;
-    background-image: url("../../assets/images/capture.png"); 
-    background-color: #cccccc;
-    background-position: flex-start; 
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: absolute;
-    background-color: rgba(255, 255, 255);
-    margin-top: 70px;
-    margin-left: 1px;
-}
+
 .ComingSoon .coming {
     width: 330px;
     padding: 10px;

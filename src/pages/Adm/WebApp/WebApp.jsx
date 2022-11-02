@@ -39,11 +39,90 @@ export function WebApp() {
                         <img src={avatarUrl === null ? profile : avatarUrl} alt="Avatar" height={100} width={100}/>
                     </label>
 
-                    <div className="dataInputs">               
+                    <div className="dataInputs">
+                        <div className="textInputWeb">
+                            <h5>Título</h5>
+                        </div>           
                     <input type="text" placeholder="Título" />
+                    <div className="textInputWeb">
+                            <h5>Descrição</h5>
+                        </div> 
                     <input type="text" placeholder="Descrição" />
+                    <div className="textInputWeb">
+                            <h5>Sobre nós</h5>
+                        </div> 
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Sobre a empresa"></textarea>
+                    <div className="textInputWeb">
+                            <h5>Serviços oferecidos</h5>
+                        </div> 
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Serviços oferecidos"></textarea>
+                    <div className="textInputWeb">
+                            <h5>Missão</h5>
+                        </div> 
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Missão"></textarea>
+                    <div className="textInputWeb">
+                            <h5>Visão</h5>
+                        </div> 
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Visão"></textarea>
+                    <div className="textInputWeb">
+                            <h5>Valores</h5>
+                        </div> 
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Valores"></textarea>
+                    <br />
+                    <br />
+                    <div className="dataInputs">
+                    <div className="textInputWeb">
+                            <h5>Telefone</h5>
+                        </div> 
+                    <input type="text" placeholder="Telefone" />
+                    <div className="textInputWeb">
+                            <h5>Whatsapp</h5>
+                        </div> 
+                    <input type="text" placeholder="Whatsapp" />
+                    <div className="textInputWeb">
+                            <h5>E-mail</h5>
+                        </div> 
+                    <input type="text" placeholder="E-mail" />
+                    </div>
+                    <div className="dataInputsWeb">
+                    <div className="textInputWeb">
+                            <h5>Facebook</h5>
+                        </div> 
+                        <div className="textInputWeb">
+                            <h5>Instagram</h5>
+                        </div> 
+                    </div>
+                    <div className="dataInputsWeb">
+                    <input type="text" placeholder="Facebook" />
+                    <input type="text" placeholder="Instagram" />
+                    </div>
+                    <div className="dataInputsWeb">
+                    <div className="textInputWeb">
+                            <h5>Linkedin</h5>
+                        </div> 
+                        <div className="textInputWeb">
+                            <h5>Youtube</h5>
+                        </div> 
+                    </div>
+                    <div className="dataInputsWeb">
+                    <input type="text" placeholder="Linkedin" />
+                    <input type="text" placeholder="Youtube" />
+                    </div>
+                    <br />
+                    <br />
+                    <div className="dataInputsWeb">
+                    <div className="textInputWeb">
+                            <h5>Cor principal</h5>
+                        </div> 
+                        <div className="textInputWeb">
+                            <h5>Cor secundária</h5>
+                        </div> 
+                        </div> 
+                    <div className="dataInputsWeb">
                     <input type="text" placeholder="Código cor 1 (Hexadecimal/RGB)" />
+
                     <input type="text" placeholder="Código cor 2 (Hexadecimal/RGB)" />
+                    </div>
                     </div>
 
                     <button>Atualizar Dados</button>

@@ -12,10 +12,6 @@ export function ComingSoon() {
             <h1>Encontre imóveis, imobiliárias e <br />corretores em poucos cliques!</h1>
 
             <img src={Notebook} alt="Notebook" />
-
-            {/* <div className="image">
-            </div> */}
-
             <div className="coming">
                 <h3>EM BREVE!</h3>
             </div>

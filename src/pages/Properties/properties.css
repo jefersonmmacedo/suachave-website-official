@@ -14,11 +14,33 @@
     justify-content: center;
     padding:60px 20px;
 }
+.Properties .listPage .topScroll {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    color: var(--Primary);
+    border-radius: 50%;
+    font-size: 20px;
+    padding:5px;
+    border: none;
+    background-color: var(--BorderHover);
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    top: 650px;
+    right: 25px;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+  }
 
 @media (max-width: 880px)  {
     .Properties .listPage {
         padding:60px 1px;
 }
+
+.Properties .listPage .topScroll {
+    right: 5px;
+  }
 @media (max-width: 600px)  {
     .Properties .listPage {
         display: flex;

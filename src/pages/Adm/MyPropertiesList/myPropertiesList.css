@@ -202,6 +202,10 @@
   margin: 5px;
   font-size: 16px;
   font-weight: 700;
+                display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
 }
 .MyPropertiesList .informations .propertyListAdm .buttons .delete {
   padding: 10px;
@@ -212,6 +216,10 @@
   margin: 5px;
   font-size: 16px;
   font-weight: 700;
+                display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
 }
 .MyPropertiesList .informations .propertyListAdm .buttons .notView {
   padding: 10px;
@@ -222,6 +230,10 @@
   margin: 5px;
   font-size: 16px;
   font-weight: 700;
+                display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
 }
 .MyPropertiesList .aside .search {
   display: flex;
@@ -317,6 +329,17 @@
           border-top: 1px solid var(--Border);
           padding: 5px;
       }
+
+        .MyPropertiesList .informations .propertyListAdm .buttons .linkEdit {
+        width: 100%;
+      }
+        .MyPropertiesList .informations .propertyListAdm .buttons .delete {
+        width: 100%;
+      }
+        .MyPropertiesList .informations .propertyListAdm .buttons .notView {
+        width: 100%;
+      }
+
 
       .MyPropertiesList .aside .search {
         width: 100%;

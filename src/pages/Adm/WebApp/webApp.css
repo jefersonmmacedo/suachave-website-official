@@ -32,7 +32,7 @@
 
 
 .WebApp .informations form{
-    width: 500px;
+    width: 600px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -88,6 +88,37 @@
     justify-content: flex-start;
     margin: 15px 0;
 }
+.WebApp .informations form .dataInputsWeb{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.WebApp .informations form .dataInputsWeb .textInputWeb{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 10px 0 10px;
+}
+.WebApp .informations form .dataInputsWeb .textInputWeb h5{
+    color: var(--Gray);
+    font-weight: 700;
+}
+.WebApp .informations form .dataInputs .textInputWeb{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 10px 0 10px;
+}
+.WebApp .informations form .dataInputs .textInputWeb h5{
+    color: var(--Gray);
+    font-weight: 700;
+}
 .WebApp .informations form input{
     width: 100%;
     display: flex;
@@ -99,6 +130,19 @@
     border-radius: 6px;
     background-color: var(--BorderInput);
     border: none;
+}
+.WebApp .informations form textarea{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 6px;
+    background-color: var(--BorderInput);
+    border: none;
+    resize: none;
 }
 .WebApp .informations form button{
     width: 100%;
@@ -124,7 +168,7 @@
         padding-right: 20px;
     }
 
-    @media (max-width: 500px) {
+    @media (max-width: 600px) {
         .WebApp .informations form{
             width: 100%;
         }

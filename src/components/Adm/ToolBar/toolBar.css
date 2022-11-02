@@ -15,18 +15,21 @@
 }
 
 .ToolBar::-webkit-scrollbar {
-    width: 0px;               /* width of the entire scrollbar */
+    width: 5px; 
+    margin: 2px;              /* width of the entire scrollbar */
   }
   
   .ToolBar::-webkit-scrollbar-track {
-    background: var(--Black);        /* color of the tracking area */
+    background: var(--BorderInput);        /* color of the tracking area */
   }
   
   .ToolBar::-webkit-scrollbar-thumb {
     background-color: var(--Border);    /* color of the scroll thumb */
     border-radius: 20px;       /* roundness of the scroll thumb */
-    border: 3px solid var(--Black);  /* creates padding around scroll thumb */
+    border: 3px solid var(--Border);  /* creates padding around scroll thumb */
   }
+
+
 
 .ToolBar .image {
     width: 110px;
