@@ -13,7 +13,7 @@ export function ComingSoon() {
 
             <img src={Notebook} alt="Notebook" />
             <div className="coming">
-                <h3>EM BREVE!</h3>
+                <h4>Lançamento em <br /> Novembro 2022</h4>
             </div>
             
 

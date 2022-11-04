@@ -6,6 +6,7 @@ import Modal from 'react-modal';
 
 export function CompanyInfo() {
     const [isOpenModal, setIsOpenModa] = useState(false);
+    const [isOpenModalPhone, setIsOpenModaPhone] = useState(false);
     function handleOpenModal(e) {
         e.preventDefault();
           setIsOpenModa(true)
@@ -14,6 +15,16 @@ export function CompanyInfo() {
         function handleCloseModal(e) {
           e.preventDefault();
           setIsOpenModa(false);
+        }
+  
+    function handleOpenModalPhone(e) {
+        e.preventDefault();
+          setIsOpenModaPhone(true)
+        }
+      
+        function handleCloseModalPhone(e) {
+          e.preventDefault();
+          setIsOpenModaPhone(false);
         }
   
 
@@ -37,7 +48,7 @@ export function CompanyInfo() {
             </div>
                 <divo className="buttonsContact">
                     <button className="btn-whats" onClick={handleOpenModal}><IoLogoWhatsapp /> Whatsapp</button>
-                    <button onClick={handleOpenModal}><IoCallOutline /> Ligar</button>
+                    <button onClick={handleOpenModalPhone}><IoCallOutline /> Ligar</button>
                 </divo>
 
 
@@ -59,7 +70,29 @@ export function CompanyInfo() {
                         <input type="text" placeholder="(XX)XXXXX-XXXX"/>
                     </form>
 
-                    <button>Entrar em contato</button>
+                    <button>Ir para Whatsapp</button>
+
+            </div>
+            </div>
+            </Modal>
+                <Modal isOpen={isOpenModalPhone} onRequestClose={handleCloseModalPhone}
+            overlayClassName="react-modal-overlay"
+            className="react-modal-content">
+            <button type="button" className="react-modal-button" onClick={handleCloseModalPhone}>
+            <IoCloseOutline /> 
+            </button>
+            <div className="content-modal-Message">
+            <div className="itensModalMessage">
+                    <h2>Fale conosco! </h2>
+
+                    <form action="">
+                        <span>Nome</span>
+                        <input type="text" placeholder="Nome completo"/>
+                        <span>Whatsapp</span>
+                        <input type="text" placeholder="(XX)XXXXX-XXXX"/>
+                    </form>
+
+                    <button>Ir para Ligação</button>
 
             </div>
             </div>
