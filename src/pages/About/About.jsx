@@ -181,11 +181,13 @@ export function About() {
         <a href="/planos"><IoQrCodeOutline /> Conheça nossos planos</a>
     </div>
         <div className="textPricing">
-        <h1>Fale <span>conosco</span></h1>
+        <h1>Fale com <span>nossa equipe</span></h1>
         <h4>Entre em contato conosco, estamos prontos para atendê-lo.</h4>
     </div>
+    
         <div className="BlocksContact">
-                <div className="blockContact">
+        <button className="btn" onClick={handleOpenModal}><IoLogoWhatsapp /> Entre em contato com nossa equipe</button>
+                {/* <div className="blockContact">
                         <h3><IoMailOpenOutline /> Email</h3>
                         <h5>contato@suachave.com.br</h5>
 
@@ -201,7 +203,7 @@ export function About() {
                     <h3><IoPhonePortraitOutline /> Whatsapp </h3>
                     <h5>21 97168-4632</h5>
                     <button>Enviar mensagem</button>
-                </div>
+                </div> */}
             </div> 
     </div>
     <Footer />

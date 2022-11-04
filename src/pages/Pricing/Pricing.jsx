@@ -2,6 +2,7 @@
 import Navbar2 from "../../components/Nav/Navbar";
 import { Plains } from "../../components/Plains/Plains";
 import { Footer } from "../../components/Footer/Footer";
+import {IoCheckmarkOutline} from "react-icons/io5"
 
 export function Pricing() {
     return (
@@ -11,6 +12,17 @@ export function Pricing() {
             <h4>Cada plano atende a uma necessidade, de acordo com as ferramentas oferecidas. <br/>Você poderá alterar a qualquer momento.</h4>
 
             <Plains />
+
+            <div className="future">
+                <h3>Em breve:</h3>
+                <h4><IoCheckmarkOutline /> Integração com portais</h4>
+                <h4><IoCheckmarkOutline /> Assinatura digital de contrato</h4>
+                <h4><IoCheckmarkOutline /> Disparo de e-mail automático personalizável</h4>
+                <h4><IoCheckmarkOutline /> Gerenciamento de leads</h4>
+                <h4><IoCheckmarkOutline /> Aplicativo para sua imobiliária</h4>
+                <h4><IoCheckmarkOutline /> Agendamento de visitas via WhatsApp</h4>
+                <h4><IoCheckmarkOutline /> Novos métodos de pagamento</h4>
+            </div>
 
             <Footer />
         </div>

@@ -234,6 +234,62 @@
 }
 
 
+
+
+.content-modal-Favorite {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-radius: 8px;
+    background-color: var(--White);
+}
+.content-modal-Favorite .itensModalFavorite {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    overflow:auto; 
+    max-height: 500px;
+    margin: 20px 10px;
+    padding: 20px;
+}
+
+.content-modal-Favorite .itensModalFavorite svg {
+    color: var(--Primary);
+    font-size: 45px;
+}
+.content-modal-Favorite .itensModalFavorite h1 {
+    font-weight: 800;
+    color: var(--Paragraph);
+    margin: 15px 0;
+}
+.content-modal-Favorite .itensModalFavorite h4 {
+    margin-right: 30px;
+}
+
+.content-modal-Favorite .itensModalFavorite a {
+    width: 150px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--Primary);
+    color: var(--White);
+    margin: 30px 0 10px 0px;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+
+
+
 @media (max-width: 950px) {
     .Property .main .data {
         width: 100%;

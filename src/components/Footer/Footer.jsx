@@ -13,7 +13,7 @@ export function Footer() {
                 <div className="sections">
                         <div className="sectionUnic">
                         <a href="/"><img src={logo} alt="" /></a>
-                            <h5>Enconte imóveis, imobiliárias e corretores em poucos cliques!</h5>
+                            <h5>Encontre imóveis, imobiliárias e corretores em poucos cliques!</h5>
                         </div>
                         <div className="sectionUnic">
                             <h3><b>SUA CHAVE</b></h3>

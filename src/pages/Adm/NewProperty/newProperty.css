@@ -32,7 +32,7 @@
     box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
     border-radius: 6px;
     margin-top: 20px;
-    background-color: var(--BorderInput2);
+    background-color: var(--White);
 }
 
 .NewProperty .aside .form input{
@@ -45,7 +45,7 @@
     margin: 5px;
     border-radius: 6px;
     background-color: var(--White);
-    border: none;
+    border: 1px solid var(--Border);
     font-weight: 600;
     color: var(--Description);
 }
@@ -65,7 +65,7 @@
     margin: 5px;
     border-radius: 6px;
     background-color: var(--White);
-    border: none;
+    border: 1px solid var(--Border);
     font-weight: 600;
     color: var(--Gray2);
 }
@@ -85,7 +85,7 @@
     margin: 5px;
     border-radius: 6px;
     background-color: var(--White);
-    border: none;
+    border: 1px solid var(--Border);
     font-weight: 600;
     resize: none;
     color: var(--Description);
@@ -113,13 +113,17 @@
 
 .NewProperty .aside .form .Check button {
     padding: 10px 20px;
-    border: none;
+    border: 1px solid var(--Border);
     font-weight: 600;
     border-radius: 25px;
     color: var(--Gray2);
     margin: 5px;
     font-size: 14px;
     background-color: var(--White);
+}
+.NewProperty .aside .form .Check button:hover {
+    color: var(--White);
+    background-color: var(--Primary);
 }
 
 .NewProperty .aside .form .data input{
@@ -132,7 +136,7 @@
     margin: 5px;
     border-radius: 6px;
     background-color: var(--White);
-    border: none;
+    border: 1px solid var(--Border);
     font-weight: 600;
 }
 .NewProperty .aside .form .data select{
@@ -145,7 +149,7 @@
     margin: 5px;
     border-radius: 6px;
     background-color: var(--White);
-    border: none;
+    border: 1px solid var(--Border);
     font-weight: 600;
 }
 

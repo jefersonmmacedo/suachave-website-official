@@ -25,6 +25,8 @@ export function Plains() {
                     {/* <p><IoCheckbox /> Anúncios no app Sua Chave</p> */}
                     <p><IoCheckbox /> App Sua Chave para clientes [Breve]</p>
                     <p><IoCheckbox /> App administrativo [Breve]</p>
+                    <p><IoCheckbox /> Captação de leads</p>
+                    <p><IoCheckbox /> Sem custo de integração</p>
                     <p><IoCheckbox /> Plano sem fidelidade</p>
                 </div>
                 <a href="/plano">Seu plano atual</a>
@@ -52,6 +54,8 @@ export function Plains() {
                     {/* <p><IoCheckbox /> Anúncios no app Sua Chave</p> */}
                     <p><IoCheckbox /> App Sua Chave para clientes [Breve]</p>
                     <p><IoCheckbox /> App administrativo [Breve]</p>
+                    <p><IoCheckbox /> Captação de leads</p>
+                    <p><IoCheckbox /> Sem custo de integração</p>
                     <p><IoCheckbox /> Plano sem fidelidade</p>
                 </div>
                 <a href="/plano">Seu plano atual</a>
@@ -79,13 +83,15 @@ export function Plains() {
                     <p><IoCheckbox /> Processo de compra e venda digitalizado</p>
                     <p><IoCheckbox /> Recebe solicitação para avaliação*</p>
                     {/* <p><IoCheckbox /> App administrativo</p> */}
-                    <p><IoCheckbox /> Site individual e responsivo para sua empresa</p>
+                    <p><IoCheckbox /> Site individual para sua empresa</p>
                     <p><IoCheckbox /> Relatório Mensal do Google Analytics</p>
                     {/* <p><IoCheckbox /> Site individual integrado ao sua chave</p>
                     <p><IoCheckbox /> Anúncios no seu site e no sua chave</p> */}
                     {/* <p><IoCheckbox /> Anúncios no app Sua Chave</p> */}
                     <p><IoCheckbox /> App Sua Chave para clientes [Breve]</p>
                     <p><IoCheckbox /> App administrativo [Breve]</p>
+                    <p><IoCheckbox /> Captação de leads</p>
+                    <p><IoCheckbox /> Sem custo de integração</p>
                     <p><IoCheckbox /> Plano sem fidelidade</p>
                 </div>
                 <a href="/plano">Selecionar plano</a>

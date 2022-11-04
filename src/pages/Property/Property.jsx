@@ -2,16 +2,18 @@
 import { SliderImages } from '../../components/SliderImages/SliderImages';
 import Navbar2 from "../../components/Nav/Navbar";
 import { FaBed, FaCar, FaShower, FaBath } from "react-icons/fa";
-import { IoCrop, IoHeart, IoMove, IoCheckmarkSharp, IoLocationOutline } from "react-icons/io5";
+import { IoCrop, IoHeart, IoMove, IoCheckmarkSharp, IoLocationOutline, IoCloseOutline } from "react-icons/io5";
 import { Footer } from "../../components/Footer/Footer";
 import { CompanyInfo } from "../../components/CompanyInfo/CompanyInfo";
 import { Rent } from "../../components/Rent/Rent";
 import { NewScheduling } from "../../components/NewScheduling/NewScheduling";
 import { NewMessageProperty } from "../../components/NewMessageProperty/NewMessageProperty";
+import { NewFavorite } from "../../components/NewFavorite/NewFavorite";
 
 
 
 export function Property() {
+
     const data = new Date();
     var text = "https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Saquarema RJ&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
     return (
@@ -28,9 +30,10 @@ export function Property() {
 
                     <NewMessageProperty />
                     <NewScheduling />
-                     <div className="heart">
-                    <IoHeart />
-                    </div>
+                    <NewFavorite />
+                     {/* <div className="heart">
+                    <IoHeart onClick={handleOpenModal}/>
+                    </div> */}
             </div>
                 <div className="text">
                     <h2>Lindo apartamento luxuoso</h2>
@@ -145,6 +148,7 @@ export function Property() {
                 <Rent />
         </div>
         <Footer />
+
 
        </div>
       )

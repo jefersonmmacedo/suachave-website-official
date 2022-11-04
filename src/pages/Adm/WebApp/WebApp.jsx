@@ -43,46 +43,46 @@ export function WebApp() {
                         <div className="textInputWeb">
                             <h5>Título</h5>
                         </div>           
-                    <input type="text" placeholder="Título" />
+                    <input type="text" placeholder="Digite" />
                     <div className="textInputWeb">
                             <h5>Descrição</h5>
                         </div> 
-                    <input type="text" placeholder="Descrição" />
+                    <input type="text" placeholder="Digite" />
                     <div className="textInputWeb">
                             <h5>Sobre nós</h5>
                         </div> 
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Sobre a empresa"></textarea>
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Digite"></textarea>
                     <div className="textInputWeb">
                             <h5>Serviços oferecidos</h5>
                         </div> 
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Serviços oferecidos"></textarea>
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Digite"></textarea>
                     <div className="textInputWeb">
                             <h5>Missão</h5>
                         </div> 
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Missão"></textarea>
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Digite"></textarea>
                     <div className="textInputWeb">
                             <h5>Visão</h5>
                         </div> 
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Visão"></textarea>
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Digite"></textarea>
                     <div className="textInputWeb">
                             <h5>Valores</h5>
                         </div> 
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Valores"></textarea>
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Digite"></textarea>
                     <br />
                     <br />
                     <div className="dataInputs">
                     <div className="textInputWeb">
                             <h5>Telefone</h5>
                         </div> 
-                    <input type="text" placeholder="Telefone" />
+                    <input type="text" placeholder="Digite" />
                     <div className="textInputWeb">
                             <h5>Whatsapp</h5>
                         </div> 
-                    <input type="text" placeholder="Whatsapp" />
+                    <input type="text" placeholder="Digite" />
                     <div className="textInputWeb">
                             <h5>E-mail</h5>
                         </div> 
-                    <input type="text" placeholder="E-mail" />
+                    <input type="text" placeholder="Digite" />
                     </div>
                     <div className="dataInputsWeb">
                     <div className="textInputWeb">
@@ -93,8 +93,8 @@ export function WebApp() {
                         </div> 
                     </div>
                     <div className="dataInputsWeb">
-                    <input type="text" placeholder="Facebook" />
-                    <input type="text" placeholder="Instagram" />
+                    <input type="text" placeholder="Digite o link"/>
+                    <input type="text" placeholder="Digite o link" />
                     </div>
                     <div className="dataInputsWeb">
                     <div className="textInputWeb">
@@ -105,8 +105,8 @@ export function WebApp() {
                         </div> 
                     </div>
                     <div className="dataInputsWeb">
-                    <input type="text" placeholder="Linkedin" />
-                    <input type="text" placeholder="Youtube" />
+                    <input type="text" placeholder="Digite o link" />
+                    <input type="text" placeholder="Digite o link" />
                     </div>
                     <br />
                     <br />
@@ -119,9 +119,9 @@ export function WebApp() {
                         </div> 
                         </div> 
                     <div className="dataInputsWeb">
-                    <input type="text" placeholder="Código cor 1 (Hexadecimal/RGB)" />
+                    <input type="text" placeholder="Ex.: 256,256,256 ou #FFFFFF" />
 
-                    <input type="text" placeholder="Código cor 2 (Hexadecimal/RGB)" />
+                    <input type="text" placeholder="Ex.: 256,256,256 ou #FFFFFF" />
                     </div>
                     </div>
 

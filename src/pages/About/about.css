@@ -312,6 +312,31 @@
     flex-wrap: wrap;
 }
 
+.About .MainAbout .BlocksContact .btn {
+    background-color: var(--White);
+    width: 350px;
+    padding: 15px 20px;
+    font-size: 16px;
+    border: 1px solid var(--Primary);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    color: var(--Primary);
+    font-weight: 700;
+}
+.About .MainAbout .BlocksContact button:hover {
+    background-color: var(--Primary);
+    color: var(--White);
+}
+
+.About .MainAbout .BlocksContact button svg {
+    font-size: 24px;
+    margin-right: 5px;
+}
+
+
 .About .MainAbout .BlocksContact .blockContact {
     width: 300px;
     display: flex;

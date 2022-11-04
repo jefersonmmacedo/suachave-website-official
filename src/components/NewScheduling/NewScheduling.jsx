@@ -6,6 +6,7 @@ import ImageHouse1 from "../../assets/images/house.jpg";
 
 export function NewScheduling() {
     const [isOpenModal, setIsOpenModa] = useState(false);
+    const [isOpenModalLogin, setIsOpenModaLogin] = useState(false);
 
     function handleOpenModal(e) {
       e.preventDefault();
@@ -16,11 +17,20 @@ export function NewScheduling() {
         e.preventDefault();
         setIsOpenModa(false);
       }
+    function handleOpenModalLogin(e) {
+      e.preventDefault();
+        setIsOpenModaLogin(true)
+      }
+    
+      function handleCloseModalLogin(e) {
+        e.preventDefault();
+        setIsOpenModaLogin(false);
+      }
 
     Modal.setAppElement('#root');
     return (
         <>
-        <button className="buttonScheduling" onClick={handleOpenModal}><IoCalendar/> Agendar visita</button>
+        <button className="buttonScheduling" onClick={handleOpenModalLogin}><IoCalendar/> Agendar visita</button>
 
         <Modal isOpen={isOpenModal} onRequestClose={handleCloseModal}
             overlayClassName="react-modal-overlay"
@@ -184,6 +194,28 @@ export function NewScheduling() {
                 </div>
                 <button className="btnSubmit">Enviar solicitação de agendamento</button>
                 </form>
+            </div>
+            </div>
+            </Modal>
+
+            
+        <Modal isOpen={isOpenModalLogin} onRequestClose={handleCloseModalLogin}
+            overlayClassName="react-modal-overlay"
+            className="react-modal-content">
+            <button type="button" className="react-modal-button" onClick={handleCloseModalLogin}>
+            <IoCloseOutline /> 
+            </button>
+            <div className="content-modal-Favorite">
+            <div className="itensModalFavorite">
+                    <IoCalendar />
+
+                    <h1>Legal! <br />
+                    Venha nos visitar.</h1>
+
+                    <h4>Entre em sua conta ou cadastre-se para para poder agendar visitas, conhecer os anúncios e ver cada detalhe.</h4>
+
+                    <a href="/entrar">Fazer login</a>
+
             </div>
             </div>
             </Modal>
