@@ -62,6 +62,30 @@ export function FinancerAdm() {
                     <h5 className="date">05/11/2022</h5>
                     <button><IoChevronDownOutline /> </button>
                 </div>
+                <div className="FinancerListUnic">
+                    <h5>Venda de Imóvel</h5>
+                    <h5 className="up">R$ 10.000,00</h5>
+                    <h5 className="date">15/11/2022</h5>
+                    <button><IoChevronDownOutline /> </button>
+                </div>
+                <div className="FinancerListUnic">
+                    <h5>Pintura Imóvel Aluguel</h5>
+                    <h5 className="down">R$ 3.000,00</h5>
+                    <h5 className="date">13/11/2022</h5>
+                    <button><IoChevronDownOutline /> </button>
+                </div>
+                <div className="FinancerListUnic">
+                    <h5>Conta de luz</h5>
+                    <h5 className="down">R$ 120,00</h5>
+                    <h5 className="date">08/11/2022</h5>
+                    <button><IoChevronDownOutline /> </button>
+                </div>
+                <div className="FinancerListUnic">
+                    <h5>Recebimento de Transação</h5>
+                    <h5 className="up">R$ 25.000,00</h5>
+                    <h5 className="date">05/11/2022</h5>
+                    <button><IoChevronDownOutline /> </button>
+                </div>
             </div>
             </div>
         </div>
