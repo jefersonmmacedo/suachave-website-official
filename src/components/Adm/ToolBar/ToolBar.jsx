@@ -72,7 +72,7 @@ export function ToolBar() {
                     </a>
                 </div>
                 <div className="ToolUnic2">
-                   <a href="/painel/avaliacoes">
+                   <a href="/painel/historico">
                    <IoTimer /><p>Histórico</p>
                     </a>
                 </div>

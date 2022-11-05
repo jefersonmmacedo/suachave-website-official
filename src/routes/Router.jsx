@@ -45,6 +45,7 @@ import { MyRents } from '../pages/Adm/MyRents/MyRents';
 import { MySales } from '../pages/Adm/MySales/MySales';
 import { MyAssessments } from '../pages/Adm/MyAssessments/MyAssessments';
 import { FinancerAdm } from '../pages/Adm/FinancerAdm/FinancerAdm';
+import { AccessAdm } from '../pages/Adm/AccessAdm/AccessAdm';
 
 function Router () {
 const Local = localStorage.getItem("suachave");
@@ -130,6 +131,8 @@ function PrivateRoute({children} ) {
                     element={ <PrivateRoute> <WebApp /> </PrivateRoute>} />
             <Route path="/painel/financas"
                     element={ <PrivateRoute> <FinancerAdm /> </PrivateRoute>} />
+            <Route path="/painel/historico"
+                    element={ <PrivateRoute> <AccessAdm /> </PrivateRoute>} />
             <Route path="/painel/menu"
                     element={ <PrivateRoute> <MenuAdm /> </PrivateRoute>} />
             </Routes>
