@@ -133,7 +133,7 @@ export function Home() {
             <ExploreIconsProperties />
             <Cities />
             <ToHire />
-            {/* <DownloadApp /> */}
+            <DownloadApp />
             <Footer />
 
 

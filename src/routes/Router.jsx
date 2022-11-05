@@ -129,7 +129,7 @@ function PrivateRoute({children} ) {
                     element={ <PrivateRoute> <MyAccountAdm /> </PrivateRoute>} />
             <Route path="/painel/web"
                     element={ <PrivateRoute> <WebApp /> </PrivateRoute>} />
-            <Route path="/painel/financas"
+            <Route path="/painel/financeiro"
                     element={ <PrivateRoute> <FinancerAdm /> </PrivateRoute>} />
             <Route path="/painel/historico"
                     element={ <PrivateRoute> <AccessAdm /> </PrivateRoute>} />

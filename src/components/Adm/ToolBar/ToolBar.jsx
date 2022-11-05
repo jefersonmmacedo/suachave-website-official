@@ -47,7 +47,7 @@ export function ToolBar() {
                 </div>
 
                 <div className="ToolUnic2">
-                   <a href="/painel/avaliacoes">
+                   <a href="/painel/financeiro">
                    <FaDollarSign /><p>Financeiro</p>
                     </a>
                 </div>
