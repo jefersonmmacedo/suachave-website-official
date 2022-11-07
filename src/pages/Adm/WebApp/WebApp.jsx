@@ -43,46 +43,46 @@ export function WebApp() {
                         <div className="textInputWeb">
                             <h5>Título</h5>
                         </div>           
-                    <input type="text" placeholder="Digite" />
+                    <input type="text"  />
                     <div className="textInputWeb">
                             <h5>Descrição</h5>
                         </div> 
-                    <input type="text" placeholder="Digite" />
+                    <input type="text"  />
                     <div className="textInputWeb">
                             <h5>Sobre nós</h5>
                         </div> 
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Digite"></textarea>
+                    <textarea name="" id="" cols="30" rows="10" ></textarea>
                     <div className="textInputWeb">
                             <h5>Serviços oferecidos</h5>
                         </div> 
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Digite"></textarea>
+                    <textarea name="" id="" cols="30" rows="10" ></textarea>
                     <div className="textInputWeb">
                             <h5>Missão</h5>
                         </div> 
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Digite"></textarea>
+                    <textarea name="" id="" cols="30" rows="10" ></textarea>
                     <div className="textInputWeb">
                             <h5>Visão</h5>
                         </div> 
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Digite"></textarea>
+                    <textarea name="" id="" cols="30" rows="10" ></textarea>
                     <div className="textInputWeb">
                             <h5>Valores</h5>
                         </div> 
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Digite"></textarea>
+                    <textarea name="" id="" cols="30" rows="10" ></textarea>
                     <br />
                     <br />
                     <div className="dataInputs">
                     <div className="textInputWeb">
                             <h5>Telefone</h5>
                         </div> 
-                    <input type="text" placeholder="Digite" />
+                    <input type="text"  />
                     <div className="textInputWeb">
                             <h5>Whatsapp</h5>
                         </div> 
-                    <input type="text" placeholder="Digite" />
+                    <input type="text"  />
                     <div className="textInputWeb">
                             <h5>E-mail</h5>
                         </div> 
-                    <input type="text" placeholder="Digite" />
+                    <input type="text"  />
                     </div>
                     <div className="dataInputsWeb">
                     <div className="textInputWeb">
@@ -93,8 +93,8 @@ export function WebApp() {
                         </div> 
                     </div>
                     <div className="dataInputsWeb">
-                    <input type="text" placeholder="Digite o link"/>
-                    <input type="text" placeholder="Digite o link" />
+                    <input type="text" placeholder="http://facebook.com/usuario"/>
+                    <input type="text" placeholder="http://instagram.com/usuario" />
                     </div>
                     <div className="dataInputsWeb">
                     <div className="textInputWeb">
@@ -105,8 +105,8 @@ export function WebApp() {
                         </div> 
                     </div>
                     <div className="dataInputsWeb">
-                    <input type="text" placeholder="Digite o link" />
-                    <input type="text" placeholder="Digite o link" />
+                    <input type="text" placeholder="http://linkedin.com/usuario" />
+                    <input type="text" placeholder="http://youtube.com/usuario" />
                     </div>
                     <br />
                     <br />

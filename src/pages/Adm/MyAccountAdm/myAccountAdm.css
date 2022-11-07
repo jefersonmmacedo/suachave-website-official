@@ -89,7 +89,7 @@
 
 .MyAccountAdm .informations form .textDataInputs h4 {
     font-weight: 700;
-    color: var(--Gray);
+    color: var(--Paragraph);
 }
 
 
@@ -113,8 +113,12 @@
     padding: 10px;
     margin: 5px;
     border-radius: 6px;
-    background-color: var(--BorderInput);
-    border: none;
+    background-color: var(--BorderHover);
+    border: 1px solid var(--Border);
+}
+
+.MyAccountAdm .informations form input::placeholder {
+    color: var(--Gray);
 }
 .MyAccountAdm .informations form button{
     padding: 10px 20px;
@@ -122,7 +126,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin: 5px 0;
+    margin: 5px 0 30px 0;
     border-radius: 6px;
     background-color: var(--Primary);
     border: none;

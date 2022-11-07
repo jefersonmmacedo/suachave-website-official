@@ -83,7 +83,9 @@ export function MyAccountAdm() {
                     </div>
 
                     <button>Atualizar Dados</button>
-
+                    <div className="textDataInputs">
+                    <h4>Alterar Senha</h4>
+                    </div>
                     <div className="dataInputs">               
                     <input type="password" placeholder="Senha Atual" />
                     <input type="password" placeholder="Nova senha" />

@@ -15,7 +15,7 @@ export function SignIn() {
     }
     function handleRedirectToPage(e) {
         e.preventDefault();
-        window.open("/entrar-empresa", "_self")
+        window.open("https://adm.suachave.com.br/")
     }
     return (
         <div className="SignIn">

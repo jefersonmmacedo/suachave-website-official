@@ -133,16 +133,16 @@
     padding: 10px;
     margin: 5px;
     border-radius: 6px;
-    background-color: var(--BorderInput);
-    border: none;
+    background-color: var(--BorderHover);
+    border: 1px solid var(--Border);
 }
 
 .WebApp .informations form input::placeholder{
-    color: var(--Border);
+    color: var(--Gray);
 }
 
 .WebApp .informations form textarea::placeholder{
-    color: var(--Border);
+    color: var(--Gray);
 }
 
 .WebApp .informations form textarea{
@@ -154,8 +154,8 @@
     padding: 10px;
     margin: 5px;
     border-radius: 6px;
-    background-color: var(--BorderInput);
-    border: none;
+    background-color: var(--BorderHover);
+    border: 1px solid var(--Border);
     resize: none;
 }
 

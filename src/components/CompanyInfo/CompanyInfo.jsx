@@ -1,5 +1,6 @@
 ﻿import "./companyInfo.css";
-import {IoCallOutline, IoLocationOutline, IoLogoWhatsapp, IoMailOutline, IoChatboxEllipsesOutline, IoCloseOutline} from 'react-icons/io5'
+import {IoCall,IoMail, IoLocation, IoLogoWhatsapp, IoMailOutline, IoChatboxEllipsesOutline, IoCloseOutline} from 'react-icons/io5'
+import {FaIdCard} from 'react-icons/fa'
 import imobiliária from "../../assets/images/imob1.png";
 import { useState } from "react";
 import Modal from 'react-modal';
@@ -36,19 +37,21 @@ export function CompanyInfo() {
                 <img src={imobiliária} alt="" />
             </div>
             <h2>Sua Chave Imóveis</h2>
-            <h5><IoLocationOutline />Centro - Rio Bonito - RJ</h5>
+            <h5><IoLocation />Centro - Rio Bonito - RJ</h5>
+            <h5><FaIdCard />CRECI: <span> 00.000J</span></h5>
 
             <div className="contact">
-                <div className="info">  
+                {/* <div className="info">  
                 <h4>Contato</h4>           
-                    <h5><IoCallOutline /> (21) 2222-2222</h5> 
+                    <h5><IoCall /> (21) 2222-2222</h5> 
                     <h5><IoLogoWhatsapp /> (21) 99999-9999</h5>          
                     <h5><IoMailOutline /> contato@suachave.com.br</h5>
-                </div>
+                </div> */}
             </div>
                 <divo className="buttonsContact">
                     <button className="btn-whats" onClick={handleOpenModal}><IoLogoWhatsapp /> Whatsapp</button>
-                    <button onClick={handleOpenModalPhone}><IoCallOutline /> Ligar</button>
+                    <button onClick={handleOpenModalPhone}><IoCall /> Ligar</button>
+                    <button onClick={handleOpenModalPhone}><IoMail /> E-mail</button>
                 </divo>
 
 

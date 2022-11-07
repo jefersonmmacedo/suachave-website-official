@@ -50,10 +50,10 @@
     color: var(--Description);
 }
 .NewProperty .aside .form input::placeholder{
-    color: var(--Gray2);
+    color: var(--Gray);
 }
 .NewProperty .aside .form textarea::placeholder{
-    color: var(--Gray2);
+    color: var(--Gray);
 }
 .NewProperty .aside .form select{
     width: 100%;
@@ -67,7 +67,7 @@
     background-color: var(--White);
     border: 1px solid var(--Border);
     font-weight: 600;
-    color: var(--Gray2);
+    color: var(--Gray);
 }
 .NewProperty .aside .form select option {
     margin: 40px;
@@ -92,7 +92,7 @@
 }
 
 .NewProperty .aside .form textarea::placeholder{
-    color: var(--Gray2);
+    color: var(--Gray);
 }
 
 .NewProperty .aside .form .data {
@@ -116,7 +116,7 @@
     border: 1px solid var(--Border);
     font-weight: 600;
     border-radius: 25px;
-    color: var(--Gray2);
+    color: var(--Gray);
     margin: 5px;
     font-size: 14px;
     background-color: var(--White);
