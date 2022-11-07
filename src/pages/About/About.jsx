@@ -43,7 +43,7 @@ export function About() {
 
                     <div className="buttonsText">
                         {/* <button onClick={handleOpenModal}><IoPlayCircle /> Clique e conheça nossa empresa</button> */}
-                        <button className="btn" onClick={handleOpenModal}><IoLogoWhatsapp /> Entre em contato com nossa equipe</button>
+                        <button className="btn" onClick={handleOpenModal}><IoLogoWhatsapp /> Falar com time Comercial</button>
                     </div>
                 </div>
         </div>
@@ -166,16 +166,14 @@ export function About() {
                     <IoChatboxEllipsesOutline />
                         <h4>Chat único por anúncio</h4>
                     </div>
-                    <div className="ToHireUnicAbout">
-                    <IoLaptopOutline />
-                        <h4>Controle do site e app</h4>
-                    </div>
+
+                    <a href="/cadastro-profissional">Quero digitalizar minha imobiliária</a>
                 </div>
         </div>
     </div>
     <div className="textPricing">
         <h1>Escolha o <span>plano ideal</span> para o seu negócio</h1>
-        <h4>Cada plano atende a uma necessidade, de acordo com as ferramentas oferecidas. <br/>Você poderá alterar a qualquer momento.</h4>
+        <h4>Temos um plano cara cada momento do seu negócio. Acesse o link a abaixo e confira:</h4>
     </div>
     <div className="buttonsPlainsAbout">
         <a href="/planos"><IoQrCodeOutline /> Conheça nossos planos</a>
@@ -186,24 +184,7 @@ export function About() {
     </div>
     
         <div className="BlocksContact">
-        <button className="btn" onClick={handleOpenModal}><IoLogoWhatsapp /> Entre em contato com nossa equipe</button>
-                {/* <div className="blockContact">
-                        <h3><IoMailOpenOutline /> Email</h3>
-                        <h5>contato@suachave.com.br</h5>
-
-                        <button>Enviar e-mail</button>
-                </div>
-                <div className="blockContact">
-                        <h3><IoCallOutline  /> Telefone</h3>
-                        <h5>21 97168-4632</h5>
-
-                        <button>Ligar</button>
-                </div>
-                <div className="blockContact">
-                    <h3><IoPhonePortraitOutline /> Whatsapp </h3>
-                    <h5>21 97168-4632</h5>
-                    <button>Enviar mensagem</button>
-                </div> */}
+        <button className="btn" onClick={handleOpenModal}><IoLogoWhatsapp /> Falar com time Comercial</button>
             </div> 
     </div>
     <Footer />

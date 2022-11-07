@@ -9,12 +9,13 @@ import {  PropertyCarroussel } from "../../components/PropertyCarroussel/Propert
 import { DownloadApp } from "../../components/DownloadApp/DownloadApp";
 import { Cities } from "../../components/Cities/Cities";
 import { ExploreIconsProperties } from "../../components/ExploreIconsProperties/ExploreIconsProperties";
-import { IoCloseOutline } from "react-icons/io5";
+import { IoBusiness, IoCloseOutline, IoSearch } from "react-icons/io5";
 import { useEffect } from "react";
 import LogoImg from '../../assets/images/Logo2.png';
 import buscaDistrito from '../../services/api-buscaDistrito';
 import { toast } from 'react-toastify';
 import { ToHire } from "../../components/ToHire/ToHire";
+import { FaBuilding, FaHome, FaStore } from "react-icons/fa";
 
 export function Home() {
     const LocalCity = localStorage.getItem("suachavecity");
@@ -23,6 +24,7 @@ export function Home() {
     const user = JSON.parse(Local);
 
     const [isOpenModal, setIsOpenModa] = useState(false);
+    const [isOpenModalSearch, setIsOpenModaSearch] = useState(false);
     const [timer, setTimes] = useState(false);
 
     const [city, setCity] = useState("");
@@ -71,6 +73,15 @@ export function Home() {
         e.preventDefault();
         setIsOpenModa(false);
       }
+    function handleOpenModalSearch(e) {
+      e.preventDefault();
+        setIsOpenModaSearch(true)
+      }
+    
+      function handleCloseModalSearch(e) {
+        e.preventDefault();
+        setIsOpenModaSearch(false);
+      }
 
 
       async function handleSearchDistrict(ufSelect) {
@@ -117,13 +128,38 @@ export function Home() {
         <div className="Home">
             <Navbar2 />
             <SliderHome />
+            <div className="searchView">
             <SearchProperty />
+            </div>
+            <div className="searchViewButton">
+            <button onClick={handleOpenModalSearch}><IoSearch/>Buscar Imóveis</button>
+            </div>
+            <div className="iconsHomeProperties">
+                <div className="unic">
+                    <FaHome />
+                    Casas
+                </div>
+                <div className="unic">
+                    <FaBuilding />
+                    Apartamentos
+                </div>
+                <div className="unic">
+                    <IoBusiness />
+                    Salas Comercais
+                </div>
+                <div className="unic">
+                    <FaStore />
+                    Lojas
+                </div>
+            </div>
             <div className="textFeature">
             <h3>Imóveis à venda</h3>
             </div>
+
             <div className="carroussel">
             <PropertyCarroussel />
             </div>
+            
             <div className="textHome">
             <h3>Imóveis para alugar</h3>
             </div>
@@ -200,6 +236,18 @@ export function Home() {
                     <a href="/entrar">Ja possuo conta</a>
                     <a href="/cadastrar">Cadastrar</a>
                 </div>
+            </div>
+            </div>
+            </Modal>
+            <Modal isOpen={isOpenModalSearch} onRequestClose={handleCloseModalSearch}
+            overlayClassName="react-modal-overlay"
+            className="react-modal-content">
+            <button type="button" className="react-modal-button" onClick={handleCloseModalSearch}>
+            <IoCloseOutline /> 
+            </button>
+            <div className="content-modal-home-Search">
+            <div className="itensModalHome-Search">
+                <SearchProperty />
             </div>
             </div>
             </Modal>

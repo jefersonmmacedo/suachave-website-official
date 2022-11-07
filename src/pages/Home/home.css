@@ -9,7 +9,7 @@
 .Home .textFeature {
     width: 1080px;
     text-align: left;
-    margin: 200px auto 0 auto;
+    margin: 40px auto 0 auto;
 }
 .Home .textHome h3 {
     margin: 20px 40px;
@@ -26,6 +26,41 @@
     margin: 0px auto;
 }
 
+.Home .searchViewButton {
+    display: none;
+}
+
+
+.Home .iconsHomeProperties {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 100px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+}
+.Home .iconsHomeProperties .unic {
+    display: flex;
+    flex-direction: row;
+    align-items:  flex-start;
+    justify-content: center;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin: 5px;
+    background-color: rgba(99,99,99, 0.5);
+    color: var(--White);
+    cursor: pointer;
+}
+
+.Home .iconsHomeProperties .unic svg {
+    margin-right: 5px;
+}
+.Home .iconsHomeProperties .unic:hover {
+    background-color: rgba(237,50,55, 0.9);
+}
+
 
 .content-modal-home {
     display: flex;
@@ -36,7 +71,26 @@
     border-radius: 8px;
     background-color: #BB0000;
 }
+.content-modal-home-Search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-radius: 8px;
+    background-color: var(--BorderInput2);
+}
 .content-modal-home .itensModalHome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    overflow:auto; 
+    max-height: 500px;
+    margin: 20px 10px;
+}
+.content-modal-home-Search .itensModalHome-Search {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -176,20 +230,55 @@
 
         @media (max-width: 750px) {
             .Home .textFeature {
-                margin-top: 470px;
-                width: 100%;
+                width: 90%;
                 text-align: center;
+            }
+            .Home .searchView {
+                display: none;
+            }
+            .Home .searchViewButton {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                margin-top: -25px;
+                z-index: 99;
+                position: absolute;
+            }
+
+            .Home .searchViewButton button {
+                border: 3px solid var(--White);
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                padding: 15px 20px;
+                Background-color: var(--Primary);
+                color: var(--White);
+                font-weight: 700;
+                border-radius: 6px;
+                width: 70%;
+                box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+            }
+
+            .Home .searchViewButton button svg {
+                margin-right: 5px;
+                font-size: 16px;
+            }
+
+            .Home .iconsHomeProperties {
+                margin-top: 80px;
             }
 
             @media (max-width: 555px) {
                 .Home .textFeature {
-                    margin-top: 500px;
-                    width: 100%;
+                    width: 80%;
                     text-align: center;
                 }
 
                 .Home .textHome {
-                    width: 100%;
+                    width: 80%;
                     text-align: center;
                 }
 

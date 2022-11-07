@@ -181,24 +181,7 @@ export function SearchProperty() {
              <button>Alterar</button>
          </div>
              }
-            <div className="icons">
-                <div className="unic">
-                    <FaHome />
-                    Casas
-                </div>
-                <div className="unic">
-                    <FaBuilding />
-                    Apartamentos
-                </div>
-                <div className="unic">
-                    <IoBusiness />
-                    Salas Comercais
-                </div>
-                <div className="unic">
-                    <FaStore />
-                    Lojas
-                </div>
-            </div>
+
         </div>
     )
 }
