@@ -20,32 +20,13 @@ import { Schedules } from '../pages/Schedules/Schedules';
 import { MessagesProperty } from '../pages/MessagesProperty/MessagesProperty';
 import { Simulator } from '../pages/Simulator/Simulator';
 import { SignInCompany } from '../pages/SignInCompany/SignInCompany';
-import { Dashboard } from '../pages/Adm/Dashboard/Dashboard';
-import { NewProperty } from '../pages/Adm/NewProperty/NewProperty';
 import { MyAccount } from '../pages/MyAccount/MyAccount';
-import { PlainsAdm } from '../pages/Adm/PlainsAdm/PlainsAdm';
-import { ChatAdm } from '../pages/Adm/ChatAdm/ChatAdm';
-import { NotificationsAdm } from '../pages/Adm/NotificationsAdm/NotificationsAdm';
-import { BrokersAdm } from '../pages/Adm/BrokersAdm/BrokersAdm';
-import { MyAccountAdm } from '../pages/Adm/MyAccountAdm/MyAccountAdm';
-import { MenuAdm } from '../pages/Adm/MenuAdm/MenuAdm';
 import { Scheduling } from '../pages/Scheduling/Scheduling';
-import { SchedulingAdm } from '../pages/Adm/SchedulingAdm/SchedulingAdm';
 import { ComingSoon } from '../pages/CommingSoom/ComingSoon';
 import { Checkout } from '../pages/Checkout/Checkout';
 import { PaymentCompleted } from '../pages/PaymentCompleted/PaymentCompleted';
 import { Contact } from '../pages/Contact/Contact';
 import { Faq } from '../pages/Faq/Faq';
-import { WebApp } from '../pages/Adm/WebApp/WebApp';
-import { MyPropertiesList } from '../pages/Adm/MyPropertiesList/MyPropertiesList';
-import { EditProperty } from '../pages/Adm/EditProperty/EditProperty';
-import { ChatAdmList } from '../pages/Adm/ChatAdmList/ChatAdmList';
-import { MyAppointments } from '../pages/Adm/MyAppointments/MyAppointments';
-import { MyRents } from '../pages/Adm/MyRents/MyRents';
-import { MySales } from '../pages/Adm/MySales/MySales';
-import { MyAssessments } from '../pages/Adm/MyAssessments/MyAssessments';
-import { FinancerAdm } from '../pages/Adm/FinancerAdm/FinancerAdm';
-import { AccessAdm } from '../pages/Adm/AccessAdm/AccessAdm';
 
 function Router () {
 const Local = localStorage.getItem("suachave");
@@ -93,48 +74,10 @@ function PrivateRoute({children} ) {
                     element={ <PrivateRoute> <Schedules /> </PrivateRoute>} />
             <Route path="agendamento/unico"
                     element={ <PrivateRoute> <Scheduling /> </PrivateRoute>} />
-            <Route path="/painel"
-                    element={ <PrivateRoute> <Dashboard /> </PrivateRoute>} />
-            <Route path="/painel/novoimovel"
-                    element={ <PrivateRoute> <NewProperty /> </PrivateRoute>} />
-            <Route path="/painel/editarimovel"
-                    element={ <PrivateRoute> <EditProperty /> </PrivateRoute>} />
-            <Route path="/painel/imoveis"
-                    element={ <PrivateRoute> <MyPropertiesList /> </PrivateRoute>} />
             <Route path="/plano"
                     element={ <PrivateRoute> <Checkout /> </PrivateRoute>} />
-            <Route path="/painel/planos"
-                    element={ <PrivateRoute> <PlainsAdm /> </PrivateRoute>} />
             <Route path="/pagamentofinalizado"
                     element={ <PrivateRoute> <PaymentCompleted /> </PrivateRoute>} />
-            <Route path="/painel/chat"
-                    element={ <PrivateRoute> <ChatAdmList /> </PrivateRoute>} />
-            <Route path="/painel/chat-client"
-                    element={ <PrivateRoute> <ChatAdm /> </PrivateRoute>} />
-            <Route path="/painel/notificacoes"
-                    element={ <PrivateRoute> <NotificationsAdm /> </PrivateRoute>} />
-            <Route path="/painel/agendamentos"
-                    element={ <PrivateRoute> <MyAppointments /> </PrivateRoute>} />
-           <Route path="/painel/agendamento/unico"
-                   element={ <PrivateRoute> <SchedulingAdm /> </PrivateRoute>} />
-           <Route path="/painel/alugueis"
-                   element={ <PrivateRoute> <MyRents /> </PrivateRoute>} />
-           <Route path="/painel/vendas"
-                   element={ <PrivateRoute> <MySales /> </PrivateRoute>} />
-           <Route path="/painel/avaliacoes"
-                   element={ <PrivateRoute> <MyAssessments /> </PrivateRoute>} />
-            <Route path="/painel/corretores"
-                    element={ <PrivateRoute> <BrokersAdm /> </PrivateRoute>} />
-            <Route path="/painel/minhaconta"
-                    element={ <PrivateRoute> <MyAccountAdm /> </PrivateRoute>} />
-            <Route path="/painel/web"
-                    element={ <PrivateRoute> <WebApp /> </PrivateRoute>} />
-            <Route path="/painel/financeiro"
-                    element={ <PrivateRoute> <FinancerAdm /> </PrivateRoute>} />
-            <Route path="/painel/historico"
-                    element={ <PrivateRoute> <AccessAdm /> </PrivateRoute>} />
-            <Route path="/painel/menu"
-                    element={ <PrivateRoute> <MenuAdm /> </PrivateRoute>} />
             </Routes>
            
     )

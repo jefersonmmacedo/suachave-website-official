@@ -88,6 +88,25 @@ const Nav = styled.nav`
     font-size:18px;
     margin:5px 5px;
 }
+  .account .iconUnicAdm {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 6px;
+    padding: 10px;
+    background-color: var(--Primary);
+    font-weight:600;
+    color: var(--White);
+    font-size:14px;
+    margin:5px 5px;
+}
+
+.account .iconUnicAdm svg {
+  margin-right: 5px;
+}
+
   .account .iconOut {
     display: flex;
     flex-direction: row;
@@ -107,9 +126,9 @@ const Nav = styled.nav`
 @media (max-width: 900px) {
   padding: 0 10px;
   .account {
-    margin-right: 110px;
-    width: 20%;
-    justify-content: center;
+    margin-right:40px;
+    width: 100%;
+    justify-content: flex-end;
   }
 
 
@@ -121,9 +140,8 @@ const Nav = styled.nav`
 
   @media (max-width: 600px) {
     .account {
-      margin-right: 110px;
-      width: 15%;
-      justify-content: center;
+      width: 100%;
+      justify-content: flex-end;
     }
     .account .iconOut {
       display: none;
@@ -137,6 +155,9 @@ const Nav = styled.nav`
 
 function HandleOpenLink(data) {
   window.open(`${data}`, "_self")
+}
+function HandleOpenLink2(data) {
+  window.open(`${data}`)
 }
 
 
@@ -168,29 +189,7 @@ const Navbar2 = () => {
 
 {user.type === "company" && user !== null && user !== undefined && user !== "" ?
                 <>
-                <button className='iconUnic' onClick={() => HandleOpenLink("/painel/novoimovel")} data-tip data-for='Novo imóvel'><IoHomeOutline/></button>
-                <ReactTooltip id='Novo imóvel' place="bottom" type="dark" effect="solid">
-                     <span>Novo imóvel</span>
-                </ReactTooltip>
-                <button className='iconUnic' onClick={() => HandleOpenLink("/painel/agendamentos")} data-tip data-for='Agendamentos'><IoCalendarOutline/></button>
-                <ReactTooltip id='Agendamentos' place="bottom" type="dark" effect="solid">
-                     <span>Agendamentos</span>
-                </ReactTooltip>
-
-                <button className='iconUnic' onClick={() => HandleOpenLink("/painel/chat")} data-tip data-for='Chat'><IoChatboxEllipsesOutline/></button>
-                <ReactTooltip id='Chat' place="bottom" type="dark" effect="solid">
-                     <span>Chat</span>
-                </ReactTooltip>
-
-                <button className='iconUnic' onClick={() => HandleOpenLink("/painel/notificacoes")} data-tip data-for='Notificações'><IoNotificationsOutline/></button>
-                <ReactTooltip id='Notificações' place="bottom" type="dark" effect="solid">
-                     <span>Notificações</span>
-                </ReactTooltip>
-
-                {/* <button className='iconUnic' onClick={() => HandleOpenLink("/painel")} data-tip data-for='Painel'><IoSpeedometerOutline /></button>
-                <ReactTooltip id='Painel' place="bottom" type="dark" effect="solid">
-                     <span>Painel</span>
-                </ReactTooltip> */}
+                <button className='iconUnicAdm' onClick={() => HandleOpenLink2("https://adm.suachave.com.br/")}><IoSpeedometerOutline/> Acessar o painel</button>
                 </>
 :
                <>

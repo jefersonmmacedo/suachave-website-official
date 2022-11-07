@@ -90,7 +90,7 @@ export function About() {
                         <IoPhonePortraitOutline />
                     </div>
                     <div className="IconsWhyText">
-                        <h2>Aplicativo Administrativo</h2>
+                        <h2>Aplicativo administrativo</h2>
                         <h4>Controle seu negócio de qualquer lugar a qualquer hora [Em breve...]</h4>
                     </div>
                 </div>
@@ -108,8 +108,8 @@ export function About() {
                         <IoPhonePortraitOutline />
                     </div>
                     <div className="IconsWhyText">
-                    <h2>Aplicatico para o seu negócio</h2>
-                    <h4>Tenha o Aplicativo do seu negócio totalmente integrado ao nosso site [Em breve...]</h4>
+                    <h2>Aplicativo para o seu negócio</h2>
+                    <h4>Tenha o aplicativo do seu negócio totalmente integrado ao nosso site [Em breve...]</h4>
                     </div>
                 </div>
             </div>
