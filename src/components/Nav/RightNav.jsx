@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import {IoDocumentTextOutline, IoPersonOutline, IoHeartOutline, IoNotificationsOutline, IoLogOutOutline, IoChatboxEllipsesOutline, IoHomeOutline, IoSpeedometerOutline, IoCalendarOutline } from 'react-icons/io5';
+import {IoPersonCircleOutline, IoPersonOutline, IoHeartOutline, IoNotificationsOutline, IoLogOutOutline, IoChatboxEllipsesOutline, IoHomeOutline, IoSpeedometerOutline, IoCalendarOutline } from 'react-icons/io5';
 
 const Ul = styled.ul`
   list-style: none;
@@ -11,7 +11,7 @@ const Ul = styled.ul`
   li {
     padding: 18px 10px;
     font-weight: 500;
-    font-size: 15px;
+    font-size: 14px;
   }
   li a{
     text-decoration: none;
@@ -173,8 +173,8 @@ const RightNav = ({ open }) => {
             </Link>
           </li>
           <li className='nav-item'>
-            <Link to='/simulador' >
-            Simulador
+            <Link to='/financiamento' >
+            Financiamento
             </Link>
           </li>
           {user === "" || user === null || user === undefined ? 

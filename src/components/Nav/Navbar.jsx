@@ -4,7 +4,7 @@ import Burger from './Burger';
 import LogoImg from '../../assets/images/Logo.png'
 import LogoSimbol from '../../assets/images/Simbol.png'
 import {IoDocumentTextOutline, IoPersonOutline, IoHeartOutline, IoNotificationsOutline,
-  IoLogOutOutline, IoSpeedometerOutline, IoHomeOutline, IoChatboxEllipsesOutline, IoCalendarOutline} from 'react-icons/io5'
+  IoLogOutOutline, IoSpeedometerOutline, IoHomeOutline, IoChatboxEllipsesOutline, IoCalendarOutline, IoPersonCircleOutline} from 'react-icons/io5'
 import { Link } from 'react-router-dom';
 import ReactTooltip from 'react-tooltip';
 
@@ -19,7 +19,8 @@ const Nav = styled.nav`
   position: fixed;
   top: 0;
   z-index: 97;
-  background: rgba(255, 255, 255, 0.25);
+  // background: rgba(255, 255, 255);
+  background: rgba(255, 255, 255, 0.35);
   backdrop-filter: blur(4px);
   font-size: 14px;
   color: var(--Description)
@@ -53,11 +54,23 @@ const Nav = styled.nav`
     padding: 18px 10px;
     font-weight: 500;
     text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: var(--Paragraph);
   }
   .account li a{
     text-decoration: none;
-    color: var(--Primary)
+    color: var(--Gray)
     font-weight: 500;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .account li a svg{
+    margin-right: 2px;
   }
   .account li a:hover{
     color: var(--Primary);
@@ -70,10 +83,11 @@ const Nav = styled.nav`
     justify-content: center;
     border: none;
     border-radius: 6px;
-    padding: 10px 20px;
-    background-color: var(--Button);
+    padding: 9px 19px;
+    background-color: rgba(255, 255, 255, 0.01);
+    border: 1px solid var(--Primary);
     font-weight:600;
-    color: var(--White);
+    color: var(--Primary);
 }
   .account .iconUnic {
     display: flex;
@@ -180,7 +194,7 @@ const Navbar2 = () => {
                 <button onClick={() => HandleOpenLink("/cadastrar")}>Anunciar</button>
                 <li className='nav-item'>
                   <Link to='/entrar' >
-                  Entrar
+                  <IoPersonCircleOutline /> Entrar
                   </Link>
                 </li>
                 

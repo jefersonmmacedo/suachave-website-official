@@ -2,7 +2,7 @@
 import Navbar2 from "../../components/Nav/Navbar";
 import { Footer } from "../../components/Footer/Footer";
 import {IoPlayCircle, IoLogoWhatsapp, IoHome, IoQrCodeOutline, IoIdCardOutline, IoPhonePortraitOutline,
-        IoLayersOutline, IoChatbubblesOutline, IoCropOutline, IoLaptopOutline, IoMailOpenOutline, IoCallOutline, IoCloseOutline, IoCalendarOutline, IoHomeOutline, IoOptionsOutline, IoChatboxEllipsesOutline} from "react-icons/io5"
+        IoLayersOutline, IoChatbubblesOutline, IoCropOutline, IoLaptopOutline, IoMailOpenOutline, IoCallOutline, IoCloseOutline, IoCalendarOutline, IoHomeOutline, IoOptionsOutline, IoChatboxEllipsesOutline, IoPersonAddOutline, IoCheckboxOutline} from "react-icons/io5"
 import { Plains } from "../../components/Plains/Plains";
 import SmartPhone from "../../assets/images/iphone.png";
 import Modal from 'react-modal';
@@ -42,8 +42,8 @@ export function About() {
                     com foco em conectar seus imóveis a novos clientes.</h3>
 
                     <div className="buttonsText">
-                        {/* <button onClick={handleOpenModal}><IoPlayCircle /> Clique e conheça nossa empresa</button> */}
-                        <button className="btn" onClick={handleOpenModal}><IoLogoWhatsapp /> Falar com time Comercial</button>
+                        <button onClick={handleOpenModal}><IoPlayCircle /> Clique e conheça nossa empresa</button>
+                        <a href="/cadastro-profissional" className="btn"><IoCheckboxOutline /> Criar minha conta agora</a>
                     </div>
                 </div>
         </div>

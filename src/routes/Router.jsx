@@ -54,7 +54,7 @@ function PrivateRoute({children} ) {
             <Route path="/imobiliaria" element={<Company />}/>
             <Route path="/corretores" element={<Brokers />}/>
             <Route path="/test" element={<About />}/>
-            <Route path="/simulador" element={<Simulator />}/>
+            <Route path="/financiamento" element={<Simulator />}/>
             <Route path="/sobre" element={<About />}/>
             <Route path="/planos" element={<Pricing />}/>
             <Route path="/faleconosco" element={<Contact />}/>

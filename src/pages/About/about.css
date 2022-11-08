@@ -104,7 +104,7 @@
 .About .MainAbout .bloco .textAbout .buttonsText .btn {
     background-color: var(--White);
     width: 350px;
-    padding: 15px 20px;
+    padding: 13px 20px;
     font-size: 16px;
     border: 1px solid var(--Primary);
     border-radius: 6px;
@@ -115,6 +115,8 @@
     color: var(--Primary);
     margin: 5px;
     font-weight: 700;
+    text-decoration: none;
+    font-size: 16px;
 }
 .About .MainAbout .bloco .textAbout .buttonsText button:hover {
     background-color: var(--PrimaryHover);
@@ -122,7 +124,16 @@
 }
 
 .About .MainAbout .bloco .textAbout .buttonsText button svg {
-    font-size: 24px;
+    font-size: 20px;
+    margin-right: 5px;
+}
+.About .MainAbout .bloco .textAbout .buttonsText .btn:hover {
+    background-color: var(--PrimaryHover);
+    color: var(--White);
+}
+
+.About .MainAbout .bloco .textAbout .buttonsText .btn svg {
+    font-size: 20px;
     margin-right: 5px;
 }
 
