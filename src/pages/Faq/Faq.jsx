@@ -38,7 +38,7 @@ export function Faq() {
         {
             id: 7,
             question: "Preciso ter cartão de crédito?",
-            reply: "Não. Neste primeiro momento estamos trabalhando apenas com pagamentos na modalidade pix."
+            reply: "Não. Neste primeiro momento estamos trabalhando apenas com pagamentos na modalidade PIX."
         },
     ]
     return (
@@ -48,7 +48,7 @@ export function Faq() {
             <h4>Tire suas dúvidas com as perguntas mais feitas por nossos clientes e colaboradores.</h4>
 
             <div className="blocFaq">
-                <input type="text" placeholder="Digite sua dúvida"/>
+                <input type="search" placeholder="Digite sua dúvida"/>
 
                     {Questions.map((faqs) => {
                         return (
