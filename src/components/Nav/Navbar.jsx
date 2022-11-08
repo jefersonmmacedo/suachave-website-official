@@ -12,7 +12,7 @@ const Nav = styled.nav`
   width: 100%;
   height: 65px;
   border-bottom: 1px solid #f1f1f1;
-  padding: 0 20px;
+  padding: 0 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -46,17 +46,18 @@ const Nav = styled.nav`
     color: var(--Text2);
     text-decoration: none;
     list-style: none;
+
   }
 
   .account li {
     padding: 18px 10px;
-    font-weight: 700;
+    font-weight: 500;
     text-decoration: none;
   }
   .account li a{
     text-decoration: none;
     color: var(--Primary)
-    font-weight: 700;
+    font-weight: 500;
   }
   .account li a:hover{
     color: var(--Primary);
@@ -176,10 +177,10 @@ const Navbar2 = () => {
       <div className="account">
         {user === "" || user === null || user === undefined ?
         <>
-                <button onClick={() => HandleOpenLink("/entrar")}>Entrar</button>
+                <button onClick={() => HandleOpenLink("/cadastrar")}>Anunciar</button>
                 <li className='nav-item'>
-                  <Link to='/cadastrar' >
-                  Cadastrar
+                  <Link to='/entrar' >
+                  Entrar
                   </Link>
                 </li>
                 

@@ -10,12 +10,13 @@ const Ul = styled.ul`
 
   li {
     padding: 18px 10px;
-    font-weight: 700;
+    font-weight: 500;
+    font-size: 15px;
   }
   li a{
     text-decoration: none;
     color: var(--Description)
-    font-weight: 700;
+    font-weight: 500;
   }
   li a:hover{
     color: var(--Primary);
@@ -153,12 +154,12 @@ const RightNav = ({ open }) => {
           </li> */}
           <li className='nav-item'>
             <Link to='/imoveis/venda' >
-            Venda
+            Comprar
             </Link>
           </li>
        <li className='nav-item'>
             <Link to='/imoveis/aluguel'>
-            Aluguel
+            Alugar
             </Link>
           </li>
           <li className='nav-item'>

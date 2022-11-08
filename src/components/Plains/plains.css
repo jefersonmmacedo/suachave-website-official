@@ -5,7 +5,7 @@
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 40px 0 20px 0;
+    margin: 20px 0 20px 0;
 }
 
 .Plains .plain {
@@ -25,6 +25,13 @@
 .Plains .plain h3 {
     font-weight: 800;
 }
+
+.Plains .plain p{
+    font-weight: 500;
+    color: var(--Description);
+    margin: 5px 0;
+}
+
 
 .Plains .plain .title {
     width: 100%;
@@ -65,7 +72,7 @@
     flex-direction: row;
     text-align: left;
     width: 100%;
-    padding: 5px 10px;
+    padding: 3px 10px;
     border: none;
     border-bottom: 1px solid var(--Border);
 }

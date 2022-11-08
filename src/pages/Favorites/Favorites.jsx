@@ -11,7 +11,7 @@ export function Favorites() {
 
             <div className="main">
                 <ToolBarClient />
-                <div className="text">
+                <div className="aside">
                 <h2>Meus favoritos</h2>
             <Favorite />
                 </div>

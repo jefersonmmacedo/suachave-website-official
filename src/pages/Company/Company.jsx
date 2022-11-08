@@ -3,9 +3,7 @@ import Navbar2 from "../../components/Nav/Navbar";
 import { IoLocationOutline, IoCallOutline, IoLogoWhatsapp, IoMailOutline, IoGlobeOutline, IoLogoFacebook, IoLogoInstagram, IoLogoLinkedin, IoLogoYoutube } from "react-icons/io5";
 import { Footer } from "../../components/Footer/Footer";
 import { BrokerList } from "../../components/BrokerList/BrokerList";
-import { Sale } from "../../components/Sale/Sale";
 import imobiliária from "../../assets/images/imob1.png";
-import { Rent } from "../../components/Rent/Rent";
 
 export function Company() {
     return (
@@ -60,7 +58,6 @@ export function Company() {
                     </div>
                     {/* <BrokerList /> */}
                 </div>
-                <Rent />
                 <button className="btnCompany">Carregar mais imóveis</button>
         </div>
         <Footer />

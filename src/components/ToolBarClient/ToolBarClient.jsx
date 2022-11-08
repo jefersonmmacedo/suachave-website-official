@@ -25,6 +25,11 @@ export function ToolBarClient() {
                     </a>
                 </div>
                 <div className="ToolUnicClient">
+                   <a href="/alugueis">
+                    <IoHome /><p>Aluguéis</p>
+                    </a>
+                </div>
+                <div className="ToolUnicClient">
                    <a href="/minhaconta">
                     <IoPerson /><p>Conta</p>
                     </a>

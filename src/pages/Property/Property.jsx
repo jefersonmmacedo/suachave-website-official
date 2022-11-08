@@ -5,7 +5,6 @@ import { FaBed, FaCar, FaShower, FaBath } from "react-icons/fa";
 import { IoCrop, IoHeart, IoMove, IoCheckmarkSharp, IoLocationOutline, IoCloseOutline } from "react-icons/io5";
 import { Footer } from "../../components/Footer/Footer";
 import { CompanyInfo } from "../../components/CompanyInfo/CompanyInfo";
-import { Rent } from "../../components/Rent/Rent";
 import { NewScheduling } from "../../components/NewScheduling/NewScheduling";
 import { NewMessageProperty } from "../../components/NewMessageProperty/NewMessageProperty";
 import { NewFavorite } from "../../components/NewFavorite/NewFavorite";
@@ -145,7 +144,6 @@ export function Property() {
 
                 <CompanyInfo />
                 </div>
-                <Rent />
         </div>
         <Footer />
 
