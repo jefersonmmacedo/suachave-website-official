@@ -20,7 +20,7 @@ const Nav = styled.nav`
   top: 0;
   z-index: 97;
   // background: rgba(255, 255, 255);
-  background: rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.65);
   backdrop-filter: blur(4px);
   font-size: 14px;
   color: var(--Description)

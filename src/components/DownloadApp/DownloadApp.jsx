@@ -16,7 +16,7 @@ export function DownloadApp() {
                         <IoLogoGooglePlaystore />
                     </div>
                     <div className="TextApp">
-                        <h6>Em breve no</h6>
+                        <h6>Em breve na</h6>
                         <h4>Play Store</h4>
                     </div>
                 </div>

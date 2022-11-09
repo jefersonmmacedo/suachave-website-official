@@ -105,6 +105,106 @@
     margin: 5px 0;
 }
 
+
+
+
+.Simulator .stepesFinances {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px 0 40px 0;
+    background-color: var(--BorderHover);
+}
+
+.Simulator .stepesFinances h2 {
+    margin-top: 40px;
+    font-weight: bold;
+    color: var(--Primary);
+    text-align: center;
+}
+.Simulator .stepesFinances h4 {
+    color: var(--Paragraph);
+    margin:10px;
+    text-align: center;
+}
+.Simulator .stepesFinances .stepesList {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    flex-wrap: wrap;
+}
+
+.Simulator .stepesFinances .stepeUnic {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 450px;
+    padding: 10px;
+    margin: 10px;
+}
+.Simulator .stepesFinances .stepeUnic2 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 450px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.Simulator .stepesFinances .stepeUnic h1 {
+    font-weight: 900;
+    font-size: 65px;
+    color: var(--BorderInput);
+}
+.Simulator .stepesFinances .stepeUnic2 h1 {
+    font-weight: 900;
+    font-size: 65px;
+    color: var(--BorderInput);
+}
+
+.Simulator .stepesFinances .stepeUnic .textStepe {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.Simulator .stepesFinances .stepeUnic2 .textStepe2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.Simulator .stepesFinances .stepeUnic .textStepe h4 {
+    color: var(--Primary);
+    font-weight: 800;
+    text-align: left;
+}
+.Simulator .stepesFinances .stepeUnic .textStepe h5 {
+    margin:-10px 10px;
+    text-align: left;
+}
+.Simulator .stepesFinances .stepeUnic2 .textStepe2 h4 {
+    color: var(--Primary);
+    font-weight: 800;
+    text-align: right;
+}
+.Simulator .stepesFinances .stepeUnic2 .textStepe2 h5 {
+    margin:-10px 10px;
+    text-align: right;
+}
+
+
+
 .Simulator .bank {
     display: flex;
     flex-direction: column;
@@ -169,10 +269,26 @@
    width: 80px;
 }
 
+@media (max-width: 1200px) {
+    .Simulator .stepesFinances .stepesList {
+        width: 90%;
+    }
 @media (max-width: 1050px) {
     .Simulator .topImageSimulator .back {
         padding: 50px 100px;
     }
+
+    .Simulator .stepesFinances .stepesList {
+        width: 100%;
+    }
+
+    .Simulator .stepesFinances .stepeUnic {
+        width: 350px;
+    }
+    .Simulator .stepesFinances .stepeUnic2 {
+        width: 350px;
+    }
+    
 
     @media (max-width: 900px) {
         .Simulator .financer .benefits {
@@ -215,6 +331,7 @@
                 }
             }
         }   
+    }
     }
     }
     

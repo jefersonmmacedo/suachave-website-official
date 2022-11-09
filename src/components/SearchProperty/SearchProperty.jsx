@@ -5,7 +5,7 @@ import { toast } from 'react-toastify';
 import {FaHome, FaBuilding, FaStore} from "react-icons/fa";
 import {IoBusiness, IoLocationOutline} from "react-icons/io5";
 
-export function SearchProperty() {
+export function SearchProperty({openModal}) {
     const LocalCity = localStorage.getItem("suachavecity");
     const userCity = JSON.parse(LocalCity);
     const [uf, setUf] = useState(userCity === null || userCity === undefined || userCity === ""? "" : userCity.uf);
@@ -14,7 +14,6 @@ export function SearchProperty() {
     const [professional, setProfessional] = useState("");
     const [code, setCode] = useState(false);
     const [status, setStatus] = useState("venda");
-
 
     console.log(uf)
     console.log(city)
@@ -178,7 +177,7 @@ export function SearchProperty() {
              : 
              <div className="textLocation">
              <h4><IoLocationOutline /> {city} - {uf}</h4> 
-             <button>Alterar</button>
+             <button onClick={openModal}>Alterar</button>
          </div>
              }
 

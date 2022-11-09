@@ -129,7 +129,7 @@ export function Home() {
             <Navbar2 />
             <SliderHome />
             <div className="searchView">
-            <SearchProperty />
+            <SearchProperty openModal={handleOpenModal}/>
             </div>
             <div className="searchViewButton">
             <button onClick={handleOpenModalSearch}><IoSearch/>Buscar Imóveis</button>
@@ -232,10 +232,15 @@ export function Home() {
 
                     <button onClick={HandleNewClientBrowser}>Definir localização</button>
                 </form>
+
+                {user !== null && user !== undefined && user !== "" ?
+                ""
+                :
                 <div className="loginAccount">
                     <a href="/entrar">Ja possuo conta</a>
                     <a href="/cadastrar">Cadastrar</a>
                 </div>
+                }
             </div>
             </div>
             </Modal>
