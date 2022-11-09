@@ -51,7 +51,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 40px 20px;
+    padding: 40px 10px;
 }
 
 .Simulator .financer h2 {
@@ -75,9 +75,8 @@
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    justify-content: center;
-    width: 80%;
-    padding: 20px;
+    justify-content: space-between;
+    width: 900px;
     flex-wrap: wrap;
 }
 .Simulator .financer .benefits .benefitUnic {
@@ -85,7 +84,7 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: center;
-    width: 300px;
+    width: 350px;
     padding: 10px;
     margin: 10px;
 }
@@ -302,11 +301,43 @@
     @media (max-width: 900px) {
         .Simulator .financer .benefits {
             width: 100%;
+            justify-content: center;
         }
+
+        .Simulator .financer .benefits .benefitUnic {
+            width: 300px;
+            padding: 5px;
+            margin: 5px;
+        }
+
     @media (max-width: 800px) {
         .Simulator .topImageSimulator .back {
             padding: 50px;
         }
+
+        .Simulator .stepesFinances .stepeUnic {
+
+            width: 350px;
+            padding: 5px;
+            margin: 5px;
+        }
+        .Simulator .stepesFinances .stepeUnic2 {
+
+            width: 350px;
+            padding: 5px;
+            margin: 5px;
+        }
+        
+
+        @media (max-width: 750px) {
+
+            .Simulator .stepesFinances .stepeUnic {
+                width: 300px;
+            }
+            .Simulator .stepesFinances .stepeUnic2 {
+                width: 300px;
+            }
+
 
         @media (max-width: 650px) {
 
@@ -325,6 +356,13 @@
                 font-size: 18px;
             }
 
+            .Simulator .stepesFinances .stepeUnic {
+                width: 350px;
+            }
+            .Simulator .stepesFinances .stepeUnic2 {
+                width: 350px;
+            }
+
             @media (max-width: 480px) {
                 .Simulator .topImageSimulator .back {
                     padding: 40px 10px;
@@ -340,6 +378,7 @@
                 }
             }
         }   
+    }
     }
     }
     }

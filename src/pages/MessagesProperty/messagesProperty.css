@@ -116,6 +116,7 @@
     @media (max-width: 700px) {
         .MessagesProperty .main {
             margin-top: 50px;
+            margin-bottom: 100px;
             display: flex;
             flex-direction: column;
             align-items: center;

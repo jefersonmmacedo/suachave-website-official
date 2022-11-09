@@ -54,7 +54,9 @@ export function MessagesProperty() {
                 </div>
                 </div>
             </div>
-                <Footer />
+            <div className="viewFooter">
+            <Footer />
+        </div>
         </div>
     )
 }

@@ -4,9 +4,10 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    border: 1px solid var(--Border);
+    border: 1px solid var(--BorderInput);
     padding: 10px 20px;
-    margin: 5px;
+    margin: 3px;
+    border-radius: 6px;
 }
 
 .Notification .infos {
@@ -43,10 +44,5 @@
             width: 90%;
         }
 
-        @media (max-width: 500px) {
-            .Notification{
-                width: 100%;
-            }
-        }
     }
 }

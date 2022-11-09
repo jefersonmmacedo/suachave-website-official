@@ -69,7 +69,9 @@ export function MyAccount() {
                     </form>
                 </div>
             </div>
-                <Footer />
+            <div className="viewFooter">
+            <Footer />
+        </div>
         </div>
     )
 }

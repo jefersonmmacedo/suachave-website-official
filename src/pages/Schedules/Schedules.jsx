@@ -58,7 +58,9 @@ export function Schedules() {
                 </div>
             </div>
 
-                <Footer />
+            <div className="viewFooter">
+            <Footer />
+        </div>
         </div>
     )
 }

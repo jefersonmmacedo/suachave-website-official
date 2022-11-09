@@ -18,8 +18,9 @@ export function Favorites() {
             </div>
 
 
-
+        <div className="viewFooter">
             <Footer />
+        </div>
         </div>
     )
 }
