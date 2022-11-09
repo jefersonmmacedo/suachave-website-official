@@ -33,7 +33,7 @@
     width: 500px;
 }
 .About .MainAbout .bloco .textAbout h1 {
-    font-size: 45px;
+    font-size: 38px;
     font-weight: 800;
     color: var(--Black2);
     text-align: left;
@@ -67,7 +67,7 @@
     border-radius: 6px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: row;
     color: var(--White);
     margin: 5px;
@@ -110,7 +110,7 @@
     border-radius: 6px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: row;
     color: var(--Primary);
     margin: 5px;
@@ -251,7 +251,7 @@
     background-color: var(--Primary);
     padding: 50px 20px;
 }
-.About .MainAbout .howItWorks h1 {
+.About .MainAbout .howItWorks h2 {
     margin-bottom: 5px;
     font-weight: 900;
     text-align: center;
@@ -296,12 +296,12 @@
 .About .MainAbout .textPricing{
     padding: 20px 20px 0 20px;
 }
-.About .MainAbout .textPricing h1 {
+.About .MainAbout .textPricing h2 {
     margin-top: 80px;
     font-weight: 800;
     text-align: center;
 }
-.About .MainAbout .textPricing h1 span {
+.About .MainAbout .textPricing h2 span {
     color: var(--Primary);
 }
 .About .MainAbout .textPricing h4 {

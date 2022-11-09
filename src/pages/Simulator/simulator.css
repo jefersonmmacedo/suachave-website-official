@@ -57,9 +57,15 @@
 .Simulator .financer h2 {
     margin-top: 40px;
     font-weight: bold;
-    color: var(--Primary);
+    color: var(--Description);
     text-align: center;
 }
+
+.Simulator .financer span {
+    color: var(--Primary);
+}
+
+
 .Simulator .financer h4 {
     color: var(--Paragraph);
     margin:10px;
@@ -121,8 +127,11 @@
 .Simulator .stepesFinances h2 {
     margin-top: 40px;
     font-weight: bold;
-    color: var(--Primary);
+    color: var(--Description);
     text-align: center;
+}
+.Simulator .stepesFinances span {
+    color: var(--Primary);
 }
 .Simulator .stepesFinances h4 {
     color: var(--Paragraph);

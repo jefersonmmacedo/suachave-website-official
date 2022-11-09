@@ -28,7 +28,7 @@ export function PropertyUnicBlock({image}) {
                     </div>
                     <div className="text">
                         <a href="/imovel">
-                    <h3>Lindo apartamento luxuoso</h3>
+                    <h4>Lindo apartamento luxuoso</h4>
                         </a>
                     <h6><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h6>
                     <div className="icons">
@@ -55,8 +55,8 @@ export function PropertyUnicBlock({image}) {
                         </div>
                     </div>
                     <div className="pricing">
-                        <h5>Aluguel</h5>
-                        <h2>R$ 2.000,00 / Mês</h2>
+                        <h6>Aluguel</h6>
+                        <h3>R$ 2.000,00 / Mês</h3>
                     </div>
                     </div>
                 </div>

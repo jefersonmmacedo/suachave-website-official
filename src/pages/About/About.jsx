@@ -37,7 +37,7 @@ export function About() {
                     </div>
                 </div>
                 <div className="textAbout">
-                    <h1>Seja bem-vindo.<br /><span>O Sua Chave é para você</span></h1>
+                    <h1>Seja bem-vindo.<br /><span>O Sua Chave é para você!</span></h1>
                     <h3>Somos uma start-up criada para imobiliárias e corretores, <br />
                     com foco em conectar seus imóveis a novos clientes.</h3>
 
@@ -48,7 +48,7 @@ export function About() {
                 </div>
         </div>
         <div className="textPricing">
-        <h1>Porque escolher o <span>Sua Chave</span>?</h1>
+        <h2>Porque escolher o <span>Sua Chave</span>?</h2>
         <h4>Veja os motivos que faz nossos clientes nos escolherem e o que podemos agregar ao seu negócio.</h4>
     </div>
         <div className="WhyChoose">
@@ -116,7 +116,7 @@ export function About() {
         </div>
 
     <div className="howItWorks">
-        <h1>Como funciona o Sua Chave ?</h1>
+        <h2>Como funciona o Sua Chave ?</h2>
         <h4>Nossos serviços tem como foco conectar os imóveis de nossos parceiros a clientes interessados.
             <br />
         Utilizando ferramentas de marketing, geolocalização e integrações, trazendo mais objetividade nas ofertas de propriedades.</h4>
@@ -172,14 +172,14 @@ export function About() {
         </div>
     </div>
     <div className="textPricing">
-        <h1>Escolha o <span>plano ideal</span> para o seu negócio</h1>
+        <h2>Escolha o <span>plano ideal</span> para o seu negócio</h2>
         <h4>Temos um plano cara cada momento do seu negócio. Acesse o link a abaixo e confira:</h4>
     </div>
     <div className="buttonsPlainsAbout">
         <a href="/planos"><IoQrCodeOutline /> Conheça nossos planos</a>
     </div>
         <div className="textPricing">
-        <h1>Fale com <span>nossa equipe</span></h1>
+        <h2>Fale com <span>nossa equipe</span></h2>
         <h4>Entre em contato conosco, estamos prontos para atendê-lo.</h4>
     </div>
     
