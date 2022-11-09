@@ -4,6 +4,7 @@ import { ListProperty } from "../../components/ListProperty/ListProperty";
 import { SearchPropertyListing } from "../../components/SearchPropertyListing/SearchPropertyListing";
 import { Footer } from "../../components/Footer/Footer";
 import { FiArrowUpCircle } from "react-icons/fi";
+import { SearchProperty } from "../../components/SearchProperty/SearchProperty";
 
 export function Properties(){
     function handleTop(e) {
@@ -17,7 +18,7 @@ export function Properties(){
         <div className="Properties">
         <Navbar2 />
         <div className="listPage">
-            <SearchPropertyListing />
+            <SearchProperty />
             <ListProperty />
             <button className="topScroll" onClick={handleTop}><FiArrowUpCircle /></button>
         </div>

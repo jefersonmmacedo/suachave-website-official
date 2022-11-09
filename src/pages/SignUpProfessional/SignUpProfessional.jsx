@@ -82,10 +82,10 @@ export function SignUpProfessional() {
                         </>
                         : data === "3" ?
                         <>
-                        <input type="text" placeholder="Webisite" />
+                        <input type="text" placeholder="Website" />
                         <input type="text" placeholder="Facebook" />
                         <input type="text" placeholder="Instagram" />
-                        <input type="text" placeholder="Linkedin" />
+                        <input type="text" placeholder="LinkedIn" />
                         <input type="text" placeholder="Youtube" />
                         <button className="btn3" onClick={() => handleSelectStepe("2")}>Voltar</button>
                         <button className="btn" onClick={() => handleSelectStepe("4")}>Avançar</button>

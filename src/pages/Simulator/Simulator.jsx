@@ -102,7 +102,7 @@ export function Simulator() {
                 <div className="stepeUnic">
                     <h1>5</h1>
                     <div className="textStepe">
-                        <h4>Liberação de crédito:</h4>
+                        <h4>Liberação de crédito</h4>
                         <h5>Após a entrega ao Santander do contrato registrado e matrícula atualizada, o crédito será liberado ao vendedor.</h5>
                     </div>
                 </div>

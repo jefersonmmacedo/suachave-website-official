@@ -44,24 +44,24 @@
 }
 
 .Contact .form .inputsContact input {
-    border: none;
-    background-color: var(--BorderInput);
+    border: 1px solid var(--BorderInput);
+    background-color: var(--BorderHover);
     width: 265px;
     margin: 5px;
     padding: 10px 20px;
     border-radius: 6px;
 }
 .Contact .form select {
-    border: none;
-    background-color: var(--BorderInput);
+    border: 1px solid var(--BorderInput);
+    background-color: var(--BorderHover);
     width: 98%;
     margin: 5px;
     padding: 10px 20px;
     border-radius: 6px;
 }
 .Contact .form textarea {
-    border: none;
-    background-color: var(--BorderInput);
+    border: 1px solid var(--BorderInput);
+    background-color: var(--BorderHover);
     width: 98%;
     margin: 5px;
     padding: 10px 20px;
@@ -99,7 +99,7 @@
     text-align: center;
     align-itens: center;
     justify-content: flex-start;
-    background-color: var(--BorderInput);
+    background-color: var(--BorderHover);
     padding: 20px;
     border-radius: 6px;
     margin: 10px;

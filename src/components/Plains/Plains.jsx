@@ -23,7 +23,7 @@ export function Plains() {
                     <p><IoCheckmarkOutline /> Captação de leads</p>
                     <p><IoCheckmarkOutline /> Plano sem fidelidade</p>
                 </div>
-                <a href="/plano">Contratar plano</a>
+                <a href="/cadastro-profissional">Contratar plano</a>
                 <p>* Plano destinado a corretores que não possúem escritório.</p>
             </div>
 
@@ -46,7 +46,7 @@ export function Plains() {
                     <p><IoCheckmarkOutline /> Captação de leads</p>
                     <p><IoCheckmarkOutline /> Plano sem fidelidade</p>
                 </div>
-                <a href="/plano">Contratar plano</a>
+                <a href="/cadastro-profissional">Contratar plano</a>
             </div>
 
             <div className="plain">
@@ -71,7 +71,7 @@ export function Plains() {
                     <p><IoCheckmarkOutline /> Sem custo de integração**</p>
                     <p><IoCheckmarkOutline /> Plano sem fidelidade</p>
                 </div>
-                <a href="/plano">Contratar plano</a>
+                <a href="/cadastro-profissional">Contratar plano</a>
                 <p>** Integração grátis por tempo limitado.</p>
             </div>
 

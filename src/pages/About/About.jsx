@@ -2,14 +2,15 @@
 import Navbar2 from "../../components/Nav/Navbar";
 import { Footer } from "../../components/Footer/Footer";
 import {IoPlayCircle, IoLogoWhatsapp, IoHome, IoQrCodeOutline, IoIdCardOutline, IoPhonePortraitOutline,
-        IoLayersOutline, IoChatbubblesOutline, IoCropOutline, IoLaptopOutline, IoMailOpenOutline, IoCallOutline, IoCloseOutline, IoCalendarOutline, IoHomeOutline, IoOptionsOutline, IoChatboxEllipsesOutline, IoPersonAddOutline, IoCheckboxOutline} from "react-icons/io5"
+        IoLayersOutline, IoChatbubblesOutline, IoCropOutline, IoLaptopOutline, IoPlayOutline, IoCallOutline, IoCloseOutline, IoCalendarOutline, IoHomeOutline, IoOptionsOutline, IoChatboxEllipsesOutline, IoPersonAddOutline, IoCheckboxOutline} from "react-icons/io5"
 import { Plains } from "../../components/Plains/Plains";
 import SmartPhone from "../../assets/images/iphone.png";
 import Modal from 'react-modal';
 import { useState } from "react";
-import imgFamily from "../../assets/images/background2.jpg"
+import imgFamily from "../../assets/images/background14.jpg"
 import Mackbook from "../../assets/images/Mockup.png"
-import { FaHouseUser } from "react-icons/fa";
+import { FaPlay } from "react-icons/fa";
+import { FiPlay } from "react-icons/fi";
 
 export function About() {
     const [isOpenModal, setIsOpenModa] = useState(false);
@@ -42,10 +43,23 @@ export function About() {
                     com foco em conectar seus imóveis a novos clientes.</h3>
 
                     <div className="buttonsText">
-                        <button onClick={handleOpenModal}><IoPlayCircle /> Clique e conheça nossa empresa</button>
+                        <button ><IoLogoWhatsapp /> Falar com time comercial</button>
                         <a href="/cadastro-profissional" className="btn"><IoCheckboxOutline /> Criar minha conta agora</a>
                     </div>
                 </div>
+        </div>
+        <div className="movie">
+        <div className="textPricing">
+        <h2>Um <span>novo conceito </span>de vender e alugar imóveis</h2>
+        <h4>Assista e veja o que temos preparado para você.</h4>
+    </div>
+            <div className="moviePlay">
+                <div className="box1"></div>
+                <div className="play">
+                    <FaPlay onClick={handleOpenModal}/>
+                </div>
+                <div className="box2"></div>
+            </div>
         </div>
         <div className="textPricing">
         <h2>Porque escolher o <span>Sua Chave</span>?</h2>
@@ -178,14 +192,7 @@ export function About() {
     <div className="buttonsPlainsAbout">
         <a href="/planos"><IoQrCodeOutline /> Conheça nossos planos</a>
     </div>
-        <div className="textPricing">
-        <h2>Fale com <span>nossa equipe</span></h2>
-        <h4>Entre em contato conosco, estamos prontos para atendê-lo.</h4>
-    </div>
-    
-        <div className="BlocksContact">
-        <button className="btn" onClick={handleOpenModal}><IoLogoWhatsapp /> Falar com time Comercial</button>
-            </div> 
+
     </div>
     <Footer />
 
@@ -198,7 +205,7 @@ export function About() {
             </button>
             <div className="content-modal">
    
-    <iframe width="100%" height="400" src="https://www.youtube-nocookie.com/embed/YODMbyiUng4" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+    <iframe width="100%" height="400" src="https://www.youtube-nocookie.com/embed/4lRRANhqnog" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 
             </div>
             </Modal>

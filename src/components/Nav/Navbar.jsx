@@ -191,7 +191,7 @@ const Navbar2 = () => {
       <div className="account">
         {user === "" || user === null || user === undefined ?
         <>
-                <button onClick={() => HandleOpenLink("/cadastrar")}>Anunciar</button>
+                <button onClick={() => HandleOpenLink("/sobre")}>Anunciar</button>
                 <li className='nav-item'>
                   <Link to='/entrar' >
                   <IoPersonCircleOutline /> Entrar
