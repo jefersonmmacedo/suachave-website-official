@@ -6,10 +6,12 @@ export function ToolBarClient() {
     return (
         <div className="ToolBarClient">
             <div className="image">
+                <a href="/minhaconta">
                 <img src={LogoImg} alt="" />
+                </a>
             </div>
             <div className="ToolsClient">
-                <div className="ToolUnicClient2">
+            <div className="ToolUnicClient2">
                    <a href="/minhaconta">
                    <div className="image2">
                       <img src={LogoImg} alt="" />
@@ -36,8 +38,8 @@ export function ToolBarClient() {
                     <IoHomeOutline /><p>Imóveis</p>
                     </a>
                 </div>
-                <div className="ToolUnicClient3">
-                   <a href="/minhaconta">
+                <div className="ToolUnicClient">
+                   <a href="/meusdados">
                     <IoPersonOutline /><p>Conta</p>
                     </a>
                 </div>

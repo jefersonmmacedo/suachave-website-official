@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import {IoPersonCircleOutline, IoPersonOutline, IoHeartOutline, IoNotificationsOutline, IoLogOutOutline, IoChatboxEllipsesOutline, IoHomeOutline, IoSpeedometerOutline, IoCalendarOutline } from 'react-icons/io5';
+import { useContext } from 'react';
+import { AuthContext } from '../../contexts/Auth';
 
 const Ul = styled.ul`
   list-style: none;
@@ -137,58 +139,65 @@ const Ul = styled.ul`
 `;
 
 
-function HandleOpenLink(data) {
-  window.open(`${data}`, "_self")
-}
 
 
 const RightNav = ({ open }) => {
+  const { logout } = useContext(AuthContext);
   const Local = localStorage.getItem("suachave");
   const user = JSON.parse(Local);
+
+  function handleLogOut() {
+    logout()
+  }
+
+  function HandleOpenLink(data) {
+    window.open(`${data}`, "_self")
+  }
+  
   return (
     <Ul open={open}>
        {/* <li className='nav-item'>
-            <Link to='/imoveis/all'>
+            <a href='/imoveis/all'>
               Imóveis
-            </Link>
+            </a>
           </li> */}
           <li className='nav-item'>
-            <Link to='/imoveis/venda' >
+            <a href='/imoveis/venda' >
             Comprar
-            </Link>
+            </a>
           </li>
        <li className='nav-item'>
-            <Link to='/imoveis/aluguel'>
+            <a href='/imoveis/aluguel'>
             Alugar
-            </Link>
+            </a>
           </li>
           <li className='nav-item'>
-            <Link to='/imobiliarias' >
+            <a href='/imobiliarias' >
             Imobiliárias
-            </Link>
+            </a>
           </li>
           <li className='nav-item'>
-            <Link to='/corretores' >
+            <a href='/corretores' >
             Corretores
-            </Link>
+            </a>
           </li>
           <li className='nav-item'>
-            <Link to='/financiamento' >
+            <a href='/financiamento' >
             Financiamento
-            </Link>
+            </a>
           </li>
           {user === "" || user === null || user === undefined ? 
             <>
-            <button onClick={() => HandleOpenLink("/entrar")}>
-              <IoLogOutOutline /> &nbsp; Entrar
+            <button onClick={() => HandleOpenLink("/sobre")}>
+            Anunciar
             </button>
             <button className='btn' onClick={() => HandleOpenLink("/entrar")}>
-              &nbsp; Cadastrar
+            Entrar
             </button>
             </>
           :
           <>
-          {user.type === "company" && user !== null && user !== undefined && user !== "" ?
+          {user.type === "Imobiliária" && user !== null && user !== undefined && user !== "" ?
           <>
                     <button className='btn' onClick={() => HandleOpenLink("/painel/novoimovel")}>
             <IoHomeOutline /> &nbsp; Imóveis
@@ -202,7 +211,7 @@ const RightNav = ({ open }) => {
           <button className='btn' onClick={() => HandleOpenLink("/painel")}>
             <IoSpeedometerOutline /> &nbsp; Painel
           </button> 
-          <button onClick={() => HandleOpenLink("/entrar")}>
+          <button onClick={handleLogOut}>
             <IoLogOutOutline /> &nbsp; Sair
           </button>
           </>
@@ -223,7 +232,7 @@ const RightNav = ({ open }) => {
           <button className='btn' onClick={() => HandleOpenLink("/minhaconta")}>
             <IoPersonOutline /> &nbsp; Minha conta
           </button> 
-          <button onClick={() => HandleOpenLink("/entrar")}>
+          <button onClick={handleLogOut}>
             <IoLogOutOutline /> &nbsp; Sair
           </button>
           </>

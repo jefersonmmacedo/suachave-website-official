@@ -81,11 +81,12 @@ body {
 body, input, textarea, button {
   font-family: 'Archivo', sans-serif;
   font-weight: 400;
-  
+  outline:none
+
   
 }
 body, input, textarea, button :focus{
-  outline-color: var(--Primary);
+  outline:none
   }
 
   body::-webkit-scrollbar {
@@ -106,7 +107,7 @@ body, input, textarea, button :focus{
     padding: 10px;
   }
   input, textarea {
-    color: var(--Primary);
+    color: var(--Description);
   }
 
 h1, h2, h3, h4, h5, h6, strong {

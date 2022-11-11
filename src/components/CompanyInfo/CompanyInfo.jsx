@@ -1,5 +1,5 @@
 ﻿import "./companyInfo.css";
-import {IoCall,IoMail, IoLocation, IoLogoWhatsapp, IoMailOutline, IoChatboxEllipsesOutline, IoCloseOutline} from 'react-icons/io5'
+import {IoCall,IoMail, IoLocationOutline, IoLogoWhatsapp, IoMailOutline, IoChatboxEllipsesOutline, IoCloseOutline} from 'react-icons/io5'
 import {FaIdCard} from 'react-icons/fa'
 import imobiliária from "../../assets/images/imob1.png";
 import { useState } from "react";
@@ -37,7 +37,7 @@ export function CompanyInfo() {
                 <img src={imobiliária} alt="" />
             </div>
             <h2>Sua Chave Imóveis</h2>
-            <h5><IoLocation />Centro - Rio Bonito - RJ</h5>
+            <h5><IoLocationOutline />Centro - Rio Bonito - RJ</h5>
             <h5><FaIdCard />CRECI: <span> 00.000J</span></h5>
 
             <div className="contact">
@@ -51,7 +51,6 @@ export function CompanyInfo() {
                 <divo className="buttonsContact">
                     <button className="btn-whats" onClick={handleOpenModal}><IoLogoWhatsapp /> Whatsapp</button>
                     <button onClick={handleOpenModalPhone}><IoCall /> Ligar</button>
-                    <button onClick={handleOpenModalPhone}><IoMail /> E-mail</button>
                 </divo>
 
 

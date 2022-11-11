@@ -70,11 +70,12 @@ export function SearchProperty({openModal}) {
     return (
         <div className="SearchProperty">
             <div className="selectButtons">
-            <button className={status === "venda" ? "btn" : ""} onClick={() => handleActiveCode(false, "venda")}>Venda</button>
-            <button className={status === "aluguel" ? "btn" : ""} onClick={() => handleActiveCode(false, "aluguel")}>Aluguel</button>
+            <button className={status === "venda" ? "btn" : "btn1"} onClick={() => handleActiveCode(false, "venda")}>Venda</button>
+            <button className={status === "aluguel" ? "btn2" : ""} onClick={() => handleActiveCode(false, "aluguel")}>Aluguel</button>
+            <button className={status === "temporada" ? "btn2" : ""} onClick={() => handleActiveCode(false, "temporada")}>Temporada</button>
             {/* <button className={status === "temporada" ? "btn" : ""} onClick={() => handleActiveCode(false, "temporada")}>Temporada</button>
             <button className={status === "diária" ? "btn" : ""} onClick={() => handleActiveCode(false, "diária")}>Diária</button> */}
-            <button className={status === "codigo" ? "btn" : ""} onClick={() => handleActiveCode(true, "codigo")}>Código</button>
+            <button className={status === "codigo" ? "btn3" : "btn4"} onClick={() => handleActiveCode(true, "codigo")}>Código</button>
                 </div>   
             <div className="search">
                 {code === false ?

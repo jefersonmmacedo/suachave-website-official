@@ -182,12 +182,13 @@
 .content-modal-home .itensModalHome .loginAccount {
     width: 400px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     border-top: 1px solid var(--BorderHover);
     margin: 20px 0;
     padding: 10px;
+    flex-wrap: wrap;
 }
 
 .content-modal-home .itensModalHome .loginAccount a {
@@ -281,6 +282,14 @@
                     width: 80%;
                     text-align: center;
                 }
+                .content-modal-home .itensModalHome form {
+                    width: 85%;
+                }
+
+                .content-modal-home .itensModalHome .loginAccount {
+                    width: 85%;
+                    margin: 20px 0 0 0;
+                }
 
                 @media (max-width: 400px) {
 
@@ -288,11 +297,11 @@
                         padding: 10px;
                     }
                     .content-modal-home .itensModalHome form {
-                        width: 100%;
+                        width: 95%;
                     }
 
                     .content-modal-home .itensModalHome .loginAccount {
-                        width: 100%;
+                        width: 95%;
                         margin: 20px 0 0 0;
                     }
                     

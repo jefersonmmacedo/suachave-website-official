@@ -2,16 +2,21 @@
 import { useState } from "react";
 import buscaDistrito from '../../services/api-buscaDistrito';
 import { toast } from 'react-toastify';
-import { IoLocationOutline } from "react-icons/io5";
+import {FaHome, FaBuilding, FaStore} from "react-icons/fa";
+import {IoBusiness, IoLocationOutline} from "react-icons/io5";
 
-export function SearchPropertyListing() {
+export function SearchPropertyListing({openModal}) {
     const LocalCity = localStorage.getItem("suachavecity");
     const userCity = JSON.parse(LocalCity);
     const [uf, setUf] = useState(userCity === null || userCity === undefined || userCity === ""? "" : userCity.uf);
     const [city, setCity] = useState(userCity === null || userCity === undefined || userCity === ""? "" : userCity.city);
     const [districtAll, setDistrictAll] = useState([]);
     const [professional, setProfessional] = useState("");
+    const [code, setCode] = useState(false);
+    const [status, setStatus] = useState("venda");
 
+    console.log(uf)
+    console.log(city)
     async function handleSearchDistrict(ufSelect) {
         console.log(ufSelect)
         try {
@@ -22,7 +27,7 @@ export function SearchPropertyListing() {
             return;
           }catch{
             console.log("error")
-            toast.error("Escolha um estado e clica em buscar cidades")
+            toast.error("Escolha um estado e clica em buscar cidades");
         }
         return
     }
@@ -49,6 +54,7 @@ export function SearchPropertyListing() {
       }
       function handleSearchProfessional(e) {
         console.log(e.target.value)
+        toast.info(`Você escolheu: ${professional}, na cidade ${city} - ${uf}`)
         const suachave = {
             city: city,
             uf: uf,
@@ -56,26 +62,24 @@ export function SearchPropertyListing() {
 
         localStorage.setItem("suachavecity", JSON.stringify(suachave));
       }
+
+      function handleActiveCode(data, status) {
+        setCode(data)
+        setStatus(status)
+      }
     return (
         <div className="SearchPropertyListing">
-        {userCity === null || userCity === undefined || userCity === "" ? 
-        <div className="textLocation">
-            <button>Definir cidade</button>
-        </div>
-         : 
-         <div className="textLocation">
-         <h5><IoLocationOutline /> {city} - {uf}</h5> 
-         <button>Alterar</button>
-     </div>
-         }
-
-
-            <div className="selectButtonsStatus">
-            <button className="btn">Aluguel</button>
-            <button>Venda</button>
-            <button className="btn2">Temporada</button>
+            <div className="selectButtonsListing">
+            <button className={status === "venda" ? "btn" : "btn1"} onClick={() => handleActiveCode(false, "venda")}>Venda</button>
+            <button className={status === "aluguel" ? "btn2" : ""} onClick={() => handleActiveCode(false, "aluguel")}>Aluguel</button>
+            <button className={status === "temporada" ? "btn2" : ""} onClick={() => handleActiveCode(false, "temporada")}>Temporada</button>
+            {/* <button className={status === "temporada" ? "btn" : ""} onClick={() => handleActiveCode(false, "temporada")}>Temporada</button>
+            <button className={status === "diária" ? "btn" : ""} onClick={() => handleActiveCode(false, "diária")}>Diária</button> */}
+            <button className={status === "codigo" ? "btn3" : "btn4"} onClick={() => handleActiveCode(true, "codigo")}>Código</button>
                 </div>   
             <div className="search">
+                {code === false ?
+                <>
             <select className="primary"> 
                             <option value="">Tipo</option>   
                             <option value="">Comercial</option>   
@@ -85,7 +89,7 @@ export function SearchPropertyListing() {
                             <option value="">Lotes</option>       
                     </select>
             <select> 
-                            <option value="">Escolha</option>   
+                            <option value="">Subtipo</option>   
                             <option value="">Casa</option>   
                             <option value="">Apartamento</option>   
                             <option value="">Cobertura</option>   
@@ -93,44 +97,33 @@ export function SearchPropertyListing() {
                             <option value="">Condomínio</option>       
                     </select>
             <select> 
-                            <option value="">Quartos</option>   
-                            <option value="1">1</option>   
-                            <option value="2">2</option>   
-                            <option value="3">3</option>   
-                            <option value="4">4</option>   
-                            <option value="5">5</option>       
-                            <option value="6">6</option>       
-                            <option value="7">7</option>       
-                            <option value="8">8</option>       
-                            <option value="9">9</option>       
-                            <option value="10">10</option>      
+                            <option value="">Quarto</option>   
+                            <option value="">Casa</option>   
+                            <option value="">Apartamento</option>   
+                            <option value="">Cobertura</option>   
+                            <option value="">Kitnet</option>   
+                            <option value="">Condomínio</option>       
                     </select>
             <select> 
-                            <option value="">Banheiros</option>   
-                            <option value="1">1</option>   
-                            <option value="2">2</option>   
-                            <option value="3">3</option>   
-                            <option value="4">4</option>   
-                            <option value="5">5</option>       
-                            <option value="6">6</option>       
-                            <option value="7">7</option>       
-                            <option value="8">8</option>       
-                            <option value="9">9</option>       
-                            <option value="10">10</option>      
+                            <option value="">Banheiro</option>   
+                            <option value="">Casa</option>   
+                            <option value="">Apartamento</option>   
+                            <option value="">Cobertura</option>   
+                            <option value="">Kitnet</option>   
+                            <option value="">Condomínio</option>       
                     </select>
             <select> 
                             <option value="">Garagem</option>   
-                            <option value="1">1</option>   
-                            <option value="2">2</option>   
-                            <option value="3">3</option>   
-                            <option value="4">4</option>   
-                            <option value="5">5</option>       
-                            <option value="6">6</option>       
-                            <option value="7">7</option>       
-                            <option value="8">8</option>       
-                            <option value="9">9</option>       
-                            <option value="10">10</option>       
+                            <option value="">Casa</option>   
+                            <option value="">Apartamento</option>   
+                            <option value="">Cobertura</option>   
+                            <option value="">Kitnet</option>   
+                            <option value="">Condomínio</option>       
                     </select>
+                </>
+                    :
+                    <input type="text" className="primary" placeholder="Digite o código" />
+                }
             {/* <select value={uf} onChange={handleSetectUf}> 
                             <option value="">Escolha seu estado</option>
                             <option value="AC">Acre</option>
@@ -167,7 +160,6 @@ export function SearchPropertyListing() {
                     <option value={city}>{city}</option>
                     :
                     <>
-                    <option value="">Escolha sua cidade</option>
                     {districtAll?.map((district) => {
                             return (
                                 <option autocomplete="off" key={district.id} value={district.nome}>{district.nome}</option>
@@ -178,6 +170,18 @@ export function SearchPropertyListing() {
                     </select> */}
                      <button onClick={handleSearchProfessional}>Buscar</button>
             </div>
+
+            {userCity === null || userCity === undefined || userCity === "" ? 
+            <div className="textLocation">
+                <button>Definir cidade</button>
+            </div>
+             : 
+             <div className="textLocation">
+             <h4><IoLocationOutline /> {city} - {uf}</h4> 
+             <button onClick={openModal}>Alterar</button>
+         </div>
+             }
+
         </div>
     )
 }

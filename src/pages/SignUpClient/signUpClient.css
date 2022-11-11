@@ -51,6 +51,33 @@
     margin: 5px 0;
     font-weight: bold;
 }
+
+.SignUpClient .login form .data .dataInputs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    border-bottom: 2px solid var(--Border);
+}
+.SignUpClient .login form .data .dataInputs .icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+.SignUpClient .login form .data .dataInputs input {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    padding: 3px;
+    margin: 5px 0;
+    font-weight: bold;
+}
 .SignUpClient .login form .data select {
     width: 80%;
     display: flex;
@@ -196,27 +223,11 @@
 
 
 
-@media (max-width: 700px) {
+@media (max-width: 850px) {
 
-    .SignUpClient .login form {
-        width: 90%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .SignUpClient .login {
-        width: 100%;
-        height: 100vh;
-    }
     
-    .SignUpClient .Client {
-        display: none;
-    }
-
     .SignUpClient .login form .data {
-        width: 70%;
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -224,6 +235,17 @@
         margin: 20px 0;
         padding: 10px;
     }
+
+    .SignUpClient .login form .data .dataInputs {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        border-bottom: 2px solid var(--Border);
+    }
+
+
     
     .SignUpClient .login form .data input {
         width: 90%;
@@ -252,6 +274,26 @@
     .SignUpClient .login form .data button {
         width: 90%;
     }
+
+@media (max-width: 700px) {
+
+    .SignUpClient .login form {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .SignUpClient .login {
+        width: 100%;
+        height: 100vh;
+    }
+    
+    .SignUpClient .Client {
+        display: none;
+    }
+
     
     @media (max-width: 500px) {
         .SignUpClient .login form {
@@ -272,4 +314,5 @@
         }
         
     }
+}
 }

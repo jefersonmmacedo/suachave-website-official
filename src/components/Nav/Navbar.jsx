@@ -7,6 +7,8 @@ import {IoDocumentTextOutline, IoPersonOutline, IoHeartOutline, IoNotificationsO
   IoLogOutOutline, IoSpeedometerOutline, IoHomeOutline, IoChatboxEllipsesOutline, IoCalendarOutline, IoPersonCircleOutline} from 'react-icons/io5'
 import { Link } from 'react-router-dom';
 import ReactTooltip from 'react-tooltip';
+import { AuthContext } from '../../contexts/Auth';
+import { useContext } from 'react';
 
 const Nav = styled.nav`
   width: 100%;
@@ -38,7 +40,6 @@ const Nav = styled.nav`
   }
 
   .account {
-    width: 240px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -47,7 +48,6 @@ const Nav = styled.nav`
     color: var(--Text2);
     text-decoration: none;
     list-style: none;
-
   }
 
   .account li {
@@ -142,7 +142,6 @@ const Nav = styled.nav`
   padding: 0 10px;
   .account {
     margin-right:40px;
-    width: 100%;
     justify-content: flex-end;
   }
 
@@ -155,7 +154,6 @@ const Nav = styled.nav`
 
   @media (max-width: 600px) {
     .account {
-      width: 100%;
       justify-content: flex-end;
     }
     .account .iconOut {
@@ -168,17 +166,23 @@ const Nav = styled.nav`
 
 `
 
-function HandleOpenLink(data) {
-  window.open(`${data}`, "_self")
-}
-function HandleOpenLink2(data) {
-  window.open(`${data}`)
-}
+
 
 
 const Navbar2 = () => {
+  const { logout } = useContext(AuthContext);
   const Local = localStorage.getItem("suachave");
   const user = JSON.parse(Local);
+
+  function handleLogOut() {
+    logout()
+  }
+  function HandleOpenLink(data) {
+    window.open(`${data}`, "_self")
+  }
+  function HandleOpenLink2(data) {
+    window.open(`${data}`)
+  }
 
   return (
     <Nav>
@@ -202,11 +206,11 @@ const Navbar2 = () => {
       : user !== "" || user !== null || user !== undefined ?
         <>
 
-{user.type === "company" && user !== null && user !== undefined && user !== "" ?
+{user.type === "Imobiliária" && user !== null && user !== undefined && user !== "" ?
                 <>
                 <button className='iconUnicAdm' onClick={() => HandleOpenLink2("https://adm.suachave.com.br/")}><IoSpeedometerOutline/> Acessar o painel</button>
                 </>
-:
+            :
                <>
                 <button className='iconUnic' onClick={() => HandleOpenLink("/mensagens")} data-tip data-for='Chat'><IoChatboxEllipsesOutline/></button>
                 <ReactTooltip id='Chat' place="bottom" type="dark" effect="solid">
@@ -234,7 +238,7 @@ const Navbar2 = () => {
                </>
                   }
 
-                <button className='iconOut' onClick={() => HandleOpenLink("/entrar")}><IoLogOutOutline /></button>
+                <button className='iconOut' onClick={handleLogOut}><IoLogOutOutline /></button>
         </>
         : ""
     }

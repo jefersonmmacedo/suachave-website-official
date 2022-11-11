@@ -51,6 +51,35 @@
     margin: 5px 0;
     font-weight: bold;
 }
+
+.SignUpProfessional .login form .data .dataInputs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    border-bottom: 2px solid var(--Border);
+}
+.SignUpProfessional .login form .data .dataInputs .icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+.SignUpProfessional .login form .data .dataInputs input {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    padding: 3px;
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+
 .SignUpProfessional .login form .data select {
     width: 80%;
     display: flex;
@@ -100,7 +129,7 @@
     padding: 10px 20px;
     color: var(--Secondary);
     font-weight: 700;
-    margin: 30px 0 10px 0;
+    margin: 30px 0 0 0;
 }
 .SignUpProfessional .login form .data .btn {
     width: 80%;
@@ -114,7 +143,7 @@
     padding: 10px 20px;
     color: var(--White);
     font-weight: 700;
-    margin: 10px 0;
+    margin: 20px 0 10px 0;
 }
 .SignUpProfessional .login form .data .btn1 {
     width: 80%;
@@ -210,14 +239,18 @@
 
 
 
-@media (max-width: 700px) {
+@media (max-width: 850px) {
 
     .SignUpProfessional .login form {
-        width: 90%;
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+    }
+
+    .SignUpProfessional .login form .data .dataInputs {
+        width: 90%;
     }
 
     .SignUpProfessional .login {

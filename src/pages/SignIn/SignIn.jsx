@@ -1,9 +1,14 @@
 ﻿import "./signIn.css";
 import Logo from "../../assets/images/Logo.png";
 import { useState } from "react";
+import { useContext } from "react";
+import { AuthContext } from "../../contexts/Auth";
 
 export function SignIn() {
     const [company, setCompany] = useState(false);
+    const [login, setLogin] = useState("");
+    const [password, setPassword] = useState("");
+    const {loginSession} = useContext(AuthContext);
 
     function handleSelectClient(e) {
         e.preventDefault();
@@ -17,6 +22,12 @@ export function SignIn() {
         e.preventDefault();
         window.open("https://adm.suachave.com.br/")
     }
+
+    function handleLogin(e) {
+        e.preventDefault();
+        loginSession({login: login, password:password})
+    }
+
     return (
         <div className="SignIn">
             <div className="login">
@@ -30,12 +41,12 @@ export function SignIn() {
 
                 {company === false ?
                     <>
-                        <input type="text" placeholder="Email ou ID"/>
-                        <input type="password" placeholder="Senha"/>
+                        <input type="text" placeholder="Email ou ID" value={login} onChange={(e) => setLogin(e.target.value)}/>
+                        <input type="password" placeholder="Senha" value={password} onChange={(e) => setPassword(e.target.value)}/>
                         <div className="links">
                             <p>Recuperar senha</p>
                         </div>
-                        <button>Entrar</button>
+                        <button onClick={handleLogin}>Entrar</button>
                         <a href="/cadastrar">Cadastre-se aqui!</a>
                     </>
                     :

@@ -27,6 +27,7 @@ import { Checkout } from '../pages/Checkout/Checkout';
 import { PaymentCompleted } from '../pages/PaymentCompleted/PaymentCompleted';
 import { Contact } from '../pages/Contact/Contact';
 import { Faq } from '../pages/Faq/Faq';
+import { UpdateAccount } from '../pages/UpdateAccount/UpdateAccount';
 
 function Router () {
 const Local = localStorage.getItem("suachave");
@@ -64,6 +65,8 @@ function PrivateRoute({children} ) {
             /* Rotas fechadas/login */
             <Route path="/minhaconta"
                     element={ <PrivateRoute> <MyAccount /> </PrivateRoute>} />
+            <Route path="/meusdados"
+                    element={ <PrivateRoute> <UpdateAccount /> </PrivateRoute>} />
             <Route path="/mensagens"
                     element={ <PrivateRoute> <MessagesProperty /> </PrivateRoute>} />
             <Route path="/favoritos"
