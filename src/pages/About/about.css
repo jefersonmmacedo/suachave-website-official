@@ -145,7 +145,7 @@
     flex-direction: column;
     width: 400px;
     height: 400px;
-    background-color: rgba(170,0,0);
+    background-color: var(--Primary);
 }
 .About .MainAbout .bloco .imageAbout .imgBlock {
     display: flex;

@@ -43,12 +43,13 @@ function AuthProvider({children}) {
     }
 
     async function createAccountCompany({
-        type,verified, status, cnpj, nameSlug, socialReason, fantasyName, creci, email, phone, whatsapp, password, responsibleName,
-    emailResponsible, whatsappResponsible, logo, cep, road, number, district, city, uf, website, facebook
+        type, verified, status, cnpj,nameSlug, socialReason, fantasyName, creci, email, phone, whatsapp, password, responsibleName,
+        emailResponsible, whatsappResponsible, logo, cep, road, number, district, city, uf, website, facebook, instagram, linkedin, youtube
+            
         }) {
         const data = {
-            type,verified, status, cnpj, nameSlug, socialReason, fantasyName, creci, email, phone, whatsapp, password, responsibleName,
-    emailResponsible, whatsappResponsible, logo, cep, road, number, district, city, uf, website, facebook
+            type, verified, status, cnpj,nameSlug, socialReason, fantasyName, creci, email, phone, whatsapp, password, responsibleName,
+            emailResponsible, whatsappResponsible, logo, cep, road, number, district, city, uf, website, facebook, instagram, linkedin, youtube
             }
         console.log(data)
        //   const dataInvite = await api.get(`/invites/find/${data.email}/${data.code}`);
@@ -56,13 +57,14 @@ function AuthProvider({children}) {
         // if(dataInvite.data[0] === undefined) {
         //     toast.error("Código de verificação errado ou expirado!")
         //     return
-        // } 
+        // } \watch
         
         await api.post('/company', data).then(() => {
           //  completeAccount(email)
             toast.info(`Cadastro criado com sucesso!`);
             localStorage.setItem("suachave", JSON.stringify(data));
-            window.open("/minhaconta", "_self")
+
+            window.open("/planos", "_self")
 
 
         }).catch(error => {
@@ -114,6 +116,13 @@ function AuthProvider({children}) {
         }
         
     }    
+
+
+
+
+
+
+
 
     async function updateAccount({id, avatar, cover, city, uf, relationship, nickname, cep, latitude, longitude, país, username, role, status, type, email, phone, online, patron}){
         const Local = localStorage.getItem("foursome");
@@ -301,22 +310,39 @@ async function newVisit(idAccount, username, idFriend) {
 
 
     //payments
-    async function createPayment({linkComprovant, idPlain, namePlain, referencePlain, idAccount,username, email, value, period, aceptTerms, status}) {
-        const data = {linkComprovant, idPlain, namePlain, referencePlain, idAccount,username, email, value, period, aceptTerms, status}
-        console.log(data)
-        await api.post("/payments", data).then(async () => {
+    async function createPayment({idPlain, idCompany, email, namePlain, value, period, linkComprovant, aceptTerms, status, status2}) {
+        const data = {idPlain, idCompany, status: status2}
+        const data2 = {idPlain, idCompany, email, namePlain, value, period, linkComprovant, aceptTerms, status}
+        console.log({idPlain, idCompany, email, namePlain, value, period, linkComprovant, aceptTerms, status, status2})
 
-            const data2 = {status: referencePlain === "Premium" ? "premium" : "essencial"}
-            await api.patch(`accounts/updatestatus/${idAccount}`, data2).then((res) => {
-                toast.info("Pagamento realizado com sucesso!");
-                window.open("/paymentConfirmed","_self")
-            }).catch((error) => {
-                console.log(error)
-            })
+        const res = await api.get(`/myplain/${idCompany}`);
+        if(res.data.length === 0) {
+           
+                await api.post("/myplain/", data).then((res) => {
+                    toast.success("Novo plano criado com sucesso")
+                    handleNewPayment({idPlain, idCompany, email, namePlain, value, period, linkComprovant, aceptTerms, status})
+                }).catch((error) => {
+                    console.log(error)
+                })
 
 
+        } else {
+            console.log("Plano Já existe")
+            console.log("Criando pagamento")
+            handleNewPayment({idPlain, idCompany, email, namePlain, value, period, linkComprovant, aceptTerms, status})
+        }
 
+    }
 
+    async function handleNewPayment({idPlain, idCompany, email, namePlain, value, period, linkComprovant, aceptTerms, status}) {
+        const data = {idPlain, idCompany, email, namePlain, value, period, linkComprovant, aceptTerms, status}
+        await api.post("/payments/", data).then((res) => {
+            toast.success("Pagamento efetuado com sucesso");
+
+            setTimeout(() => {
+                window.open(`/pagamentofinalizado/`, "_self")
+              }, "5000")
+        
         }).catch((error) => {
             console.log(error)
         })

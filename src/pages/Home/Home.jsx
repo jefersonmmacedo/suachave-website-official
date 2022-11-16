@@ -24,7 +24,7 @@ export function Home() {
     const user = JSON.parse(Local);
 
     const [isOpenModal, setIsOpenModa] = useState(false);
-    const [isOpenModalSearch, setIsOpenModaSearch] = useState(false);
+    const [isOpenModalSearchProperty, setIsOpenModaSearchProperty] = useState(false);
     const [timer, setTimes] = useState(false);
 
     const [city, setCity] = useState("");
@@ -73,14 +73,15 @@ export function Home() {
         e.preventDefault();
         setIsOpenModa(false);
       }
-    function handleOpenModalSearch(e) {
+    function handleOpenModalSearchProperty(e) {
       e.preventDefault();
-        setIsOpenModaSearch(true)
+      console.log("Olá")
+        setIsOpenModaSearchProperty(true)
       }
     
-      function handleCloseModalSearch(e) {
+      function handleCloseModalSearchProperty(e) {
         e.preventDefault();
-        setIsOpenModaSearch(false);
+        setIsOpenModaSearchProperty(false);
       }
 
 
@@ -132,7 +133,7 @@ export function Home() {
             <SearchProperty openModal={handleOpenModal}/>
             </div>
             <div className="searchViewButton">
-            <button onClick={handleOpenModalSearch}><IoSearch/>Buscar Imóveis</button>
+            <button onClick={handleOpenModalSearchProperty}><IoSearch/>Buscar Imóveis</button>
             </div>
             <div className="iconsHomeProperties">
                 <div className="unic">
@@ -244,10 +245,10 @@ export function Home() {
             </div>
             </div>
             </Modal>
-            <Modal isOpen={isOpenModalSearch} onRequestClose={handleCloseModalSearch}
+            <Modal isOpen={isOpenModalSearchProperty} onRequestClose={handleCloseModalSearchProperty}
             overlayClassName="react-modal-overlay"
             className="react-modal-content">
-            <button type="button" className="react-modal-button" onClick={handleCloseModalSearch}>
+            <button type="button" className="react-modal-button" onClick={handleCloseModalSearchProperty}>
             <IoCloseOutline /> 
             </button>
             <div className="content-modal-home-Search">

@@ -2,7 +2,9 @@
 import Navbar2 from "../../components/Nav/Navbar";
 import { Footer } from "../../components/Footer/Footer";
 import {IoPlayCircle, IoLogoWhatsapp, IoHome, IoQrCodeOutline, IoIdCardOutline, IoPhonePortraitOutline,
-        IoLayersOutline, IoChatbubblesOutline, IoCropOutline, IoLaptopOutline, IoPlayOutline, IoCallOutline, IoCloseOutline, IoCalendarOutline, IoHomeOutline, IoOptionsOutline, IoChatboxEllipsesOutline, IoPersonAddOutline, IoCheckboxOutline} from "react-icons/io5"
+        IoLayersOutline, IoChatbubblesOutline, IoCropOutline, IoLaptopOutline, IoPlayOutline, IoCallOutline,
+        IoCloseOutline, IoCalendarOutline, IoHomeOutline, IoOptionsOutline, IoChatboxEllipsesOutline,
+        IoPersonAddOutline, IoCheckboxOutline, IoFunnelOutline} from "react-icons/io5"
 import { Plains } from "../../components/Plains/Plains";
 import SmartPhone from "../../assets/images/iphone.png";
 import Modal from 'react-modal';
@@ -27,6 +29,12 @@ export function About() {
 
     Modal.setAppElement('#root');
 
+    function HandleOpen(e) {
+        e.preventDefault();
+      
+        window.open("https://wa.me/5521997429585?text=Olá. Gostaria de saber mais detalhes sobre os planos e serviços que a Sua Chave pode me oferecer")
+      }
+
     return (
 <div className="About">
     <Navbar2 />
@@ -43,7 +51,7 @@ export function About() {
                     com foco em conectar seus imóveis a novos clientes.</h3>
 
                     <div className="buttonsText">
-                        <button ><IoLogoWhatsapp /> Falar com time comercial</button>
+                        <button onClick={HandleOpen}><IoLogoWhatsapp /> Falar com time comercial</button>
                         <a href="/cadastro-profissional" className="btn"><IoCheckboxOutline /> Criar minha conta agora</a>
                     </div>
                 </div>
@@ -158,7 +166,7 @@ export function About() {
             <img src={Mackbook} alt="" />
         </div>
         <div className="textDashboardAbout">
-        <h2>Controle <span>completo</span> <br /> para sua <span>imobiliária</span>:</h2>
+        <h2>Gerencie sua <span>imobiliária</span>:</h2>
                 <div className="itensToHireAbout">
                     <div className="ToHireUnicAbout">
                     <IoHomeOutline />
@@ -171,6 +179,10 @@ export function About() {
                     <div className="ToHireUnicAbout">
                         <IoOptionsOutline />
                         <h4>Controle de alugueis e vendas</h4>
+                    </div>
+                    <div className="ToHireUnicAbout">
+                    <IoFunnelOutline />
+                        <h4>Geração e captação de leads</h4>
                     </div>
                     <div className="ToHireUnicAbout">
                         <IoHomeOutline />

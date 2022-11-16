@@ -74,6 +74,7 @@ export function SignUpProfessional() {
 
     function handleSelectAccount(e) {
         setAccount(e.target.value)
+        setType(e.target.value)
     }
 
     async function handleSearchDistrict(ufSelect) {
@@ -129,8 +130,9 @@ export function SignUpProfessional() {
         const verified = false;
         const status = "Ativo";
         const nameSlug = fantasyName;
-        createAccountCompany({type,verified, status, cnpj, nameSlug, socialReason, fantasyName, creci, email, phone, whatsapp, password, responsibleName,
-            emailResponsible, whatsappResponsible, logo:photoUrlAvatar, cep, road, number, district, city, uf, website, facebook})
+        createAccountCompany({type, verified, status, cnpj,nameSlug, socialReason, fantasyName, creci, email, phone, whatsapp, password, responsibleName,
+            emailResponsible, whatsappResponsible, logo: photoUrlAvatar, cep, road, number, district, city, uf, website, facebook,
+            instagram, linkedin, youtube})
     }
 
     function ChangeMaskPhone(e) {
@@ -150,6 +152,36 @@ export function SignUpProfessional() {
         ]);
     
         setWhatsapp(maskedValue)
+      }
+    function ChangeMaskWhatsappResp(e) {
+        const originalValue = unMask(e.target.value);
+        const maskedValue = masker(originalValue, [
+          "(99)99999-9999",
+          "(99)99999-999",
+        ]);
+    
+        setWhatsappResponsible(maskedValue)
+      }
+    function ChangeMaskCNPJ(e) {
+        const originalValue = unMask(e.target.value);
+        const maskedValue = masker(originalValue, [
+            "999.999.999-99",
+          "99.999.999/9999-99",
+        ]);
+    
+        setCnpj(maskedValue)
+      }
+    function ChangeMaskCReci(e) {
+        const originalValue = unMask(e.target.value);
+        const maskedValue = masker(originalValue, [
+            "999-SS",
+            "9999-SS",
+          "99999-SS",
+          "999999-SS",
+          "9999999-SS",
+        ]);
+    
+        setCreci(maskedValue)
       }
 
       function handlePasswordView() {
@@ -180,19 +212,19 @@ export function SignUpProfessional() {
                         </select>
                         {account === "imobiliária" ?
                         <>
-                        <input type="text" placeholder="CNPJ" value={cnpj} onChange={(e) => setCnpj(e.target.value)} />
-                        <input type="text" placeholder="Razão Social" value={cnpj} onChange={(e) => setCnpj(e.target.value)} />
-                        <input type="text" placeholder="Nome Fantasia" value={cnpj} onChange={(e) => setCnpj(e.target.value)} />
+                        <input type="text" placeholder="CNPJ" value={cnpj} onChange={ChangeMaskCNPJ} />
+                        <input type="text" placeholder="Razão Social" value={socialReason} onChange={(e) => setSocialReason(e.target.value)} />
+                        <input type="text" placeholder="Nome Fantasia" value={fantasyName} onChange={(e) => setFantasyName(e.target.value)} />
                         </>
                         : 
                         <>
-                        <input type="text" placeholder="CPF" value={cnpj} onChange={(e) => setCnpj(e.target.value)} />
-                        <input type="text" placeholder="Nome Completo" value={cnpj} onChange={(e) => setCnpj(e.target.value)} />
-                        <input type="text" placeholder="Nome Profissional" value={cnpj} onChange={(e) => setCnpj(e.target.value)} />
+                        <input type="text" placeholder="CPF" value={cnpj} onChange={ChangeMaskCNPJ} />
+                        <input type="text" placeholder="Nome Completo" value={socialReason} onChange={(e) => setSocialReason(e.target.value)} />
+                        <input type="text" placeholder="Nome Profissional" value={fantasyName} onChange={(e) => setFantasyName(e.target.value)} />
                         </>
 
                         }
-                        <input type="text" placeholder="CRECI" value={cnpj} onChange={(e) => setCnpj(e.target.value)} />
+                        <input type="text" placeholder="CRECI" value={creci} onChange={ChangeMaskCReci} />
                         <input type="email" placeholder="E-mail" value={email} onChange={(e) => setEmail(e.target.value)} />
                         <input type="text" placeholder="Telefone" value={phone} onChange={ChangeMaskPhone} />
                         <input type="text" placeholder="Whatsapp" value={whatsapp} onChange={ChangeMaskWhatsapp} />
@@ -210,19 +242,19 @@ export function SignUpProfessional() {
                         </>
                         : data === "2" ?
                         <>
-                         <input type="text" placeholder="Nome Responsável" value={cnpj} onChange={(e) => setCnpj(e.target.value)} />
-                        <input type="email" placeholder="E-mail" value={cnpj} onChange={(e) => setCnpj(e.target.value)} />
-                        <input type="text" placeholder="Whatsapp" value={cnpj} onChange={(e) => setCnpj(e.target.value)} />
+                         <input type="text" placeholder="Nome Responsável" value={responsibleName} onChange={(e) => setResponsibleName(e.target.value)} />
+                        <input type="email" placeholder="E-mail" value={emailResponsible} onChange={(e) => setEmailResponsible(e.target.value)} />
+                        <input type="text" placeholder="Whatsapp" value={whatsappResponsible} onChange={ChangeMaskWhatsappResp} />
                         <button className="btn3" onClick={() => handleSelectStepe("1")}>Voltar</button>
                         <button className="btn" onClick={() => handleSelectStepe("3")}>Avançar</button>
                         </>
                         : data === "3" ?
                         <>
-                        <input type="text" placeholder="Website" value={cnpj} onChange={(e) => setCnpj(e.target.value)} />
-                        <input type="text" placeholder="Facebook" value={cnpj} onChange={(e) => setCnpj(e.target.value)} />
-                        <input type="text" placeholder="Instagram" value={cnpj} onChange={(e) => setCnpj(e.target.value)} />
-                        <input type="text" placeholder="LinkedIn" value={cnpj} onChange={(e) => setCnpj(e.target.value)} />
-                        <input type="text" placeholder="Youtube" value={cnpj} onChange={(e) => setCnpj(e.target.value)} />
+                        <input type="text" placeholder="Website" value={website} onChange={(e) => setWebsite(e.target.value)} />
+                        <input type="text" placeholder="Facebook" value={facebook} onChange={(e) => setFacebook(e.target.value)} />
+                        <input type="text" placeholder="Instagram" value={instagram} onChange={(e) => setInstagram(e.target.value)} />
+                        <input type="text" placeholder="LinkedIn" value={linkedin} onChange={(e) => setLinkedin(e.target.value)} />
+                        <input type="text" placeholder="Youtube" value={youtube} onChange={(e) => setYoutube(e.target.value)} />
                         <button className="btn3" onClick={() => handleSelectStepe("2")}>Voltar</button>
                         <button className="btn" onClick={() => handleSelectStepe("4")}>Avançar</button>
                         </>
@@ -233,6 +265,12 @@ export function SignUpProfessional() {
                             <input type="file" accept="image/*" onChange={handleFile} required/><br />
                             <img src={avatarUrl === null ? profile : avatarUrl} alt="Avatar" height={100} width={100}/>
                         </label>
+                        
+
+                         <input type="text" placeholder="Rua" value={road} onChange={(e) => setRoad(e.target.value)}  />
+                         <input type="text" placeholder="Número" value={number} onChange={(e) => setNumber(e.target.value)}  />
+                        <input type="text" placeholder="Bairro" value={district} onChange={(e) => setDistrict(e.target.value)}  />
+
 
                         <select value={uf} onChange={handleSetectUf}> 
                             <option value="">Escolha seu estado</option>
@@ -279,9 +317,7 @@ export function SignUpProfessional() {
                     </>
                     }     
                     </select>
-                         <input type="text" placeholder="Bairro" />
-                         <input type="text" placeholder="Número" />
-                         <input type="text" placeholder="Rua" />
+
 
 
                         <button className="btn3" onClick={() => handleSelectStepe("3")}>Voltar</button>

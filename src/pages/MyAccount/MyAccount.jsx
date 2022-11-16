@@ -4,6 +4,7 @@ import "./myAccount.css";
 import { ToolBarClient } from "../../components/ToolBarClient/ToolBarClient";
 import { IoCalendarOutline, IoChatboxEllipsesOutline, IoHeartOutline, IoHomeOutline} from "react-icons/io5"
 
+
 export function MyAccount() {
     const LocalCity = localStorage.getItem("suachave");
     const user = JSON.parse(LocalCity);

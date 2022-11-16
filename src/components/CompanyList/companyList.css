@@ -261,6 +261,16 @@
         }
 
         @media (max-width: 711px) {
+            .CompanyList .searchCompanies {
+                width: 98%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                margin: 10px 0;
+            }
+
+
             .CompanyList .listProperties .propertyUnicFavorite {
                 width: 100%;
             }
@@ -289,6 +299,30 @@
                 }
 
                 @media (max-width: 515px) {
+
+                    .CompanyList .searchCompanies {
+                        width: 98%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        margin: 10px 0;
+                    }
+
+                    .CompanyList .listProperties .propertyUnicFavorite  {
+                        width: 98%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        height: 100%;
+                    }
+                    .CompanyList .listProperties .propertyUnicFavorite .text {
+                        justify-content: flex-start;
+                        padding: 10px 5px;
+                    }
+
+
                     .CompanyList .listProperties .propertyUnicFavorite .text {
                         justify-content: flex-start;
                     }
@@ -301,6 +335,18 @@
                     .CompanyList .listProperties .propertyUnicFavorite .text h2 {
                         font-size: 24px;
                     }
+
+                    .CompanyList .listProperties .propertyUnicFavorite .image {
+                        width: 100%; 
+                        height: 100px;
+                        border-radius: 6px 6px 0 0
+                    }
+                    .CompanyList .listProperties .propertyUnicFavorite .image img {
+                        width: 100%; 
+                        height: 100px;
+                        border-radius: 6px 6px 0 0
+                    }
+    
 
                     @media (max-width: 450px) {
                         .CompanyList .listProperties .propertyUnicFavorite .text h2 {

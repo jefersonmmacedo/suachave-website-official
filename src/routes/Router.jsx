@@ -77,7 +77,7 @@ function PrivateRoute({children} ) {
                     element={ <PrivateRoute> <Schedules /> </PrivateRoute>} />
             <Route path="agendamento/unico"
                     element={ <PrivateRoute> <Scheduling /> </PrivateRoute>} />
-            <Route path="/plano"
+            <Route path="/plano/:id"
                     element={ <PrivateRoute> <Checkout /> </PrivateRoute>} />
             <Route path="/pagamentofinalizado"
                     element={ <PrivateRoute> <PaymentCompleted /> </PrivateRoute>} />

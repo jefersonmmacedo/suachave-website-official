@@ -173,7 +173,7 @@ export function SearchProperty({openModal}) {
 
             {userCity === null || userCity === undefined || userCity === "" ? 
             <div className="textLocation">
-                <button>Definir cidade</button>
+                <button onClick={openModal}>Definir cidade</button>
             </div>
              : 
              <div className="textLocation">
