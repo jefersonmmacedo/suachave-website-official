@@ -1,6 +1,11 @@
 ﻿import "./exploreIconsProperties.css";
 import {FaHome, FaBuilding, FaStore, FaMapMarkedAlt} from "react-icons/fa";
-import {IoBusiness, IoArrowForward} from "react-icons/io5";
+import {IoBusiness, IoArrowForward, IoHomeOutline, IoMapOutline} from "react-icons/io5";
+import {GiFactory, GiFarmTractor} from "react-icons/gi";
+import {RiStore2Line} from "react-icons/ri";
+import {HiOutlineHome} from "react-icons/hi";
+import {MdOutlineMapsHomeWork} from "react-icons/md";
+import {TbTractor, TbMap2, TbBuildingFactory} from "react-icons/tb";
 
 
 export function ExploreIconsProperties() {
@@ -16,23 +21,23 @@ export function ExploreIconsProperties() {
 
             <div className="iconsExplore">
                 <div className="IconUnicExplore">
-                    <FaHome />
-                    <h5>Casas</h5>
+                    <MdOutlineMapsHomeWork />
+                    <h5>Residenciais</h5>
                 </div>
                 <div className="IconUnicExplore">
-                    <FaBuilding />
-                    <h5>Apartamentos</h5>
+                    <RiStore2Line />
+                    <h5>Comerciais</h5>
                 </div>
                 <div className="IconUnicExplore">
-                    <IoBusiness />
-                    <h5>Salas Comerciais</h5>
+                    <TbTractor />
+                    <h5>Rurais</h5>
                 </div>
                 <div className="IconUnicExplore">
-                    <FaStore />
-                    <h5>Lojas</h5>
+                    <TbBuildingFactory />
+                    <h5>Industriais</h5>
                 </div>
                 <div className="IconUnicExplore">
-                    <FaMapMarkedAlt />
+                    <TbMap2 />
                     <h5>Terrenos e Lotes</h5>
                 </div>
             </div>

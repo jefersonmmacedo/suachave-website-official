@@ -1,6 +1,8 @@
 ﻿import "./propertyUnicBlock.css"
 import { FaBed, FaCar, FaShower } from "react-icons/fa";
-import { IoHeart, IoLocationOutline } from "react-icons/io5";
+import { IoBedOutline, IoCarSportOutline, IoHeart, IoLocationOutline } from "react-icons/io5";
+import { GiShower, GiHomeGarage } from "react-icons/gi";
+import { MdOutlineShower } from "react-icons/md";
 import profile from "../../assets/images/profile.png";
 import { NewFavorite } from "../NewFavorite/NewFavorite";
 
@@ -33,30 +35,27 @@ export function PropertyUnicBlock({image}) {
                     <h6><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h6>
                     <div className="icons">
                         <div className="iconUnic">
-                            <p>Quartos</p>
+                                <IoBedOutline />
                             <div className="simbol">
-                                <FaBed />
-                                <p>3</p>
+                                <p>3 Quartos</p>
                             </div>
                         </div>
                         <div className="iconUnic">
-                            <p>Banheiro</p>
+                                <MdOutlineShower />
                             <div className="simbol">
-                                <FaShower />
-                                <p>3</p>
+                                <p>3 Banheiros</p>
                             </div>
                         </div>
                         <div className="iconUnic">
-                            <p>Garagem</p>
+                                <IoCarSportOutline />
                             <div className="simbol">
-                                <FaCar />
-                                <p>3</p>
+                                <p>3 Vagas</p>
                             </div>
                         </div>
                     </div>
                     <div className="pricing">
                         <h6>Aluguel</h6>
-                        <h3>R$ 2.000,00 / Mês</h3>
+                        <h3>R$ <span>2.000,00</span> /Mês</h3>
                     </div>
                     </div>
                 </div>

@@ -20,6 +20,7 @@
     align-items: flex-start;
     justify-content: center;
     margin: 20px 0;
+
 }
 
 
@@ -31,7 +32,7 @@
     justify-content: flex-start;
     background-color: var(--White);
     border-radius: 6px;
-    margin: 20px;
+    margin: 20px 0;
     padding-bottom: 20px;
 }
 
@@ -41,7 +42,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
+    padding: 10px 0;
     flex-wrap: wrap;
 }
 
@@ -81,14 +82,14 @@
     width: 100%;
 }
 .Property .main .data .propertyUnic .text h2 {
-    color: var(--Primary);
+    color: var(--Paragraph);
     font-weight: 700;
     margin: 20px 10px 5px 10px;
 }
 .Property .main .data .propertyUnic .text h4 {
     font-weight: 700;
     color: var(--Paragraph);
-    margin:20px 10px;
+    margin:10px 10px;
 }
 .Property .main .data .propertyUnic .text .description {
     font-weight: 400;
@@ -139,7 +140,6 @@
     margin: 10px 0;
     flex-wrap: wrap;
     border: none;
-    border-top: 1px solid var(--Border);
 }
 
 .Property .main .data .propertyUnic .text .icons .iconUnic {
@@ -154,10 +154,13 @@
     color: var(--Gray);
 }
 
-.Property .main .data .propertyUnic .text .icons .iconUnic p {
-    color: var(--Paragraph);
-    font-weight: 700;
+.Property .main .data .propertyUnic .text .icons .iconUnic svg {
+    font-size: 18px;
+    margin-right: 10px;
+    color: var(--Primary);
 }
+
+
 .Property .main .data .propertyUnic .text .icons .iconUnic .simbol {
     width: 100%;
     display: flex;
@@ -168,11 +171,12 @@
     margin-top: 5px;
 }
 
-.Property .main .data .propertyUnic .text .icons .iconUnic .simbol svg {
-    font-size: 18px;
-    margin-right: 10px;
+.Property .main .data .propertyUnic .text .icons .iconUnic .simbol p {
     color: var(--Gray);
+    font-weight: 600;
+
 }
+
 
 .Property .main .data .propertyUnic .text .characteristics {
     width: 100%;
@@ -180,7 +184,6 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
-    margin: 10px 0;
     flex-wrap: wrap;
 }
 
@@ -191,18 +194,29 @@
     justify-content: flex-start;
     padding: 5px;
     margin: 5px;
-    color: var(--Paragraph);
+    color: var(--Gray);
+    padding: 5px 10px;
+    border-radius: 6px;
+    background-color: rgba(170,0,0, 0.03);
 }
 .Property .main .data .propertyUnic .text .characteristics .item svg {
     color: var(--Primary);
     margin-right: 3px;
 }
 .Property .main .data .propertyUnic .text .characteristics .item p {
-    color: var(--Paragraph);
+    color: var(--Gray);
     font-weight: 700;
 }
 
 
+.Property .main .data .propertyUnic .text .infosCompanyMobile {
+    width: 100%;
+    display: none;
+    border-radius: 6px;
+    border: 1px solid var(--Border);
+    margin: 5px;
+    padding: 10px;
+}
 .Property .main .data .propertyUnic .text .pricing {
     width: 100%;
     display: flex;
@@ -210,18 +224,57 @@
     align-items: flex-start;
     justify-content: flex-start;
     text-align: flex-start;
+    margin-top: 20px;
+    margin-bottom: 5px;
 }
 
 .Property .main .data .propertyUnic .text .pricing h5 {
-    color: var(--Paragraph);
+    color: var(--Gray);
     font-weight: 700;
     margin: 5px 10px;
 }
 .Property .main .data .propertyUnic .text .pricing h2 {
-    color: var(--Primary);
-    font-weight: 700;
+    color: var(--Paragraph);
+    font-weight: 400;
     margin: 0 10px;
 }
+.Property .main .data .propertyUnic .text .pricing h2 span {
+    color: var(--Paragraph);
+    font-weight: 800;
+}
+
+.Property .main .data .propertyUnic .text .otherPrincings {
+    width: 600px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: row;
+    border-bottom: 1px solid var(--Border);
+    padding: 5px 0;
+}
+
+.Property .main .data .propertyUnic .text .otherPrincings h5 {
+    color: var(--Gray);
+    font-weight: 700;
+    margin: 5px 10px;
+}
+
+.Property .main .data .propertyUnic .text .pricingTotal {
+    width: 600px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 5px 0;
+}
+
+.Property .main .data .propertyUnic .text .pricingTotal h4 {
+    color: var(--Paragraph);
+    font-weight: 800;
+    margin: 5px 10px;
+}
+
+
 .Property .main .data .propertyUnic .text .video {
     width: 100%;
     margin: 20px 0;
@@ -232,6 +285,79 @@
     margin: 20px 0;
     border-radius: 6px;
 }
+
+
+.Property .main .data .infosCompany {
+    max-width: 420px;
+    min-width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: var(--White);
+    border-radius: 6px;
+    border: 1px solid var(--Border);
+    margin: 20px ;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.Property .main .data .infosCompany .pricing {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: flex-start;
+    margin-bottom: 5px;
+}
+
+.Property .main .data .infosCompany .pricing h5 {
+    color: var(--Gray);
+    font-weight: 700;
+    margin: 5px 10px;
+}
+.Property .main .data .infosCompany .pricing h2 {
+    color: var(--Paragraph);
+    font-weight: 400;
+    margin: 0 10px;
+}
+.Property .main .data .infosCompany .pricing h2 span {
+    color: var(--Paragraph);
+    font-weight: 800;
+}
+
+.Property .main .data .infosCompany .otherPrincings {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: row;
+    border-bottom: 1px solid var(--Border);
+    padding: 5px 0;
+}
+
+.Property .main .data .infosCompany .otherPrincings h5 {
+    color: var(--Gray);
+    font-weight: 700;
+    margin: 5px 10px;
+}
+
+.Property .main .data .infosCompany .pricingTotal {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 5px 0;
+}
+
+.Property .main .data .infosCompany .pricingTotal h4 {
+    color: var(--Paragraph);
+    font-weight: 800;
+    margin: 5px 10px;
+}
+
 
 
 
@@ -290,10 +416,23 @@
 
 
 
-@media (max-width: 950px) {
-    .Property .main .data {
-        width: 100%;
+
+
+
+@media (max-width: 1000px) {
+    .Property .main .data .propertyUnic {
+        width:100%;
     }
+
+    .Property .main .data .infosCompany {
+        max-width: 310px;
+        min-width: 310px;
+
+    }
+    
+@media (max-width: 950px) {
+
+    
 @media (max-width: 850px) {
     .Property .main .data {
         width: 100%;
@@ -308,13 +447,30 @@
     .Property .main .data .propertyUnic {
         width: 90%;
     }
+
+    .Property .main .data .propertyUnic .text .infosCompanyMobile {
+        display: block;
+    }
+    .Property .main .data .infosCompany {
+        display: none;
+    }
 }
 
 @media (max-width: 750px) {
     .Property .main .data {
         padding: 0px;
     }
-
+    @media (max-width: 750px) {
+        .Property .main .data .propertyUnic .text .otherPrincings {
+            width: 100%;
+        }
+        
+        .Property .main .data .propertyUnic .text .pricingTotal {
+            width: 100%;
+        }
+        
+}
 }
 
+}
 }

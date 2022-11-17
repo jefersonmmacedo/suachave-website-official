@@ -1,6 +1,7 @@
 ﻿import "./companyInfo.css";
 import {IoCall,IoMail, IoLocationOutline, IoLogoWhatsapp, IoMailOutline, IoChatboxEllipsesOutline, IoCloseOutline} from 'react-icons/io5'
 import {FaIdCard} from 'react-icons/fa'
+import {HiOutlineIdentification} from 'react-icons/hi'
 import imobiliária from "../../assets/images/imob1.png";
 import { useState } from "react";
 import Modal from 'react-modal';
@@ -33,12 +34,16 @@ export function CompanyInfo() {
 
     return (
         <div className="CompanyInfo">
+            <div className="Head">
             <div className="image">
                 <img src={imobiliária} alt="" />
             </div>
-            <h2>Sua Chave Imóveis</h2>
+            <div className="textHead">
+            <h4 >Sua Chave Imóveis e consultoria imobiliária</h4>
             <h5><IoLocationOutline />Centro - Rio Bonito - RJ</h5>
-            <h5><FaIdCard />CRECI: <span> 00.000J</span></h5>
+            <h5><HiOutlineIdentification />CRECI: <span> 00.000J</span></h5>
+            </div>
+            </div>
 
             <div className="contact">
                 {/* <div className="info">  

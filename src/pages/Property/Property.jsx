@@ -1,8 +1,11 @@
 ﻿import "./property.css"
 import { SliderImages } from '../../components/SliderImages/SliderImages';
 import Navbar2 from "../../components/Nav/Navbar";
-import { FaBed, FaCar, FaShower, FaBath } from "react-icons/fa";
-import { IoCrop, IoHeart, IoMove, IoCheckmarkSharp, IoLocationOutline, IoCloseOutline } from "react-icons/io5";
+import {FaBed, FaShower, FaCar, FaBath} from 'react-icons/fa';
+import {IoCrop, IoMove, IoArrowBack, IoArrowForward, IoLocationOutline, IoBedOutline, IoCarSportOutline, IoCheckmarkSharp} from 'react-icons/io5';
+import {TfiRulerAlt2} from 'react-icons/tfi';
+import {MdOutlineShower} from 'react-icons/md';
+import {TbBath} from 'react-icons/tb';
 import { Footer } from "../../components/Footer/Footer";
 import { CompanyInfo } from "../../components/CompanyInfo/CompanyInfo";
 import { NewScheduling } from "../../components/NewScheduling/NewScheduling";
@@ -46,45 +49,39 @@ export function Property() {
 
                     <div className="icons">
                         <div className="iconUnic">
-                            <p>Quartos</p>
+                                <IoBedOutline />
                             <div className="simbol">
-                                <FaBed />
-                                <p>3</p>
+                            <p>3 Quartos</p>
                             </div>
                         </div>
                         <div className="iconUnic">
-                            <p>Suítes</p>
+                                <TbBath />
                             <div className="simbol">
-                                <FaBath />
-                                <p>3</p>
+                            <p>3 Suítes</p>
                             </div>
                         </div>
                         <div className="iconUnic">
-                            <p>Banheiro</p>
+                                <MdOutlineShower />
                             <div className="simbol">
-                                <FaShower />
-                                <p>3</p>
+                            <p>3 Banheiro</p>
                             </div>
                         </div>
                         <div className="iconUnic">
-                            <p>Garagem</p>
+                                <IoCarSportOutline />
                             <div className="simbol">
-                                <FaCar />
-                                <p>3</p>
+                            <p>2 Vagas</p>
                             </div>
                         </div>
                         <div className="iconUnic">
-                            <p>Área total</p>
+                                <TfiRulerAlt2 />
                             <div className="simbol">
-                                <IoMove />
-                                <p>300 M2</p>
+                                <p>300 M<sup>2</sup></p>
                             </div>
                         </div>
                         <div className="iconUnic">
-                            <p>Construção</p>
-                            <div className="simbol">
                                 <IoCrop />
-                                <p>150 M2</p>
+                            <div className="simbol">
+                                <p>150 M<sup>2</sup></p>
                             </div>
                         </div>
                     </div>
@@ -109,9 +106,32 @@ export function Property() {
                             <IoCheckmarkSharp /> <p>Wifi</p>
                         </div>
                     </div>
+                    <div className="infosCompanyMobile">
                     <div className="pricing">
                         <h5>Aluguel</h5>
-                        <h2>R$ 2.000,00 / Mês</h2>
+                        <h2>R$ <span>2.000,00</span> / Mês</h2>
+                    </div>
+                    <div className="otherPrincings">
+                        <h5>Condomínio</h5>
+                        <h5>R$ 100,00</h5>
+                    </div>
+                    <div className="otherPrincings">
+                        <h5>IPTU</h5>
+                        <h5>R$ 150,00</h5>
+                    </div>
+                    <div className="otherPrincings">
+                        <h5>Outros encargos</h5>
+                        <h5>R$ 250,00</h5>
+                    </div>
+                    <div className="pricingTotal">
+                        <h4>Total</h4>
+                        <h4>R$ 250,00</h4>
+                    </div>
+                    <div className="pricing">
+                        <h5>Venda</h5>
+                        <h2>R$ <span>200.000,00</span></h2>
+                    </div>
+                    <CompanyInfo />
                     </div>
 
                     <div className="video">
@@ -141,8 +161,34 @@ export function Property() {
                     </div>
                 </div>
 
+                <div className="infosCompany">
+                <div className="pricing">
+                        <h5>Aluguel</h5>
+                        <h2>R$ <span>2.000,00</span> / Mês</h2>
+                    </div>
+                    <div className="otherPrincings">
+                        <h5>Condomínio</h5>
+                        <h5>R$ 100,00</h5>
+                    </div>
+                    <div className="otherPrincings">
+                        <h5>IPTU</h5>
+                        <h5>R$ 150,00</h5>
+                    </div>
+                    <div className="otherPrincings">
+                        <h5>Outros encargos</h5>
+                        <h5>R$ 250,00</h5>
+                    </div>
+                    <div className="pricingTotal">
+                        <h4>Total</h4>
+                        <h4>R$ 250,00</h4>
+                    </div>
 
+                    <div className="pricing">
+                        <h5>Venda</h5>
+                        <h2>R$ <span>200.000,00</span></h2>
+                    </div>
                 <CompanyInfo />
+                </div>
                 </div>
         </div>
         <Footer />

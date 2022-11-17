@@ -33,7 +33,7 @@ const Nav = styled.nav`
     padding: 15px 0;
   }
   .logo a img {
-    height: 40px;
+    height: 35px;
   }
   .logo2 {
     display: none;

@@ -1,6 +1,9 @@
 ﻿import "./sliderHome.css"
 import {FaBed, FaShower, FaCar, FaBath} from 'react-icons/fa';
-import {IoCrop, IoMove, IoArrowBack, IoArrowForward, IoLocationOutline} from 'react-icons/io5';
+import {IoCrop, IoMove, IoArrowBack, IoArrowForward, IoLocationOutline, IoBedOutline, IoCarSportOutline} from 'react-icons/io5';
+import {TfiRulerAlt2} from 'react-icons/tfi';
+import {MdOutlineShower} from 'react-icons/md';
+import {TbBath} from 'react-icons/tb';
 import ImageHouse1 from "../../assets/images/house.jpg";
 import ImageHouse2 from "../../assets/images/house1.jpg";
 import ImageHouse3 from "../../assets/images/house2.jpg";
@@ -51,51 +54,45 @@ const properties = {
                     <h5><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h5>
                     <div className="icons">
                         <div className="iconUnic">
-                            <p>Quartos</p>
+                                <IoBedOutline />
                             <div className="simbol">
-                                <FaBed />
-                                <p>3</p>
+                            <p>3 Quartos</p>
                             </div>
                         </div>
                         <div className="iconUnic">
-                            <p>Suítes</p>
+                                <TbBath />
                             <div className="simbol">
-                                <FaBath />
-                                <p>3</p>
+                            <p>3 Suítes</p>
                             </div>
                         </div>
                         <div className="iconUnic">
+                                <MdOutlineShower />
+                            <div className="simbol">
                             <p>Banheiro</p>
-                            <div className="simbol">
-                                <FaShower />
-                                <p>3</p>
                             </div>
                         </div>
                         <div className="iconUnic">
-                            <p>Garagem</p>
+                                <IoCarSportOutline />
                             <div className="simbol">
-                                <FaCar />
-                                <p>3</p>
+                                <p>3 Vagas</p>
                             </div>
                         </div>
                         <div className="iconUnic">
-                            <p>Área total</p>
+                                <TfiRulerAlt2 />
                             <div className="simbol">
-                                <IoMove />
-                                <p>300 M2</p>
+                                <p>300 M<sup>2</sup></p>
                             </div>
                         </div>
                         <div className="iconUnic">
-                            <p>Construção</p>
-                            <div className="simbol">
                                 <IoCrop />
-                                <p>150 M2</p>
+                            <div className="simbol">
+                                <p>150 M<sup>2</sup></p>
                             </div>
                         </div>
                     </div>
                     <div className="pricing">
                         <h5>Aluguel</h5>
-                        <h2>R$ 2.000,00 / Mês</h2>
+                        <h2>R$ <span>2.000,00</span> /Mês</h2>
                     </div>
                 </div>
             </div>
@@ -117,51 +114,45 @@ const properties = {
                     <h5><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h5>
                     <div className="icons">
                         <div className="iconUnic">
-                            <p>Quartos</p>
+                                <IoBedOutline />
                             <div className="simbol">
-                                <FaBed />
-                                <p>3</p>
+                            <p>3 Quartos</p>
                             </div>
                         </div>
                         <div className="iconUnic">
-                            <p>Suítes</p>
+                                <TbBath />
                             <div className="simbol">
-                                <FaBath />
-                                <p>3</p>
+                            <p>3 Suítes</p>
                             </div>
                         </div>
                         <div className="iconUnic">
-                            <p>Banheiro</p>
+                                <MdOutlineShower />
                             <div className="simbol">
-                                <FaShower />
-                                <p>3</p>
+                            <p>1 Banheiro</p>
                             </div>
                         </div>
                         <div className="iconUnic">
-                            <p>Garagem</p>
+                                <IoCarSportOutline />
                             <div className="simbol">
-                                <FaCar />
-                                <p>3</p>
+                            <p>2 Vagas</p>
                             </div>
                         </div>
                         <div className="iconUnic">
-                            <p>Área total</p>
+                                <TfiRulerAlt2 />
                             <div className="simbol">
-                                <IoMove />
-                                <p>300 M2</p>
+                                <p>300 M<sup>2</sup></p>
                             </div>
                         </div>
                         <div className="iconUnic">
-                            <p>Construção</p>
-                            <div className="simbol">
                                 <IoCrop />
-                                <p>150 M2</p>
+                            <div className="simbol">
+                                <p>150 M<sup>2</sup></p>
                             </div>
                         </div>
                     </div>
                     <div className="pricing">
                         <h5>Aluguel</h5>
-                        <h2>R$ 2.000,00 / Mês</h2>
+                        <h2>R$ <span>2.000,00</span> /Mês</h2>
                     </div>
                 </div>
             </div>
@@ -183,51 +174,45 @@ const properties = {
                     <h5><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h5>
                     <div className="icons">
                         <div className="iconUnic">
-                            <p>Quartos</p>
+                                <IoBedOutline />
                             <div className="simbol">
-                                <FaBed />
-                                <p>3</p>
+                            <p>3 Quartos</p>
                             </div>
                         </div>
                         <div className="iconUnic">
-                            <p>Suítes</p>
+                                <TbBath />
                             <div className="simbol">
-                                <FaBath />
-                                <p>3</p>
+                            <p>3 Suítes</p>
                             </div>
                         </div>
                         <div className="iconUnic">
+                                <MdOutlineShower />
+                            <div className="simbol">
                             <p>Banheiro</p>
-                            <div className="simbol">
-                                <FaShower />
-                                <p>3</p>
                             </div>
                         </div>
                         <div className="iconUnic">
-                            <p>Garagem</p>
+                                <IoCarSportOutline />
                             <div className="simbol">
-                                <FaCar />
-                                <p>3</p>
+                                <p>3 Vagas</p>
                             </div>
                         </div>
                         <div className="iconUnic">
-                            <p>Área total</p>
+                                <TfiRulerAlt2 />
                             <div className="simbol">
-                                <IoMove />
-                                <p>300 M2</p>
+                                <p>300 M<sup>2</sup></p>
                             </div>
                         </div>
                         <div className="iconUnic">
-                            <p>Construção</p>
-                            <div className="simbol">
                                 <IoCrop />
-                                <p>150 M2</p>
+                            <div className="simbol">
+                                <p>150 M<sup>2</sup></p>
                             </div>
                         </div>
                     </div>
                     <div className="pricing">
                         <h5>Aluguel</h5>
-                        <h2>R$ 2.000,00 / Mês</h2>
+                        <h2>R$ <span>2.000,00</span> /Mês</h2>
                     </div>
                 </div>
             </div>
@@ -249,51 +234,45 @@ const properties = {
                     <h5><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h5>
                     <div className="icons">
                         <div className="iconUnic">
-                            <p>Quartos</p>
+                                <IoBedOutline />
                             <div className="simbol">
-                                <FaBed />
-                                <p>3</p>
+                            <p>3 Quartos</p>
                             </div>
                         </div>
                         <div className="iconUnic">
-                            <p>Suítes</p>
+                                <TbBath />
                             <div className="simbol">
-                                <FaBath />
-                                <p>3</p>
+                            <p>3 Suítes</p>
                             </div>
                         </div>
                         <div className="iconUnic">
+                                <MdOutlineShower />
+                            <div className="simbol">
                             <p>Banheiro</p>
-                            <div className="simbol">
-                                <FaShower />
-                                <p>3</p>
                             </div>
                         </div>
                         <div className="iconUnic">
-                            <p>Garagem</p>
+                                <IoCarSportOutline />
                             <div className="simbol">
-                                <FaCar />
-                                <p>3</p>
+                                <p>3 Vagas</p>
                             </div>
                         </div>
                         <div className="iconUnic">
-                            <p>Área total</p>
+                                <TfiRulerAlt2 />
                             <div className="simbol">
-                                <IoMove />
-                                <p>300 M2</p>
+                                <p>300 M<sup>2</sup></p>
                             </div>
                         </div>
                         <div className="iconUnic">
-                            <p>Construção</p>
-                            <div className="simbol">
                                 <IoCrop />
-                                <p>150 M2</p>
+                            <div className="simbol">
+                                <p>150 M<sup>2</sup></p>
                             </div>
                         </div>
                     </div>
                     <div className="pricing">
                         <h5>Aluguel</h5>
-                        <h2>R$ 2.000,00 / Mês</h2>
+                        <h2>R$ <span>2.000,00</span> /Mês</h2>
                     </div>
                 </div>
             </div>

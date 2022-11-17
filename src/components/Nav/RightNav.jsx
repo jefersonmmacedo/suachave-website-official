@@ -186,6 +186,11 @@ const RightNav = ({ open }) => {
             Financiamento
             </a>
           </li>
+          <li className='nav-item'>
+            <a href='/planos' >
+            Planos
+            </a>
+          </li>
           {user === "" || user === null || user === undefined ? 
             <>
             <button onClick={() => HandleOpenLink("/sobre")}>

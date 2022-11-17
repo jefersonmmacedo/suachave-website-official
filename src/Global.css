@@ -49,7 +49,7 @@ html {
 body {
   -webkit-font-smoothing: antialiased;
   font-family: 'Archivo', sans-serif;
-  background: var(--Background2);
+  background: var(--White);
 }
 
 .content {

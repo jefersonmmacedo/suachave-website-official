@@ -16,7 +16,7 @@
     justify-content: center;
     width: 950px;
     border-radius: 0 6px 6px 6px;
-    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--Border);
     background-color: var(--White);
     padding:7px;
 }
@@ -68,6 +68,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
+    
 }
 .SearchProperty .selectButtons button {
     display: flex;
@@ -80,7 +81,6 @@
     color: var(--Paragraph);
     font-weight: 700;
     border: 2px solid var(--White);
-    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
 }
 .SearchProperty .selectButtons button:hover {
     background-color: var(--Primary);
