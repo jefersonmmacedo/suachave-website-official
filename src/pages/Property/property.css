@@ -32,7 +32,7 @@
     justify-content: flex-start;
     background-color: var(--White);
     border-radius: 6px;
-    margin: 20px 0;
+    margin: 20px;
     padding-bottom: 20px;
 }
 
@@ -216,6 +216,7 @@
     border: 1px solid var(--Border);
     margin: 5px;
     padding: 10px;
+    margin-top: 20px;
 }
 .Property .main .data .propertyUnic .text .pricing {
     width: 100%;
@@ -224,7 +225,6 @@
     align-items: flex-start;
     justify-content: flex-start;
     text-align: flex-start;
-    margin-top: 20px;
     margin-bottom: 5px;
 }
 
@@ -266,6 +266,7 @@
     justify-content: space-between;
     flex-direction: row;
     padding: 5px 0;
+    margin-bottom: 20px;
 }
 
 .Property .main .data .propertyUnic .text .pricingTotal h4 {
@@ -288,8 +289,7 @@
 
 
 .Property .main .data .infosCompany {
-    max-width: 420px;
-    min-width: 350px;
+    width: 400px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -356,6 +356,7 @@
     color: var(--Paragraph);
     font-weight: 800;
     margin: 5px 10px;
+    margin-bottom: 20px;
 }
 
 

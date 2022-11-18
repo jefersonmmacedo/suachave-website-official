@@ -125,7 +125,7 @@ export function Property() {
                     </div>
                     <div className="pricingTotal">
                         <h4>Total</h4>
-                        <h4>R$ 250,00</h4>
+                        <h4>R$ 2.500,00</h4>
                     </div>
                     <div className="pricing">
                         <h5>Venda</h5>
@@ -180,7 +180,7 @@ export function Property() {
                     </div>
                     <div className="pricingTotal">
                         <h4>Total</h4>
-                        <h4>R$ 250,00</h4>
+                        <h4>R$ 2.500,00</h4>
                     </div>
 
                     <div className="pricing">

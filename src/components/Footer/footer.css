@@ -151,6 +151,7 @@
 .Footer .copy h5 a {
     color: var(--Primary);
     text-decoration: none;
+    font-weight: 560;
 
 }
 .Footer .copy h5 a:hover {

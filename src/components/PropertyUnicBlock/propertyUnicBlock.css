@@ -232,9 +232,19 @@
         margin: 350px 0 50px 0;
     }
 
-    @media (max-width: 550px) {
+    @media (max-width: 570px) {
         .Featured {
             margin: 400px 0 50px 0;
         }
+
+        .PropertyUnicBlock {
+            width: 80%;
+        }
+        @media (max-width: 450px) {
+
+        .PropertyUnicBlock {
+            width: 95%;
+        }
     }
+}
 }
