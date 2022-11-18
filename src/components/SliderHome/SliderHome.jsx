@@ -91,8 +91,8 @@ const properties = {
                         </div>
                     </div>
                     <div className="pricing">
-                        <h5>Aluguel</h5>
-                        <h2>R$ <span>2.000,00</span> /Mês</h2>
+                        <h5>Aluguel / <span>Mensal</span></h5>
+                        <h2>R$ <span>2.000,00</span></h2>
                     </div>
                 </div>
             </div>
@@ -151,8 +151,8 @@ const properties = {
                         </div>
                     </div>
                     <div className="pricing">
-                        <h5>Aluguel</h5>
-                        <h2>R$ <span>2.000,00</span> /Mês</h2>
+                        <h5>Aluguel / <span>Mensal</span></h5>
+                        <h2>R$ <span>2.000,00</span></h2>
                     </div>
                 </div>
             </div>
@@ -211,8 +211,8 @@ const properties = {
                         </div>
                     </div>
                     <div className="pricing">
-                        <h5>Aluguel</h5>
-                        <h2>R$ <span>2.000,00</span> /Mês</h2>
+                        <h5>Aluguel / <span>Mensal</span></h5>
+                        <h2>R$ <span>2.000,00</span></h2>
                     </div>
                 </div>
             </div>
@@ -271,8 +271,8 @@ const properties = {
                         </div>
                     </div>
                     <div className="pricing">
-                        <h5>Aluguel</h5>
-                        <h2>R$ <span>2.000,00</span> /Mês</h2>
+                        <h5>Aluguel / <span>Mensal</span></h5>
+                        <h2>R$ <span>2.000,00</span></h2>
                     </div>
                 </div>
             </div>

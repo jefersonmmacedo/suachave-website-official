@@ -123,8 +123,11 @@
 
 .each-slide-effect .imageTop .blockSlider .pricing h5 {
   color: var(--Gray);
-  font-weight: 700;
+  font-weight: 800;
   margin: 5px 10px;
+}
+.each-slide-effect .imageTop .blockSlider .pricing span {
+  font-weight: 500;
 }
 .each-slide-effect .imageTop .blockSlider .pricing h2 {
   color: var(--Paragraph);

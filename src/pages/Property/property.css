@@ -230,8 +230,11 @@
 
 .Property .main .data .propertyUnic .text .pricing h5 {
     color: var(--Gray);
-    font-weight: 700;
+    font-weight: 800;
     margin: 5px 10px;
+}
+.Property .main .data .propertyUnic .text .pricing h5 span {
+    font-weight: 500;
 }
 .Property .main .data .propertyUnic .text .pricing h2 {
     color: var(--Paragraph);
@@ -314,8 +317,11 @@
 
 .Property .main .data .infosCompany .pricing h5 {
     color: var(--Gray);
-    font-weight: 700;
+    font-weight: 800;
     margin: 5px 10px;
+}
+.Property .main .data .infosCompany .pricing h5 span {
+    font-weight: 500;
 }
 .Property .main .data .infosCompany .pricing h2 {
     color: var(--Paragraph);

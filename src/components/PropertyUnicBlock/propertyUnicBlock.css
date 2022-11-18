@@ -213,8 +213,12 @@
 
 .PropertyUnicBlock .text .pricing h6 {
     color: var(--Gray);
-    font-weight: 700;
+    font-weight: 800;
     margin: 0 10px;
+}
+.PropertyUnicBlock .text .pricing h6 span {
+    font-weight: 500;
+    color: var(--Gray);
 }
 .PropertyUnicBlock .text .pricing h3 {
     color: var(--Paragraph);

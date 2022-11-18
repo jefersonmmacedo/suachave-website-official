@@ -54,8 +54,8 @@ export function PropertyUnicBlock({image}) {
                         </div>
                     </div>
                     <div className="pricing">
-                        <h6>Aluguel</h6>
-                        <h3>R$ <span>2.000,00</span> /Mês</h3>
+                        <h6>Aluguel / <span> Mensal</span></h6>
+                        <h3>R$ <span>2.000,00</span></h3>
                     </div>
                     </div>
                 </div>
