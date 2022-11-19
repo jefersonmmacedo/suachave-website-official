@@ -17,6 +17,8 @@ import { FiPlay } from "react-icons/fi";
 export function About() {
     const [isOpenModal, setIsOpenModa] = useState(false);
 
+
+
     function handleOpenModal(e) {
       e.preventDefault();
         setIsOpenModa(true)
