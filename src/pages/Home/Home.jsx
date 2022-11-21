@@ -158,14 +158,14 @@ export function Home() {
             </div>
 
             <div className="carroussel">
-            <PropertyCarroussel />
+            <PropertyCarroussel status={"Venda"}/>
             </div>
             
             <div className="textHome">
             <h3>Imóveis para alugar</h3>
             </div>
             <div className="carroussel">
-            <PropertyCarroussel />
+            <PropertyCarroussel status={"Aluguel"}/>
             </div>
             <ExploreIconsProperties />
             <Cities />

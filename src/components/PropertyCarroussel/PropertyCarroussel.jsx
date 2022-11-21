@@ -1,17 +1,20 @@
-﻿import "./propertyCarroussel.css";
-import {FaBed, FaShower, FaCar} from 'react-icons/fa';
-import {IoHeart, IoLocationOutline} from 'react-icons/io5';
-import ImageHouse from "../../assets/images/house.jpg";
-import ImageHouse1 from "../../assets/images/house1.jpg";
-import ImageHouse2 from "../../assets/images/house2.jpg";
-import ImageHouse3 from "../../assets/images/house3.jpg";
-import ImageHouse4 from "../../assets/images/house4.jpg";
-import ImageHouse5 from "../../assets/images/house5.jpg";
+import "./propertyCarroussel.css";
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
 import { PropertyUnicBlock } from "../PropertyUnicBlock/PropertyUnicBlock";
+import { useFetch } from "../../hooks/useFetch";
 
-export function PropertyCarroussel() {
+export function PropertyCarroussel({status}) {
+    console.log(status)
+    const availability = "Disponível";
+
+    const {data} = useFetch(`/property/lists/${availability}/${status}`);
+
+    if(!data) {
+        return (
+            <h5>Carregando..</h5>
+        )
+    }
     const buttonStyle = {
         display:'none'
     };
@@ -30,14 +33,14 @@ export function PropertyCarroussel() {
             }
         },
         {
-            breakpoint: 900,
+            breakpoint: 780,
             settings: {
                 slidesToShow: 3,
                 slidesToScroll: 3
             }
         },
         {
-            breakpoint: 610,
+            breakpoint: 560,
             settings: {
                 slidesToShow: 2,
                 slidesToScroll: 2
@@ -55,18 +58,11 @@ export function PropertyCarroussel() {
     return (
         <div>
             <Slide slidesToScroll={3} slidesToShow={3} indicators={true} {...properties} responsive={responsiveSettings}>
-            <PropertyUnicBlock image={ImageHouse}/>
-            <PropertyUnicBlock image={ImageHouse1}/>
-            <PropertyUnicBlock image={ImageHouse2}/>
-            <PropertyUnicBlock image={ImageHouse3}/>
-            <PropertyUnicBlock image={ImageHouse4}/>
-            <PropertyUnicBlock image={ImageHouse5}/>
-            <PropertyUnicBlock image={ImageHouse}/>
-            <PropertyUnicBlock image={ImageHouse1}/>
-            <PropertyUnicBlock image={ImageHouse2}/>
-            <PropertyUnicBlock image={ImageHouse3}/>
-            <PropertyUnicBlock image={ImageHouse4}/>
-            <PropertyUnicBlock image={ImageHouse5}/>
+                {data?.map((property) => {
+                    return (
+                        <PropertyUnicBlock id={property.id} key={property.id}/>
+                    )
+                })}
             </Slide>
         </div>
     )

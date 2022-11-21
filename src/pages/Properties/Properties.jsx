@@ -8,8 +8,10 @@ import { SearchProperty } from "../../components/SearchProperty/SearchProperty";
 import { IoCloseOutline, IoSearch } from "react-icons/io5";
 import Modal from 'react-modal';
 import { useState } from "react";
+import { useParams } from "react-router-dom";
 
 export function Properties(){
+    const {status} = useParams();
     const [isOpenModalSearch, setIsOpenModaSearch] = useState(false);
     function handleTop(e) {
         window.scrollTo({
@@ -40,7 +42,7 @@ export function Properties(){
             <div className="ButtomView">
             <button onClick={handleOpenModalSearch}><IoSearch/>Buscar Imóveis</button>
             </div>
-            <ListProperty />
+            <ListProperty status={status}/>
             <button className="topScroll" onClick={handleTop}><FiArrowUpCircle /></button>
         </div>
         <Footer />

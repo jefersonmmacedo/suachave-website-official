@@ -1,25 +1,27 @@
-﻿import "./sliderHome.css"
-import {FaBed, FaShower, FaCar, FaBath} from 'react-icons/fa';
-import {IoCrop, IoMove, IoArrowBack, IoArrowForward, IoLocationOutline, IoBedOutline, IoCarSportOutline} from 'react-icons/io5';
+import "./sliderHome.css";
+import {IoCrop, IoArrowBack, IoArrowForward, IoLocationOutline, IoBedOutline, IoCarSportOutline} from 'react-icons/io5';
 import {TfiRulerAlt2} from 'react-icons/tfi';
 import {MdOutlineShower} from 'react-icons/md';
 import {TbBath} from 'react-icons/tb';
-import ImageHouse1 from "../../assets/images/house.jpg";
-import ImageHouse2 from "../../assets/images/house1.jpg";
-import ImageHouse3 from "../../assets/images/house2.jpg";
-import ImageHouse4 from "../../assets/images/house4.jpg";
-import ImageHouse5 from "../../assets/images/house5.jpg";
-import ImageHouse6 from "../../assets/images/house6.jpg";
+
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
+import { useFetch } from "../../hooks/useFetch";
 
 function SliderHome() {
-  const images = [
-    ImageHouse1,
-    ImageHouse2,
-    ImageHouse3,
-    ImageHouse4,
-];
+    const availability = "Disponível";
+
+    const {data} = useFetch(`/property/all/${availability}`);
+
+    if(data) {
+        console.log(data);
+    }
+
+    if(!data) {
+        return (
+            <h5>Carregando...</h5>
+        )
+    }
 
 const buttonStyle = {
   padding: '10px',
@@ -37,246 +39,86 @@ const properties = {
    
     return (
       <Slide {...properties}>
-          <div className="each-slide-effect">
+          {data?.map((property) => {
+            return (
+                <div className="each-slide-effect">
           <div className="imageTop">
             <div className="image">
-                <a href="/imovel">
-                    <img src={images[0]} alt="" />
+                 <a href={`/imovel/${property.id}`}>
+                    <img src={property.featuredImage} alt="" />
                 </a>
             </div>
                 <div className="blockSlider">
+                {new Date(property.created_at).getDate() === new Date().getDate() ?
                     <div className="featured">
                         <p>Novo</p>
                     </div>
-                    <a href="/imovel">
-                    <h3>Apartamento de luxo</h3>
+                    : ""
+                    } 
+                     <a href={`/imovel/${property.id}`}>
+                    <h3>{property.title}</h3>
                     </a>
-                    <h5><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h5>
+                    <h5><IoLocationOutline /> {property.road} - {property.district} - {property.city} - {property.uf}</h5>
                     <div className="icons">
+                    {property.bedroom === "" ? "" :
                         <div className="iconUnic">
                                 <IoBedOutline />
                             <div className="simbol">
-                            <p>3 Quartos</p>
+                            <p>{property.bedroom} Quartos</p>
                             </div>
                         </div>
+                    }
+                        {property.suite === "" ? "" :
                         <div className="iconUnic">
                                 <TbBath />
                             <div className="simbol">
-                            <p>3 Suítes</p>
+                            <p>{property.suite} Suítes</p>
                             </div>
                         </div>
+                        }
+                        {property.restroom === "" ? "" :
                         <div className="iconUnic">
                                 <MdOutlineShower />
                             <div className="simbol">
-                            <p>Banheiro</p>
+                            <p>{property.restroom} Banheiro</p>
                             </div>
                         </div>
+                        }
+                        {property.garage === "" ? "" :
                         <div className="iconUnic">
                                 <IoCarSportOutline />
                             <div className="simbol">
-                                <p>3 Vagas</p>
+                                <p>{property.garage} Vagas</p>
                             </div>
                         </div>
+                        }
+                        {property.totalArea === "" ? "" :
                         <div className="iconUnic">
                                 <TfiRulerAlt2 />
                             <div className="simbol">
-                                <p>300 M<sup>2</sup></p>
+                                <p>{property.totalArea} M<sup>2</sup></p>
                             </div>
                         </div>
+                            }
+                        {property.buildingArea === "" ? "" :
                         <div className="iconUnic">
                                 <IoCrop />
                             <div className="simbol">
-                                <p>150 M<sup>2</sup></p>
+                                <p>{property.buildingArea} M<sup>2</sup></p>
                             </div>
                         </div>
+                        }
                     </div>
                     <div className="pricing">
-                        <h5>Aluguel / <span>Mensal</span></h5>
-                        <h2>R$ <span>2.000,00</span></h2>
+                        <h5>{property.status} {property.textRent !==  "" ? "/" : "" }<span> {property.textRent}</span></h5>
+                        <h2>R$ <span>{property.status === "Venda" ? property.priceSale : property.priceRent}</span></h2>
                     </div>
                 </div>
             </div>
           </div>
-          <div className="each-slide-effect">
-          <div className="imageTop">
-          <div className="image">
-            <a href="/imovel">
-                    <img src={images[1]} alt="" />
-            </a>
-            </div>
-                <div className="blockSlider">
-                    <div className="featured">
-                        <p>Novo</p>
-                    </div>
-                    <a href="/imovel">
-                    <h3>Apartamento luxuoso</h3>
-                    </a>
-                    <h5><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h5>
-                    <div className="icons">
-                        <div className="iconUnic">
-                                <IoBedOutline />
-                            <div className="simbol">
-                            <p>3 Quartos</p>
-                            </div>
-                        </div>
-                        <div className="iconUnic">
-                                <TbBath />
-                            <div className="simbol">
-                            <p>3 Suítes</p>
-                            </div>
-                        </div>
-                        <div className="iconUnic">
-                                <MdOutlineShower />
-                            <div className="simbol">
-                            <p>1 Banheiro</p>
-                            </div>
-                        </div>
-                        <div className="iconUnic">
-                                <IoCarSportOutline />
-                            <div className="simbol">
-                            <p>2 Vagas</p>
-                            </div>
-                        </div>
-                        <div className="iconUnic">
-                                <TfiRulerAlt2 />
-                            <div className="simbol">
-                                <p>300 M<sup>2</sup></p>
-                            </div>
-                        </div>
-                        <div className="iconUnic">
-                                <IoCrop />
-                            <div className="simbol">
-                                <p>150 M<sup>2</sup></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="pricing">
-                        <h5>Aluguel / <span>Mensal</span></h5>
-                        <h2>R$ <span>2.000,00</span></h2>
-                    </div>
-                </div>
-            </div>
-          </div>
-          <div className="each-slide-effect">
-          <div className="imageTop">
-          <div className="image">
-            <a href="/imovel">
-                    <img src={images[2]} alt="" />
-            </a>
-            </div>
-                <div className="blockSlider">
-                    <div className="featured">
-                        <p>Novo</p>
-                    </div>
-                    <a href="/imovel">
-                    <h3>Apartamento luxuoso</h3>
-                    </a>
-                    <h5><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h5>
-                    <div className="icons">
-                        <div className="iconUnic">
-                                <IoBedOutline />
-                            <div className="simbol">
-                            <p>3 Quartos</p>
-                            </div>
-                        </div>
-                        <div className="iconUnic">
-                                <TbBath />
-                            <div className="simbol">
-                            <p>3 Suítes</p>
-                            </div>
-                        </div>
-                        <div className="iconUnic">
-                                <MdOutlineShower />
-                            <div className="simbol">
-                            <p>Banheiro</p>
-                            </div>
-                        </div>
-                        <div className="iconUnic">
-                                <IoCarSportOutline />
-                            <div className="simbol">
-                                <p>3 Vagas</p>
-                            </div>
-                        </div>
-                        <div className="iconUnic">
-                                <TfiRulerAlt2 />
-                            <div className="simbol">
-                                <p>300 M<sup>2</sup></p>
-                            </div>
-                        </div>
-                        <div className="iconUnic">
-                                <IoCrop />
-                            <div className="simbol">
-                                <p>150 M<sup>2</sup></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="pricing">
-                        <h5>Aluguel / <span>Mensal</span></h5>
-                        <h2>R$ <span>2.000,00</span></h2>
-                    </div>
-                </div>
-            </div>
-          </div>
-          <div className="each-slide-effect">
-          <div className="imageTop">
-          <div className="image">
-            <a href="/imovel">
-                    <img src={images[3]} alt="" />
-            </a>
-            </div>
-                <div className="blockSlider">
-                    <div className="featured">
-                        <p>Novo</p>
-                    </div>
-                    <a href="/imovel">
-                    <h3>Apartamento luxuoso</h3>
-                    </a>
-                    <h5><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h5>
-                    <div className="icons">
-                        <div className="iconUnic">
-                                <IoBedOutline />
-                            <div className="simbol">
-                            <p>3 Quartos</p>
-                            </div>
-                        </div>
-                        <div className="iconUnic">
-                                <TbBath />
-                            <div className="simbol">
-                            <p>3 Suítes</p>
-                            </div>
-                        </div>
-                        <div className="iconUnic">
-                                <MdOutlineShower />
-                            <div className="simbol">
-                            <p>Banheiro</p>
-                            </div>
-                        </div>
-                        <div className="iconUnic">
-                                <IoCarSportOutline />
-                            <div className="simbol">
-                                <p>3 Vagas</p>
-                            </div>
-                        </div>
-                        <div className="iconUnic">
-                                <TfiRulerAlt2 />
-                            <div className="simbol">
-                                <p>300 M<sup>2</sup></p>
-                            </div>
-                        </div>
-                        <div className="iconUnic">
-                                <IoCrop />
-                            <div className="simbol">
-                                <p>150 M<sup>2</sup></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="pricing">
-                        <h5>Aluguel / <span>Mensal</span></h5>
-                        <h2>R$ <span>2.000,00</span></h2>
-                    </div>
-                </div>
-            </div>
-          </div>
+            )
+          })
+          }
       </Slide>
   );
 };

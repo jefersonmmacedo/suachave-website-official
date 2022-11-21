@@ -1,61 +1,70 @@
-﻿import "./propertyUnicBlock.css"
-import { FaBed, FaCar, FaShower } from "react-icons/fa";
-import { IoBedOutline, IoCarSportOutline, IoHeart, IoLocationOutline } from "react-icons/io5";
-import { GiShower, GiHomeGarage } from "react-icons/gi";
+import "./propertyUnicBlock.css";
+import { IoBedOutline, IoCarSportOutline, IoLocationOutline } from "react-icons/io5";
 import { MdOutlineShower } from "react-icons/md";
-import profile from "../../assets/images/profile.png";
-import { NewFavorite } from "../NewFavorite/NewFavorite";
 
-export function PropertyUnicBlock({image}) {
-    console.log(image)
+import { NewFavorite } from "../NewFavorite/NewFavorite";
+import api from "../../services/api";
+import { useEffect, useState } from "react";
+
+export function PropertyUnicBlock({id}) {
+    const [property, setProperty] = useState([])
+    useEffect(() => {
+        async function loadproperties() {
+            await api.get(`/property/${id}`).then((res) => {
+                setProperty(res.data[0])
+            }).catch((error) => {
+                console.log(error)
+            })
+        }
+
+        loadproperties()
+    },[id])
+
+
     return (
         <div className="PropertyUnicBlock">
                     <div className="image">
-                        <a href="/imovel">
-                    <img src={image} alt="" />
+                        <a href={`/imovel/${property.id}`}>
+                    <img src={property.featuredImage} alt="" />
                         </a>
                     </div>
+                    {new Date(property.created_at).getDate() === new Date().getDate() ?
                     <div className="featured">
                         <p>Novo</p>
                     </div>
-                    <div className="userBlock">
-                            <div className="ImgUserBlock">
-                                <img src={profile} alt="" />
-                            </div>
-                            <h5 className="name">João Felix Silva imobiliar</h5>
-                            {/* 26 letras */}
-                        </div>
+                    : ""
+                    } 
                     <div className="heart2">
-                    <NewFavorite />
+                    <NewFavorite idProperty={property.id} idCompany={property.idCompany}/>
                     </div>
                     <div className="text">
-                        <a href="/imovel">
-                    <h4>Lindo apartamento luxuoso</h4>
+                    <a href={`/imovel/${property.id}`}>
+                    <h4>{property?.title !== undefined ? property?.title.slice(0,27) : property?.title}</h4>
                         </a>
-                    <h6><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h6>
+                    <h6><IoLocationOutline />{property.district} - {property.city} - {property.uf}</h6>
                     <div className="icons">
                         <div className="iconUnic">
                                 <IoBedOutline />
                             <div className="simbol">
-                                <p>3 Quartos</p>
+                                <p>{property.bedroom} Quartos</p>
                             </div>
                         </div>
                         <div className="iconUnic">
                                 <MdOutlineShower />
                             <div className="simbol">
-                                <p>3 Banheiros</p>
+                                <p>{property.restroom} Banheiros</p>
                             </div>
                         </div>
                         <div className="iconUnic">
                                 <IoCarSportOutline />
                             <div className="simbol">
-                                <p>3 Vagas</p>
+                                <p>{property.garage} Vagas</p>
                             </div>
                         </div>
                     </div>
                     <div className="pricing">
-                        <h6>Aluguel / <span> Mensal</span></h6>
-                        <h3>R$ <span>2.000,00</span></h3>
+                        <h6>{property.status} {property.textRent !==  "" ? "/" : "" }<span> {property.textRent}</span></h6>
+                        <h3>R$ <span>{property.status === "Venda" ? property.priceSale : property.priceRent}</span></h3>
                     </div>
                     </div>
                 </div>

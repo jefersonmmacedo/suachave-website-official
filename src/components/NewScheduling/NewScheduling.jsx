@@ -3,10 +3,33 @@ import { IoCalendar, IoCloseOutline, IoLocationOutline, IoBusinessOutline } from
 import Modal from 'react-modal';
 import { useState } from "react";
 import ImageHouse1 from "../../assets/images/house.jpg";
+import Calendar from 'react-calendar';
+import 'react-calendar/dist/Calendar.css';
 
-export function NewScheduling() {
+export function NewScheduling({idProperty, idCompany}) {
+    const Local = localStorage.getItem("suachave");
+    const user = JSON.parse(Local);
+
     const [isOpenModal, setIsOpenModa] = useState(false);
     const [isOpenModalLogin, setIsOpenModaLogin] = useState(false);
+    const [value, onChange] = useState(new Date());
+    const [shift, setShift] = useState();
+    const [hour, setHour] = useState();
+    const [ownACar, setOwnACar] = useState();
+    const [similarProperties, setSimilarProperties] = useState();
+    const [amountOfPeople, setAmountOfPeople] = useState();
+
+
+
+    function handleNewScheduling() {
+        // const status = "Pendente"
+        // console.log({
+        //     idClient: user.id, idProperty, idCompany, email: user.email, phone: user.phone, whatsapp: user.whatsapp, status,
+        //     day, month, shift, hour, ownACar, nameCompany, address, amountOfPeople,
+        //     similarProperties, dateCompleted: value
+        // })
+    }
+
 
     function handleOpenModal(e) {
       e.preventDefault();
@@ -27,10 +50,26 @@ export function NewScheduling() {
         setIsOpenModaLogin(false);
       }
 
+      function handleShift(e) {
+        setShift(e.target.value);
+      }
+      function handleHour(e) {
+        setHour(e.target.value);
+      }
+      function handleAmountOfPeople(e) {
+        setAmountOfPeople(e.target.value);
+      }
+      function handleOwnACar(e) {
+        setOwnACar(e.target.value);
+      }
+      function handleSimilarProperties(e) {
+        setSimilarProperties(e.target.value);
+      }
+
     Modal.setAppElement('#root');
     return (
         <>
-        <button className="buttonScheduling" onClick={handleOpenModalLogin}><IoCalendar/> Agendar visita</button>
+        <button className="buttonScheduling" onClick={handleOpenModal}><IoCalendar/> Agendar visita</button>
 
         <Modal isOpen={isOpenModal} onRequestClose={handleCloseModal}
             overlayClassName="react-modal-overlay"
@@ -38,8 +77,8 @@ export function NewScheduling() {
             <button type="button" className="react-modal-button" onClick={handleCloseModal}>
             <IoCloseOutline /> 
             </button>
-            <div className="content-modal">
-            <div className="itensModal">
+            <div className="content-modal-scheduling">
+            <div className="itensModal-scheduling">
                 <div className="dataProperty">
                     <div className="image">
                     <img src={ImageHouse1} alt="" />
@@ -53,75 +92,14 @@ export function NewScheduling() {
                     </div>
                     </div>
                 </div>
-                <form action="">
-                    <div className="text">
-                        <p>Mês</p>
-                    </div>
-                <select>
-                    <option>Escolha o mês</option>
-                    <option value="01">Janeiro</option>
-                    <option value="02">Fevereiro</option>
-                    <option value="03">Março</option>
-                    <option value="04">Abril</option>
-                    <option value="05">Maio</option>
-                    <option value="06">Junho</option>
-                    <option value="07">Julho</option>
-                    <option value="08">Agosto</option>
-                    <option value="09">Setembro</option>
-                    <option value="10">Outubro</option>
-                    <option value="11">Novembro</option>
-                    <option value="12">Dezembro</option>
-                </select>
-                <div className="text">
-                        <p>Dia</p>
-                    </div>
-                    <div className="buttonsDays">
-                            <button>1</button>
-                            <button>2</button>
-                            <button>3</button>
-                            <button>4</button>
-                            <button>5</button>
-                            <button>6</button>
-                            <button>7</button>
-                            <button>8</button>
-                            <button>9</button>
-                            <button>10</button>
-                            <button>11</button>
-                            <button>12</button>
-                            <button>13</button>
-                            <button>14</button>
-                            <button>15</button>
-                            <button>16</button>
-                            <button>17</button>
-                            <button>18</button>
-                            <button>19</button>
-                            <button>20</button>
-                            <button>21</button>
-                            <button>22</button>
-                            <button>23</button>
-                            <button>24</button>
-                            <button>25</button>
-                            <button>26</button>
-                            <button>27</button>
-                            <button>28</button>
-                            <button>29</button>
-                            <button>30</button>
-                            <button>31</button>
-                    </div>
-                    <div className="text">
-                        <p>Ano</p>
-                    </div>
-                <select>
-                    <option>Escolha o ano</option>
-                    <option value="2022">2022</option>
-                    <option value="2023">2023</option>
-                </select>
+                <Calendar onChange={onChange} value={value} />
+                <div className="form">
                 <div className="data">
                     <div className="infosData">
                     <div className="text">
                         <p>Turno</p>
                     </div>
-                    <select>
+                     <select value={shift} onChange={handleShift}>
                     <option value="Escolha">Escolha</option>
                     <option value="Manhã">Manhã</option>
                     <option value="Tarde">Tarde</option>
@@ -131,47 +109,62 @@ export function NewScheduling() {
                     <div className="text">
                         <p>Escolha um horário</p>
                     </div>
-                    <select>
-                    <option value="Escolha">Escolha</option>
-                    <option value="08h - 09h">08h - 09h</option>
-                    <option value="09h - 10h">09h - 10h</option>
-                    <option value="10h - 11h">10h - 11h</option>
-                    <option value="11h - 12h">11h - 12h</option>
-                    <option value="13h - 14h">13h - 14h</option>
-                    <option value="14h - 15h">14h - 15h</option>
-                    <option value="15h - 16h">15h - 16h</option>
-                    <option value="16h - 17h">16h - 17h</option>
+                     <select value={hour} onChange={handleHour}>
+                     {shift === "Manhã" ?
+                        <>
+                         <option value="Escolha">Escolha</option>
+                        <option value="08h - 09h">08h - 09h</option>
+                        <option value="09h - 10h">09h - 10h</option>
+                        <option value="10h - 11h">10h - 11h</option>
+                        <option value="11h - 12h">11h - 12h</option>
+                        </>
+                        :
+                        <>
+                        <option value="Escolha">Escolha</option>
+                        <option value="13h - 14h">13h - 14h</option>
+                        <option value="14h - 15h">14h - 15h</option>
+                        <option value="15h - 16h">15h - 16h</option>
+                        <option value="16h - 17h">16h - 17h</option>
+                        </>}
+                  
+
                 </select>
                     </div>
 
                 </div>
                 <div className="data">
-                    <div className="infosData">
-                    <div className="text">
-                        <p>Quantidade de pessoas</p>
-                    </div>
-                    <select>
-                    <option value="Escolha">Escolha</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                </select>
-                    </div>
+
                     <div className="infosData">
                     <div className="text">
                         <p>Possúi carro?</p>
                     </div>
-                    <select>
+                 <select value={ownACar} onChange={handleOwnACar}>
                     <option value="Escolha">Escolha</option>
                     <option value="Não">Não</option>
                     <option value="Sim">Sim</option>
+                </select>
+                    </div>
+
+                    <div className="infosData">
+                    <div className="text">
+                        <p>Quantidade de pessoas</p>
+                    </div>
+                     <select value={amountOfPeople} onChange={handleAmountOfPeople}>
+                        {ownACar === "Sim" ?
+                        <>
+                        <option value="Escolha">Escolha</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option></>
+                        :
+                        <>
+                        <option value="Escolha">Escolha</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        </>}
                 </select>
                     </div>
 
@@ -180,7 +173,7 @@ export function NewScheduling() {
                 <div className="text">
                         <p>Deseja ver imóveis similares que a imobiliária possua?</p>
                     </div>
-                <select>
+                 <select value={similarProperties} onChange={handleSimilarProperties}>
                     <option>Escolha</option>
                     <option value="Sim">Sim</option>
                     <option value="Não">Não</option>
@@ -192,8 +185,8 @@ export function NewScheduling() {
                     <p><IoBusinessOutline />Imobiliária Sua Chave</p>
                     <p><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</p>
                 </div>
-                <button className="btnSubmit">Enviar solicitação de agendamento</button>
-                </form>
+                <button className="btnSubmit" onClick={handleNewScheduling}>Enviar solicitação de agendamento</button>
+                </div>
             </div>
             </div>
             </Modal>

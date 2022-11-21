@@ -1,10 +1,20 @@
-﻿import "./newFavorite.css"
-import { IoChatboxEllipses, IoCloseOutline, IoHeart } from "react-icons/io5";
+import "./newFavorite.css"
+import { IoCloseOutline, IoHeart, IoHeartOutline } from "react-icons/io5";
 import { useState } from "react";
 import Modal from 'react-modal';
+import { useFetch } from "../../hooks/useFetch";
+import api from "../../services/api";
 
-export function NewFavorite() {
-    const [isOpenModal, setIsOpenModa] = useState(false);
+export function NewFavorite({idProperty, idCompany}) {
+
+  const Local = localStorage.getItem("suachave");
+  const user = JSON.parse(Local);
+
+  const [isOpenModal, setIsOpenModa] = useState(false);
+  const idClient = user === null ? "000000" : user.id;
+
+  const {data} = useFetch(`/favorite/filter/${idProperty}/${idClient}`);
+
     function handleOpenModal(e) {
         e.preventDefault();
           setIsOpenModa(true)
@@ -14,13 +24,43 @@ export function NewFavorite() {
           e.preventDefault();
           setIsOpenModa(false);
         }
+
+        async function newFavorite(e) {
+          e.preventDefault();
+          const data = {
+            idClient,
+            idProperty,
+            idCompany
+          }
+          await api.post(`/favorite`, data).then((res) => {
+            console.log("Novo favorito adicionado com sucesso")
+          }).catch((error) => {
+            console.log(error)
+          })
+        }
+
+        async function deleteFavorite(id) {
+          console.log(id)
+          await api.delete(`/favorite/${id}`).then((res) => {
+            console.log("Favorito Deletado")
+          }).catch((error) => {
+            console.log(error)
+          })
+        }
   
 
     Modal.setAppElement('#root');
 
     return (
         <>
-        <div className="NewFavorite" ><IoHeart onClick={handleOpenModal}/></div>
+        <div className="NewFavorite" >
+          {data?.length === 0 ? 
+          <IoHeartOutline color={"#fff"} onClick={user === null ? handleOpenModal : newFavorite}/>
+          :
+          <IoHeart color={"#E0282F"} onClick={user === null ? handleOpenModal : () => deleteFavorite(data[0].id)}/>
+          }
+          
+          </div>
 
         <Modal isOpen={isOpenModal} onRequestClose={handleCloseModal}
             overlayClassName="react-modal-overlay"

@@ -52,7 +52,7 @@ function PrivateRoute({children} ) {
             <Route path="/imoveis/:status" element={<Properties />}/>
             <Route path="/privacidade" element={<PrivacyPolicy />}/>
             <Route path="/termos" element={<TermsOfUse />}/>
-            <Route path="/imovel" element={<Property />}/>
+            <Route path="/imovel/:id" element={<Property />}/>
             <Route path="/imobiliarias" element={<Companies />}/>
             <Route path="/imobiliaria" element={<Company />}/>
             <Route path="/corretores" element={<Brokers />}/>

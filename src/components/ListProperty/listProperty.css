@@ -4,14 +4,15 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 40px;
 }
 
 .ListProperty .itens {
-    width: 90%;
+    width: 95%;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
 }
 

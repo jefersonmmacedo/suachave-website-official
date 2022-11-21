@@ -95,6 +95,7 @@
     font-weight: 400;
     color: var(--Paragraph);
     margin:5px 10px;
+    white-space: pre-line;
 }
 .Property .main .data .propertyUnic .text h3 {
     color: var(--Paragraph);
@@ -137,9 +138,11 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
-    margin: 10px 0;
+    margin: 20px 0;
     flex-wrap: wrap;
     border: none;
+    border-top: 1px solid var(--Border);
+    padding-top: 10px;
 }
 
 .Property .main .data .propertyUnic .text .icons .iconUnic {
@@ -185,6 +188,7 @@
     align-items: flex-start;
     justify-content: flex-start;
     flex-wrap: wrap;
+    margin: 10px 0;
 }
 
 .Property .main .data .propertyUnic .text .characteristics .item {
@@ -194,7 +198,7 @@
     justify-content: flex-start;
     padding: 5px;
     margin: 5px;
-    color: var(--Gray);
+    color: var(--Paragraph);
     padding: 5px 10px;
     border-radius: 6px;
     background-color: rgba(170,0,0, 0.03);
@@ -204,8 +208,8 @@
     margin-right: 3px;
 }
 .Property .main .data .propertyUnic .text .characteristics .item p {
-    color: var(--Gray);
-    font-weight: 700;
+    color: var(--Paragraph);
+    font-weight: 600;
 }
 
 

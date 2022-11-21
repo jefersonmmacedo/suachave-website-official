@@ -22,7 +22,7 @@
     color: var(--Gray);
 }
 .Home .carroussel {
-    width: 1030px;
+    width: 1080px;
     margin: 0px auto;
 }
 
@@ -208,7 +208,7 @@
     font-size: 14px;
 }
 
-@media (max-width: 1090px) {
+@media (max-width: 1085px) {
     .Home .carroussel {
         width: 95%;
         margin: 0px auto;

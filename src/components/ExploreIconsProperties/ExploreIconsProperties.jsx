@@ -38,7 +38,7 @@ export function ExploreIconsProperties() {
                 </div>
                 <div className="IconUnicExplore">
                     <TbMap2 />
-                    <h5>Terrenos e Lotes</h5>
+                    <h5>Terrenos</h5>
                 </div>
             </div>
             </div>

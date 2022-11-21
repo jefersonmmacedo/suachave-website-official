@@ -1,5 +1,5 @@
 ﻿.PropertyUnicBlock {
-    width: 240px;
+    width: 255px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -43,36 +43,6 @@
 
 
 
-.PropertyUnicBlock .userBlock {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: row;
-    max-width: 200px;
-    margin-top: 108px;
-    margin-left: 5px;
-    padding: 3px;
-    position: absolute;
-      background-color: rgba(0,0,0, 0.4);
-    border-radius: 6px;
-  }
-  
-  .PropertyUnicBlock .userBlock .ImgUserBlock {
-    width: 25px;
-    height: 25px;
-    object-fit: cover;
-  }
-  .PropertyUnicBlock .userBlock .ImgUserBlock img {
-    width: 100%;
-    object-fit: cover;
-  }
-  
-  .PropertyUnicBlock .userBlock .name {
-    margin: 5px 0;
-    padding: 3px 5px;
-    color: var(--White);
-    font-weight: 700;
-  }
 /* .PropertyUnicBlock .status {
     display: flex;
     flex-direction: row;
@@ -236,7 +206,7 @@
         margin: 350px 0 50px 0;
     }
 
-    @media (max-width: 570px) {
+    @media (max-width: 572px) {
         .Featured {
             margin: 400px 0 50px 0;
         }
