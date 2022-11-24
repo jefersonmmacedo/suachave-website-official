@@ -2,7 +2,7 @@
 import Navbar2 from "../../components/Nav/Navbar";
 import { Plains } from "../../components/Plains/Plains";
 import { Footer } from "../../components/Footer/Footer";
-import {IoCheckmarkOutline} from "react-icons/io5"
+import {MdAlarm} from "react-icons/md"
 
 export function Pricing() {
     return (
@@ -15,14 +15,17 @@ export function Pricing() {
 
             <div className="future">
                 <h4>Serviços disponíveis <span>em breve</span>:</h4>
-                <h5><IoCheckmarkOutline /> Integração com portais</h5>
-                <h5><IoCheckmarkOutline /> Assinatura digital de contrato</h5>
-                <h5><IoCheckmarkOutline /> Disparo de e-mail automático personalizável</h5>
-                <h5><IoCheckmarkOutline /> Gerenciamento de leads</h5>
-                <h5><IoCheckmarkOutline /> Aplicativo para clientes</h5>
-                <h5><IoCheckmarkOutline /> Aplicativo para gerenciamento de sua imobiliária</h5>
-                <h5><IoCheckmarkOutline /> Aplicativo único para sua imobiliáiria</h5>
-                <h5><IoCheckmarkOutline /> Agendamento de visitas via WhatsApp</h5>
+                <h5><MdAlarm /> Integração com portais</h5>
+                <h5><MdAlarm /> Assinatura digital de contrato</h5>
+                <h5><MdAlarm /> Disparo de e-mail automático personalizável</h5>
+                <h5><MdAlarm /> Gerenciamento de leads</h5>
+                <h5><MdAlarm /> Google Analytcs</h5>
+                <h5><MdAlarm /> Contas de Email (1GB/5GB/15BG/50GB de espaço)</h5>
+                <h5><MdAlarm /> Aplicativo para clientes</h5>
+                <h5><MdAlarm /> Aplicativo para gerenciamento de sua imobiliária</h5>
+                <h5><MdAlarm /> Aplicativo único para sua imobiliáiria</h5>
+                <h5><MdAlarm /> Agendamento de visitas via WhatsApp</h5>
+                <h5><MdAlarm /> Marketing Digital Especializado</h5>
             </div>
 
             <Footer />

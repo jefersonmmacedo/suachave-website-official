@@ -41,7 +41,7 @@ const properties = {
       <Slide {...properties}>
           {data?.map((property) => {
             return (
-                <div className="each-slide-effect">
+                <div className="each-slide-effect" key={property.id}>
           <div className="imageTop">
             <div className="image">
                  <a href={`/imovel/${property.id}`}>

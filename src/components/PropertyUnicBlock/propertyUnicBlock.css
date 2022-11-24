@@ -43,23 +43,23 @@
 
 
 
-/* .PropertyUnicBlock .status {
+.PropertyUnicBlock .status {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background-color: var(--Secondary);
+    background-color: rgba(0, 175, 239, 0.5);
     border-radius: 6px;
     position: absolute;
-    margin-top: 110px;
+    margin-top: 115px;
     margin-left: 10px;
-    padding: 10px 20px;
+    padding: 7px 15px;
 }
 
 .PropertyUnicBlock .status p {
     color: var(--White);
     font-weight: 700;
-} */
+}
 
 .PropertyUnicBlock .heart {
     position: absolute;

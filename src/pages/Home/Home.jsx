@@ -16,6 +16,7 @@ import buscaDistrito from '../../services/api-buscaDistrito';
 import { toast } from 'react-toastify';
 import { ToHire } from "../../components/ToHire/ToHire";
 import { FaBuilding, FaHome, FaStore } from "react-icons/fa";
+import { TopHeadHome } from "../../components/TopHeadHome/TopHeadHome";
 
 export function Home() {
     const LocalCity = localStorage.getItem("suachavecity");
@@ -128,6 +129,7 @@ export function Home() {
     return (
         <div className="Home">
             <Navbar2 />
+            {/* <TopHeadHome /> */}
             <SliderHome />
             <div className="searchView">
             <SearchProperty openModal={handleOpenModal}/>

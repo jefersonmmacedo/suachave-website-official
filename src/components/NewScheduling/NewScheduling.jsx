@@ -79,19 +79,6 @@ export function NewScheduling({idProperty, idCompany}) {
             </button>
             <div className="content-modal-scheduling">
             <div className="itensModal-scheduling">
-                <div className="dataProperty">
-                    <div className="image">
-                    <img src={ImageHouse1} alt="" />
-                    </div>
-                    <div className="textProperty">
-                    <h3>Apartamento luxuoso</h3>
-                    <h5><IoLocationOutline />Centro - Rio Bonito - RJ</h5>
-                    <div className="pricing">
-                        <h6>Aluguel</h6>
-                        <h3>R$ 2.000,00 / Mês</h3>
-                    </div>
-                    </div>
-                </div>
                 <Calendar onChange={onChange} value={value} />
                 <div className="form">
                 <div className="data">
@@ -184,6 +171,23 @@ export function NewScheduling({idProperty, idCompany}) {
                 <div className="address">
                     <p><IoBusinessOutline />Imobiliária Sua Chave</p>
                     <p><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</p>
+                </div>
+                <div className="dataProperty">
+                    <div className="image">
+                    <img src={ImageHouse1} alt="" />
+                    </div>
+                    <div className="textProperty">
+                    <h4>Apartamento luxuoso</h4>
+                    <h6><IoLocationOutline />Centro - Rio Bonito - RJ</h6>
+                    <div className="pricing">
+                        <h6>Aluguel /<span> Mensal</span></h6>
+                        <h3>R$ <span>2.000,00</span></h3>
+                    </div>
+                    {/* <div className="pricing">
+                        <h6>{property.status} {property.textRent !==  "" ? "/" : "" }<span> {property.textRent}</span></h6>
+                        <h3>R$ <span>{property.status === "Venda" ? property.priceSale : property.priceRent}</span></h3>
+                    </div> */}
+                    </div>
                 </div>
                 <button className="btnSubmit" onClick={handleNewScheduling}>Enviar solicitação de agendamento</button>
                 </div>

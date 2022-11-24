@@ -114,7 +114,7 @@
 }
 
 .Pricing .future h5 svg {
-    color: var(--Primary);
+    color: rgba(204, 204, 204, 0.5);
     margin-right: 5px;
     font-size: 22px;
 }

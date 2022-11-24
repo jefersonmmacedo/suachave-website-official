@@ -5,7 +5,7 @@ import Modal from 'react-modal';
 import { useFetch } from "../../hooks/useFetch";
 import api from "../../services/api";
 
-export function NewFavorite({idProperty, idCompany}) {
+export function NewFavorite({idProperty, idCompany, page}) {
 
   const Local = localStorage.getItem("suachave");
   const user = JSON.parse(Local);
@@ -55,7 +55,7 @@ export function NewFavorite({idProperty, idCompany}) {
         <>
         <div className="NewFavorite" >
           {data?.length === 0 ? 
-          <IoHeartOutline color={"#fff"} onClick={user === null ? handleOpenModal : newFavorite}/>
+          <IoHeartOutline color={page ===  "yes" ? "#999999": "#E6E7E8"} onClick={user === null ? handleOpenModal : newFavorite}/>
           :
           <IoHeart color={"#E0282F"} onClick={user === null ? handleOpenModal : () => deleteFavorite(data[0].id)}/>
           }

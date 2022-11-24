@@ -34,8 +34,14 @@ export function PropertyUnicBlock({id}) {
                     </div>
                     : ""
                     } 
+
+                    {property?.financing === "" ? "" :
+                        <div className="status">
+                            <p>Aceita financiamento</p>
+                        </div>
+                    }
                     <div className="heart2">
-                    <NewFavorite idProperty={property.id} idCompany={property.idCompany}/>
+                    <NewFavorite idProperty={property.id} idCompany={property.idCompany} page={"not"}/>
                     </div>
                     <div className="text">
                     <a href={`/imovel/${property.id}`}>

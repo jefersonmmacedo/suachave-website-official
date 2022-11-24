@@ -6,6 +6,8 @@ import apple from "../../assets/images/apple.png";
 
 
 export function Footer() {
+    const Local = localStorage.getItem("suachave");
+    const user = JSON.parse(Local);
 
     const date = new Date().getFullYear();
     return (
@@ -80,7 +82,7 @@ export function Footer() {
                 </div>
                 <div className="copy">
                     <h5>© Sua Chave {date}. Todos os direitos reservados</h5>
-                    <h5><a href="https://www.codingit.com.br/" target="_Blank">Anunciar imóvel</a></h5>
+                    <h5><a href={user !== null ? "https://adm.suachave.com.br/imoveis" : "https://suachave.com.br/sobre"} target="_Blank">Anunciar imóvel</a></h5>
                 </div>
         </div>
     )

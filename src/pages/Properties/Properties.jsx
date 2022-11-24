@@ -1,17 +1,20 @@
 ﻿import "./properties.css";
 import Navbar2 from "../../components/Nav/Navbar";
 import { ListProperty } from "../../components/ListProperty/ListProperty";
-import { SearchPropertyListing } from "../../components/SearchPropertyListing/SearchPropertyListing";
+import { SearchPropertyListing } from "../../components/SearchPropertyHomeTop/SearchPropertyHomeTop";
 import { Footer } from "../../components/Footer/Footer";
 import { FiArrowUpCircle } from "react-icons/fi";
 import { SearchProperty } from "../../components/SearchProperty/SearchProperty";
 import { IoCloseOutline, IoSearch } from "react-icons/io5";
 import Modal from 'react-modal';
 import { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useLocation, useSearchParams, useRoutes} from "react-router-dom";
+import { useQuery } from "../../hooks/useQuery";
 
 export function Properties(){
     const {status} = useParams();
+    const query = useQuery();
+    console.log(query.get("tipo"))
     const [isOpenModalSearch, setIsOpenModaSearch] = useState(false);
     function handleTop(e) {
         window.scrollTo({
@@ -36,12 +39,12 @@ export function Properties(){
         <div className="Properties">
         <Navbar2 />
         <div className="listPage">
-            <div className="SearchView">
+            {/* <div className="SearchView">
             <SearchPropertyListing />
             </div>
             <div className="ButtomView">
             <button onClick={handleOpenModalSearch}><IoSearch/>Buscar Imóveis</button>
-            </div>
+            </div> */}
             <ListProperty status={status}/>
             <button className="topScroll" onClick={handleTop}><FiArrowUpCircle /></button>
         </div>

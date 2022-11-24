@@ -1,8 +1,7 @@
 ﻿import "./property.css"
 import { SliderImages } from '../../components/SliderImages/SliderImages';
 import Navbar2 from "../../components/Nav/Navbar";
-import {FaBed, FaShower, FaCar, FaBath} from 'react-icons/fa';
-import {IoCrop, IoMove, IoArrowBack, IoArrowForward, IoLocationOutline, IoBedOutline, IoCarSportOutline, IoCheckmarkSharp} from 'react-icons/io5';
+import {IoCrop, IoLocationOutline, IoBedOutline, IoCarSportOutline, IoCheckmarkSharp} from 'react-icons/io5';
 import {TfiRulerAlt2} from 'react-icons/tfi';
 import {MdOutlineShower} from 'react-icons/md';
 import {TbBath} from 'react-icons/tb';
@@ -12,9 +11,8 @@ import { NewScheduling } from "../../components/NewScheduling/NewScheduling";
 import { NewMessageProperty } from "../../components/NewMessageProperty/NewMessageProperty";
 import { NewFavorite } from "../../components/NewFavorite/NewFavorite";
 import { useParams } from "react-router-dom";
-import api from "../../services/api";
-import { useEffect, useState } from "react";
 import { useFetch } from "../../hooks/useFetch";
+import { toNumber } from "vanilla-masker";
 
 
 
@@ -32,6 +30,31 @@ export function Property() {
         )
     }
 
+    const valuesRent =[
+        // {
+        // id: "rent",
+        // value: parseFloat(data[0].priceRent)
+        // },
+        {
+        id: "condominium",
+        value: data[0].condominium
+        },
+        {
+        id: "iptu",
+        value: data[0].iptu
+        },
+        {
+        id: "otherPrices",
+        value: data[0].otherPrices
+        }
+]
+
+    const payments = valuesRent?.reduce(function (acumulador, objetoAtual){
+        return acumulador + parseFloat(objetoAtual.value);
+      }, 0);
+
+      var ResultBRL = payments.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+
     return (
        <div className="Property">
         <Navbar2 />
@@ -46,7 +69,7 @@ export function Property() {
 
                     <NewMessageProperty />
                     <NewScheduling />
-                    <NewFavorite />
+                    <NewFavorite idProperty={data[0].id} idCompany={data[0].idCompany} page={"yes"}/>
                      {/* <div className="heart">
                     <IoHeart onClick={handleOpenModal}/>
                     </div> */}
@@ -125,40 +148,79 @@ export function Property() {
                         })}
                     </div>
                     <div className="infosCompanyMobile">
-                    {data[0].priceRent === "" ? "" :
+                    {data[0].status === "Aluguel" ?
                     <>
+                     {data[0].priceRent === "" ? "" :
                     <div className="pricing">
                         <h5>{data[0].status} / <span> {data[0].textRent}</span></h5>
                         <h2>R$ <span>{data[0].priceRent}</span></h2>
                     </div>
-                    {data[0].condominium === "" ? "" :
+                    }
+                     {data[0].condominium === "" || data[0].condominium === "0,00" ? ""  :
                     <div className="otherPrincings">
                         <h5>Condomínio</h5>
                         <h5>R$ {data[0].condominium}</h5>
                     </div>
                         }
-                     {data[0].iptu === "" ? "" :
+                     {data[0].iptu === "" || data[0].iptu === "0,00" ? "" :
                     <div className="otherPrincings">
                         <h5>IPTU</h5>
                         <h5>R$ {data[0].iptu}</h5>
                     </div>
                      }
-                     {data[0].otherPrices === "" ? "" :
+                     {data[0].otherPrices === "" || data[0].otherPrices === "0,00" ? ""  :
                     <div className="otherPrincings">
                         <h5>Outros encargos</h5>
                         <h5>R$ {data[0].otherPrices}</h5>
                     </div>
                      }
+                      {ResultBRL === "" ? "" :
                     <div className="pricingTotal">
-                        <h4>Total</h4>
-                         <h4>R$ 2.500,00</h4>
+                        <h4>Total encargos</h4>
+                         <h4>{ResultBRL}</h4>
                      </div>
-                    </>}
+                    }
+                     {data[0].priceSale === "" ? "" :
+                     <div className="pricing">
+                         <h5>Venda</h5>
+                         <h2>R$ <span>{data[0].priceSale}</span></h2>
+                     </div>
+                     }
+                    </>
+                    :
+                    <>
                     {data[0].priceSale === "" ? "" :
                     <div className="pricing">
                         <h5>Venda</h5>
                         <h2>R$ <span>{data[0].priceSale}</span></h2>
                     </div>
+                    }
+                    {data[0].condominium === "" || data[0].condominium === "0,00" ? ""  :
+                    <div className="otherPrincings">
+                        <h5>Condomínio</h5>
+                        <h5>R$ {data[0].condominium}</h5>
+                    </div>
+                        }
+                     {data[0].iptu === "" || data[0].iptu === "0,00" ? "" :
+                    <div className="otherPrincings">
+                        <h5>IPTU</h5>
+                        <h5>R$ {data[0].iptu}</h5>
+                    </div>
+                     }
+                     {data[0].otherPrices === "" || data[0].otherPrices === "0,00" ? ""  :
+                    <div className="otherPrincings">
+                        <h5>Outros encargos</h5>
+                        <h5>R$ {data[0].otherPrices}</h5>
+                    </div>
+                     }
+                     {ResultBRL === "" ? "" :
+                   <div className="pricingTotal">
+                       <h4>Total encargos</h4>
+                        <h4>{ResultBRL}</h4>
+                    </div>
+                   }
+                  
+                   </>
                     }
                     <CompanyInfo />
                     </div>
@@ -193,41 +255,79 @@ export function Property() {
                 </div>
 
                 <div className="infosCompany">
-                {data[0].priceRent === "" ? "" :
+                {data[0].status === "Aluguel" ?
                     <>
+                     {data[0].priceRent === "" ? "" :
                     <div className="pricing">
                         <h5>{data[0].status} / <span> {data[0].textRent}</span></h5>
                         <h2>R$ <span>{data[0].priceRent}</span></h2>
                     </div>
-                    {data[0].condominium === "" ? "" :
+                    }
+                    {data[0].condominium === "" || data[0].condominium === "0,00" ? ""  :
                     <div className="otherPrincings">
                         <h5>Condomínio</h5>
                         <h5>R$ {data[0].condominium}</h5>
                     </div>
                         }
-                     {data[0].iptu === "" ? "" :
+                     {data[0].iptu === "" || data[0].iptu === "0,00" ? "" :
                     <div className="otherPrincings">
                         <h5>IPTU</h5>
                         <h5>R$ {data[0].iptu}</h5>
                     </div>
                      }
-                     {data[0].otherPrices === "" ? "" :
+                     {data[0].otherPrices === "" || data[0].otherPrices === "0,00" ? ""  :
                     <div className="otherPrincings">
                         <h5>Outros encargos</h5>
                         <h5>R$ {data[0].otherPrices}</h5>
                     </div>
                      }
+                      {ResultBRL === "" ? "" :
                     <div className="pricingTotal">
-                        <h4>Total</h4>
-                        <h4>R$ 2.500,00</h4>
-                    </div>
-                    </>}
-
+                        <h4>Total encargos</h4>
+                         <h4>{ResultBRL}</h4>
+                     </div>
+                    }
+                     {data[0].priceSale === "" ? "" :
+                     <div className="pricing">
+                         <h5>Venda</h5>
+                         <h2>R$ <span>{data[0].priceSale}</span></h2>
+                     </div>
+                     }
+                    </>
+                    :
+                    <>
                     {data[0].priceSale === "" ? "" :
                     <div className="pricing">
                         <h5>Venda</h5>
                         <h2>R$ <span>{data[0].priceSale}</span></h2>
                     </div>
+                    }
+                   {data[0].condominium === "" || data[0].condominium === "0,00" ? ""  :
+                   <div className="otherPrincings">
+                       <h5>Condomínio</h5>
+                       <h5>R$ {data[0].condominium}</h5>
+                   </div>
+                       }
+                    {data[0].iptu === "" || data[0].iptu === "0,00" ? ""  :
+                   <div className="otherPrincings">
+                       <h5>IPTU</h5>
+                       <h5>R$ {data[0].iptu}</h5>
+                   </div>
+                    }
+                    {data[0].otherPrices === "" || data[0].otherPrices === "0,00" ? ""  :
+                   <div className="otherPrincings">
+                       <h5>Outros encargos</h5>
+                       <h5>R$ {data[0].otherPrices}</h5>
+                   </div>
+                    }
+                     {ResultBRL === "" ? "" :
+                   <div className="pricingTotal">
+                       <h4>Total encargos</h4>
+                        <h4>{ResultBRL}</h4>
+                    </div>
+                   }
+                  
+                   </>
                     }
                 <CompanyInfo />
                 </div>
