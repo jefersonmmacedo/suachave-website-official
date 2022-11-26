@@ -24,11 +24,11 @@ export function PropertyUnicBlock({id}) {
     return (
         <div className="PropertyUnicBlock">
                     <div className="image">
-                        <a href={`/imovel/${property.id}`}>
-                    <img src={property.featuredImage} alt="" />
+                        <a href={`/imovel/${property?.id}`}>
+                    <img src={property?.featuredImage} alt="" />
                         </a>
                     </div>
-                    {new Date(property.created_at).getDate() === new Date().getDate() ?
+                    {new Date(property?.created_at).getDate() === new Date().getDate() ?
                     <div className="featured">
                         <p>Novo</p>
                     </div>
@@ -41,36 +41,36 @@ export function PropertyUnicBlock({id}) {
                         </div>
                     }
                     <div className="heart2">
-                    <NewFavorite idProperty={property.id} idCompany={property.idCompany} page={"not"}/>
+                    <NewFavorite idProperty={property?.id} idCompany={property?.idCompany} page={"not"}/>
                     </div>
                     <div className="text">
-                    <a href={`/imovel/${property.id}`}>
+                    <a href={`/imovel/${property?.id}`}>
                     <h4>{property?.title !== undefined ? property?.title.slice(0,27) : property?.title}</h4>
                         </a>
-                    <h6><IoLocationOutline />{property.district} - {property.city} - {property.uf}</h6>
+                    <h6><IoLocationOutline />{property?.district} - {property?.city} - {property?.uf}</h6>
                     <div className="icons">
                         <div className="iconUnic">
                                 <IoBedOutline />
                             <div className="simbol">
-                                <p>{property.bedroom} Quartos</p>
+                                <p>{property?.bedroom} Quartos</p>
                             </div>
                         </div>
                         <div className="iconUnic">
                                 <MdOutlineShower />
                             <div className="simbol">
-                                <p>{property.restroom} Banheiros</p>
+                                <p>{property?.restroom} Banheiros</p>
                             </div>
                         </div>
                         <div className="iconUnic">
                                 <IoCarSportOutline />
                             <div className="simbol">
-                                <p>{property.garage} Vagas</p>
+                                <p>{property?.garage} Vagas</p>
                             </div>
                         </div>
                     </div>
                     <div className="pricing">
-                        <h6>{property.status} {property.textRent !==  "" ? "/" : "" }<span> {property.textRent}</span></h6>
-                        <h3>R$ <span>{property.status === "Venda" ? property.priceSale : property.priceRent}</span></h3>
+                        <h6>{property?.status} {property?.textRent !==  "" ? "/" : "" }<span> {property?.textRent}</span></h6>
+                        <h3>R$ <span>{property?.status === "Venda" ? property?.priceSale : property?.priceRent}</span></h3>
                     </div>
                     </div>
                 </div>

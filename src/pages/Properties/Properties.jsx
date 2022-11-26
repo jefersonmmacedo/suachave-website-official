@@ -45,7 +45,8 @@ export function Properties(){
             <div className="ButtomView">
             <button onClick={handleOpenModalSearch}><IoSearch/>Buscar Imóveis</button>
             </div> */}
-            <ListProperty status={status}/>
+            <ListProperty status={status} tipo={query.get("tipo")} subtipo={query.get("subtipo")} quartos={query.get("quartos")}
+                           suites={query.get("suites")} banheiros={query.get("banheiros")} garagem={query.get("garagem")}/>
             <button className="topScroll" onClick={handleTop}><FiArrowUpCircle /></button>
         </div>
         <Footer />

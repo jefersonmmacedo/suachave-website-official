@@ -12,8 +12,6 @@ import { NewMessageProperty } from "../../components/NewMessageProperty/NewMessa
 import { NewFavorite } from "../../components/NewFavorite/NewFavorite";
 import { useParams } from "react-router-dom";
 import { useFetch } from "../../hooks/useFetch";
-import { toNumber } from "vanilla-masker";
-
 
 
 export function Property() {
@@ -55,6 +53,15 @@ export function Property() {
 
       var ResultBRL = payments.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
 
+      const dataProperty = {
+        idPropery: data[0].id,
+        adress: `${data[0].road} - ${data[0].district} - ${data[0].city} - ${data[0].uf}`,
+        status: data[0].status,
+        priceRent: data[0].priceRent,
+        priceSale: data[0].priceSale,
+        titleProperty: data[0].title
+      }
+
     return (
        <div className="Property">
         <Navbar2 />
@@ -68,11 +75,9 @@ export function Property() {
                     </div>
 
                     <NewMessageProperty />
-                    <NewScheduling />
+                    <NewScheduling idProperty={data[0].id} idCompany={data[0].idCompany}/>
                     <NewFavorite idProperty={data[0].id} idCompany={data[0].idCompany} page={"yes"}/>
-                     {/* <div className="heart">
-                    <IoHeart onClick={handleOpenModal}/>
-                    </div> */}
+
             </div>
                 <div className="text">
                     <h2>{data[0].title}</h2>
@@ -235,15 +240,15 @@ export function Property() {
 
                     {/* <div className="map"> */}
                     {/* <iframe
-  width="600"
-  height="450"
-  style={{border:"0px", borderRadius: "6px"}}
-  loading="lazy"
-  allowfullscreen
-  referrerpolicy="no-referrer-when-downgrade"
-  src={`https://www.google.com/maps/embed/v1/place?key="AIzaSyAKKy0iHlEZMQavlxNM5i-tkIYp4q7X_Y0
-    &q=Space+Needle,Seattle+WA`}>
-</iframe> */}
+                        width="600"
+                        height="450"
+                        style={{border:"0px", borderRadius: "6px"}}
+                        loading="lazy"
+                        allowfullscreen
+                        referrerpolicy="no-referrer-when-downgrade"
+                        src={`https://www.google.com/maps/embed/v1/place?key="AIzaSyAKKy0iHlEZMQavlxNM5i-tkIYp4q7X_Y0
+                            &q=Space+Needle,Seattle+WA`}>
+                    </iframe> */}
                     {/* <iframe class="gmap_iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
                     src={text}
                     width="100%" height="300" style={{border:"0px", borderRadius: "6px"}} allowFullScreen=""

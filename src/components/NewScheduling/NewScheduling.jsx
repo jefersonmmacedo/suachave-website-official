@@ -5,6 +5,8 @@ import { useState } from "react";
 import ImageHouse1 from "../../assets/images/house.jpg";
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
+import { useFetch } from "../../hooks/useFetch";
+import { PropertyUnicBlock } from "../PropertyUnicBlock/PropertyUnicBlock";
 
 export function NewScheduling({idProperty, idCompany}) {
     const Local = localStorage.getItem("suachave");
@@ -18,16 +20,17 @@ export function NewScheduling({idProperty, idCompany}) {
     const [ownACar, setOwnACar] = useState();
     const [similarProperties, setSimilarProperties] = useState();
     const [amountOfPeople, setAmountOfPeople] = useState();
+    const [meet, setMeet] = useState();
 
-
+    // const {data} = useFetch(`/property/${idCompany}`)
 
     function handleNewScheduling() {
-        // const status = "Pendente"
-        // console.log({
-        //     idClient: user.id, idProperty, idCompany, email: user.email, phone: user.phone, whatsapp: user.whatsapp, status,
-        //     day, month, shift, hour, ownACar, nameCompany, address, amountOfPeople,
-        //     similarProperties, dateCompleted: value
-        // })
+        const status = "Pendente"
+        console.log({
+            idClient: user.id, idProperty, idCompany, email: user.email, phone: user.phone, whatsapp: user.whatsapp, status,
+            day: new Date(value).getDate(), month: new Date(value).getMonth()+1, year: new Date(value).getFullYear(), shift, hour, ownACar, nameCompany: "", address: "", amountOfPeople,
+            similarProperties, dateCompleted: value
+        })
     }
 
 
@@ -65,6 +68,9 @@ export function NewScheduling({idProperty, idCompany}) {
       function handleSimilarProperties(e) {
         setSimilarProperties(e.target.value);
       }
+      function handleMeet(e) {
+        setMeet(e.target.value);
+      }
 
     Modal.setAppElement('#root');
     return (
@@ -79,11 +85,12 @@ export function NewScheduling({idProperty, idCompany}) {
             </button>
             <div className="content-modal-scheduling">
             <div className="itensModal-scheduling">
+              <h2>Novo agendamento</h2>
                 <Calendar onChange={onChange} value={value} />
                 <div className="form">
                 <div className="data">
                     <div className="infosData">
-                    <div className="text">
+                    <div className="textModal-scheduling">
                         <p>Turno</p>
                     </div>
                      <select value={shift} onChange={handleShift}>
@@ -93,7 +100,7 @@ export function NewScheduling({idProperty, idCompany}) {
                 </select>
                     </div>
                     <div className="infosData">
-                    <div className="text">
+                    <div className="textModal-scheduling">
                         <p>Escolha um horário</p>
                     </div>
                      <select value={hour} onChange={handleHour}>
@@ -105,14 +112,15 @@ export function NewScheduling({idProperty, idCompany}) {
                         <option value="10h - 11h">10h - 11h</option>
                         <option value="11h - 12h">11h - 12h</option>
                         </>
-                        :
+                        : shift === "Tarde" ?
                         <>
                         <option value="Escolha">Escolha</option>
                         <option value="13h - 14h">13h - 14h</option>
                         <option value="14h - 15h">14h - 15h</option>
                         <option value="15h - 16h">15h - 16h</option>
                         <option value="16h - 17h">16h - 17h</option>
-                        </>}
+                        </>
+                        : <option value="Escolha">Escolha Turno</option>}
                   
 
                 </select>
@@ -122,7 +130,7 @@ export function NewScheduling({idProperty, idCompany}) {
                 <div className="data">
 
                     <div className="infosData">
-                    <div className="text">
+                    <div className="textModal-scheduling">
                         <p>Possúi carro?</p>
                     </div>
                  <select value={ownACar} onChange={handleOwnACar}>
@@ -133,7 +141,7 @@ export function NewScheduling({idProperty, idCompany}) {
                     </div>
 
                     <div className="infosData">
-                    <div className="text">
+                    <div className="textModal-scheduling">
                         <p>Quantidade de pessoas</p>
                     </div>
                      <select value={amountOfPeople} onChange={handleAmountOfPeople}>
@@ -157,22 +165,41 @@ export function NewScheduling({idProperty, idCompany}) {
 
                 </div>
 
-                <div className="text">
-                        <p>Deseja ver imóveis similares que a imobiliária possua?</p>
+
+                    <div className="data">
+                    <div className="infosData">
+<div className="textModal-scheduling">
+    <p>Local de encontro</p>
+</div>
+ <select value={meet} onChange={handleMeet}>
+    <option value="Escolha">Local de encontro</option>
+    <option value="Imobiliária">Imobiliária</option>
+    <option value="Endereço do imóvel">Endereço do imóvel</option>
+</select>
+</div>
+<div className="infosData">
+<div className="textModal-scheduling">
+                        <p>Deseja ver imóveis similares da imobiliária?</p>
                     </div>
                  <select value={similarProperties} onChange={handleSimilarProperties}>
                     <option>Escolha</option>
                     <option value="Sim">Sim</option>
                     <option value="Não">Não</option>
                 </select>
-                <div className="text">
+
+</div>
+
+
+
+</div>
+<div className="textModal-scheduling">
                         <p>Endereço de encontro</p>
                     </div>
                 <div className="address">
                     <p><IoBusinessOutline />Imobiliária Sua Chave</p>
                     <p><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</p>
                 </div>
-                <div className="dataProperty">
+                {/* <div className="dataProperty">
                     <div className="image">
                     <img src={ImageHouse1} alt="" />
                     </div>
@@ -183,12 +210,10 @@ export function NewScheduling({idProperty, idCompany}) {
                         <h6>Aluguel /<span> Mensal</span></h6>
                         <h3>R$ <span>2.000,00</span></h3>
                     </div>
-                    {/* <div className="pricing">
-                        <h6>{property.status} {property.textRent !==  "" ? "/" : "" }<span> {property.textRent}</span></h6>
-                        <h3>R$ <span>{property.status === "Venda" ? property.priceSale : property.priceRent}</span></h3>
-                    </div> */}
                     </div>
-                </div>
+                </div> */}
+
+                <PropertyUnicBlock id={idProperty}/>
                 <button className="btnSubmit" onClick={handleNewScheduling}>Enviar solicitação de agendamento</button>
                 </div>
             </div>

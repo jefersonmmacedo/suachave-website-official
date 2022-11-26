@@ -4,7 +4,7 @@ import { IoSearch} from "react-icons/io5";
 import { useFetch } from "../../hooks/useFetch";
 import { useState } from "react";
 
-export function ListProperty({status}) {
+export function ListProperty({status, tipo, subtipo, quartos, suites, banheiros, garagem}) {
     const availability = "Disponível";
     const [subType, setSubType] = useState("");
     const [type, setType] = useState("");
@@ -12,6 +12,8 @@ export function ListProperty({status}) {
     const [garage, setGarage] = useState("");
     const [suite, setSuite] = useState("");
     const [restroom, setRestroom] = useState("");
+
+    console.log(status, tipo, subtipo, quartos, suites, banheiros, garagem)
 
     const {data} = useFetch(`/property/lists/${availability}/${status}`);
 

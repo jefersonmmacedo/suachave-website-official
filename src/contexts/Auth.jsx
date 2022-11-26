@@ -348,6 +348,18 @@ async function newVisit(idAccount, username, idFriend) {
         })
     }
 
+    async function newScheduling({idClient, idProperty, idCompany, email, phone, whatsapp, status,
+        day, month, year, shift, hour, ownACar, address, similarProperties, amountOfPeople, dateCompleted}) {
+        const data = {idClient, idProperty, idCompany, email, phone, whatsapp, status,
+            day, month, year, shift, hour, ownACar, address, similarProperties, amountOfPeople, dateCompleted}
+        await api.post("/scheduling/", data).then((res) => {
+            toast.success("Agendamento criado com sucesso!");
+        
+        }).catch((error) => {
+            console.log(error)
+        })
+    }
+
 
   // Deslogandop após tempo de inatividade
    function inactivityTime() {
@@ -399,7 +411,8 @@ async function newVisit(idAccount, username, idFriend) {
             recoverPasswordNew,
             inactivityTime,
             createPayment,
-            deleteConversation
+            deleteConversation,
+            newScheduling
         }}>
             {children}
         </AuthContext.Provider>
