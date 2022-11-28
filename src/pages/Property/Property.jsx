@@ -13,21 +13,38 @@ import { NewFavorite } from "../../components/NewFavorite/NewFavorite";
 import { useParams } from "react-router-dom";
 import { useFetch } from "../../hooks/useFetch";
 import { NewShare } from "../../components/NewShare/NewShare";
+import api from "../../services/api";
 
 
 export function Property() {
+    const Local = localStorage.getItem("suachave");
+    const user = JSON.parse(Local);
+
     const {id} = useParams()
     const {data} = useFetch(`/property/${id}`)
-
-    if(data) {
-        console.log(data)
-    }
 
     if(!data) {
         return (
             <>Carregando...</>
         )
     }
+    if(data) {
+         newView(data[0].id, data[0].idCompany )
+    }
+
+        async function newView(property, company) {
+            const data = {
+                idProperty: property ,
+                idCompany: company ,
+                idClient: user === null ? null : user.id
+            }
+            await api.post("/viewproperty", data).then((res) => {
+                return
+            }).catch((err) => {
+                console.log(err)
+            })
+        }
+
 
     const valuesRent =[
         // {
@@ -83,7 +100,7 @@ export function Property() {
              }
 
                     <NewMessageProperty />
-                    <NewScheduling idProperty={data[0].id} idCompany={data[0].idCompany} />
+                    <NewScheduling idProperty={data[0].id} idCompany={data[0].idCompany} title={data[0].title} image={data[0].featuredImage}/>
                     <NewShare idProperty={data[0].id} title={`${data[0].title} (${data[0].city} / ${data[0].uf})`}/>
                     <NewFavorite idProperty={data[0].id} idCompany={data[0].idCompany} page={"yes"}/>
 

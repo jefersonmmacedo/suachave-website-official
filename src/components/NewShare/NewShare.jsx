@@ -4,7 +4,6 @@ import { RWebShare } from "react-web-share";
 
 
 export function NewShare({idProperty, title}) {
-    console.log(title)
     return (
         <>
       <RWebShare

@@ -14,15 +14,10 @@ export function MessagesProperty() {
 
                 <div className="main">
                 <ToolBarClient />
-                {/* <div className="text">
-                <h2>Minhas mensagens</h2>
-                    <h3><IoCloseCircle /></h3>
-                    <h3>Você não possui agendamentos</h3>
-                    <a href="/imoveis/venda">Ver imóveis</a>
-                </div> */}
                 <div className="text">
                 <h2>Minhas conversas</h2>
-                <div className="chat">
+                <h5>Você não possui conversas</h5>
+                {/* <div className="chat">
                     <div className="image">
                         <img src={ImageHouse} alt="" />
                     </div>
@@ -31,27 +26,8 @@ export function MessagesProperty() {
                     <h5>Olá, boa noite. Este imóvel aceita financiamento...</h5>
                     <h6>Ultima mensagem às 16:45h</h6>
                     </div>
-                </div>
-                <div className="chat">
-                    <div className="image">
-                        <img src={ImageHouse1} alt="" />
-                    </div>
-                    <div className="textChat">
-                    <h3>Lindo apartamento luxuoso</h3>
-                    <h5>Olá, boa noite. Este imóvel aceita financiamento...</h5>
-                    <h6>Ultima mensagem às 16:45h</h6>
-                    </div>
-                </div>
-                <div className="chat">
-                    <div className="image">
-                        <img src={ImageHouse2} alt="" />
-                    </div>
-                    <div className="textChat">
-                    <h3>Lindo apartamento luxuoso</h3>
-                    <h5>Olá, boa noite. Este imóvel aceita financiamento...</h5>
-                    <h6>Ultima mensagem às 16:45h</h6>
-                    </div>
-                </div>
+                </div> */}
+
                 </div>
             </div>
             <div className="viewFooter">

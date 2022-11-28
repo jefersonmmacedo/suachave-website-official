@@ -9,7 +9,7 @@ import api from "../../services/api";
 import { useContext } from "react";
 import { AuthContext } from "../../contexts/Auth";
 
-export function NewScheduling({idProperty, idCompany}) {
+export function NewScheduling({idProperty, idCompany, title, image}) {
     const Local = localStorage.getItem("suachave");
     const user = JSON.parse(Local);
 
@@ -50,7 +50,8 @@ export function NewScheduling({idProperty, idCompany}) {
     function handleNewScheduling() {
         const status = "Pendente"
         newScheduling({
-            idClient: user.id, idProperty, idCompany, email: user.email, phone: user.phone, whatsapp: user.whatsapp, status, meet,
+            idClient: user.id, idProperty, idCompany, titleProperty: title, imageProperty: image, email: user.email, phone: user.phone,
+            whatsapp: user.whatsapp, status, meet,
             day: new Date(value).getDate(), month: new Date(value).getMonth()+1, year: new Date(value).getFullYear(),
             shift, hour, ownACar, location: meet === "Imobiliária" ? company.fantasyName : "No local do imóvel",
             address: meet === "Imobiliária" ? `${company.road} - Nº ${company.number} - ${company.district} - ${company.city} - ${company.uf}` : `${property.road} - ${property.district} - ${property.city} - ${property.uf}`,

@@ -350,16 +350,33 @@ async function newVisit(idAccount, username, idFriend) {
     }
 
     async function newScheduling({
-        idClient, idProperty, idCompany, email, phone, whatsapp, status, meet, 
+        idClient, idProperty, idCompany, titleProperty, imageProperty, email, phone, whatsapp, status, meet, 
       day, month, year, shift, hour, ownACar, location, address, similarProperties, amountOfPeople, dateCompleted
     }) {
-        const data = {idClient, idProperty, idCompany, email, phone, whatsapp, status, meet, 
+        const data = {idClient, idProperty, idCompany, titleProperty, imageProperty, email, phone, whatsapp, status, meet, 
             day, month, year, shift, hour, ownACar, location, address, similarProperties, amountOfPeople, dateCompleted}
 
         await api.post("/scheduling/", data).then((res) => {
             
             toast.success("Agendamento criado com sucesso!");
             window.location.reload(false);
+
+        }).catch((error) => {
+            console.log(error)
+        })
+    }
+    async function newContact({
+        idProperty, idCompany, idClient, name, email, phone, whatsapp, type, link
+    }) {
+        const data = {idProperty, idCompany, idClient, name, email, phone, whatsapp, type}
+
+        await api.post("/contact/", data).then((res) => {
+
+            if(type === "Ligação") {
+                window.open(`tel:+55${phone}`, "_self");
+            } else {
+                window.open(`https://wa.me/55${whatsapp}?text=Olá. Gostaria de saber mais detalhes sobre o imóvel:%20 ${link}`)
+            }
 
         }).catch((error) => {
             console.log(error)
@@ -418,7 +435,8 @@ async function newVisit(idAccount, username, idFriend) {
             inactivityTime,
             createPayment,
             deleteConversation,
-            newScheduling
+            newScheduling,
+            newContact
         }}>
             {children}
         </AuthContext.Provider>

@@ -34,7 +34,7 @@ export function ToolBarClient() {
                     </a>
                 </div>
                 <div className="ToolUnicClient">
-                   <a href="/alugueis">
+                   <a href="/meusimoveis">
                     <IoHomeOutline /><p>Imóveis</p>
                     </a>
                 </div>

@@ -6,17 +6,20 @@ import imobiliária from "../../assets/images/imob1.png";
 import { useState } from "react";
 import Modal from 'react-modal';
 import { useFetch } from "../../hooks/useFetch";
+import { useContext } from "react";
+import { AuthContext } from "../../contexts/Auth";
 
 export function CompanyInfo({idProperty, idCompany}) {
     const Local = localStorage.getItem("suachave");
     const user = JSON.parse(Local);
+
+    const {newContact} = useContext(AuthContext);
 
     const [isOpenModal, setIsOpenModa] = useState(false);
     const [isOpenModalPhone, setIsOpenModaPhone] = useState(false);
 
     const [name, setName] = useState("");
     const [phone, setPhone] = useState("");
-    const [whatsapp, setWhatsapp] = useState("");
     const [email, setEmail] = useState("");
 
     const {data} = useFetch(`/company/unic/${idCompany}`)
@@ -28,15 +31,21 @@ export function CompanyInfo({idProperty, idCompany}) {
     }
 
     function handleNewContactButton(type) {
-        console.log({
+        newContact({
         idProperty: idProperty, idCompany: idCompany, idClient: user.id, name: user.name,
-        email: user.email, phone: user.phone, whatsapp: user.whatsapp, type: type})
+        email: user.email, phone: user.phone, whatsapp: user.whatsapp, type: type, link: `http://www.suachave.com.br/imovel/${idProperty}`})
     }
-    
-    function handleNewContactModal(type, email, name, phone, whatsapp) {
-        console.log({
-        idProperty: idProperty, idCompany: idCompany, idClient: user.id, name: user.name,
-        email: user.email, phone: user.phone, whatsapp: user.whatsapp, type: type})
+
+    function handleNewContactModal(type) {
+        newContact({
+        idProperty: idProperty, idCompany: idCompany, idClient: "User Sem cadastro", name: name,
+        email: email, phone: phone, whatsapp: phone, type: type, link: `http://www.suachave.com.br/imovel/${idProperty}`})
+
+        if(type === "WhatsApp") {
+            setIsOpenModa(false)
+        } else {
+            setIsOpenModaPhone(false)
+        }
     }
 
 
@@ -79,8 +88,8 @@ export function CompanyInfo({idProperty, idCompany}) {
             <div className="contact">
             </div>
                 <divo className="buttonsContact">
-                    <button className="btn-whats" onClick={handleOpenModal}><IoLogoWhatsapp /> Whatsapp</button>
-                    <button onClick={handleOpenModalPhone}><IoCall /> Ligar</button>
+                    <button className="btn-whats" onClick={user == null ? handleOpenModal : () => handleNewContactButton("Whatsapp")}><IoLogoWhatsapp /> Whatsapp</button>
+                    <button onClick={user == null ? handleOpenModalPhone : () => handleNewContactButton("Ligação") }><IoCall /> Ligar </button>
                 </divo>
 
 
@@ -97,14 +106,14 @@ export function CompanyInfo({idProperty, idCompany}) {
 
                     <form action="">
                         <span>Nome</span>
-                        <input type="text" placeholder="Nome completo"/>
+                        <input type="text" placeholder="Nome completo" value={name} onChange={e => setName(e.target.value)}/>
                         <span>Whatsapp</span>
-                        <input type="text" placeholder="(XX)XXXXX-XXXX"/>
+                        <input type="text" placeholder="(XX)XXXXX-XXXX" value={phone} onChange={e => setPhone(e.target.value)}/>
                         <span>Email</span>
-                        <input type="text" placeholder="seuemail@provedor.com"/>
+                        <input type="text" placeholder="seuemail@provedor.com" value={email} onChange={e => setEmail(e.target.value)}/>
                     </form>
 
-                    <button>Ir para Whatsapp</button>
+                    <button onClick={() => handleNewContactModal("Whatsapp")}>Ir para Whatsapp</button>
 
             </div>
             </div>
@@ -121,14 +130,14 @@ export function CompanyInfo({idProperty, idCompany}) {
 
                     <form action="">
                         <span>Nome</span>
-                        <input type="text" placeholder="Nome completo"/>
+                        <input type="text" placeholder="Nome completo" value={name} onChange={e => setName(e.target.value)}/>
                         <span>Telefone</span>
-                        <input type="text" placeholder="(XX)XXXXX-XXXX"/>
+                        <input type="text" placeholder="(XX)XXXXX-XXXX" value={phone} onChange={e => setPhone(e.target.value)}/>
                         <span>Email</span>
-                        <input type="text" placeholder="seuemail@provedor.com"/>
+                        <input type="text" placeholder="seuemail@provedor.com" value={email} onChange={e => setEmail(e.target.value)}/>
                     </form>
 
-                    <button>Ir para Ligação</button>
+                    <button onClick={() => handleNewContactModal("Ligação")}>Ir para Ligação</button>
 
             </div>
             </div>
