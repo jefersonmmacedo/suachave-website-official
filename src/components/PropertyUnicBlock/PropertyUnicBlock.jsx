@@ -28,7 +28,10 @@ export function PropertyUnicBlock({id}) {
                     <img src={property?.featuredImage} alt="" />
                         </a>
                     </div>
-                    {new Date(property?.created_at).getDate() === new Date().getDate() ?
+                    {new Date(property?.created_at).getDate() === new Date().getDate() &&
+                    new Date(property?.created_at).getMonth() === new Date().getMonth() &&
+                    new Date(property?.created_at).getFullYear() === new Date().getFullYear()
+                    ?
                     <div className="featured">
                         <p>Novo</p>
                     </div>

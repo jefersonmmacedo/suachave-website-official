@@ -17,7 +17,7 @@
     background-color: var(--White);
 }
 
-.SignIn .login form {
+.SignIn .login .form {
     width: 80%;
     display: flex;
     flex-direction: column;
@@ -25,11 +25,11 @@
     justify-content: center;
 }
 
-.SignIn .login form img {
+.SignIn .login .form img {
     height: 50px;
 }
 
-.SignIn .login form .data {
+.SignIn .login .form .data {
     width: 90%;
     display: flex;
     flex-direction: column;
@@ -38,14 +38,14 @@
     margin: 20px 0;
     padding: 10px;
 }
-.SignIn .login form .data .buttons {
+.SignIn .login .form .data .buttons {
     width: 80%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
-.SignIn .login form .data .buttons .button1 {
+.SignIn .login .form .data .buttons .button1 {
     width: 80%;
     display: flex;
     flex-direction: row;
@@ -59,7 +59,7 @@
     font-weight: 700;
     margin: 20px 0;
 }
-.SignIn .login form .data .buttons .button2 {
+.SignIn .login .form .data .buttons .button2 {
     width: 80%;
     display: flex;
     flex-direction: row;
@@ -73,7 +73,7 @@
     font-weight: 700;
     margin: 20px 0;
 }
-.SignIn .login form .data .buttons .btn {
+.SignIn .login .form .data .buttons .btn {
     width: 80%;
     display: flex;
     flex-direction: row;
@@ -87,7 +87,7 @@
     font-weight: 700;
     margin: 20px 0;
 }
-.SignIn .login form .data .buttons .btn2 {
+.SignIn .login .form .data .buttons .btn2 {
     width: 80%;
     display: flex;
     flex-direction: row;
@@ -102,7 +102,7 @@
     margin: 20px 0;
 }
 
-.SignIn .login form .data input {
+.SignIn .login .form .data input {
     width: 80%;
     display: flex;
     flex-direction: row;
@@ -115,10 +115,10 @@
     font-weight: bold;
 }
 
-.SignIn .login form .data input::placeholder {
+.SignIn .login .form .data input::placeholder {
     color: var(--Gray);
 }
-.SignIn .login form .data .links {
+.SignIn .login .form .data .links {
     width: 80%;
     display: flex;
     flex-direction: row;
@@ -129,7 +129,7 @@
     margin: 10px 0;
 }
 
-.SignIn .login form .data button {
+.SignIn .login .form .data button {
     width: 80%;
     display: flex;
     flex-direction: row;
@@ -143,7 +143,7 @@
     font-weight: 700;
     margin: 20px 0;
 }
-.SignIn .login form .data .buttonCompany {
+.SignIn .login .form .data .buttonCompany {
     width: 80%;
     display: flex;
     flex-direction: row;
@@ -157,7 +157,7 @@
     font-weight: 700;
     margin: 20px 0;
 }
-.SignIn .login form .data a {
+.SignIn .login .form .data a {
     width: 80%;
     display: flex;
     flex-direction: row;
@@ -216,7 +216,7 @@
 
 
 @media (max-width: 950px) {
-    .SignIn .login form {
+    .SignIn .login .form {
         width: 90%;
         display: flex;
         flex-direction: column;
@@ -224,7 +224,7 @@
         justify-content: center;
     }
 
-    .SignIn .login form .data input {
+    .SignIn .login .form .data input {
         width: 90%;
         display: flex;
         flex-direction: row;
@@ -237,7 +237,7 @@
         font-weight: bold;
     }
 
-    .SignIn .login form .data button {
+    .SignIn .login .form .data button {
         width: 90%;
         display: flex;
         flex-direction: row;
@@ -254,7 +254,7 @@
     
     @media (max-width: 700px) {
 
-        .SignIn .login form {
+        .SignIn .login .form {
             width: 90%;
             display: flex;
             flex-direction: column;
@@ -271,7 +271,7 @@
             display: none;
         }
 
-        .SignIn .login form .data {
+        .SignIn .login .form .data {
             width: 70%;
             display: flex;
             flex-direction: column;
@@ -281,7 +281,7 @@
             padding: 10px;
         }
         
-        .SignIn .login form .data input {
+        .SignIn .login .form .data input {
             width: 90%;
             display: flex;
             flex-direction: row;
@@ -294,10 +294,10 @@
             font-weight: bold;
         }
         
-        .SignIn .login form .data input::placeholder {
+        .SignIn .login .form .data input::placeholder {
             color: var(--Gray);
         }
-        .SignIn .login form .data .links {
+        .SignIn .login .form .data .links {
             width: 90%;
             display: flex;
             flex-direction: row;
@@ -308,7 +308,7 @@
             margin: 10px 0;
         }
         
-        .SignIn .login form .data button {
+        .SignIn .login .form .data button {
             width: 90%;
             display: flex;
             flex-direction: row;
@@ -324,14 +324,14 @@
         }
         
         @media (max-width: 500px) {
-            .SignIn .login form {
+            .SignIn .login .form {
                 width: 90%;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
             }
-            .SignIn .login form .data {
+            .SignIn .login .form .data {
                 width: 100%;
                 display: flex;
                 flex-direction: column;

@@ -27,6 +27,7 @@
     "react-toastify": "^9.0.8",
     "react-tooltip": "^4.2.21",
     "react-uploader": "^2.1.0",
+    "react-web-share": "^2.0.2",
     "remask": "^0.1.0-alpha.5",
     "socket.io-client": "^4.5.2",
     "styled-components": "^5.3.5",

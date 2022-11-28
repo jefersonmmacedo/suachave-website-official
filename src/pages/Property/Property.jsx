@@ -12,6 +12,7 @@ import { NewMessageProperty } from "../../components/NewMessageProperty/NewMessa
 import { NewFavorite } from "../../components/NewFavorite/NewFavorite";
 import { useParams } from "react-router-dom";
 import { useFetch } from "../../hooks/useFetch";
+import { NewShare } from "../../components/NewShare/NewShare";
 
 
 export function Property() {
@@ -70,12 +71,20 @@ export function Property() {
           <div className="data">
           <div className="propertyUnic">
             <div className="targets">
+
+                {new Date(data[0].created_at).getDate() === new Date().getDate() &&
+                new Date(data[0].created_at).getMonth() === new Date().getMonth() &&
+                new Date(data[0].created_at).getFullYear() === new Date().getFullYear()
+                ? 
             <div className="featured">
                         <p>Novo</p>
                     </div>
+                    : ""
+             }
 
                     <NewMessageProperty />
-                    <NewScheduling idProperty={data[0].id} idCompany={data[0].idCompany}/>
+                    <NewScheduling idProperty={data[0].id} title={`${data[0].title} (${data[0].city} / ${data[0].uf})`}/>
+                    <NewShare idProperty={data[0].id} idCompany={data[0].idCompany}/>
                     <NewFavorite idProperty={data[0].id} idCompany={data[0].idCompany} page={"yes"}/>
 
             </div>
@@ -227,7 +236,7 @@ export function Property() {
                   
                    </>
                     }
-                    <CompanyInfo />
+                    <CompanyInfo idProperty={data[0].id} idCompany={data[0].idCompany} />
                     </div>
 
                     {data[0].video === "" ? "" :
@@ -334,7 +343,7 @@ export function Property() {
                   
                    </>
                     }
-                <CompanyInfo />
+                <CompanyInfo idProperty={data[0].id} idCompany={data[0].idCompany} />
                 </div>
                 </div>
         </div>

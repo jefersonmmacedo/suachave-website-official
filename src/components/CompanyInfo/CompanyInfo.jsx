@@ -5,10 +5,41 @@ import {HiOutlineIdentification} from 'react-icons/hi'
 import imobiliária from "../../assets/images/imob1.png";
 import { useState } from "react";
 import Modal from 'react-modal';
+import { useFetch } from "../../hooks/useFetch";
 
-export function CompanyInfo() {
+export function CompanyInfo({idProperty, idCompany}) {
+    const Local = localStorage.getItem("suachave");
+    const user = JSON.parse(Local);
+
     const [isOpenModal, setIsOpenModa] = useState(false);
     const [isOpenModalPhone, setIsOpenModaPhone] = useState(false);
+
+    const [name, setName] = useState("");
+    const [phone, setPhone] = useState("");
+    const [whatsapp, setWhatsapp] = useState("");
+    const [email, setEmail] = useState("");
+
+    const {data} = useFetch(`/company/unic/${idCompany}`)
+
+    if(!data) {
+        return (
+            <h6>Carregando...</h6>
+        )
+    }
+
+    function handleNewContactButton(type) {
+        console.log({
+        idProperty: idProperty, idCompany: idCompany, idClient: user.id, name: user.name,
+        email: user.email, phone: user.phone, whatsapp: user.whatsapp, type: type})
+    }
+    
+    function handleNewContactModal(type, email, name, phone, whatsapp) {
+        console.log({
+        idProperty: idProperty, idCompany: idCompany, idClient: user.id, name: user.name,
+        email: user.email, phone: user.phone, whatsapp: user.whatsapp, type: type})
+    }
+
+
     function handleOpenModal(e) {
         e.preventDefault();
           setIsOpenModa(true)
@@ -39,19 +70,13 @@ export function CompanyInfo() {
                 <img src={imobiliária} alt="" />
             </div>
             <div className="textHead">
-            <h4 >Sua Chave Imóveis e consultoria imobiliária</h4>
-            <h5><IoLocationOutline />Centro - Rio Bonito - RJ</h5>
-            <h5><HiOutlineIdentification />CRECI: <span> 00.000J</span></h5>
+            <h4 >{data[0].fantasyName}</h4>
+            <h5><IoLocationOutline />{data[0].road}, {data[0].number} - {data[0].district} - {data[0].city} - {data[0].uf}</h5>
+            <h5><HiOutlineIdentification />CRECI: <span> {data[0].creci}</span></h5>
             </div>
             </div>
 
             <div className="contact">
-                {/* <div className="info">  
-                <h4>Contato</h4>           
-                    <h5><IoCall /> (21) 2222-2222</h5> 
-                    <h5><IoLogoWhatsapp /> (21) 99999-9999</h5>          
-                    <h5><IoMailOutline /> contato@suachave.com.br</h5>
-                </div> */}
             </div>
                 <divo className="buttonsContact">
                     <button className="btn-whats" onClick={handleOpenModal}><IoLogoWhatsapp /> Whatsapp</button>
@@ -75,6 +100,8 @@ export function CompanyInfo() {
                         <input type="text" placeholder="Nome completo"/>
                         <span>Whatsapp</span>
                         <input type="text" placeholder="(XX)XXXXX-XXXX"/>
+                        <span>Email</span>
+                        <input type="text" placeholder="seuemail@provedor.com"/>
                     </form>
 
                     <button>Ir para Whatsapp</button>
@@ -95,8 +122,10 @@ export function CompanyInfo() {
                     <form action="">
                         <span>Nome</span>
                         <input type="text" placeholder="Nome completo"/>
-                        <span>Whatsapp</span>
+                        <span>Telefone</span>
                         <input type="text" placeholder="(XX)XXXXX-XXXX"/>
+                        <span>Email</span>
+                        <input type="text" placeholder="seuemail@provedor.com"/>
                     </form>
 
                     <button>Ir para Ligação</button>

@@ -76,6 +76,8 @@ function AuthProvider({children}) {
     async function loginSession({login, password}) {     
         let email;
         let username;
+
+        console.log({login, password})
        
         if(login.includes('@')) {
             email = login
@@ -103,8 +105,7 @@ function AuthProvider({children}) {
                     toast.error(`Olá, ${result.data.username}. Sua conta está bloqueada, entre em contato!`);
                     return
                 }
- 
-                localStorage.setItem("foursome", JSON.stringify(result.data));
+                localStorage.setItem("suachave", JSON.stringify(result.data));
                
                 window.open("/minhaconta", "_self")
                 
@@ -348,13 +349,18 @@ async function newVisit(idAccount, username, idFriend) {
         })
     }
 
-    async function newScheduling({idClient, idProperty, idCompany, email, phone, whatsapp, status,
-        day, month, year, shift, hour, ownACar, address, similarProperties, amountOfPeople, dateCompleted}) {
-        const data = {idClient, idProperty, idCompany, email, phone, whatsapp, status,
-            day, month, year, shift, hour, ownACar, address, similarProperties, amountOfPeople, dateCompleted}
+    async function newScheduling({
+        idClient, idProperty, idCompany, email, phone, whatsapp, status, meet, 
+      day, month, year, shift, hour, ownACar, location, address, similarProperties, amountOfPeople, dateCompleted
+    }) {
+        const data = {idClient, idProperty, idCompany, email, phone, whatsapp, status, meet, 
+            day, month, year, shift, hour, ownACar, location, address, similarProperties, amountOfPeople, dateCompleted}
+
         await api.post("/scheduling/", data).then((res) => {
+            
             toast.success("Agendamento criado com sucesso!");
-        
+            window.location.reload(false);
+
         }).catch((error) => {
             console.log(error)
         })

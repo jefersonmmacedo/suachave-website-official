@@ -26,12 +26,13 @@ export function SignIn() {
     function handleLogin(e) {
         e.preventDefault();
         loginSession({login: login, password:password})
+        console.log({login: login, password:password})
     }
 
     return (
         <div className="SignIn">
             <div className="login">
-                <form action="">
+                <div className="form">
                 <img src={Logo} alt="Logo GPS Buscador" />
                     <div className="data">
                 <div className="buttons">
@@ -56,7 +57,7 @@ export function SignIn() {
                     </>
                 }
                     </div>
-                </form>
+                </div>
 
             </div>
             <div className="professional">

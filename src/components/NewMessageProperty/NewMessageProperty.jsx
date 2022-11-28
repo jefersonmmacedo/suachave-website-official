@@ -20,7 +20,7 @@ export function NewMessageProperty() {
 
     return (
         <>
-        <button className="buttonMessage" onClick={handleOpenModal}><IoChatboxEllipses/> Envar mensagem</button>
+        <button className="buttonMessage" onClick={handleOpenModal}><IoChatboxEllipses/> Mensagem</button>
 
         <Modal isOpen={isOpenModal} onRequestClose={handleCloseModal}
             overlayClassName="react-modal-overlay"
