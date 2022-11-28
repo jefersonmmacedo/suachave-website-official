@@ -102,7 +102,7 @@ export function NewScheduling({idProperty, idCompany, title, image}) {
     Modal.setAppElement('#root');
     return (
         <>
-        <button className="buttonScheduling" onClick={handleOpenModal}><IoCalendar/> Agendar visita</button>
+        <button className="buttonScheduling" onClick={user === null ? handleOpenModalLogin : handleOpenModal}><IoCalendar/> Agendar visita</button>
 
         <Modal isOpen={isOpenModal} onRequestClose={handleCloseModal}
             overlayClassName="react-modal-overlay"
