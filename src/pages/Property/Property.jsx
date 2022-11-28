@@ -83,8 +83,8 @@ export function Property() {
              }
 
                     <NewMessageProperty />
-                    <NewScheduling idProperty={data[0].id} title={`${data[0].title} (${data[0].city} / ${data[0].uf})`}/>
-                    <NewShare idProperty={data[0].id} idCompany={data[0].idCompany}/>
+                    <NewScheduling idProperty={data[0].id} idCompany={data[0].idCompany} />
+                    <NewShare idProperty={data[0].id} title={`${data[0].title} (${data[0].city} / ${data[0].uf})`}/>
                     <NewFavorite idProperty={data[0].id} idCompany={data[0].idCompany} page={"yes"}/>
 
             </div>

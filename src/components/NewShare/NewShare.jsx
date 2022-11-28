@@ -4,16 +4,14 @@ import { RWebShare } from "react-web-share";
 
 
 export function NewShare({idProperty, title}) {
-    const Local = localStorage.getItem("suachave");
-    const user = JSON.parse(Local);
-
+    console.log(title)
     return (
         <>
       <RWebShare
         data={{
-          text: title,
+          text: `${title}`,
           url: `https://www.suachave.com.br/imovel/${idProperty}`,
-          title: title,
+          title: `${title}`,
         }}
         onClick={() => console.log("shared successfully!")}
       >
