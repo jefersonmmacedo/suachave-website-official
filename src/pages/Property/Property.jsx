@@ -99,7 +99,12 @@ export function Property() {
                     : ""
              }
 
-                    <NewMessageProperty />
+                    {/* <NewMessageProperty /> */}
+                    {data[0].financing === "Sim" ?
+                    <div className="status2">
+                        <p>Aceita financiamento</p>
+                    </div>
+                    : ""}
                     <NewScheduling idProperty={data[0].id} idCompany={data[0].idCompany} title={data[0].title} image={data[0].featuredImage}/>
                     <NewShare idProperty={data[0].id} title={`${data[0].title} (${data[0].city} / ${data[0].uf})`}/>
                     <NewFavorite idProperty={data[0].id} idCompany={data[0].idCompany} page={"yes"}/>
@@ -110,11 +115,11 @@ export function Property() {
                     <h5><IoLocationOutline />{data[0].road} - {data[0].district} - {data[0].city} - {data[0].uf}</h5>
                     {/* <h4>ID: 9fcb1vbb</h4> */}
                     <h4>ID: {data[0].id}</h4>
-                    {data[0].financing === "Sim" ?
+                    {/* {data[0].financing === "Sim" ?
                     <div className="status">
                         <p>Aceita financiamento</p>
                     </div>
-                    : ""}
+                    : ""} */}
                     <h4 className="description">{data[0].description}</h4>
 
                     <div className="icons">

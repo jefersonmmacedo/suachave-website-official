@@ -18,11 +18,11 @@ export function Footer() {
                             <h5> <b>Encontre imóveis, imobiliárias e corretores em poucos cliques!</b> </h5>
                             <br />
                             <div className="network">
-                                <button className="networkButton"><IoLogoFacebook/></button>
-                                <button className="networkButton"><IoLogoInstagram/></button>
-                                <button className="networkButton"><IoLogoTwitter/></button>
-                                <button className="networkButton"><IoLogoLinkedin/></button>
-                                <button className="networkButton"><IoLogoYoutube/></button>
+                                <a href="https://www.facebook.com/somossuachave" target="_blank" className="networkButton"><IoLogoFacebook/></a>
+                                <a href="https://www.instagram.com/somossuachave/" target="_blank" className="networkButton"><IoLogoInstagram/></a>
+                                {/* <a href="" target="_blank" className="networkButton"><IoLogoTwitter/></a> */}
+                                <a href="https://www.linkedin.com/company/sua-chave/" target="_blank" className="networkButton"><IoLogoLinkedin/></a>
+                                <a href="https://www.youtube.com/@suachave" target="_blank" className="networkButton"><IoLogoYoutube/></a>
                             </div>
                         </div>
                         <div className="sectionUnic">
@@ -82,7 +82,11 @@ export function Footer() {
                 </div>
                 <div className="copy">
                     <h5>© Sua Chave {date}. Todos os direitos reservados</h5>
-                    <h5><a href={user !== null ? "https://adm.suachave.com.br/imoveis" : "https://suachave.com.br/sobre"} target="_Blank">Anunciar imóvel</a></h5>
+                    {user !== null ?
+                    <h5><a href="https://adm.suachave.com.br/imoveis" target="_Blank">Anunciar imóvel</a></h5>
+                    :
+                    <h5><a href="https://suachave.com.br/sobre">Anunciar imóvel</a></h5>
+                    }
                 </div>
         </div>
     )

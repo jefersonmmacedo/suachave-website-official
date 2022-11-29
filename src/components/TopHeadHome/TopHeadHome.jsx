@@ -1,8 +1,8 @@
 ﻿import "./topHeadHome.css"
 import { SearchPropertyHomeTop } from "../SearchPropertyHomeTop/SearchPropertyHomeTop";
-import image1 from "../../assets/images/house1.jpg";
-import image2 from "../../assets/images/house2.jpg";
-import image3 from "../../assets/images/house3.jpg";
+import image1 from "../../assets/images/background13.jpg";
+import image2 from "../../assets/images/background11.jpg";
+import image3 from "../../assets/images/background12.jpg";
 
 export function TopHeadHome() {
     return (

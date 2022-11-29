@@ -101,7 +101,7 @@
     width: 100%;
     margin-bottom: 25px;
 }
-.Footer .sections .sectionUnic .network button {
+.Footer .sections .sectionUnic .network a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -114,6 +114,7 @@
     color: var(--Primary);
     font-size: 20px;
     margin-right: 5px;
+    text-decoration: none;
 }
 .Footer .sections .sectionUnic .network .btn {
     display: flex;
@@ -128,7 +129,7 @@
     color: var(--White);
     font-size: 16px;
 }
-.Footer .sections .sectionUnic .network button:hover {
+.Footer .sections .sectionUnic .network a:hover {
     background-color: var(--Primary);
     color: var(--White);
 }
