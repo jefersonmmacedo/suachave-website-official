@@ -87,7 +87,9 @@ body, input, textarea, button {
   
 }
 body, input, textarea, button :focus{
-  outline:none
+  outline:none;
+  box-shadow: 0 0 0 0;
+  outline: 0;
   }
 
   body::-webkit-scrollbar {

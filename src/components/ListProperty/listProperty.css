@@ -177,7 +177,16 @@
     background-color: var(--White);
     color: var(--Paragraph);
     border-radius: 6px;
-    padding: 20px;
+    padding: 15px;
+    width: 100%;
+    margin: 10px 0 30px 0;
+}
+.ListProperty .searchItens .searchOptions .dataSearchOptions .dataSelects .selectInput {
+    border: 1px solid var(--Primary);
+    background-color: var(--White);
+    color: var(--Primary);
+    border-radius: 6px;
+    padding: 15px;
     width: 100%;
     margin: 10px 0 30px 0;
 }
@@ -185,6 +194,14 @@
     border: 1px solid var(--Gray);
     background-color: var(--White);
     color: var(--Paragraph);
+    border-radius: 6px;
+    padding: 10px 20px;
+    width: 100%;
+}
+.ListProperty .searchItens .searchOptions .dataSearchOptions .dataSelects .select {
+    border: 1px solid var(--Primary);
+    background-color: var(--White);
+    color: var(--Primary);
     border-radius: 6px;
     padding: 10px 20px;
     width: 100%;
@@ -217,6 +234,44 @@
 .ListProperty .searchItens .searchOptions .dataSearchOptions .dataSelectsButtons .btn {
     background-color: var(--White);
     padding:20px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    border: 1px solid var(--Gray2);
+    border-radius: 6px;
+    color: var(--Paragraph);
+    font-size: 14px;
+    width: 50%;
+    margin: 5px;
+}
+.ListProperty .searchItens .searchOptions .dataSearchOptions .dataSelectsButtonsAction {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+
+.ListProperty .searchItens .searchOptions .dataSearchOptions .dataSelectsButtonsAction button {
+    background-color: var(--Primary);
+    padding:10px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    border: 1px solid var(--Primary);
+    border-radius: 6px;
+    color: var(--White);
+    font-size: 14px;
+    width: 50%;
+    margin: 5px;
+}
+.ListProperty .searchItens .searchOptions .dataSearchOptions .dataSelectsButtonsAction .btn {
+    background-color: var(--White);
+    padding:10px;
     display: flex;
     flex-direction: row;
     align-items: flex-start;

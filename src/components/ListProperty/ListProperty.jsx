@@ -18,6 +18,7 @@ export function ListProperty({status, tipo, subtipo, quartos, suites, banheiros,
     const [garage, setGarage] = useState("");
     const [suite, setSuite] = useState("");
     const [restroom, setRestroom] = useState("");
+    const [search, setSearch] = useState("");
     const [filter, setFilter] = useState(false);
 
     console.log(status, tipo, subtipo, quartos, suites, banheiros, garagem)
@@ -106,9 +107,7 @@ export function ListProperty({status, tipo, subtipo, quartos, suites, banheiros,
                      <button className={status === "Venda" ? "" : "btn"}>À venda</button>
                      </div>
                      
-                     <div className="dataSelects">
-                       <input type="search" placeholder="Digite bairro ou cidade" />
-                    </div>
+
                      
                      <div className="dataSelects">
                      <h4>Tipo:</h4>
@@ -196,6 +195,23 @@ export function ListProperty({status, tipo, subtipo, quartos, suites, banheiros,
                         <option value="10">10 Quartos</option>
                     </select>
                     </div>
+
+                    <div className="dataSelects">
+                    <h4>Suítes: </h4>
+                    <select value={suite} onChange={handleSuite} className={suite === "" ? "" : "select"}>
+                        <option value="">Suítes</option>
+                        <option value="1">1 Suíte</option>
+                        <option value="2">2 Suítes</option>
+                        <option value="3">3 Suítes</option>
+                        <option value="4">4 Suítes</option>
+                        <option value="5">5 Suítes</option>
+                        <option value="6">6 Suítes</option>
+                        <option value="7">7 Suítes</option>
+                        <option value="8">8 Suítes</option>
+                        <option value="9">9 Suítes</option>
+                        <option value="10">10 Suítes</option>
+                    </select>
+                    </div>
                     
                     <div className="dataSelects">
                     <h4>Banheiros: </h4>
@@ -213,7 +229,7 @@ export function ListProperty({status, tipo, subtipo, quartos, suites, banheiros,
                         <option value="10">10 Banheiros</option>
                     </select>
                     </div>
-                    
+                                       
                     <div className="dataSelects">
                     <h4>Garagem: </h4>
                     <select value={garage} onChange={handleGarage} className={garage === "" ? "" : "select"}>
@@ -231,7 +247,11 @@ export function ListProperty({status, tipo, subtipo, quartos, suites, banheiros,
                     </select>
                     </div>
 
-                    <div className="dataSelectsButtons">
+                    <div className="dataSelects">
+                       <input type="search" placeholder="Digite bairro ou cidade" className={search === "" ? "" : "selectInput"} onChange={e => setSearch(e.target.value)}/>
+                    </div>
+
+                    <div className="dataSelectsButtonsAction">
                         <button><IoSearch /> Buscar</button>
                         <button className="btn"><IoClose /> Limpar</button>
                 </div>
