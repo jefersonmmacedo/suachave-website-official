@@ -38,7 +38,7 @@ export function PropertyUnicBlockLoader() {
                     </div>
                     <div className="pricing">
                         <h6><span> </span></h6>
-                        <h3>R$ <span>2.000.000,00</span></h3>
+                        <h3><span>2.000.000,00</span></h3>
                     </div>
                     </div>
                 </div>

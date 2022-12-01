@@ -158,7 +158,7 @@
 .PropertyUnicBlockLoader .text .icons .iconUnic svg {
     font-size: 18px;
     margin-right: 10px;
-    color: var(--Primary);
+    color: var(--Border);
 }
 
 .PropertyUnicBlockLoader .text .icons .iconUnic .simbol {

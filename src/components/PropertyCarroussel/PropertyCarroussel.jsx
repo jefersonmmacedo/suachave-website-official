@@ -5,6 +5,7 @@ import { PropertyUnicBlock } from "../PropertyUnicBlock/PropertyUnicBlock";
 import { useFetch } from "../../hooks/useFetch";
 import { PropertyUnicBlockLoader } from "../PropertyUnicBlockLoader/PropertyUnicBlockLoader";
 
+
 export function PropertyCarroussel({status}) {
     console.log(status)
     const availability = "Disponível";
@@ -13,9 +14,12 @@ export function PropertyCarroussel({status}) {
 
     if(!data) {
         return (
-            <>
+            <div className="loader">
             <PropertyUnicBlockLoader />
-            </>
+            <PropertyUnicBlockLoader />
+            <PropertyUnicBlockLoader />
+            <PropertyUnicBlockLoader />
+            </div>
         )
     }
     const buttonStyle = {

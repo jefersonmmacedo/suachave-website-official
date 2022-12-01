@@ -302,13 +302,11 @@
         }
 
         .ToolBarClient .ToolsClient .ToolUnicClient a svg {
-            font-size: 18px;
+            font-size: 508px;
         }
 
         .ToolBarClient .ToolsClient .ToolUnicClient a p {
-            font-size: 12px;
-            font-weight: 500;
-            color: var(--Paragraph);
+            display: none;
         }
     }
 }
