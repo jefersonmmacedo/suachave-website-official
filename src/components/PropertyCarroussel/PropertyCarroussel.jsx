@@ -3,6 +3,7 @@ import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
 import { PropertyUnicBlock } from "../PropertyUnicBlock/PropertyUnicBlock";
 import { useFetch } from "../../hooks/useFetch";
+import { PropertyUnicBlockLoader } from "../PropertyUnicBlockLoader/PropertyUnicBlockLoader";
 
 export function PropertyCarroussel({status}) {
     console.log(status)
@@ -12,7 +13,9 @@ export function PropertyCarroussel({status}) {
 
     if(!data) {
         return (
-            <h5>Carregando..</h5>
+            <>
+            <PropertyUnicBlockLoader />
+            </>
         )
     }
     const buttonStyle = {
@@ -62,6 +65,7 @@ export function PropertyCarroussel({status}) {
                     return (
                         <PropertyUnicBlock id={property.id} key={property.id}/>
                     )
+
                 })}
             </Slide>
         </div>
