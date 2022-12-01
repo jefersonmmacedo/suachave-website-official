@@ -3,6 +3,7 @@ import { PropertyUnicBlock } from "../PropertyUnicBlock/PropertyUnicBlock";
 import { IoClose, IoLocationOutline, IoSearch} from "react-icons/io5";
 import { useFetch } from "../../hooks/useFetch";
 import { useState } from "react";
+import { PropertyUnicBlockLoader } from "../PropertyUnicBlockLoader/PropertyUnicBlockLoader";
 
 
 export function ListProperty({status, tipo, subtipo, quartos, suites, banheiros, garagem}) {
@@ -25,7 +26,12 @@ export function ListProperty({status, tipo, subtipo, quartos, suites, banheiros,
 
     if(!data) {
         return (
-            <h5>Carregando..</h5>
+            <div className="loader">
+            <PropertyUnicBlockLoader />
+            <PropertyUnicBlockLoader />
+            <PropertyUnicBlockLoader />
+            <PropertyUnicBlockLoader />
+            </div>
         )
     }
 
