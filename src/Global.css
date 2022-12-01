@@ -6,6 +6,7 @@
 
 :root{
   --Primary: #E0282F;
+  --PrimaryRGBA: rgba(224, 40, 47, 0.5);
   --PrimaryHover: #d51942;
   --Secondary: #00afef;
   --SecondaryHover: #37b2e6;

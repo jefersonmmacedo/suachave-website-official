@@ -208,6 +208,10 @@
     font-size: 14px;
 }
 
+.content-modal-home .itensModalHome .loginAccount a svg {
+    margin-right: 3px;
+}
+
 @media (max-width: 1085px) {
     .Home .carroussel {
         width: 95%;

@@ -39,6 +39,7 @@ export function Plains() {
 
             {plains?.map((plain) => {
                 return (
+                    plain?.name === "Pro" ? "" :
                     <div className="plain">
                     <h3>{plain?.name}</h3>
                     <div className="title">

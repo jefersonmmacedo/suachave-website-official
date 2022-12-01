@@ -4,36 +4,148 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 20px;
 }
 
-.ListProperty .searchItens {
-    width: 92%;
+.ListProperty .topList {
+    width: 95%;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
 }
-.ListProperty .searchItens .searchOptions {
-    width: 550px;
+
+.ListProperty .topList button {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    padding: 7px 15px;
+    Background-color: var(--White);
+    color: var(--Paragraph);
+    font-weight: 500;
+    border: 1px solid var(--Gray);
+    border-radius: 6px;
+    font-size: 12px;
 }
-.ListProperty .searchItens .searchOptions button {
-    background-color: var(--Primary);
+
+
+
+.ListProperty .topList .textLocation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 5px 0;
+    flex-wrap: wrap;
+}
+
+.ListProperty .topList .textLocation h5 {
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: var(--Gray);
+}
+
+.ListProperty .topList .textLocation button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 3px 15px;
+    Background-color: var(--White);
+    color: var(--White);
+    font-weight: 500;
+    border: 1px solid var(--Gray);
+    border-radius: 25px;
+    font-size: 12px;
+    color: var(--Gray);
+    margin: 0 5px;
+}
+
+
+.ListProperty .searchItens {
     padding: 20px;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    flex-flow: column nowrap;
+    background: var(--BorderHover);
+    border-left: 1px solid var(--Border);
+    backdrop-filter: blur(4px);
+    position: fixed;
+    transform: translateX(0);
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 650px;
+    padding-top: 3.5rem;
+    transition: transform 0.3s ease-in-out;
+    z-index: 99;
+    box-shadow: 1px 1px 20px 0px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 1px 1px 20px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: 1px 1px 20px 0px rgba(0,0,0,0.3);
+}
+.ListProperty .searchItensNone {
+    transform: translateX(100%);
+    flex-flow: column nowrap;
+    background: var(--White);
+    border-left: 1px solid var(--Border);
+    backdrop-filter: blur(4px);
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 500px;
+    padding-top: 3.5rem;
+    transition: transform 0.3s ease-in-out;
+    z-index: 99;
+}
+.ListProperty .searchItens .buttons {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.ListProperty .searchItens .buttons button {
+    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    border: none;
+    padding: 7px 15px;
+    Background-color: var(--White);
+    color: var(--Paragraph);
+    font-weight: 500;
+    border: 1px solid var(--Gray);
     border-radius: 6px;
-    color: var(--White);
-    font-size: 20px;
+    font-size: 12px;
+    margin-top: -50px;
+}
+
+.ListProperty .searchItens .searchOptions {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.ListProperty .searchItensNone .searchOptions {
+    width: 95%;
+    display: none;
+}
+
+.ListProperty .searchItensNone .buttons {
+    width: 95%;
+    display: none;
+}
+
+.ListProperty .searchItens .searchOptions button svg {
+    margin-right: 5px;
 }
 .ListProperty .searchItens .searchOptions .dataSearchOptions {
     width: 100%;
@@ -50,26 +162,82 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    margin: 5px 0;
+}
+
+.ListProperty .searchItens .searchOptions .dataSearchOptions .dataSelects h4 {
+    width: 20%;
+    color: var(--Paragraph);
+    font-weight: 600;
+    margin-right: 5px;
 }
 
 .ListProperty .searchItens .searchOptions .dataSearchOptions .dataSelects input {
-    border: 1px solid var(--Border);
+    border: 1px solid var(--Gray);
     background-color: var(--White);
     color: var(--Paragraph);
     border-radius: 6px;
-    padding: 5px 10px;
+    padding: 20px;
     width: 100%;
-    margin: 2px;
+    margin: 10px 0 30px 0;
 }
 .ListProperty .searchItens .searchOptions .dataSearchOptions .dataSelects select {
-    border: 1px solid var(--Border);
+    border: 1px solid var(--Gray);
     background-color: var(--White);
     color: var(--Paragraph);
     border-radius: 6px;
-    padding: 5px 10px;
+    padding: 10px 20px;
     width: 100%;
-    margin: 2px;
 }
+
+.ListProperty .searchItens .searchOptions .dataSearchOptions .dataSelectsButtons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+
+.ListProperty .searchItens .searchOptions .dataSearchOptions .dataSelectsButtons button {
+    background-color: var(--White);
+    padding:20px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    border: 1px solid var(--Primary);
+    border-radius: 6px;
+    color: var(--Primary);
+    font-size: 14px;
+    width: 50%;
+    margin: 5px;
+}
+.ListProperty .searchItens .searchOptions .dataSearchOptions .dataSelectsButtons .btn {
+    background-color: var(--White);
+    padding:20px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    border: 1px solid var(--Gray2);
+    border-radius: 6px;
+    color: var(--Paragraph);
+    font-size: 14px;
+    width: 50%;
+    margin: 5px;
+}
+
+.ListProperty .searchItens .textItens {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+}
+
 
 
 
@@ -96,10 +264,26 @@
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        padding: 5px;
         flex-wrap: wrap;
     }
     
+
+@media (max-width: 670px) {
+    .ListProperty .searchItens {
+        width: 100%;
+        padding: 20px 10px;
+    }
+
+    .ListProperty .searchItens .buttons button {
+        margin-top:0px;
+    }
+
+    .ListProperty .searchItens .searchOptions .dataSearchOptions .dataSelects h4 {
+        color: var(--Paragraph);
+        font-weight: 600;
+        margin-right: 5px;
+    }
+
 
 @media (max-width: 600px) {
     .ListProperty .itens {
@@ -108,9 +292,16 @@
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        padding: 5px;
         flex-wrap: wrap;
     }
+
+    .ListProperty .searchItens .searchOptions .dataSearchOptions .dataSelects h4 {
+        width: 30%;
+        color: var(--Paragraph);
+        font-weight: 600;
+        margin-right: 5px;
+    }
+
 
 @media (max-width: 450px) {
     .ListProperty .searchItens .searchOptions {
@@ -134,6 +325,15 @@
     margin-top: 0px;
 }
 
+
+.ListProperty .searchItens .searchOptions .dataSearchOptions .dataSelects h4 {
+    width: 40%;
+    color: var(--Paragraph);
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+}
 }
 }
 }

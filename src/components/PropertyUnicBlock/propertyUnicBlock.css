@@ -48,7 +48,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background-color: rgba(0, 175, 239, 0.5);
+    background-color: var(--PrimaryRGBA);
     border-radius: 6px;
     position: absolute;
     margin-top: 115px;

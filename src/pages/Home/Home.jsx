@@ -9,14 +9,14 @@ import {  PropertyCarroussel } from "../../components/PropertyCarroussel/Propert
 import { DownloadApp } from "../../components/DownloadApp/DownloadApp";
 import { Cities } from "../../components/Cities/Cities";
 import { ExploreIconsProperties } from "../../components/ExploreIconsProperties/ExploreIconsProperties";
-import { IoBusiness, IoCloseOutline, IoSearch } from "react-icons/io5";
+import { IoBusiness, IoCloseOutline, IoSearch, IoPersonCircleOutline, IoCheckboxOutline } from "react-icons/io5";
 import { useEffect } from "react";
 import LogoImg from '../../assets/images/Logo2.png';
 import buscaDistrito from '../../services/api-buscaDistrito';
 import { toast } from 'react-toastify';
 import { ToHire } from "../../components/ToHire/ToHire";
 import { FaBuilding, FaHome, FaStore } from "react-icons/fa";
-import { TopHeadHome } from "../../components/TopHeadHome/TopHeadHome";
+
 
 export function Home() {
     const LocalCity = localStorage.getItem("suachavecity");
@@ -42,7 +42,7 @@ export function Home() {
             }
             setTimeout(() => {
                 setIsOpenModa(true)
-              }, "10000")
+              }, "5000")
         
         }
         initialTime()
@@ -56,14 +56,8 @@ export function Home() {
             city: city,
             uf: uf,
           };
-        const suachave2 = {
-            type: "company",
-            city: city,
-            uf: uf,
-          };
 
         localStorage.setItem("suachavecity", JSON.stringify(suachave));
-        localStorage.setItem("suachave", JSON.stringify(suachave2));
     }
     function handleOpenModal(e) {
       e.preventDefault();
@@ -129,7 +123,6 @@ export function Home() {
     return (
         <div className="Home">
             <Navbar2 />
-            {/* <TopHeadHome /> */}
             <SliderHome />
             <div className="searchView">
             <SearchProperty openModal={handleOpenModal}/>
@@ -240,8 +233,8 @@ export function Home() {
                 ""
                 :
                 <div className="loginAccount">
-                    <a href="/entrar">Ja possuo conta</a>
-                    <a href="/cadastrar">Cadastrar</a>
+                    <a href="/entrar"><IoPersonCircleOutline />Entrar</a>
+                    <a href="/cadastrar"><IoCheckboxOutline />Cadastrar</a>
                 </div>
                 }
             </div>

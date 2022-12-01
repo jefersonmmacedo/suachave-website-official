@@ -114,24 +114,36 @@ export function Simulator() {
                 <h2>Escolha um banco para a simulação</h2>
                 <h4>Estamos trabalhando para trazer as simulações direto em nosso site.</h4>
                 <div className="logosBank">
+                        <a href="https://www8.caixa.gov.br/siopiinternet-web/simulaOperacaoInternet.do?method=inicializarCasoUso" target="_blank" rel="noreferrer">
                     <div className="logoUnicBank">
                         <img src={Caixa} alt="" className="imageBank"/>
                     </div>
+                        </a>
+                        <a href="https://banco.bradesco/html/classic/produtos-servicos/emprestimo-e-financiamento/imoveis/index.shtm" target="_blank" rel="noreferrer">
                     <div className="logoUnicBank">
                         <img src={Bradesco} alt="" className="imageBank"/>
                     </div>
+                        </a>
+                        <a href="https://www.santander.com.br/hotsite/credito-financiamento-imobiliario/?ic=homepf-cardsprod-creditoimobiliario#/home" target="_blank" rel="noreferrer">
                     <div className="logoUnicBank">
                         <img src={Santander} alt="" className="imageBank"/>
                     </div>
+                        </a>
+                        <a href="https://credito-imobiliario.itau.com.br/?gclid=Cj0KCQiA-JacBhC0ARIsAIxybyNNuqPMOAKbqlAgm0jZg5icrPX9dQHZX6Zce97CFORCAYd15IOMYFYaAtRqEALw_wcB&utm_source=google&utm_medium=search&utm_campaign=rv-midia_paga-credito_imobiliario-conversao-marca_nna_tcpa&utm_content=google-2nd-cpc-all_devices-keyword-marca_financ-paid_search-responsive_ad-rv1423646818&utm_sou=google&utm_med=paidsearch&utm_cid=&utm_cont=imob_responsive&ef_id=Cj0KCQiA-JacBhC0ARIsAIxybyNNuqPMOAKbqlAgm0jZg5icrPX9dQHZX6Zce97CFORCAYd15IOMYFYaAtRqEALw_wcB:G:s&s_kwcid=AL!905!3!606053187726!b!!g!!financiamento%20itau%20imoveis" target="_blank" rel="noreferrer">
                     <div className="logoUnicBank">
                         <img src={Itau} alt="" className="imageBank"/>
                     </div>
+                        </a>
+                        <a href="https://www42.bb.com.br/portalbb/imobiliario/creditoimobiliario/simular,802,2250,2250.bbx" target="_blank" rel="noreferrer">
                     <div className="logoUnicBank">
                         <img src={Brasil} alt="" className="imageBank"/>
                     </div>
+                        </a>
+                        <a href="https://imobiliario.bancointer.com.br/financiamento-imobiliario?utm_source=google&utm_medium=cpc&utm_content=Sitelink+-+Imobili%C3%A1rio&gclid=Cj0KCQiA-JacBhC0ARIsAIxybyNsnpjbpqZI2GH7Q5A8DToddywZk5jywV0jLZ7MTSCSCFaYWBmg_EoaAn4WEALw_wcB#/informacoes-imovel" target="_blank" rel="noreferrer">
                     <div className="logoUnicBank">
                         <img src={Inter} alt="" className="imageBank"/>
                     </div>
+                        </a>
                 </div>
                 </div>
                 </div>

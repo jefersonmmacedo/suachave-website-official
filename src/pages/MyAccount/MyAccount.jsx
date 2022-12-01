@@ -2,7 +2,7 @@
 import Navbar2 from "../../components/Nav/Navbar";
 import "./myAccount.css";
 import { ToolBarClient } from "../../components/ToolBarClient/ToolBarClient";
-import { IoCalendarOutline, IoChatboxEllipsesOutline, IoHeartOutline, IoHomeOutline} from "react-icons/io5"
+import { IoCalendarOutline, IoChatboxEllipsesOutline, IoHeartOutline, IoHomeOutline, IoPersonOutline} from "react-icons/io5"
 import api from "../../services/api";
 import { useEffect } from "react";
 import { useState } from "react";
@@ -65,12 +65,12 @@ export function MyAccount() {
                             </div>
                         </div>
                         </a>
-                        {/* <a href="/mensagens">
+                        <a href="/minhaconta">
                         <div className="indicatorUnic">
-                            <IoChatboxEllipsesOutline />
+                            <IoPersonOutline />
                             <div className="textIndicator">
-                                <h3>5</h3>
-                                <h4>Conversas</h4>
+                                <h3>-</h3>
+                                <h4>Minha conta</h4>
                             </div>
                         </div>
                         </a>
@@ -78,11 +78,11 @@ export function MyAccount() {
                         <div className="indicatorUnic">
                             <IoHomeOutline />
                             <div className="textIndicator">
-                                <h3>5</h3>
+                                <h3>0</h3>
                                 <h4>Imóveis</h4>
                             </div>
                         </div>
-                        </a> */}
+                        </a>
 
                     </div>
                 </div>

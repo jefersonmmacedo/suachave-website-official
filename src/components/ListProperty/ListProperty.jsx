@@ -1,17 +1,23 @@
 ﻿import "./listProperty.css";
 import { PropertyUnicBlock } from "../PropertyUnicBlock/PropertyUnicBlock";
-import { IoSearch} from "react-icons/io5";
+import { IoClose, IoLocationOutline, IoSearch} from "react-icons/io5";
 import { useFetch } from "../../hooks/useFetch";
 import { useState } from "react";
 
+
 export function ListProperty({status, tipo, subtipo, quartos, suites, banheiros, garagem}) {
+    const LocalCity = localStorage.getItem("suachavecity");
+    const userCity = JSON.parse(LocalCity);
+
     const availability = "Disponível";
+    const [statusProperty, setStatusProperty] = useState("");
     const [subType, setSubType] = useState("");
     const [type, setType] = useState("");
     const [bedroom, setBedroom] = useState("");
     const [garage, setGarage] = useState("");
     const [suite, setSuite] = useState("");
     const [restroom, setRestroom] = useState("");
+    const [filter, setFilter] = useState(false);
 
     console.log(status, tipo, subtipo, quartos, suites, banheiros, garagem)
 
@@ -23,6 +29,10 @@ export function ListProperty({status, tipo, subtipo, quartos, suites, banheiros,
         )
     }
 
+    function handleStatusProperty(e) {
+        setStatusProperty(e.target.value)
+        console.log(e.target.value)
+    }
     function handleType(e) {
         setType(e.target.value)
         console.log(e.target.value)
@@ -48,16 +58,54 @@ export function ListProperty({status, tipo, subtipo, quartos, suites, banheiros,
         console.log(e.target.value)
     }
 
+    function handleFiltro(e) {
+        e.preventDefault();
+
+        setFilter(!filter)
+        console.log(!filter)
+    }
     return (
         <div className="ListProperty">
-            <div className="searchItens">
-                <siv className="textItens">
+            <div className="topList">
+            <siv className="textItens">
                     <h3>{data.length} {status === "Venda" ? `imóveis à ${status}` : `imóveis para ${status}`}</h3>
+
+                    {userCity === null || userCity === undefined || userCity === "" ? 
+                    <div className="textLocation">
+                        {/* <button onClick={openModal}>Definir cidade</button> */}
+                        <button >Definir cidade</button>
+                    </div>
+                    : 
+                    <div className="textLocation">
+                    <h5><IoLocationOutline /> {userCity.city} - {userCity.uf}</h5> 
+                    {/* <button onClick={openModal}>Alterar</button> */}
+                    <button >Alterar</button>
+                    </div>
+                    }
                 </siv>
+            <button onClick={handleFiltro}>Filtro +</button>
+            </div>
+
+
+
+            <div className={filter === true ? "searchItens" : "searchItensNone"}>
+                <div className="buttons">
+                <button onClick={handleFiltro}>X</button>
+                </div>
                 <div className="searchOptions">
                     <div className="dataSearchOptions">
-                    <div className="dataSelects">
-                      <input type="search" placeholder="ID Imóvel" />
+                    
+                    <div className="dataSelectsButtons">
+                     <button className={status === "Aluguel" ? "" : "btn"}>Para Alugar</button>
+                     <button className={status === "Venda" ? "" : "btn"}>À venda</button>
+                     </div>
+                     
+                     <div className="dataSelects">
+                       <input type="search" placeholder="Digite bairro ou cidade" />
+                    </div>
+                     
+                     <div className="dataSelects">
+                     <h4>Tipo:</h4>
                     <select value={type} onChange={handleType} className={type === "" ? "" : "select"}>
                         <option value="">Tipo</option>
                         <option value="Residencial">Residencial</option>
@@ -66,6 +114,10 @@ export function ListProperty({status, tipo, subtipo, quartos, suites, banheiros,
                         <option value="Rural">Rural</option>
                         <option value="Terrenos e Lotes">Terrenos e Lotes</option>
                     </select>
+                    </div>
+                     
+                     <div className="dataSelects">
+                     <h4>Subtipo:</h4>
                     <select value={subType} onChange={handleSubType} className={subType === "" ? "" : "select"}>
                         {type === "Residencial" ?
                         <>
@@ -121,7 +173,9 @@ export function ListProperty({status, tipo, subtipo, quartos, suites, banheiros,
                         }
                     </select>
                     </div>
+                    
                     <div className="dataSelects">
+                        <h4>Quartos: </h4>
                     <select value={bedroom} onChange={handleBedroom} className={bedroom === "" ? "" : "select"}>
                         <option value="">Quartos</option>
                         <option value="1">1 Quarto</option>
@@ -135,19 +189,10 @@ export function ListProperty({status, tipo, subtipo, quartos, suites, banheiros,
                         <option value="9">9 Quartos</option>
                         <option value="10">10 Quartos</option>
                     </select>
-                    <select value={suite} onChange={handleSuite} className={suite === "" ? "" : "select"}>
-                        <option value="">Suítes</option>
-                        <option value="1">1 Suíte</option>
-                        <option value="2">2 Suítes</option>
-                        <option value="3">3 Suítes</option>
-                        <option value="4">4 Suítes</option>
-                        <option value="5">5 Suítes</option>
-                        <option value="6">6 Suítes</option>
-                        <option value="7">7 Suítes</option>
-                        <option value="8">8 Suítes</option>
-                        <option value="9">9 Suítes</option>
-                        <option value="10">10 Suítes</option>
-                    </select>
+                    </div>
+                    
+                    <div className="dataSelects">
+                    <h4>Banheiros: </h4>
                     <select value={restroom} onChange={handleRestroom} className={restroom === "" ? "" : "select"}>
                         <option value="">Banheiros</option>
                         <option value="1">1 Banheiro</option>
@@ -161,6 +206,10 @@ export function ListProperty({status, tipo, subtipo, quartos, suites, banheiros,
                         <option value="9">9 Banheiros</option>
                         <option value="10">10 Banheiros</option>
                     </select>
+                    </div>
+                    
+                    <div className="dataSelects">
+                    <h4>Garagem: </h4>
                     <select value={garage} onChange={handleGarage} className={garage === "" ? "" : "select"}>
                         <option value="">Vagas de garagem</option>
                         <option value="1">1 Vaga de garagem</option>
@@ -175,8 +224,12 @@ export function ListProperty({status, tipo, subtipo, quartos, suites, banheiros,
                         <option value="10">10 Vagas de garagem</option>
                     </select>
                     </div>
+
+                    <div className="dataSelectsButtons">
+                        <button><IoSearch /> Buscar</button>
+                        <button className="btn"><IoClose /> Limpar</button>
+                </div>
                     </div>
-                        <button><IoSearch /></button>
                 </div>
             </div>
             <div className="itens">

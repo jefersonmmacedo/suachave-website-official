@@ -187,7 +187,7 @@ const Navbar2 = () => {
   return (
     <Nav>
       <div className="logo">
-        <a href="/home">
+        <a href="/">
       <img src={LogoImg} alt="Logo CPA Educacional" />
         </a>
       </div>

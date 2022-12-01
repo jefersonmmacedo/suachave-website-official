@@ -105,8 +105,9 @@ export function SignUpClient() {
     function continueNewAccount(photoUrlAvatar) {
         const verified = false;
         const status = "Ativo";
-       createAccount({name, email, phone, whatsapp, password, status, verified, avatar:photoUrlAvatar, cep, city, uf})
-        console.log({name, email, phone, whatsapp, password, status, verified, avatar:photoUrlAvatar, cep, city, uf})
+        const type = "client";
+       createAccount({type, name, email, phone, whatsapp, password, status, verified, avatar:photoUrlAvatar, cep, city, uf})
+        console.log({type, name, email, phone, whatsapp, password, status, verified, avatar:photoUrlAvatar, cep, city, uf})
     }
 
     function ChangeMaskPhone(e) {

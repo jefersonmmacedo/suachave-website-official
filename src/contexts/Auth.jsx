@@ -12,7 +12,8 @@ const AuthContext = createContext({});
 function AuthProvider({children}) {
     const [loading, setLoading] = useState(true);
     const navigate = useNavigate();
-    const [comentsPosts, setComentsPosts] = useState([])
+    const [cityLocation, setCityLocation] = useState("");
+    const [ufLocation, setUfLocation] = useState("");
 
     
     async function createAccount({
@@ -407,6 +408,15 @@ async function newVisit(idAccount, username, idFriend) {
       time = setTimeout(doSomething, 900000)
       //time = setTimeout(doSomething, 1000)
     }
+
+
+}
+
+function newLocation(cityLocation, ufLocation) {
+    console.log({cityLocation, ufLocation});
+
+    setCityLocation(cityLocation)
+    setUfLocation(ufLocation)
 }
 
 
@@ -425,8 +435,6 @@ async function newVisit(idAccount, username, idFriend) {
             logout,
             deleteActualMessage,
             newVisit,
-            comentsPosts,
-            setComentsPosts,
             deleteAccount,
             recuperationUserForEmail,
             gerateCodeRecuperation,
@@ -436,7 +444,10 @@ async function newVisit(idAccount, username, idFriend) {
             createPayment,
             deleteConversation,
             newScheduling,
-            newContact
+            newContact,
+            newLocation,
+            cityLocation,
+            ufLocation,
         }}>
             {children}
         </AuthContext.Provider>

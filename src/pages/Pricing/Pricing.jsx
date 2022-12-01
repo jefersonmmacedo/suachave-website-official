@@ -16,6 +16,12 @@ export function Pricing() {
             <div className="future">
                 <h4>Serviços disponíveis <span>em breve</span>:</h4>
                 <h5><MdAlarm /> Chat único por anúncio</h5>
+                <h5><MdAlarm /> Avaliação de imóveis</h5>
+                <h5><MdAlarm /> Processo de compra online</h5>
+                <h5><MdAlarm /> Processo de aluguel online</h5>
+                <h5><MdAlarm /> Controle de recebimento de aluguel</h5>
+                <h5><MdAlarm /> Sistema de pedido e controle de reparo em imóveis</h5>
+                <h5><MdAlarm /> Cadastro de corretores</h5>
                 <h5><MdAlarm /> Integração com portais</h5>
                 <h5><MdAlarm /> Assinatura digital de contrato</h5>
                 <h5><MdAlarm /> Disparo de e-mail automático personalizável</h5>
@@ -27,6 +33,7 @@ export function Pricing() {
                 <h5><MdAlarm /> Agendamento de visitas via WhatsApp</h5>
                 <h5><MdAlarm /> Marketing Digital Especializado</h5>
                 <h5><MdAlarm /> Adição de novos usuários</h5>
+                <h5><MdAlarm /> Novos modelos de site individual</h5>
             </div>
 
             <Footer />
