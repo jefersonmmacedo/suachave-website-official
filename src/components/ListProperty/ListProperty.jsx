@@ -11,19 +11,42 @@ export function ListProperty({status, tipo, subtipo, quartos, suites, banheiros,
     const userCity = JSON.parse(LocalCity);
 
     const availability = "Disponível";
-    const [statusProperty, setStatusProperty] = useState("");
+    const [statusProperty, setStatusProperty] = useState(status);
     const [subType, setSubType] = useState("");
     const [type, setType] = useState("");
-    const [bedroom, setBedroom] = useState("");
-    const [garage, setGarage] = useState("");
-    const [suite, setSuite] = useState("");
-    const [restroom, setRestroom] = useState("");
+    const [bedroom, setBedroom] = useState("0");
+    const [garage, setGarage] = useState("0");
+    const [suite, setSuite] = useState("0");
+    const [restroom, setRestroom] = useState("0");
     const [search, setSearch] = useState("");
     const [filter, setFilter] = useState(false);
 
-    console.log(status, tipo, subtipo, quartos, suites, banheiros, garagem)
+    console.log(status, tipo, subtipo, quartos, suites, banheiros, garagem);
 
-    const {data} = useFetch(`/property/lists/${availability}/${status}`);
+    const city = userCity?.city
+    const uf = userCity?.uf
+
+    console.log(city, uf)
+
+    // const {data} = useFetch(
+    //     `/property/lists/${availability}/${status}`
+    //    );
+    const {data} = useFetch(
+         userCity !== null ?
+        `/property/listsadress/${availability}/${statusProperty}?uf=${uf}&city=${city}`
+        : tipo === null || subtipo === null ?
+        `/property/lists/${availability}/${statusProperty}`
+        :subtipo !== null || subType !== "0"?
+        `/property/lists/${availability}/${statusProperty}?tipo=${tipo === null ? type : tipo }&subtipo=${subtipo === null ? subType : subtipo}&bedroom=${quartos === null ? bedroom : quartos}&suite=${suites === null ? suite : suites}&restroom=${banheiros === null ? restroom : banheiros}&garage=${garagem === null ? garage : garagem}`
+        : `/property/lists/${availability}/${statusProperty}`
+        );
+     
+
+        function dataInfos(e) {
+            e.preventDefault();
+         
+           console.log(`/property/lists/${availability}/${statusProperty}?tipo=${tipo === null ? type : tipo }&subtipo=${subtipo === null ? subType : subtipo}&bedroom=${quartos === null ? bedroom : quartos}&suite=${suites === null ? suite : suites}&restroom=${banheiros === null ? restroom : banheiros}&garage=${garagem === null ? garage : garagem}`)
+        }
 
     if(!data) {
         return (
@@ -36,12 +59,13 @@ export function ListProperty({status, tipo, subtipo, quartos, suites, banheiros,
         )
     }
 
-    function handleStatusProperty(e) {
-        setStatusProperty(e.target.value)
-        console.log(e.target.value)
+    function handleNewStatus(data) {
+        setStatusProperty(data)
+        console.log(data)
     }
     function handleType(e) {
         setType(e.target.value)
+        setSubType("")
         console.log(e.target.value)
     }
     function handleSubType(e) {
@@ -71,10 +95,12 @@ export function ListProperty({status, tipo, subtipo, quartos, suites, banheiros,
         setFilter(!filter)
         console.log(!filter)
     }
+
+    const statusSelected = statusProperty === "" ? status : statusProperty
     return (
         <div className="ListProperty">
             <div className="topList">
-            <siv className="textItens">
+            <div className="textItens">
                     <h3>{data.length} {status === "Venda" ? `imóveis à ${status}` : `imóveis para ${status}`}</h3>
 
                     {userCity === null || userCity === undefined || userCity === "" ? 
@@ -89,7 +115,7 @@ export function ListProperty({status, tipo, subtipo, quartos, suites, banheiros,
                     <button >Alterar</button>
                     </div>
                     }
-                </siv>
+                </div>
             <button onClick={handleFiltro}>Filtro +</button>
             </div>
 
@@ -103,15 +129,15 @@ export function ListProperty({status, tipo, subtipo, quartos, suites, banheiros,
                     <div className="dataSearchOptions">
                     
                     <div className="dataSelectsButtons">
-                     <button className={status === "Aluguel" ? "" : "btn"}>Para Alugar</button>
-                     <button className={status === "Venda" ? "" : "btn"}>À venda</button>
+                     <button className={statusSelected === "Aluguel" ? "" : "btn"} onClick={() => handleNewStatus("Aluguel")}>Para Alugar</button>
+                     <button className={statusSelected === "Venda" ? "" : "btn"} onClick={() => handleNewStatus("Venda")}>À venda</button>
                      </div>
                      
 
                      
                      <div className="dataSelects">
                      <h4>Tipo:</h4>
-                    <select value={type} onChange={handleType} className={type === "" ? "" : "select"}>
+                    <select value={type} onChange={handleType} className={type === "" || tipo !== null ? "" : "select"}>
                         <option value="">Tipo</option>
                         <option value="Residencial">Residencial</option>
                         <option value="Comercial">Comercial</option>
@@ -252,7 +278,7 @@ export function ListProperty({status, tipo, subtipo, quartos, suites, banheiros,
                     </div>
 
                     <div className="dataSelectsButtonsAction">
-                        <button><IoSearch /> Buscar</button>
+                        <button onClick={dataInfos}><IoSearch /> Buscar</button>
                         <button className="btn"><IoClose /> Limpar</button>
                 </div>
                     </div>
