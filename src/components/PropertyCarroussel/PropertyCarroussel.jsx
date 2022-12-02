@@ -12,8 +12,8 @@ export function PropertyCarroussel({status}) {
 
     console.log(status)
     const availability = "Disponível";
-    const city = userCity.city;
-    const uf = userCity.uf;
+    const city = userCity?.city;
+    const uf = userCity?.uf;
 
     const {data} = useFetch(
         userCity !== null ?
