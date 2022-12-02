@@ -152,11 +152,11 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
-    width: 100%;
-    margin: 10px 0;
-    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 950px;
+    margin: 5px 0;
 }
+
 
 .SearchProperty .textLocation h4 {
     margin: 5px;
@@ -167,18 +167,18 @@
     color: var(--Gray);
 }
 
-.SearchProperty .textLocation button {
+.SearchProperty .textLocation select {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding: 5px 15px;
-    Background-color: rgba(0,0,0,0.6);
-    color: var(--White);
+    padding: 10px 15px;
+    Background-color:var(--BorderHover);
+    color: var(--Paragraph);
     font-weight: 500;
     border: none;
     margin: 5px;
-    border-radius: 25px;
+    border-radius: 6px;
 }
 
 
@@ -226,6 +226,10 @@
             width: 90%;
         }
 
+        .SearchProperty .textLocation {
+            width: 90%;
+        }
+
         .SearchProperty .selectButtons {
             width: 92%;
             display: flex;
@@ -242,6 +246,10 @@
             justify-content: center;
             width: 95%;
 
+        }
+
+        .SearchProperty .textLocation {
+            width: 95%;
         }
 
         .SearchProperty .selectButtons {
@@ -277,6 +285,10 @@
                 box-shadow: none;
                 margin-top: -7px;
 
+            }
+
+            .SearchProperty .textLocation {
+                width: 70%;
             }
 
             .SearchProperty .search h3 {
@@ -330,10 +342,10 @@
                 width: 67%;
             }
             .SearchProperty .selectButtons button {
-                width: 25%;
+                width: 100%;
             }
             .SearchProperty .selectButtons .btn {
-                width: 25%;
+                width: 100%;
             }
 
             .SearchProperty .icons .unic {
@@ -348,6 +360,15 @@
                     justify-content: center;
                     width: 100%;
                 }
+
+                .SearchProperty .textLocation {
+                    width: 95%;
+                }
+
+                .SearchProperty .textLocation select {
+                    width: 40%;
+                }
+
                 .SearchProperty .selectButtons {
                     width: 96%;
                 }

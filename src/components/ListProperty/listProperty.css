@@ -29,43 +29,6 @@
 }
 
 
-
-.ListProperty .topList .textLocation {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    margin: 5px 0;
-    flex-wrap: wrap;
-}
-
-.ListProperty .topList .textLocation h5 {
-    margin: 5px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    color: var(--Gray);
-}
-
-.ListProperty .topList .textLocation button {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 3px 15px;
-    Background-color: var(--White);
-    color: var(--White);
-    font-weight: 500;
-    border: 1px solid var(--Gray);
-    border-radius: 25px;
-    font-size: 12px;
-    color: var(--Gray);
-    margin: 0 5px;
-}
-
-
 .ListProperty .searchItens {
     padding: 20px;
     display: flex;
@@ -283,6 +246,42 @@
     width: 50%;
     margin: 5px;
 }
+
+
+.ListProperty .searchItens .searchOptions .dataSearchOptions  .textLocation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    margin: 5px 0;
+}
+
+
+.ListProperty .searchItens .searchOptions .dataSearchOptions  .textLocation h4 {
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: var(--Paragraph);
+    font-weight: 700;
+}
+
+.ListProperty .searchItens .searchOptions .dataSearchOptions  .textLocation select {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    Background-color:var(--BorderInput2);
+    color: var(--Paragraph);
+    font-weight: 500;
+    border: none;
+    margin: 5px;
+    border-radius: 6px;
+}
+
 
 .ListProperty .searchItens .textItens {
     padding: 10px;

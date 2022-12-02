@@ -4,11 +4,11 @@ import { IoClose, IoLocationOutline, IoSearch} from "react-icons/io5";
 import { useFetch } from "../../hooks/useFetch";
 import { useState } from "react";
 import { PropertyUnicBlockLoader } from "../PropertyUnicBlockLoader/PropertyUnicBlockLoader";
+import buscaDistrito from "../../services/api-buscaDistrito";
+import { toast } from 'react-toastify';
 
 
-export function ListProperty({status, tipo, subtipo, quartos, suites, banheiros, garagem}) {
-    const LocalCity = localStorage.getItem("suachavecity");
-    const userCity = JSON.parse(LocalCity);
+export function ListProperty({status, tipo, city, uf, subtipo, quartos, suites, banheiros, garagem}) {
 
     const availability = "Disponível";
     const [statusProperty, setStatusProperty] = useState(status);
@@ -21,24 +21,16 @@ export function ListProperty({status, tipo, subtipo, quartos, suites, banheiros,
     const [search, setSearch] = useState("");
     const [filter, setFilter] = useState(false);
 
+    const [city2, setCity2] = useState("");
+    const [districtAll, setDistrictAll] = useState([]);
+    const [uf2, setUf2] = useState("");
+
     console.log(status, tipo, subtipo, quartos, suites, banheiros, garagem);
-
-    const city = userCity?.city
-    const uf = userCity?.uf
-
     console.log(city, uf)
 
-    // const {data} = useFetch(
-    //     `/property/lists/${availability}/${status}`
-    //    );
+
     const {data} = useFetch(
-         userCity !== null ?
-        `/property/listsadress/${availability}/${statusProperty}?uf=${uf}&city=${city}`
-        : tipo === null || subtipo === null ?
-        `/property/lists/${availability}/${statusProperty}`
-        :subtipo !== null || subType !== "0"?
-        `/property/lists/${availability}/${statusProperty}?tipo=${tipo === null ? type : tipo }&subtipo=${subtipo === null ? subType : subtipo}&bedroom=${quartos === null ? bedroom : quartos}&suite=${suites === null ? suite : suites}&restroom=${banheiros === null ? restroom : banheiros}&garage=${garagem === null ? garage : garagem}`
-        : `/property/lists/${availability}/${statusProperty}`
+        `/property/lists/${availability}/${statusProperty}?city=${city}&uf=${uf}&tipo=${tipo === null ? type : tipo }&subtipo=${subtipo === null ? subType : subtipo}&bedroom=${quartos === null ? bedroom : quartos}&suite=${suites === null ? suite : suites}&restroom=${banheiros === null ? restroom : banheiros}&garage=${garagem === null ? garage : garagem}`
         );
      
 
@@ -47,6 +39,7 @@ export function ListProperty({status, tipo, subtipo, quartos, suites, banheiros,
          
            console.log(`/property/lists/${availability}/${statusProperty}?tipo=${tipo === null ? type : tipo }&subtipo=${subtipo === null ? subType : subtipo}&bedroom=${quartos === null ? bedroom : quartos}&suite=${suites === null ? suite : suites}&restroom=${banheiros === null ? restroom : banheiros}&garage=${garagem === null ? garage : garagem}`)
         }
+
 
     if(!data) {
         return (
@@ -58,6 +51,45 @@ export function ListProperty({status, tipo, subtipo, quartos, suites, banheiros,
             </div>
         )
     }
+
+        
+    async function handleSearchDistrict(ufSelect) {
+        console.log(ufSelect)
+        try {
+          const res = await buscaDistrito.get(`${ufSelect}/distritos`) 
+            console.log(res.data)
+            setDistrictAll(res.data)
+            console.log(res.data[0].municipio.nome);
+            return;
+          }catch{
+            console.log("error")
+            toast.error("Escolha um estado e clica em buscar cidades")
+        }
+        return
+    }
+
+    if(districtAll) {
+        districtAll.sort(function(a,b) {
+            if(a.nome < b.nome ) {
+                return -1
+            } else {
+                return true
+            }
+        })
+        }
+
+        
+    function handleSetectCity(e) {
+        setCity2(e.target.value)
+        console.log(e.target.value)
+      }
+      function handleSetectUf(e) {
+        setUf2(e.target.value)
+        console.log(e.target.value)
+        handleSearchDistrict(e.target.value)
+      }
+
+
 
     function handleNewStatus(data) {
         setStatusProperty(data)
@@ -96,25 +128,16 @@ export function ListProperty({status, tipo, subtipo, quartos, suites, banheiros,
         console.log(!filter)
     }
 
+      
+
     const statusSelected = statusProperty === "" ? status : statusProperty
+    const typeSelected = type === "" ? tipo : type
+    const subtypeSelected = subType === "" ? subtipo : subType
     return (
         <div className="ListProperty">
             <div className="topList">
             <div className="textItens">
                     <h3>{data.length} {status === "Venda" ? `imóveis à ${status}` : `imóveis para ${status}`}</h3>
-
-                    {userCity === null || userCity === undefined || userCity === "" ? 
-                    <div className="textLocation">
-                        {/* <button onClick={openModal}>Definir cidade</button> */}
-                        <button >Definir cidade</button>
-                    </div>
-                    : 
-                    <div className="textLocation">
-                    <h5><IoLocationOutline /> {userCity.city} - {userCity.uf}</h5> 
-                    {/* <button onClick={openModal}>Alterar</button> */}
-                    <button >Alterar</button>
-                    </div>
-                    }
                 </div>
             <button onClick={handleFiltro}>Filtro +</button>
             </div>
@@ -137,7 +160,7 @@ export function ListProperty({status, tipo, subtipo, quartos, suites, banheiros,
                      
                      <div className="dataSelects">
                      <h4>Tipo:</h4>
-                    <select value={type} onChange={handleType} className={type === "" || tipo !== null ? "" : "select"}>
+                    <select value={typeSelected} onChange={handleType} className={type === "" || tipo !== null ? "" : "select"}>
                         <option value="">Tipo</option>
                         <option value="Residencial">Residencial</option>
                         <option value="Comercial">Comercial</option>
@@ -149,7 +172,7 @@ export function ListProperty({status, tipo, subtipo, quartos, suites, banheiros,
                      
                      <div className="dataSelects">
                      <h4>Subtipo:</h4>
-                    <select value={subType} onChange={handleSubType} className={subType === "" ? "" : "select"}>
+                    <select value={subtypeSelected} onChange={handleSubType} className={subType === "" ? "" : "select"}>
                         {type === "Residencial" ?
                         <>
                         <option value="">Subtipo</option>
@@ -207,7 +230,7 @@ export function ListProperty({status, tipo, subtipo, quartos, suites, banheiros,
                     
                     <div className="dataSelects">
                         <h4>Quartos: </h4>
-                    <select value={bedroom} onChange={handleBedroom} className={bedroom === "" ? "" : "select"}>
+                    <select value={bedroom} onChange={handleBedroom} className={bedroom === "0" ? "" : "select"}>
                         <option value="">Quartos</option>
                         <option value="1">1 Quarto</option>
                         <option value="2">2 Quartos</option>
@@ -224,7 +247,7 @@ export function ListProperty({status, tipo, subtipo, quartos, suites, banheiros,
 
                     <div className="dataSelects">
                     <h4>Suítes: </h4>
-                    <select value={suite} onChange={handleSuite} className={suite === "" ? "" : "select"}>
+                    <select value={suite} onChange={handleSuite} className={suite === "0" ? "" : "select"}>
                         <option value="">Suítes</option>
                         <option value="1">1 Suíte</option>
                         <option value="2">2 Suítes</option>
@@ -241,7 +264,7 @@ export function ListProperty({status, tipo, subtipo, quartos, suites, banheiros,
                     
                     <div className="dataSelects">
                     <h4>Banheiros: </h4>
-                    <select value={restroom} onChange={handleRestroom} className={restroom === "" ? "" : "select"}>
+                    <select value={restroom} onChange={handleRestroom} className={restroom === "0" ? "" : "select"}>
                         <option value="">Banheiros</option>
                         <option value="1">1 Banheiro</option>
                         <option value="2">2 Banheiros</option>
@@ -258,7 +281,7 @@ export function ListProperty({status, tipo, subtipo, quartos, suites, banheiros,
                                        
                     <div className="dataSelects">
                     <h4>Garagem: </h4>
-                    <select value={garage} onChange={handleGarage} className={garage === "" ? "" : "select"}>
+                    <select value={garage} onChange={handleGarage} className={garage === "0" ? "" : "select"}>
                         <option value="">Vagas de garagem</option>
                         <option value="1">1 Vaga de garagem</option>
                         <option value="2">2 Vagas de garagem</option>
@@ -276,6 +299,55 @@ export function ListProperty({status, tipo, subtipo, quartos, suites, banheiros,
                     <div className="dataSelects">
                        <input type="search" placeholder="Digite bairro ou cidade" className={search === "" ? "" : "selectInput"} onChange={e => setSearch(e.target.value)}/>
                     </div>
+
+                    <div className="textLocation">
+                <h4>Local:</h4>
+                <select value={uf2} onChange={handleSetectUf}> 
+                            <option value="">Escolha seu estado</option>
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                            <option value="EX">Estrangeiro</option>     
+                    </select>
+                    <select value={city2} onChange={handleSetectCity}> 
+                    {districtAll.length === 0 ?
+                    <option value={city2}>{city2}</option>
+                    :
+                    <>
+                    <option value="">Escolha sua cidade</option>
+                    {districtAll?.map((district) => {
+                            return (
+                                <option autocomplete="off" key={district.id} value={district.nome}>{district.nome}</option>
+                            )
+                        })}
+                    </>
+                    }     
+                    </select>
+            </div>
 
                     <div className="dataSelectsButtonsAction">
                         <button onClick={dataInfos}><IoSearch /> Buscar</button>

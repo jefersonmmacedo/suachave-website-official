@@ -86,7 +86,7 @@ body, input, textarea, button {
 
   
 }
-body, input, textarea, button :focus{
+body, input, textarea, select, button :focus{
   outline:none;
   box-shadow: 0 0 0 0;
   outline: 0;
