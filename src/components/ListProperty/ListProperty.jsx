@@ -24,9 +24,9 @@ export function ListProperty({status, tipo, city, uf, subtipo, quartos, suites, 
     const [search, setSearch] = useState("");
     const [filter, setFilter] = useState(false);
 
-    const [city2, setCity2] = useState(city !== null ? city : user !== null ? user?.city : "");
+    const [city2, setCity2] = useState(statusProperty === undefined ? "" : city !== null ? city : user !== null ? user?.city : "");
     const [districtAll, setDistrictAll] = useState([]);
-    const [uf2, setUf2] = useState( uf !== null ? uf : user !== null ? user?.uf : "");
+    const [uf2, setUf2] = useState( statusProperty === undefined ? "" : uf !== null ? uf : user !== null ? user?.uf : "");
 
     console.log(status, uf, city, tipo, subtipo, quartos, suites, banheiros, garagem);
     console.log(status, type, subType, bedroom, suite, restroom, garage);
@@ -36,6 +36,12 @@ export function ListProperty({status, tipo, city, uf, subtipo, quartos, suites, 
     const {data} = useFetch(
         statusProperty === undefined ?
         `/property/all/${availability}`
+        :
+        statusProperty !== undefined && city2 === "" && uf2 === "" ?
+        `/property/lists/${availability}/${statusProperty}`
+        :
+        statusProperty !== undefined && city2 !== "" && uf2 !== "" ?
+        `/property/listsadress/${availability}/${statusProperty}?city=${city2}&uf=${uf2}`
         :
         `/property/listsadressfull/${availability}/${statusProperty}?city=${city2}&uf=${uf2}&tipo=${tipo === null ? type : tipo }&subtipo=${subtipo === null ? subType : subtipo}&bedroom=${quartos === null ? bedroom : quartos}&suite=${suites === null ? suite : suites}&restroom=${banheiros === null ? restroom : banheiros}&garage=${garagem === null ? garage : garagem}`
         );
