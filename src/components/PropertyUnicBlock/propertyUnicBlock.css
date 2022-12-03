@@ -7,7 +7,7 @@
     background-color: var(--White);
     border: 1px solid var(--Border);
     border-radius: 6px;
-    margin: 20px 10px;
+    margin: 20px auto;
     padding-bottom: 10px;
 }
 
@@ -204,12 +204,12 @@
 
 @media (max-width: 1090px) {
     .PropertyUnicBlock {
-        margin: 20px 0px;
+        /* margin: 20px 0px; */
     }
     
 @media (max-width: 950px) {
     .PropertyUnicBlock {
-        margin: 20px auto;
+        /* margin: 20px auto; */
     }
     
 @media (max-width: 750px) {
