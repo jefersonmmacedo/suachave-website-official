@@ -145,10 +145,18 @@ export function ListProperty({status, tipo, city, uf, subtipo, quartos, suites, 
         setUf2("")
         setCity2("")
     }
-    function handleClear(e) {
+    function handleClearItens(e) {
         e.preventDefault();
         setUf2("")
         setCity2("")
+        setStatusProperty(status)
+        setType("")
+        setSubType("")
+        setBedroom("0")
+        setSuite("0")
+        setRestroom("0")
+        setGarage("0")
+        setSearch("")
     }
 
 
@@ -388,7 +396,7 @@ export function ListProperty({status, tipo, city, uf, subtipo, quartos, suites, 
 
                     <div className="dataSelectsButtonsAction">
                         {/* <button onClick={dataInfos}><IoSearch /> Buscar</button> */}
-                        <button className="btn" onClick={handleClear}><IoClose /> Limpar</button>
+                        <button className="btn" onClick={handleClearItens}><IoClose /> Limpar</button>
                 </div>
                     </div>
                 </div>
