@@ -105,6 +105,11 @@ export function SearchProperty({openModal}) {
         handleSearchDistrict(e.target.value)
       }
 
+        function handleClearAddress(e) {
+            e.preventDefault();
+            setUf("")
+            setCity("")
+        }
 
 
     return (
@@ -276,6 +281,7 @@ export function SearchProperty({openModal}) {
                     </>
                     }     
                     </select>
+                    <button onClick={handleClearAddress}>X Limpar</button>
             </div>
 
         </div>

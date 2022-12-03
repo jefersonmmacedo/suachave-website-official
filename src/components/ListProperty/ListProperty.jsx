@@ -24,9 +24,9 @@ export function ListProperty({status, tipo, city, uf, subtipo, quartos, suites, 
     const [search, setSearch] = useState("");
     const [filter, setFilter] = useState(false);
 
-    const [city2, setCity2] = useState(statusProperty === undefined ? "" : city !== null ? city : user !== null ? user?.city : "");
+    const [city2, setCity2] = useState(statusProperty === undefined ? "" : city !== null ? city : "");
     const [districtAll, setDistrictAll] = useState([]);
-    const [uf2, setUf2] = useState( statusProperty === undefined ? "" : uf !== null ? uf : user !== null ? user?.uf : "");
+    const [uf2, setUf2] = useState( statusProperty === undefined ? "" : uf !== null ? uf : "");
 
     console.log(status, uf, city, tipo, subtipo, quartos, suites, banheiros, garagem);
     console.log(status, type, subType, bedroom, suite, restroom, garage);
@@ -139,6 +139,18 @@ export function ListProperty({status, tipo, city, uf, subtipo, quartos, suites, 
         setFilter(!filter)
         console.log(!filter)
     }
+
+    function handleClearAddress(e) {
+        e.preventDefault();
+        setUf2("")
+        setCity2("")
+    }
+    function handleClear(e) {
+        e.preventDefault();
+        setUf2("")
+        setCity2("")
+    }
+
 
       console.log(subType)
 
@@ -359,7 +371,7 @@ export function ListProperty({status, tipo, city, uf, subtipo, quartos, suites, 
                     </select>
                     <select value={city2} onChange={handleSetectCity}> 
                     {districtAll.length === 0 ?
-                    <option value={city}>{city}</option>
+                    <option value={city2}>{city2}</option>
                     :
                     <>
                     <option value="">Escolha sua cidade</option>
@@ -371,11 +383,12 @@ export function ListProperty({status, tipo, city, uf, subtipo, quartos, suites, 
                     </>
                     }     
                     </select>
+                    <button onClick={handleClearAddress}>X Limpar</button>
             </div>
 
                     <div className="dataSelectsButtonsAction">
                         {/* <button onClick={dataInfos}><IoSearch /> Buscar</button> */}
-                        <button className="btn"><IoClose /> Limpar</button>
+                        <button className="btn" onClick={handleClear}><IoClose /> Limpar</button>
                 </div>
                     </div>
                 </div>

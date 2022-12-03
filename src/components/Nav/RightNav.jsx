@@ -162,12 +162,20 @@ const RightNav = ({ open }) => {
             </a>
           </li> */}
           <li className='nav-item'>
-            <a href='/imoveis/Venda' >
+            <a href={
+              user === null ? "/imoveis/Venda" 
+              :
+              `/imoveis/Venda?city=${user?.city}&uf=${user?.uf}`
+              }>
             Comprar
             </a>
           </li>
        <li className='nav-item'>
-            <a href='/imoveis/Aluguel'>
+            <a href={
+              user === null ? "/imoveis/Aluguel" 
+              :
+              `/imoveis/Aluguel?city=${user?.city}&uf=${user?.uf}`
+              }>
             Alugar
             </a>
           </li>

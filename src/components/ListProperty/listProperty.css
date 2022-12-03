@@ -282,6 +282,20 @@
     border-radius: 6px;
 }
 
+.ListProperty .searchItens .searchOptions .dataSearchOptions  .textLocation button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    Background-color:var(--BorderInput2);
+    color: var(--Paragraph);
+    font-weight: 500;
+    border: none;
+    margin: 5px 10px;
+    border-radius: 6px;
+}
+
 
 .ListProperty .topList .textItens {
     padding: 10px;
