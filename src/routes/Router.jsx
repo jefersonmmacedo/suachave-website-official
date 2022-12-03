@@ -31,6 +31,7 @@ import { UpdateAccount } from '../pages/UpdateAccount/UpdateAccount';
 import { UploadPage } from '../pages/UploadPage/UploadPage';
 import { NotFound } from '../pages/NotFound/NotFound';
 import { Negociations } from '../pages/Negociations/Negociations';
+import { TestTools } from '../pages/TestTools/TestTools';
 
 function Router () {
 const Local = localStorage.getItem("suachave");
@@ -60,13 +61,13 @@ function PrivateRoute({children} ) {
             <Route path="/imobiliarias" element={<Companies />}/>
             <Route path="/imobiliaria" element={<Company />}/>
             <Route path="/corretores" element={<Brokers />}/>
-            <Route path="/test" element={<About />}/>
             <Route path="/financiamento" element={<Simulator />}/>
             <Route path="/sobre" element={<About />}/>
             <Route path="/planos" element={<Pricing />}/>
             <Route path="/faleconosco" element={<Contact />}/>
             <Route path="/faq" element={<Faq />}/>
             <Route path="/conversa" element={<Message />}/>
+            <Route path="/test" element={<TestTools />}/>
             
             /* Rotas fechadas/login */
             <Route path="/minhaconta"

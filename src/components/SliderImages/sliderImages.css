@@ -1,4 +1,4 @@
-﻿.content-modal {
+﻿.content-modal-images {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -6,7 +6,7 @@
     width: 100%;
 }
 
-.content-moda .itensModal h5 {
+.content-modal-images .itensModal-images h5 {
     color: var(--Primary);
     font-weight: 700;
 }
