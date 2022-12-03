@@ -34,17 +34,17 @@ export function ListProperty({status, tipo, city, uf, subtipo, quartos, suites, 
 
 
     const {data} = useFetch(
+        statusProperty === undefined ?
+        `/property/all/${availability}`
+        :
         `/property/listsadressfull/${availability}/${statusProperty}?city=${city2}&uf=${uf2}&tipo=${tipo === null ? type : tipo }&subtipo=${subtipo === null ? subType : subtipo}&bedroom=${quartos === null ? bedroom : quartos}&suite=${suites === null ? suite : suites}&restroom=${banheiros === null ? restroom : banheiros}&garage=${garagem === null ? garage : garagem}`
         );
-     console.log(
-        `/property/listsadressfull/${availability}/${statusProperty}?city=${city2}&uf=${uf2}&tipo=${tipo === null ? type : tipo }&subtipo=${subtipo === null ? subType : subtipo}&bedroom=${quartos === null ? bedroom : quartos}&suite=${suites === null ? suite : suites}&restroom=${banheiros === null ? restroom : banheiros}&garage=${garagem === null ? garage : garagem}`
-        )
 
-        function dataInfos(e) {
-            e.preventDefault();
+        // function dataInfos(e) {
+        //     e.preventDefault();
          
-           console.log(`/property/lists/${availability}/${statusProperty}?tipo=${tipo === null ? type : tipo }&subtipo=${subtipo === null ? subType : subtipo}&bedroom=${quartos === null ? bedroom : quartos}&suite=${suites === null ? suite : suites}&restroom=${banheiros === null ? restroom : banheiros}&garage=${garagem === null ? garage : garagem}`)
-        }
+        //    console.log(`/property/lists/${availability}/${statusProperty}?tipo=${tipo === null ? type : tipo }&subtipo=${subtipo === null ? subType : subtipo}&bedroom=${quartos === null ? bedroom : quartos}&suite=${suites === null ? suite : suites}&restroom=${banheiros === null ? restroom : banheiros}&garage=${garagem === null ? garage : garagem}`)
+        // }
 
 
     if(!data) {
@@ -150,6 +150,8 @@ export function ListProperty({status, tipo, city, uf, subtipo, quartos, suites, 
                     ""                   
                 : data.length === 1 ?
                 <h3>{data.length} {statusProperty === "Venda" ? `imóvel à ${statusProperty}` : `imóvel para ${statusProperty}`}</h3>
+                : status === undefined ?
+                <h3>{data.length} Imóveis disponíveis</h3>
                 :
                 <h3>{data.length} {statusProperty === "Venda" ? `imóveis à ${statusProperty}` : `imóveis para ${statusProperty}`}</h3>
                 }
@@ -366,7 +368,7 @@ export function ListProperty({status, tipo, city, uf, subtipo, quartos, suites, 
             </div>
 
                     <div className="dataSelectsButtonsAction">
-                        <button onClick={dataInfos}><IoSearch /> Buscar</button>
+                        {/* <button onClick={dataInfos}><IoSearch /> Buscar</button> */}
                         <button className="btn"><IoClose /> Limpar</button>
                 </div>
                     </div>

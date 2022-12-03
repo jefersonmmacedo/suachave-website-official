@@ -29,7 +29,7 @@ export function Footer() {
                             <h3>SUA CHAVE</h3>
                                 <h5><a href="/sobre">Sobre nós</a></h5>
                                 {/* <h5><a href="/sobre">Blog</a></h5> */}
-                                <h5><a href="/imoveis/all">Imóveis</a></h5>
+                                <h5><a href="/imoveis">Imóveis</a></h5>
                                 <h5><a href="/imobiliarias">Imobiliárias</a></h5>
                                 <h5><a href="/corretores">Corretores</a></h5>
                                 <h5><a href="/financiamento">Financiamento</a></h5>

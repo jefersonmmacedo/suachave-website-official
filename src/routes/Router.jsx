@@ -53,6 +53,7 @@ function PrivateRoute({children} ) {
             <Route path="/cadastro-profissional" element={<SignUpProfessional />}/>
             <Route path="/cadastro-cliente" element={<SignUpClient />}/>
             <Route path="/imoveis/:status" element={<Properties />}/>
+            <Route path="/imoveis" element={<Properties />}/>
             <Route path="/privacidade" element={<PrivacyPolicy />}/>
             <Route path="/termos" element={<TermsOfUse />}/>
             <Route path="/imovel/:id" element={<Property />}/>
