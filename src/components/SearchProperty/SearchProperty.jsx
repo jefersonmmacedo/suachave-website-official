@@ -37,7 +37,7 @@ export function SearchProperty({openModal}) {
             return
         }
         e.preventDefault();
-        window.open(`/imoveis/${status}?city=${city}$uf=${uf}&tipo=${type}&subtipo=${subType}&quartos=${bedroom}&suites=${suite}&banheiros=${restroom}&garagem=${garage}`,"_self")
+       window.open(`/imoveis/${status}?city=${city}&uf=${uf}&tipo=${type}&subtipo=${subType}&quartos=${bedroom}&suites=${suite}&banheiros=${restroom}&garagem=${garage}`,"_self")
     }
 
       function handleType(e) {
@@ -74,7 +74,6 @@ export function SearchProperty({openModal}) {
         console.log(ufSelect)
         try {
           const res = await buscaDistrito.get(`${ufSelect}/distritos`) 
-            console.log(res.data)
             setDistrictAll(res.data)
             console.log(res.data[0].municipio.nome);
             return;

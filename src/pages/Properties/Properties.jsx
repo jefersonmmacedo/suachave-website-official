@@ -14,7 +14,8 @@ import { useQuery } from "../../hooks/useQuery";
 export function Properties(){
     const {status} = useParams();
     const query = useQuery();
-    console.log(query.get("tipo"))
+    console.log(query.get("city"))
+    console.log(query.get("uf"))
     const [isOpenModalSearch, setIsOpenModaSearch] = useState(false);
     function handleTop(e) {
         window.scrollTo({

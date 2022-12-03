@@ -12,27 +12,30 @@ export function ListProperty({status, tipo, city, uf, subtipo, quartos, suites, 
 
     const availability = "Disponível";
     const [statusProperty, setStatusProperty] = useState(status);
-    const [subType, setSubType] = useState("");
-    const [type, setType] = useState("");
-    const [bedroom, setBedroom] = useState("0");
-    const [garage, setGarage] = useState("0");
-    const [suite, setSuite] = useState("0");
-    const [restroom, setRestroom] = useState("0");
+    const [type, setType] = useState(tipo === null ? "" : tipo);
+    const [subType, setSubType] = useState(subtipo === null ? "" : subtipo);
+    const [bedroom, setBedroom] = useState(quartos === null ? "0" : quartos);
+    const [garage, setGarage] = useState(garagem === null ? "0" : garagem);
+    const [suite, setSuite] = useState(suites === null ? "0" : suites);
+    const [restroom, setRestroom] = useState(banheiros === null ? "0" : banheiros);
     const [search, setSearch] = useState("");
     const [filter, setFilter] = useState(false);
 
     const [city2, setCity2] = useState("");
     const [districtAll, setDistrictAll] = useState([]);
-    const [uf2, setUf2] = useState("");
+    const [uf2, setUf2] = useState(uf === null ? "" : uf);
 
-    console.log(status, tipo, subtipo, quartos, suites, banheiros, garagem);
-    console.log(city, uf)
+    console.log(status, uf, city, tipo, subtipo, quartos, suites, banheiros, garagem);
+    console.log(status, type, subType, bedroom, suite, restroom, garage);
+
 
 
     const {data} = useFetch(
-        `/property/lists/${availability}/${statusProperty}?city=${city}&uf=${uf}&tipo=${tipo === null ? type : tipo }&subtipo=${subtipo === null ? subType : subtipo}&bedroom=${quartos === null ? bedroom : quartos}&suite=${suites === null ? suite : suites}&restroom=${banheiros === null ? restroom : banheiros}&garage=${garagem === null ? garage : garagem}`
+        `/property/listsadressfull/${availability}/${statusProperty}?city=${city2}&uf=${uf2}&tipo=${tipo === null ? type : tipo }&subtipo=${subtipo === null ? subType : subtipo}&bedroom=${quartos === null ? bedroom : quartos}&suite=${suites === null ? suite : suites}&restroom=${banheiros === null ? restroom : banheiros}&garage=${garagem === null ? garage : garagem}`
         );
-     
+     console.log(
+        `/property/listsadressfull/${availability}/${statusProperty}?city=${city2}&uf=${uf2}&tipo=${tipo === null ? type : tipo }&subtipo=${subtipo === null ? subType : subtipo}&bedroom=${quartos === null ? bedroom : quartos}&suite=${suites === null ? suite : suites}&restroom=${banheiros === null ? restroom : banheiros}&garage=${garagem === null ? garage : garagem}`
+        )
 
         function dataInfos(e) {
             e.preventDefault();
@@ -128,11 +131,15 @@ export function ListProperty({status, tipo, city, uf, subtipo, quartos, suites, 
         console.log(!filter)
     }
 
-      
+      console.log(subType)
 
     const statusSelected = statusProperty === "" ? status : statusProperty
-    const typeSelected = type === "" ? tipo : type
-    const subtypeSelected = subType === "" ? subtipo : subType
+    const searchLower = search.toLowerCase()
+    const SearchProperty =  data?.filter((property) => property.title.toLowerCase().includes(searchLower)
+                        || property.district.toLowerCase().includes(searchLower)
+                        || property.city.toLowerCase().includes(searchLower)
+                        )
+
     return (
         <div className="ListProperty">
             <div className="topList">
@@ -160,7 +167,7 @@ export function ListProperty({status, tipo, city, uf, subtipo, quartos, suites, 
                      
                      <div className="dataSelects">
                      <h4>Tipo:</h4>
-                    <select value={typeSelected} onChange={handleType} className={type === "" || tipo !== null ? "" : "select"}>
+                    <select value={type} onChange={handleType} className={type === "" ? "" : "select"}>
                         <option value="">Tipo</option>
                         <option value="Residencial">Residencial</option>
                         <option value="Comercial">Comercial</option>
@@ -172,7 +179,7 @@ export function ListProperty({status, tipo, city, uf, subtipo, quartos, suites, 
                      
                      <div className="dataSelects">
                      <h4>Subtipo:</h4>
-                    <select value={subtypeSelected} onChange={handleSubType} className={subType === "" ? "" : "select"}>
+                    <select value={subType} onChange={handleSubType} className={subType === "" ? "" : "select"}>
                         {type === "Residencial" ?
                         <>
                         <option value="">Subtipo</option>
@@ -223,7 +230,7 @@ export function ListProperty({status, tipo, city, uf, subtipo, quartos, suites, 
                         <option value="Área">Área</option>
                         <option value="Terreno/Lote">Terreno/Lote</option>
                         </>
-                        :  <option value="">Selecione o tipo</option>
+                        :  <option value="">{subType === "" ? "Selecione o tipo" : subType}</option>
                         }
                     </select>
                     </div>
@@ -297,7 +304,8 @@ export function ListProperty({status, tipo, city, uf, subtipo, quartos, suites, 
                     </div>
 
                     <div className="dataSelects">
-                       <input type="search" placeholder="Digite bairro ou cidade" className={search === "" ? "" : "selectInput"} onChange={e => setSearch(e.target.value)}/>
+                       <input type="search" placeholder="Digite bairro ou título" className={search === "" ? "" : "selectInput"}
+                        value={search.toLowerCase()} onChange={e => setSearch(e.target.value)}/>
                     </div>
 
                     <div className="textLocation">
@@ -335,7 +343,7 @@ export function ListProperty({status, tipo, city, uf, subtipo, quartos, suites, 
                     </select>
                     <select value={city2} onChange={handleSetectCity}> 
                     {districtAll.length === 0 ?
-                    <option value={city2}>{city2}</option>
+                    <option value={city}>{city}</option>
                     :
                     <>
                     <option value="">Escolha sua cidade</option>
@@ -358,7 +366,7 @@ export function ListProperty({status, tipo, city, uf, subtipo, quartos, suites, 
             </div>
             <div className="itens">
             
-            {data?.map((property) => {
+            {SearchProperty?.map((property) => {
                     return (
                         <PropertyUnicBlock id={property.id} key={property.id}/>
                     )

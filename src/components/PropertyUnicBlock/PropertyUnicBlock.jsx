@@ -1,5 +1,5 @@
 import "./propertyUnicBlock.css";
-import { IoBedOutline, IoCarSportOutline, IoHome, IoHomeOutline, IoLocationOutline } from "react-icons/io5";
+import { IoBedOutline, IoCarSportOutline, IoChevronForwardOutline, IoHome, IoHomeOutline, IoLocationOutline } from "react-icons/io5";
 import { MdOutlineShower } from "react-icons/md";
 
 import { NewFavorite } from "../NewFavorite/NewFavorite";
@@ -20,7 +20,8 @@ export function PropertyUnicBlock({id}) {
         loadproperties()
     },[id])
 
-    const titleProperty = `${property?.subType} ${property?.status === "Venda" ? "à venda" : "para aluguel"}`
+    const titleProperty = `${property?.title}`
+    const cityProperty = `${property?.subType} ${property?.status === "Venda" ? "à venda" : "para aluguel"}`
     return (
         <div className="PropertyUnicBlock">
                     <div className="image">
@@ -48,8 +49,9 @@ export function PropertyUnicBlock({id}) {
                     </div>
                     <div className="text">
                     <a href={`/imovel/${property?.id}`}>
-                    <h4>{titleProperty !== undefined ? titleProperty.slice(0,28) : titleProperty}</h4>
+                    <h4>{titleProperty !== undefined ? titleProperty.slice(0,27) : titleProperty}</h4>
                         </a>
+                    <h5>{cityProperty}</h5>
                     <h6><IoLocationOutline />{property?.district} - {property?.city} - {property?.uf}</h6>
                     <div className="icons">
                         <div className="iconUnic">
