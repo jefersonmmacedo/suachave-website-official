@@ -268,25 +268,15 @@ export function Property() {
                     </div>
                     }
 
-
-                    {/* <div className="map"> */}
-                    {/* <iframe
-                        width="600"
-                        height="450"
-                        style={{border:"0px", borderRadius: "6px"}}
-                        loading="lazy"
-                        allowfullscreen
-                        referrerpolicy="no-referrer-when-downgrade"
-                        src={`https://www.google.com/maps/embed/v1/place?key="AIzaSyAKKy0iHlEZMQavlxNM5i-tkIYp4q7X_Y0
-                            &q=Space+Needle,Seattle+WA`}>
-                    </iframe> */}
-                    {/* <iframe class="gmap_iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
-                    src={text}
-                    width="100%" height="300" style={{border:"0px", borderRadius: "6px"}} allowFullScreen=""
-                    loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe> */}
-                    {/* <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d12290.419599284141!2d-42.62790332892239!3d-22.711818016034076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1664680466523!5m2!1spt-BR!2sbr"
-                    width="100%" height="300" style={{border:"0px", borderRadius: "6px"}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
-                    </div> */}
+                        <div className="map">
+                            <iframe
+                            width="100%" height="300"
+                            frameBorder="0" style={{border:"0px", borderRadius: "6px"}}
+                            referrerpolicy="no-referrer-when-downgrade"
+                            src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyCZllXD0czNd_oeF0u_o9LUVJ2bCd1K4p8&q=${data[0].road},${data[0].district},${data[0].city},${data[0].uf}`}
+                            allowFullScreen>
+                            </iframe>
+                        </div> 
                     </div>
                 </div>
 
