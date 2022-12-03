@@ -7,18 +7,10 @@ import { PropertyUnicBlockLoader } from "../PropertyUnicBlockLoader/PropertyUnic
 
 
 export function PropertyCarroussel({status}) {
-    const LocalCity = localStorage.getItem("suachavecity");
-    const userCity = JSON.parse(LocalCity);
-
     console.log(status)
     const availability = "Disponível";
-    const city = userCity?.city;
-    const uf = userCity?.uf;
 
     const {data} = useFetch(
-        userCity !== null ?
-       `/property/listsadress/${availability}/${status}?uf=${uf}&city=${city}`
-        :
         `/property/lists/${availability}/${status}`
        );
 
