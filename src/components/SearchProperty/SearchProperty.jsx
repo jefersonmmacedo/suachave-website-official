@@ -6,8 +6,8 @@ import {FaHome, FaBuilding, FaStore} from "react-icons/fa";
 import {IoBusiness, IoLocationOutline} from "react-icons/io5";
 
 export function SearchProperty({openModal}) {
-    const LocalCity = localStorage.getItem("suachavecity");
-    const userCity = JSON.parse(LocalCity);
+    const Local = localStorage.getItem("suachave");
+    const user = JSON.parse(Local);
 
     const [code, setCode] = useState(false);
     const [status, setStatus] = useState("Venda");
@@ -18,9 +18,9 @@ export function SearchProperty({openModal}) {
     const [garage, setGarage] = useState("0");
     const [restroom, setRestroom] = useState("0");
 
-    const [city, setCity] = useState("");
+    const [city, setCity] = useState(user !== null ? user?.city : "");
     const [districtAll, setDistrictAll] = useState([]);
-    const [uf, setUf] = useState("");
+    const [uf, setUf] = useState(user !== null ? user?.uf : "");
 
 
     function handleLinkSearchProperty(e) {

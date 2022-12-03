@@ -6,9 +6,12 @@ import { useState } from "react";
 import { PropertyUnicBlockLoader } from "../PropertyUnicBlockLoader/PropertyUnicBlockLoader";
 import buscaDistrito from "../../services/api-buscaDistrito";
 import { toast } from 'react-toastify';
+import notFoundImage from "../../assets/images/svg/404property.svg";
 
 
 export function ListProperty({status, tipo, city, uf, subtipo, quartos, suites, banheiros, garagem}) {
+    const Local = localStorage.getItem("suachave");
+    const user = JSON.parse(Local);
 
     const availability = "Disponível";
     const [statusProperty, setStatusProperty] = useState(status);
@@ -21,9 +24,9 @@ export function ListProperty({status, tipo, city, uf, subtipo, quartos, suites, 
     const [search, setSearch] = useState("");
     const [filter, setFilter] = useState(false);
 
-    const [city2, setCity2] = useState("");
+    const [city2, setCity2] = useState(city !== null ? city : user !== null ? user?.city : "");
     const [districtAll, setDistrictAll] = useState([]);
-    const [uf2, setUf2] = useState(uf === null ? "" : uf);
+    const [uf2, setUf2] = useState( uf !== null ? uf : user !== null ? user?.uf : "");
 
     console.log(status, uf, city, tipo, subtipo, quartos, suites, banheiros, garagem);
     console.log(status, type, subType, bedroom, suite, restroom, garage);
@@ -137,14 +140,19 @@ export function ListProperty({status, tipo, city, uf, subtipo, quartos, suites, 
     const searchLower = search.toLowerCase()
     const SearchProperty =  data?.filter((property) => property.title.toLowerCase().includes(searchLower)
                         || property.district.toLowerCase().includes(searchLower)
-                        || property.city.toLowerCase().includes(searchLower)
                         )
 
     return (
         <div className="ListProperty">
             <div className="topList">
             <div className="textItens">
-                    <h3>{data.length} {status === "Venda" ? `imóveis à ${status}` : `imóveis para ${status}`}</h3>
+                {data.length === 0 ?
+                    ""                   
+                : data.length === 1 ?
+                <h3>{data.length} {statusProperty === "Venda" ? `imóvel à ${statusProperty}` : `imóvel para ${statusProperty}`}</h3>
+                :
+                <h3>{data.length} {statusProperty === "Venda" ? `imóveis à ${statusProperty}` : `imóveis para ${statusProperty}`}</h3>
+                }
                 </div>
             <button onClick={handleFiltro}>Filtro +</button>
             </div>
@@ -364,15 +372,24 @@ export function ListProperty({status, tipo, city, uf, subtipo, quartos, suites, 
                     </div>
                 </div>
             </div>
-            <div className="itens">
-            
-            {SearchProperty?.map((property) => {
-                    return (
-                        <PropertyUnicBlock id={property.id} key={property.id}/>
-                    )
-                })}
+            {SearchProperty?.length > 0 ?
+             <div className="itens">
+                {SearchProperty?.map((property) => {
+                        return (
+                            <PropertyUnicBlock id={property.id} key={property.id}/>
+                        )
+                    })}
+                </div> 
+                :
+                    <div className="MainAbout">
+                        <img src={notFoundImage} alt="" />
+                        <h3>Nenhum imóvel localizado</h3>
+                    </div>
                 
-                </div>        
+
+            }
+
+                  
         </div>
     )
 }

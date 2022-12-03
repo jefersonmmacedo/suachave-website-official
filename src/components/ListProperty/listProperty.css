@@ -283,7 +283,7 @@
 }
 
 
-.ListProperty .searchItens .textItens {
+.ListProperty .topList .textItens {
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -291,6 +291,48 @@
     justify-content: flex-start;
 
 }
+
+.ListProperty .MainAbout{
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-itens: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.ListProperty .MainAbout img {
+    width: 550px;
+    margin: 40px auto;
+}
+
+.ListProperty .MainAbout h3 {
+    font-weight: 600;
+    text-align: center;
+    color: var(--Paragraph);
+    margin: 10px 0;
+    text-align: center;
+}
+
+@media (max-width: 750px) {
+    .ListProperty .MainAbout img {
+        width: 60%;
+        margin: 40px auto 0 auto;
+    }
+
+    .ListProperty .MainAbout h3 {
+        margin: 40px;
+    }
+    
+
+    @media (max-width: 550px) {
+        .ListProperty .MainAbout img {
+            width: 70%;
+        }
+    }
+}
+
 
 
 
@@ -370,7 +412,7 @@
         padding: 7px;
         margin: 5px 0;
     }
-    .ListProperty .searchItens .textItens{
+    .ListProperty .topList .textItens{
         margin: 10px 0;
     }
 
