@@ -29,7 +29,7 @@ export function Property() {
         )
     }
     if(data) {
-         newView(data[0].id, data[0].idCompany )
+         newView(data[0].id, data[0].idCompany );
     }
 
         async function newView(property, company) {
@@ -42,7 +42,8 @@ export function Property() {
                 return
             }).catch((err) => {
                 console.log(err)
-            })
+            });
+            return
         }
 
 

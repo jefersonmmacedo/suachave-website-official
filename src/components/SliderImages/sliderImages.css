@@ -1,12 +1,10 @@
-﻿.content-modal-images {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+﻿
+.content-modal .itensModal {
+    margin: 5px;
 }
-
-.content-modal-images .itensModal-images h5 {
-    color: var(--Primary);
+.content-modal .itensModal h5 {
+    color: var(--Paragraph);
     font-weight: 700;
+    text-align: center;
+    width: 100%;
 }
