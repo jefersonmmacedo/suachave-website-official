@@ -3,7 +3,7 @@ import {IoCrop, IoArrowBack, IoArrowForward, IoLocationOutline, IoBedOutline, Io
 import {TfiRulerAlt2} from 'react-icons/tfi';
 import {MdOutlineShower} from 'react-icons/md';
 import {TbBath} from 'react-icons/tb';
-
+import imageBack from "../../assets/images/background15.jpg"
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
 import { useFetch } from "../../hooks/useFetch";
@@ -19,7 +19,23 @@ function SliderHome() {
 
     if(!data) {
         return (
-            <h5>Carregando...</h5>
+            <div className="each-slide-effectLoading">
+            <div className="imageTopLoading">
+            <div className="imageLoading">
+                 <a href="">
+                    <img src={imageBack} alt="" />
+                </a>
+            </div>
+            <div className="blockSliderLoading">
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+            </div>
+            </div>
+            </div>
         )
     }
 

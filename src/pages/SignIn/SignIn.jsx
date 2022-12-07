@@ -3,12 +3,13 @@ import Logo from "../../assets/images/Logo.png";
 import { useState } from "react";
 import { useContext } from "react";
 import { AuthContext } from "../../contexts/Auth";
+import { IoAlertCircleOutline } from "react-icons/io5";
 
 export function SignIn() {
     const [company, setCompany] = useState(false);
     const [login, setLogin] = useState("");
     const [password, setPassword] = useState("");
-    const {loginSession} = useContext(AuthContext);
+    const {loginSession, loading} = useContext(AuthContext);
 
     function handleSelectClient(e) {
         e.preventDefault();
@@ -44,6 +45,11 @@ export function SignIn() {
                     <>
                         <input type="text" placeholder="Email ou ID" value={login} onChange={(e) => setLogin(e.target.value)}/>
                         <input type="password" placeholder="Senha" value={password} onChange={(e) => setPassword(e.target.value)}/>
+                        {loading === true ? "" :
+                         <div className="message">
+                         <h5><IoAlertCircleOutline /> Login ou senha incorretos.</h5>
+                       </div>
+                        }
                         <div className="links">
                             <p>Recuperar senha</p>
                         </div>
