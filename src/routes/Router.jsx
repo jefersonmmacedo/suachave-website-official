@@ -45,9 +45,9 @@ function PrivateRoute({children} ) {
             <Routes>
             {/* Rotas abertas */}
             <Route path="*" element={<NotFound />}/>
-            <Route path="/home" element={<ComingSoon />}/>
+            <Route path="/" element={<ComingSoon />}/>
             <Route path="/up" element={<UploadPage />}/>
-            <Route path="/" element={<Home />}/>
+            <Route path="/home" element={<Home />}/>
             <Route path="/entrar" element={<SignIn />}/>
             <Route path="/entrar-empresa" element={<SignInCompany />}/>
             <Route path="/cadastrar" element={<ChooseYourAccount />}/>
