@@ -1,0 +1,229 @@
+.Evaluation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    color: var(--White);
+    background-color: var(--Primary);
+}
+
+.Evaluation .img {
+    height: 40px;
+    margin: 10px;;
+}
+.Evaluation .Address {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+.Evaluation .CompaniesEvaluation {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+
+}
+.Evaluation .CompaniesEvaluation .listCompaniesEvaluation {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 450px;
+    overflow: auto;
+}
+.Evaluation .CompaniesEvaluation .listCompaniesEvaluation .CompanieUnicEvaluation {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: row;
+    width: 95%;
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid var(--White);
+    border-radius: 6px;
+}
+.Evaluation .CompaniesEvaluation .listCompaniesEvaluation .CompanieUnicEvaluation .imageEvaluation {
+    width: 60px;
+    height: 60px;
+    border-radius: 6px;
+    object-fit: cover;
+    background-color: var(--White);
+}
+
+.Evaluation .CompaniesEvaluation .listCompaniesEvaluation .CompanieUnicEvaluation .imageEvaluation img {
+    width: 60px;
+    height: 60px;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.Evaluation .CompaniesEvaluation .listCompaniesEvaluation .CompanieUnicEvaluation .text {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 10px;
+}
+
+.Evaluation .CompaniesEvaluation .listCompaniesEvaluation .CompanieUnicEvaluation .text h3 {
+    font-weight: 700;
+}
+
+.Evaluation input {
+    padding: 10px 20px;
+    width: 100%;
+    border: 1px solid var(--Border);
+    border-radius: 6px;
+    margin: 5px 2px;
+}
+
+.Evaluation .CompaniesEvaluation .listCompaniesEvaluation .CompanieUnicEvaluation .buttonCompany {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    height: 100%;
+}
+
+.Evaluation .CompaniesEvaluation .listCompaniesEvaluation .CompanieUnicEvaluation .buttonCompany .btnCompany {
+    padding: 10px;
+    border: 1px solid var(--Border);
+    border-radius: 6px;
+    margin: 5px;
+    color: var(--Primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+.Evaluation .CompaniesEvaluation .listCompaniesEvaluation .CompanieUnicEvaluation .buttonCompany .btnCompany svg {
+    margin-right: 0px;
+}
+
+.Evaluation select {
+    padding: 10px 20px;
+    width: 100%;
+    border: 1px solid var(--Border);
+    border-radius: 6px;
+    margin: 5px 2px;
+}
+.Evaluation textarea {
+    padding: 10px 20px;
+    width: 100%;
+    border: 1px solid var(--Border);
+    border-radius: 6px;
+    margin: 5px 2px;
+    resize: none;
+}
+
+.Evaluation button {
+    padding: 10px 15px;
+    border: 1px solid var(--Border);
+    border-radius: 6px;
+    margin: 5px;
+    color: var(--Primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.Evaluation button svg {
+    margin-right: 5px;
+    font-size: 16px;
+}
+
+.Evaluation .Address .cep {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 300px;
+}
+
+.Evaluation .Address .data {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 10px;
+    width: 450px;
+}
+.Evaluation .Address .data .dataInputs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+}
+.Evaluation .Address .data2 {
+    display: none;
+}
+
+.Evaluation .stepes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20px 2px;
+    width: 100%;
+}
+
+.Evaluation .stepes .stepeUnicSelect {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--White);
+    background-color: var(--White);
+    color: var(--Primary)
+}
+.Evaluation .stepes .stepeUnic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--Border);
+    color: var(--Border);
+}
+
+.Evaluation .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20px;
+    width: 350px;
+}
+
+.Evaluation .buttons button {
+    padding: 10px 15px;
+    border: 1px solid var(--Border);
+    border-radius: 6px;
+    margin: 5px;
+    color: var(--White);
+    background-color: var(--Primary);
+    border-radius: 6px;
+    width: 45%;
+}

@@ -12,6 +12,7 @@ import { ExploreIconsProperties } from "../../components/ExploreIconsProperties/
 import { IoBusiness, IoCloseOutline, IoSearch, IoPersonCircleOutline, IoCheckboxOutline } from "react-icons/io5";
 import { ToHire } from "../../components/ToHire/ToHire";
 import { FaBuilding, FaHome, FaStore } from "react-icons/fa";
+import { Finance } from "../../components/Finance/Finance";
 
 
 export function Home() {
@@ -73,6 +74,7 @@ export function Home() {
             <div className="carroussel">
             <PropertyCarroussel status={"Aluguel"}/>
             </div>
+            <Finance />
             <ExploreIconsProperties />
             <Cities />
             <ToHire />

@@ -32,6 +32,7 @@ import { UploadPage } from '../pages/UploadPage/UploadPage';
 import { NotFound } from '../pages/NotFound/NotFound';
 import { Negociations } from '../pages/Negociations/Negociations';
 import { TestTools } from '../pages/TestTools/TestTools';
+import { Evaluation } from '../pages/Evaluation/Evaluation';
 
 function Router () {
 const Local = localStorage.getItem("suachave");
@@ -67,6 +68,7 @@ function PrivateRoute({children} ) {
             <Route path="/faleconosco" element={<Contact />}/>
             <Route path="/faq" element={<Faq />}/>
             <Route path="/conversa" element={<Message />}/>
+            <Route path="/avaliacao" element={<Evaluation />}/>
             <Route path="/test" element={<TestTools />}/>
             
             /* Rotas fechadas/login */

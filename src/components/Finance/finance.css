@@ -1,0 +1,125 @@
+﻿.Finance  {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 1200px;
+    margin: 20px auto;
+}
+
+.Finance .simulation {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: var(--Primary);
+    padding: 30px;
+    margin: 20px;
+    border-radius: 6px;
+    color: var(--White);
+    width: 100%;
+}
+
+.Finance .simulation:hover {
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+.Finance .simulation svg {
+    font-size: 40px;
+    margin: 10px 0;
+}
+.Finance .simulation h2 {
+    font-weight: 900;
+    font-size: 32px;
+}
+.Finance .simulation h4{
+    margin: 5px 0 20px 0;
+}
+.Finance .simulation a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    Background-color: var(--White);
+    color: var(--Primary);
+    font-weight: 500;
+    border: none;
+    margin: 10px 0;
+    border-radius: 25px;
+    text-decoration:none;
+    font-weight: 700;
+}
+
+.Finance .FinanceValue {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: var(--BorderInput);
+    padding: 30px;
+    margin: 20px;
+    border-radius: 6px;
+    color: var(--Description);
+    width: 100%;
+}
+.Finance .FinanceValue:hover {
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+.Finance .FinanceValue svg {
+    font-size: 40px;
+    margin: 10px 0;
+}
+.Finance .FinanceValue h2 {
+    font-weight: 900;
+    font-size: 32px;
+}
+.Finance .FinanceValue h4{
+    margin: 5px 0 20px 0;
+}
+.Finance .FinanceValue a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    Background-color: var(--Primary);
+    color: var(--White);
+    font-weight: 500;
+    border: none;
+    margin: 10px 0;
+    border-radius: 25px;
+    text-decoration:none;
+    font-weight: 700;
+}
+
+@media (max-width: 1200px) {
+    .Finance  {
+        width: 100%;
+    }
+    
+@media (max-width: 800px) {
+
+    .Finance  {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .Finance .FinanceValue h2 {
+        font-size: 30px;
+        font-weight: 700;
+    }
+    .Finance .simulation h2 {
+        font-size: 30px;
+        font-weight: 700;
+    }
+    .Finance .FinanceValue a {
+        width: 80%;
+    }
+    .Finance .simulation a {
+        width: 80%;
+    }
+}
+}

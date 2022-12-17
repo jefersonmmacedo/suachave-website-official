@@ -1,17 +1,18 @@
 ﻿import "./newScheduling.css"
-import { IoCalendar, IoCloseOutline, IoLocationOutline, IoBusinessOutline } from "react-icons/io5";
+import { IoCalendar, IoCloseOutline, IoLocationOutline, IoBusinessOutline, IoHomeOutline, IoVideocamOutline, IoHome, IoVideocam } from "react-icons/io5";
 import Modal from 'react-modal';
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import { PropertyUnicBlock } from "../PropertyUnicBlock/PropertyUnicBlock";
 import api from "../../services/api";
-import { useContext } from "react";
 import { AuthContext } from "../../contexts/Auth";
 
 export function NewScheduling({idProperty, idCompany, title, image}) {
     const Local = localStorage.getItem("suachave");
     const user = JSON.parse(Local);
+
+    const [view, setView] = useState("")
 
     const {newScheduling} = useContext(AuthContext)
 
@@ -27,6 +28,9 @@ export function NewScheduling({idProperty, idCompany, title, image}) {
 
     const [property, setProperty] = useState();
     const [company, setCompany] = useState();
+  
+    const [nameNew, setNameNew] = useState("");
+    const [whatsappNew, setWhatsappNew] = useState("");
 
 
     useEffect(() => {
@@ -69,6 +73,7 @@ export function NewScheduling({idProperty, idCompany, title, image}) {
       function handleCloseModal(e) {
         e.preventDefault();
         setIsOpenModa(false);
+        setView("")
       }
     function handleOpenModalLogin(e) {
       e.preventDefault();
@@ -98,6 +103,9 @@ export function NewScheduling({idProperty, idCompany, title, image}) {
       function handleMeet(e) {
         setMeet(e.target.value);
       }
+      function handleTypeScheduling(data) {
+        setView(data);
+      }
 
     Modal.setAppElement('#root');
     return (
@@ -111,6 +119,7 @@ export function NewScheduling({idProperty, idCompany, title, image}) {
             <IoCloseOutline /> 
             </button>
             <div className="content-modal-scheduling">
+              {view === "visita" ?
             <div className="itensModal-scheduling">
               <h2>Novo agendamento</h2>
                 <Calendar onChange={onChange} value={value} />
@@ -233,24 +242,140 @@ export function NewScheduling({idProperty, idCompany, title, image}) {
                 </div>
                 : ""
                   }
-                {/* <div className="dataProperty">
-                    <div className="image">
-                    <img src={ImageHouse1} alt="" />
-                    </div>
-                    <div className="textProperty">
-                    <h4>Apartamento luxuoso</h4>
-                    <h6><IoLocationOutline />Centro - Rio Bonito - RJ</h6>
-                    <div className="pricing">
-                        <h6>Aluguel /<span> Mensal</span></h6>
-                        <h3>R$ <span>2.000,00</span></h3>
-                    </div>
-                    </div>
-                </div> */}
 
                 <PropertyUnicBlock id={idProperty}/>
                 <button className="btnSubmit" onClick={handleNewScheduling}>Enviar solicitação de agendamento</button>
+               
+                <div className="buttonsType">
+                    <button className="btnType" onClick={() => handleTypeScheduling("Video")}><IoVideocam /> Vídeo chamada</button>
+                    <button className="btnType" onClick={handleCloseModal}><IoCloseOutline /> Fechar</button>
+                     </div>
+
                 </div>
             </div>
+            : view === "Video" ?
+            <div className="itensModal-scheduling">
+              <h2><IoVideocamOutline />  Nova video chamada</h2>
+                <Calendar onChange={onChange} value={value} />
+                <div className="form">
+                <div className="data">
+                    <div className="infosData">
+                    <div className="textModal-scheduling">
+                        <p>Turno</p>
+                    </div>
+                     <select value={shift} onChange={handleShift}>
+                    <option value="Escolha">Escolha</option>
+                    <option value="Manhã">Manhã</option>
+                    <option value="Tarde">Tarde</option>
+                </select>
+                    </div>
+                    <div className="infosData">
+                    <div className="textModal-scheduling">
+                        <p>Escolha um horário</p>
+                    </div>
+                     <select value={hour} onChange={handleHour}>
+                     {shift === "Manhã" ?
+                        <>
+                         <option value="Escolha">Escolha</option>
+                        <option value="08h - 09h">08h - 09h</option>
+                        <option value="09h - 10h">09h - 10h</option>
+                        <option value="10h - 11h">10h - 11h</option>
+                        <option value="11h - 12h">11h - 12h</option>
+                        </>
+                        : shift === "Tarde" ?
+                        <>
+                        <option value="Escolha">Escolha</option>
+                        <option value="13h - 14h">13h - 14h</option>
+                        <option value="14h - 15h">14h - 15h</option>
+                        <option value="15h - 16h">15h - 16h</option>
+                        <option value="16h - 17h">16h - 17h</option>
+                        </>
+                        : <option value="Escolha">Escolha Turno</option>}
+                  
+
+                </select>
+                    </div>
+
+                </div>
+                <div className="data">
+                    <div className="infosData">
+                    <div className="textModal-scheduling">
+                        <p>Mensagem de confirmação?</p>
+                    </div>
+                 <select value={ownACar} onChange={handleOwnACar}>
+                    <option value="Escolha">Escolha</option>
+                    <option value="Sim">Sim</option>
+                    <option value="Não">Não</option>
+                </select>
+                    </div>
+
+                    <div className="infosData">
+                    <div className="textModal-scheduling">
+                        <p>Quando?</p>
+                    </div>
+                     <select value={amountOfPeople} onChange={handleAmountOfPeople}>
+                        {ownACar === "Sim" ?
+                        <>
+                        <option value="Escolha">Escolha</option>
+                        <option value="10 Minutos antes">10 Minutos antes</option>
+                        <option value="20 Minutos antes">20 Minutos antes</option>
+                        <option value="30 Minutos antes">30 Minutos antes</option>
+                        <option value="1 Hora antes">1 Hora antes</option>
+                        </>
+                        : ownACar === "Não" ?
+                        <>
+                        <option value="Sem mensagem de confirmação">Sem mensagem de confirmação</option>
+                        </>
+                        :
+                        <option value=""></option>
+                        }
+                </select>
+                    </div>
+
+                </div>
+
+
+                    <div className="data">
+                    <div className="infosData">
+                  <div className="textModal-scheduling">
+                      <p>Nome</p>
+                  </div>
+                  <input type="text" value={nameNew === "" ? user.name : nameNew} onChange={e => setNameNew(e.target.value)}/>
+                  </div>
+                  <div className="infosData">
+                  <div className="textModal-scheduling">
+                        <p>Whatsapp</p>
+                    </div>
+                    <input type="text" value={whatsappNew === "" ? user.whatsapp : whatsappNew } onChange={e => setWhatsappNew(e.target.value)}/>
+                            </div>
+                </div>
+
+                <div className="data">
+                <div className="infosData">
+                    <div className="textModal-scheduling">
+                        <p>* Agende a vídeo chamada com 3 horas de antecedência</p>
+                    </div>
+                    </div>
+                </div>
+
+                <PropertyUnicBlock id={idProperty}/>
+                <button className="btnSubmit" onClick={handleNewScheduling}>Enviar solicitação de agendamento</button>
+                <div className="buttonsType">
+                    <button className="btnType" onClick={() => handleTypeScheduling("visita")}><IoHome /> Visita no imóvel</button>
+                    <button className="btnType" onClick={handleCloseModal}><IoCloseOutline /> Fechar</button>
+                     </div>
+                </div>
+            </div>
+                 :
+            <div className="itensModal-scheduling">
+                    <div className="form">
+                    <div className="buttonsType">
+                    <button className="btnType" onClick={() => handleTypeScheduling("visita")}><IoHome /> Visita no imóvel</button>
+                    <button className="btnType" onClick={() => handleTypeScheduling("Video")}><IoVideocam /> Vídeo chamada</button>
+                     </div>
+                    </div>
+                </div>
+                 }
             </div>
             </Modal>
 

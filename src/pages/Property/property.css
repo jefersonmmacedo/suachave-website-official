@@ -20,7 +20,6 @@
     align-items: flex-start;
     justify-content: center;
     margin: 20px 0;
-
 }
 
 
@@ -447,7 +446,12 @@
 
 
 
+@media (max-width: 1200px) {
+    .Property .main .data {
+        width: 95%;
+    }
 @media (max-width: 1000px) {
+
     .Property .main .data .propertyUnic {
         width:100%;
     }
@@ -459,7 +463,9 @@
     }
     
 @media (max-width: 950px) {
-
+    .Property .main .data {
+        width: 100%;
+    }
     
 @media (max-width: 850px) {
     .Property .main .data {
@@ -469,7 +475,7 @@
         align-items: center;
         justify-content: flex-start;
         margin: 20px 0;
-        padding: 0 40px;
+        padding: 0 10px;
     }
     
     .Property .main .data .propertyUnic {
@@ -500,5 +506,6 @@
 }
 }
 
+}
 }
 }
