@@ -33,6 +33,7 @@ import { NotFound } from '../pages/NotFound/NotFound';
 import { Negociations } from '../pages/Negociations/Negociations';
 import { TestTools } from '../pages/TestTools/TestTools';
 import { Evaluation } from '../pages/Evaluation/Evaluation';
+import { ChatMessage } from '../pages/ChatMessage/ChatMessage';
 
 function Router () {
 const Local = localStorage.getItem("suachave");
@@ -78,6 +79,8 @@ function PrivateRoute({children} ) {
                     element={ <PrivateRoute> <UpdateAccount /> </PrivateRoute>} />
             <Route path="/mensagens"
                     element={ <PrivateRoute> <MessagesProperty /> </PrivateRoute>} />
+            <Route path="/chat/:room/:idProperty/:idCompany/:idClient"
+                    element={ <PrivateRoute> <ChatMessage /> </PrivateRoute>} />
             <Route path="/favoritos"
                     element={ <PrivateRoute> <Favorites /> </PrivateRoute>} />
             <Route path="/notificacoes"

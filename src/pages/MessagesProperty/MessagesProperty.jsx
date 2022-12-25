@@ -15,9 +15,9 @@ export function MessagesProperty() {
                 <div className="main">
                 <ToolBarClient />
                 <div className="text">
-                <h2>Minhas conversas</h2>
-                <h5>Você não possui conversas</h5>
-                {/* <div className="chat">
+                {/* <h2>Minhas conversas</h2>
+                <h5>Você não possui conversas</h5> */}
+                <div className="chat">
                     <div className="image">
                         <img src={ImageHouse} alt="" />
                     </div>
@@ -26,7 +26,7 @@ export function MessagesProperty() {
                     <h5>Olá, boa noite. Este imóvel aceita financiamento...</h5>
                     <h6>Ultima mensagem às 16:45h</h6>
                     </div>
-                </div> */}
+                </div>
 
                 </div>
             </div>

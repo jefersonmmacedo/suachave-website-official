@@ -11,7 +11,7 @@
 
 .Evaluation .img {
     height: 40px;
-    margin: 10px;;
+    margin: 20px;
 }
 .Evaluation .Address {
     display: flex;
@@ -226,4 +226,21 @@
     background-color: var(--Primary);
     border-radius: 6px;
     width: 45%;
+    font-size: 14px;
+}
+.Evaluation .buttons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 10px 15px;
+    border: 1px solid var(--Border);
+    border-radius: 6px;
+    margin: 5px;
+    color: var(--White);
+    background-color: var(--Primary);
+    border-radius: 6px;
+    width: 45%;
+    text-decoration: none;
+    font-size: 14px;
 }

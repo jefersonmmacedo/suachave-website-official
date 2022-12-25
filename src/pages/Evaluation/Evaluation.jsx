@@ -96,8 +96,8 @@ export function Evaluation() {
             </div>
             </div>
             <div className="buttons">
+                <a href="/" className="btnCancel">X Fechar</a>
                 <button className="btn" onClick={() => handleSelectStepe("2")}>Avançar</button>
-                <button className="btnCancel">X Fechar</button>
             </div>
             </>
             : stepes === "2" ? 
@@ -143,8 +143,8 @@ export function Evaluation() {
             </div>
             </div>
             <div className="buttons">
-                <button className="btn" onClick={() => handleSelectStepe("3")}>Avançar</button>
                 <button className="btn" onClick={() => handleSelectStepe("1")}>Voltar</button>
+                <button className="btn" onClick={() => handleSelectStepe("3")}>Avançar</button>
             </div>
             </>
                : stepes === "3" ? 
@@ -157,8 +157,8 @@ export function Evaluation() {
 
                </div>
                <div className="buttons">
-                   <button className="btn" onClick={() => handleSelectStepe("4")}>Avançar</button>
                    <button className="btn" onClick={() => handleSelectStepe("2")}>Voltar</button>
+                   <button className="btn" onClick={() => handleSelectStepe("4")}>Avançar</button>
                </div>
                </>
                   : stepes === "4" ? 
@@ -195,8 +195,8 @@ export function Evaluation() {
    
                   </div>
                   <div className="buttons">
-                      <button className="btn" onClick={() => handleSelectStepe("5")}>Avançar</button>
                       <button className="btn" onClick={() => handleSelectStepe("3")}>Voltar</button>
+                      <button className="btn" onClick={() => handleSelectStepe("5")}>Avançar</button>
                   </div>
                   </>
                     : stepes === "5" ? 
@@ -209,8 +209,8 @@ export function Evaluation() {
      
                     </div>
                     <div className="buttons">
-                        <button className="btn" onClick={() => handleSelectStepe("5")}>Enviar</button>
                         <button className="btn" onClick={() => handleSelectStepe("4")}>Voltar</button>
+                        <button className="btn" onClick={() => handleSelectStepe("5")}>Enviar</button>
                     </div>
                     </>
             : ""

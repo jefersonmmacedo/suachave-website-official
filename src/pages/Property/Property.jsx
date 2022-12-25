@@ -100,7 +100,7 @@ export function Property() {
                     : ""
              }
 
-                    <NewMessageProperty />
+                    <NewMessageProperty idProperty={data[0].id} idCompany={data[0].idCompany}/>
                     <NewScheduling idProperty={data[0].id} idCompany={data[0].idCompany} title={data[0].title} image={data[0].featuredImage}/>
                     <NewShare idProperty={data[0].id} title={`${data[0].title} (${data[0].city} / ${data[0].uf})`}/>
                     <NewFavorite idProperty={data[0].id} idCompany={data[0].idCompany} page={"yes"}/>
@@ -271,6 +271,7 @@ export function Property() {
                             src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyCZllXD0czNd_oeF0u_o9LUVJ2bCd1K4p8&q=${data[0].road},${data[0].district},${data[0].city},${data[0].uf}`}
                             allowFullScreen>
                             </iframe>
+                           <h6> * Endereço aproximado</h6>
                         </div> 
                     </div>
                 </div>
