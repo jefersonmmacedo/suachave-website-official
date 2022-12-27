@@ -2,7 +2,7 @@
 import Navbar2 from "../../components/Nav/Navbar";
 import "./myAccount.css";
 import { ToolBarClient } from "../../components/ToolBarClient/ToolBarClient";
-import { IoCalendarOutline, IoChatboxEllipsesOutline, IoHeartOutline, IoHomeOutline, IoPersonOutline} from "react-icons/io5"
+import { IoCalendarOutline, IoChatboxEllipsesOutline, IoChatboxOutline, IoHeartOutline, IoHomeOutline, IoPersonOutline} from "react-icons/io5"
 import api from "../../services/api";
 import { useEffect } from "react";
 import { useState } from "react";
@@ -14,6 +14,7 @@ export function MyAccount() {
 
     const [favorite, setFavorite] = useState()
     const [scheduling, setScheduling] = useState()
+    const [chats, setChats] = useState()
 
     useEffect(() => {
         async function loadFavorites() {
@@ -36,6 +37,16 @@ export function MyAccount() {
         }
 
         loadScheduling()
+
+        async function loadChats() {
+            await api.get(`/rooms/client/${user.id}`).then((res) => {
+                setChats(res.data.length)
+            }).catch((error) => {
+                console.log(error)
+            })
+        }
+
+        loadChats()
     }, [])
      
     return (
@@ -47,6 +58,15 @@ export function MyAccount() {
                 <div className="text">
                 <h2>Seja bem-vindo, {user.name}</h2>
                     <div className="indicators">
+                        <a href="/mensagens">
+                        <div className="indicatorUnic">
+                            <IoChatboxEllipsesOutline />
+                            <div className="textIndicator">
+                                <h3>{chats}</h3>
+                                <h4>Conversas</h4>
+                            </div>
+                        </div>
+                        </a>
                         <a href="/favoritos">
                         <div className="indicatorUnic">
                             <IoHeartOutline />
@@ -65,15 +85,15 @@ export function MyAccount() {
                             </div>
                         </div>
                         </a>
-                        <a href="/minhaconta">
+                        {/* <a href="/minhaconta">
                         <div className="indicatorUnic">
                             <IoPersonOutline />
                             <div className="textIndicator">
-                                <h3>-</h3>
+                                <h3>&nbsp;</h3>
                                 <h4>Minha conta</h4>
                             </div>
                         </div>
-                        </a>
+                        </a> */}
                         <a href="/meusimoveis">
                         <div className="indicatorUnic">
                             <IoHomeOutline />

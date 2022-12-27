@@ -100,7 +100,7 @@ export function Property() {
                     : ""
              }
 
-                    <NewMessageProperty idProperty={data[0].id} idCompany={data[0].idCompany}/>
+                    <NewMessageProperty idProperty={data[0].id} idCompany={data[0].idCompany} imageProperty={data[0].featuredImage}/>
                     <NewScheduling idProperty={data[0].id} idCompany={data[0].idCompany} title={data[0].title} image={data[0].featuredImage}/>
                     <NewShare idProperty={data[0].id} title={`${data[0].title} (${data[0].city} / ${data[0].uf})`}/>
                     <NewFavorite idProperty={data[0].id} idCompany={data[0].idCompany} page={"yes"}/>

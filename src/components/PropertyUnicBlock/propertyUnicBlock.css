@@ -74,12 +74,23 @@
 .PropertyUnicBlock .heart2 {
     position: absolute;
     margin-top: 115px;
-    margin-left: 210px;
+    margin-left: 220px;
 }
 
 .PropertyUnicBlock .heart2 svg {
     color: var(--Primary);
     font-size: 24px;
+    cursor: pointer;
+}
+.PropertyUnicBlock .share {
+    position: absolute;
+    margin-top: 118px;
+    margin-left: 185px;
+}
+
+.PropertyUnicBlock .share svg {
+    color: var(--Border);
+    font-size: 20px;
     cursor: pointer;
 }
 .PropertyUnicBlock .heart svg:hover {

@@ -2,9 +2,11 @@ import "./propertyUnicBlock.css";
 import { IoBedOutline, IoCarSportOutline, IoChevronForwardOutline, IoHome, IoHomeOutline, IoLocationOutline } from "react-icons/io5";
 import { MdOutlineShower } from "react-icons/md";
 
+
 import { NewFavorite } from "../NewFavorite/NewFavorite";
 import api from "../../services/api";
 import { useEffect, useState } from "react";
+import { NewShareBox } from "../NewShareBox/NewShareBox";
 
 export function PropertyUnicBlock({id}) {
     const [property, setProperty] = useState([])
@@ -46,6 +48,9 @@ export function PropertyUnicBlock({id}) {
                     }
                     <div className="heart2">
                     <NewFavorite idProperty={property?.id} idCompany={property?.idCompany} page={"not"}/>
+                    </div>
+                    <div className="share">
+                    <NewShareBox idProperty={property?.id} title={property?.title}/>
                     </div>
                     <div className="text">
                     <a href={`/imovel/${property?.id}`}>

@@ -6,7 +6,7 @@ import {v4 as uuidv4} from "uuid";
 import { useFetch } from "../../hooks/useFetch";
 import api from "../../services/api";
 
-export function NewMessageProperty({idProperty, idCompany}) {
+export function NewMessageProperty({idProperty, idCompany, imageProperty}) {
   const Local = localStorage.getItem("suachave");
   const user = JSON.parse(Local);
 
@@ -14,7 +14,8 @@ export function NewMessageProperty({idProperty, idCompany}) {
     room: uuidv4().substring(0,8),
     idClient: user.id,
     idCompany,
-    idProperty
+    idProperty,
+    imageProperty
   });
 
   const {data} = useFetch(`/rooms/${idProperty}/${idCompany}/${user.id}`);
@@ -37,7 +38,8 @@ export function NewMessageProperty({idProperty, idCompany}) {
       id: uuidv4().substring(0,8),
       idClient: user.id,
       idCompany,
-      idProperty
+      idProperty,
+      imageProperty
     }
     await api.post("/rooms", newRoom).then((res) => {
       window.open(`/chat/${newRoom.id}/${newRoom.idProperty}/${newRoom.idCompany}/${newRoom.idClient}`, "_self");
