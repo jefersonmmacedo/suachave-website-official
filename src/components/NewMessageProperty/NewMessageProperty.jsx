@@ -12,13 +12,13 @@ export function NewMessageProperty({idProperty, idCompany, imageProperty}) {
 
   console.log({
     room: uuidv4().substring(0,8),
-    idClient: user.id,
+    idClient: user?.id,
     idCompany,
     idProperty,
     imageProperty
   });
 
-  const {data} = useFetch(`/rooms/${idProperty}/${idCompany}/${user.id}`);
+  const {data} = useFetch(`/rooms/${idProperty}/${idCompany}/${user?.id}`);
 
   if(data) {
     console.log(data);
@@ -26,7 +26,7 @@ export function NewMessageProperty({idProperty, idCompany, imageProperty}) {
 
   function handleNewChatMessage() {
       if(data?.length > 0) {
-        window.open(`/chat/${data[0]?.room}/${idProperty}/${idCompany}/${user.id}`, "_self");
+        window.open(`/chat/${data[0]?.room}/${idProperty}/${idCompany}/${user?.id}`, "_self");
         return
       }
 
@@ -36,7 +36,7 @@ export function NewMessageProperty({idProperty, idCompany, imageProperty}) {
   async function handleCreateNewChatmenssage() {
     const newRoom = {
       id: uuidv4().substring(0,8),
-      idClient: user.id,
+      idClient: user?.id,
       idCompany,
       idProperty,
       imageProperty
