@@ -40,17 +40,21 @@ export function PropertyUnicBlock({id}) {
                     </div>
                     : ""
                     } 
-
+                    <div className="infosPropertyButtons">
                     {property?.financing === "" ? "" :
                         <div className="status">
                             <p>Aceita financiamento</p>
                         </div>
                     }
+                    <div className="infosButtons">
+                  
+                    <div className="share">
+                    <NewShareBox idProperty={property?.id} title={property?.title}/>
+                    </div>
                     <div className="heart2">
                     <NewFavorite idProperty={property?.id} idCompany={property?.idCompany} page={"not"}/>
                     </div>
-                    <div className="share">
-                    <NewShareBox idProperty={property?.id} title={property?.title}/>
+                    </div>
                     </div>
                     <div className="text">
                     <a href={`/imovel/${property?.id}`}>

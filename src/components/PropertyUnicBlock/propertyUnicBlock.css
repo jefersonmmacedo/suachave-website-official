@@ -43,59 +43,58 @@
 
 
 
-.PropertyUnicBlock .status {
+.PropertyUnicBlock .infosPropertyButtons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0px 5px;
+    margin-top: -33px;
+}
+
+.PropertyUnicBlock .infosPropertyButtons .status {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     background-color: var(--PrimaryRGBA);
     border-radius: 6px;
-    position: absolute;
-    margin-top: 115px;
-    margin-left: 10px;
     padding: 7px 15px;
 }
 
-.PropertyUnicBlock .status p {
+.PropertyUnicBlock .infosPropertyButtons .status p {
     color: var(--White);
     font-weight: 700;
 }
 
-.PropertyUnicBlock .heart {
-    position: absolute;
-    margin-top: 115px;
-    margin-left: 210px;
+.PropertyUnicBlock .infosPropertyButtons .infosButtons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 25%;
 }
 
-.PropertyUnicBlock .heart svg {
-    font-size: 24px;
+.PropertyUnicBlock .infosPropertyButtons .infosButtons .heart2 {
+
 }
 
-.PropertyUnicBlock .heart2 {
-    position: absolute;
-    margin-top: 115px;
-    margin-left: 220px;
-}
-
-.PropertyUnicBlock .heart2 svg {
+.PropertyUnicBlock .infosPropertyButtons .infosButtons .heart2 svg {
     color: var(--Primary);
     font-size: 24px;
     cursor: pointer;
 }
-.PropertyUnicBlock .share {
-    position: absolute;
-    margin-top: 118px;
-    margin-left: 185px;
+.PropertyUnicBlock .infosPropertyButtons .infosButtons .share {
+margin-top: -20px;
 }
 
-.PropertyUnicBlock .share svg {
+.PropertyUnicBlock .infosPropertyButtons .infosButtons .share svg {
     color: var(--Border);
     font-size: 20px;
     cursor: pointer;
 }
-.PropertyUnicBlock .heart svg:hover {
-    color: var(--Primary);
-}
+
 
 
 
