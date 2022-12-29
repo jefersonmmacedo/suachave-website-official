@@ -140,7 +140,7 @@ margin-top: -20px;
     align-items: flex-start;
     justify-content: flex-start;
     color: var(--Gray);
-    margin: 2px 8px 0 8px; 
+    margin: 2px 8px 5px 8px; 
     font-weight: 700;
 }
 .PropertyUnicBlock .text .icons {
@@ -149,21 +149,23 @@ margin-top: -20px;
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
+    margin: 2px 0px; 
+    flex-wrap: wrap;
 }
 
 .PropertyUnicBlock .text .icons .iconUnic {
-    width: 33%;
+    width: 74px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     text-align: center;
-    padding: 5px;
-    margin: 5px;
+    padding: 0px 5px;
+    margin: 2px 5px;
     color: var(--Gray);
 }
 .PropertyUnicBlock .text .icons .iconUnic svg {
-    font-size: 18px;
+    font-size: 16px;
     margin-right: 10px;
     color: var(--Primary);
 }
@@ -190,6 +192,7 @@ margin-top: -20px;
     align-items: flex-start;
     justify-content: flex-start;
     text-align: flex-start;
+    margin-top: 10px;
 }
 
 .PropertyUnicBlock .text .pricing h6 {
@@ -235,10 +238,19 @@ margin-top: -20px;
         .PropertyUnicBlock {
             width: 80%;
         }
+       
+        .PropertyUnicBlock .text .icons .iconUnic {
+            width: 20%;
+        }
+
         @media (max-width: 450px) {
 
         .PropertyUnicBlock {
             width: 95%;
+        }
+
+        .PropertyUnicBlock .text .icons .iconUnic {
+            width: 30%;
         }
     }
 }

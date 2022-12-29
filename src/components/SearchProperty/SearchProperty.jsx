@@ -4,6 +4,7 @@ import buscaDistrito from '../../services/api-buscaDistrito';
 import { toast } from 'react-toastify';
 import {FaHome, FaBuilding, FaStore} from "react-icons/fa";
 import {IoBusiness, IoLocationOutline} from "react-icons/io5";
+import { useFetch } from "../../hooks/useFetch";
 
 export function SearchProperty({openModal}) {
     const Local = localStorage.getItem("suachave");
@@ -21,6 +22,46 @@ export function SearchProperty({openModal}) {
     const [city, setCity] = useState(user !== null ? user?.city : "");
     const [districtAll, setDistrictAll] = useState([]);
     const [uf, setUf] = useState(user !== null ? user?.uf : "");
+
+    const [citySelected, setCitySelected] = useState("");
+    const [ufSelected, setUfSelected] = useState("");
+
+    const availability = "Disponível";
+    const {data} = useFetch(`/property/all/${availability}`);
+
+    if(data) {
+        console.log(data);
+    }
+
+    var cityList = [];
+    var ufList = [];
+
+    data?.forEach((item) => {
+        var duplicated  = cityList.findIndex(redItem => {
+            return item.city == redItem.city;
+        }) > -1;
+    
+        if(!duplicated) {
+            cityList.push(item);
+        }
+    });
+    
+    data?.forEach((item) => {
+        var duplicated  = ufList.findIndex(redItem => {
+            return item.uf == redItem.uf;
+        }) > -1;
+    
+        if(!duplicated) {
+            ufList.push(item);
+        }
+    });
+    
+    console.log("cityList");
+    console.log(cityList);
+    console.log("ufList");
+    console.log(ufList);
+
+    const filterCity = cityList.filter((item) => item.uf === ufSelected);
 
 
     function handleLinkSearchProperty(e) {
@@ -104,11 +145,22 @@ export function SearchProperty({openModal}) {
         console.log(e.target.value)
         handleSearchDistrict(e.target.value)
       }
+      function handleSetectUfSelected(e) {
+        setUfSelected(e.target.value)
+        console.log(e.target.value)
+      }
+
+      function handleSetectCitySelected(e) {
+        setCitySelected(e.target.value)
+        console.log(e.target.value)
+      }
 
         function handleClearAddress(e) {
             e.preventDefault();
             setUf("")
             setCity("")
+            setUfSelected("")
+            setCitySelected("")
         }
 
 
@@ -236,46 +288,24 @@ export function SearchProperty({openModal}) {
         
             <div className="textLocation">
                 <h4>Local:</h4>
-                <select value={uf} onChange={handleSetectUf}> 
+                <select value={ufSelected} onChange={handleSetectUfSelected}> 
                             <option value="">Escolha seu estado</option>
-                            <option value="AC">Acre</option>
-                            <option value="AL">Alagoas</option>
-                            <option value="AP">Amapá</option>
-                            <option value="AM">Amazonas</option>
-                            <option value="BA">Bahia</option>
-                            <option value="CE">Ceará</option>
-                            <option value="DF">Distrito Federal</option>
-                            <option value="ES">Espírito Santo</option>
-                            <option value="GO">Goiás</option>
-                            <option value="MA">Maranhão</option>
-                            <option value="MT">Mato Grosso</option>
-                            <option value="MS">Mato Grosso do Sul</option>
-                            <option value="MG">Minas Gerais</option>
-                            <option value="PA">Pará</option>
-                            <option value="PB">Paraíba</option>
-                            <option value="PR">Paraná</option>
-                            <option value="PE">Pernambuco</option>
-                            <option value="PI">Piauí</option>
-                            <option value="RJ">Rio de Janeiro</option>
-                            <option value="RN">Rio Grande do Norte</option>
-                            <option value="RS">Rio Grande do Sul</option>
-                            <option value="RO">Rondônia</option>
-                            <option value="RR">Roraima</option>
-                            <option value="SC">Santa Catarina</option>
-                            <option value="SP">São Paulo</option>
-                            <option value="SE">Sergipe</option>
-                            <option value="TO">Tocantins</option>
-                            <option value="EX">Estrangeiro</option>     
+                            {ufList?.map((uf) => {
+                                return (
+                                    <option value={uf.uf}>{uf.uf}</option>
+                                )
+                            })}
+                                
                     </select>
-                    <select value={city} onChange={handleSetectCity}> 
-                    {districtAll.length === 0 ?
-                    <option value={city}>{city}</option>
+                    <select value={citySelected} onChange={handleSetectCitySelected}> 
+                    {filterCity.length === 0 ?
+                    <option value={citySelected}>{citySelected}</option>
                     :
                     <>
                     <option value="">Escolha sua cidade</option>
-                    {districtAll?.map((district) => {
+                    {filterCity?.map((district) => {
                             return (
-                                <option autocomplete="off" key={district.id} value={district.nome}>{district.nome}</option>
+                                <option autocomplete="off" key={district.id} value={district.city}>{district.city}</option>
                             )
                         })}
                     </>

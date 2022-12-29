@@ -10,14 +10,6 @@ export function NewMessageProperty({idProperty, idCompany, imageProperty}) {
   const Local = localStorage.getItem("suachave");
   const user = JSON.parse(Local);
 
-  console.log({
-    room: uuidv4().substring(0,8),
-    idClient: user?.id,
-    idCompany,
-    idProperty,
-    imageProperty
-  });
-
   const {data} = useFetch(`/rooms/${idProperty}/${idCompany}/${user?.id}`);
 
   if(data) {

@@ -1,8 +1,10 @@
 ﻿import "./testTools.css";
 import ReactFullscreenSlideshow from 'react-fullscreen-slideshow';
+import { useState } from "react";
+import { RiH3 } from "react-icons/ri";
 
 export function TestTools(){
-    
+    const [number, setNumber] = useState()
     const images = [
         {
             image: 'https://images.unsplash.com/photo-1664574652984-5b5f769bef07?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60',
@@ -42,11 +44,20 @@ export function TestTools(){
         }
     ];
 
-    
+    console.log(number)
 
     return (
         <div className="App2"> 
-        <ReactFullscreenSlideshow images={images} width="100%" height="100%" cycle={true}/>
+        {/* <ReactFullscreenSlideshow images={images} width="100%" height="100%" cycle={true}/> */}
+        <h2>Vamos testar a entrada do texto</h2>
+
+        <input type="text" value={number} onChange={e => setNumber(e.target.value)} />
+
+        {number < 20000 ?
+        <h3>Menor: {number}</h3>
+        :
+        <h3>Maior: {number}</h3>
+        }
     </div>
     )
 }

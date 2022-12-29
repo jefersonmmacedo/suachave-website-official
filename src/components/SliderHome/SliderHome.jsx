@@ -2,7 +2,7 @@ import "./sliderHome.css";
 import {IoCrop, IoArrowBack, IoArrowForward, IoLocationOutline, IoBedOutline, IoCarSportOutline} from 'react-icons/io5';
 import {TfiRulerAlt2} from 'react-icons/tfi';
 import {MdOutlineShower} from 'react-icons/md';
-import {TbBath} from 'react-icons/tb';
+import {TbBath, TbBone, TbSofa} from 'react-icons/tb';
 import imageBack from "../../assets/images/background15.jpg"
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
@@ -111,7 +111,23 @@ const properties = {
                             </div>
                         </div>
                         }
-                        {property.totalArea === "" ? "" :
+                          {property?.pet === "não" ? "" :
+                        <div className="iconUnic">
+                                <TbBone />
+                            <div className="simbol">
+                            <p>{property?.pet} Aceita pets</p>
+                            </div>
+                        </div>
+                        }
+                         {property?.furnished === "não" ? "" :
+                        <div className="iconUnic">
+                                <TbSofa />
+                            <div className="simbol">
+                                <p>Mobilhado</p>
+                            </div>
+                        </div>
+                        }
+                        {/* {property.totalArea === "" ? "" :
                         <div className="iconUnic">
                                 <TfiRulerAlt2 />
                             <div className="simbol">
@@ -126,7 +142,7 @@ const properties = {
                                 <p>{property.buildingArea} M<sup>2</sup></p>
                             </div>
                         </div>
-                        }
+                        } */}
                     </div>
                     <div className="pricing">
                         <h5>{property.status} {property.textRent !==  "" ? "/" : "" }<span> {property.textRent}</span></h5>

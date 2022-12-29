@@ -48,6 +48,7 @@ export function SignIn() {
                         {loading === true ? "" :
                          <div className="message">
                          <h5><IoAlertCircleOutline /> Login ou senha incorretos.</h5>
+                         <h5> Caso sua conta seja empresarial, clique no botão Imobiliária acima.</h5>
                        </div>
                         }
                         <div className="links">

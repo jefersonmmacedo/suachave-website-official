@@ -1,5 +1,5 @@
 import "./propertyUnicBlock.css";
-import { IoBedOutline, IoCarSportOutline, IoChevronForwardOutline, IoHome, IoHomeOutline, IoLocationOutline } from "react-icons/io5";
+import { IoBedOutline, IoCarSportOutline, IoChevronForwardOutline, IoHome, IoHomeOutline, IoLocationOutline, IoPawOutline } from "react-icons/io5";
 import { MdOutlineShower } from "react-icons/md";
 
 
@@ -7,6 +7,8 @@ import { NewFavorite } from "../NewFavorite/NewFavorite";
 import api from "../../services/api";
 import { useEffect, useState } from "react";
 import { NewShareBox } from "../NewShareBox/NewShareBox";
+import { TbBath, TbBone, TbDogBowl, TbSofa } from "react-icons/tb";
+import { GiHollowCat, GiSniffingDog } from "react-icons/gi";
 
 export function PropertyUnicBlock({id}) {
     const [property, setProperty] = useState([])
@@ -63,24 +65,57 @@ export function PropertyUnicBlock({id}) {
                     <h5>{cityProperty}</h5>
                     <h6><IoLocationOutline />{property?.district} - {property?.city} - {property?.uf}</h6>
                     <div className="icons">
+                    {property?.bedroom === "" || property?.bedroom === "0"? "" :
                         <div className="iconUnic">
                                 <IoBedOutline />
                             <div className="simbol">
-                                <p>{property?.bedroom} Quartos</p>
+                                <p>{property?.bedroom} {property?.bedroom < 2 ? " Quarto" : " Quartos"}</p>
                             </div>
                         </div>
+                        }
+                        {property?.restroom === "" || property?.restroom === "0"? "" :
                         <div className="iconUnic">
                                 <MdOutlineShower />
                             <div className="simbol">
-                                <p>{property?.restroom} Banheiros</p>
+                                <p>{property?.restroom} {property?.restroom < 2 ? " Banheiro" : " Banheiros"}</p>
                             </div>
                         </div>
+                        }
+                        {property?.suite === "" || property?.suite === "0" ? "" :
+                        <div className="iconUnic">
+                                <TbBath />
+                            <div className="simbol">
+                                <p>{property?.suite} Suítes</p>
+                            </div>
+                        </div>
+                        }
+                         {property?.garage === "" || property?.garage === "0" ? "" :
                         <div className="iconUnic">
                                 <IoCarSportOutline />
                             <div className="simbol">
-                                <p>{property?.garage} Vagas</p>
+                                <p>{property?.garage} {property?.garage < 2 ? " Vaga" : " Vagas"}</p>
                             </div>
                         </div>
+                        }
+                        {property?.pet === "não" ? "" :
+                        <div className="iconUnic">
+                                <TbBone />
+                            <div className="simbol">
+                            <p>{property?.pet} Aceita pets</p>
+                            </div>
+                        </div>
+                        }
+                         {property?.furnished === "não" ? "" :
+                        <div className="iconUnic">
+                                <TbSofa />
+                            <div className="simbol">
+                                <p>Mobilhado</p>
+                            </div>
+                        </div>
+                        }
+
+
+
                     </div>
                     <div className="pricing">
                         <h6>{property?.status} {property?.textRent !==  "" ? "/" : "" }<span> {property?.textRent}</span></h6>

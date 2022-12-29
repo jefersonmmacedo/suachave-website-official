@@ -4,7 +4,7 @@ import Navbar2 from "../../components/Nav/Navbar";
 import {IoCrop, IoLocationOutline, IoBedOutline, IoCarSportOutline, IoCheckmarkSharp} from 'react-icons/io5';
 import {TfiRulerAlt2} from 'react-icons/tfi';
 import {MdOutlineShower} from 'react-icons/md';
-import {TbBath} from 'react-icons/tb';
+import {TbBath, TbBone, TbSofa} from 'react-icons/tb';
 import { Footer } from "../../components/Footer/Footer";
 import { CompanyInfo } from "../../components/CompanyInfo/CompanyInfo";
 import { NewScheduling } from "../../components/NewScheduling/NewScheduling";
@@ -47,11 +47,29 @@ export function Property() {
         }
 
 
+            console.log("data[0].priceSale")
+            console.log(parseInt(data[0].priceSale))
+            console.log(parseFloat(data[0].priceSale))
+          const price1 = data[0].priceSale.replace(",","")
+          const price2 =price1.replace(".","")
+          const price3 = price2.replace("00","")
+            console.log(price3)
+            console.log("data[0].priceRent")
+            console.log(parseInt(data[0].priceRent))
+            console.log(parseFloat(data[0].priceRent))
+            const sale1 = data[0].priceRent.replace(",","")
+            const sale2 = sale1.replace(".","")
+            const sale3 = sale2.replace("00","")
+              console.log(sale3)
+              
+              const plusSale = price3 < 1000 ? 0 : 1000
+              const plusRent = sale3 < 1000 ? 0 : "Não"
+
     const valuesRent =[
-        // {
-        // id: "rent",
-        // value: parseFloat(data[0].priceRent)
-        // },
+        {
+        id: "rent",
+        value: data[0].priceRent === "" ? parseFloat(data[0].priceSale) * plusSale : parseFloat(data[0].priceRent) * plusRent
+        },
         {
         id: "condominium",
         value: data[0].condominium
@@ -147,6 +165,22 @@ export function Property() {
                                 <IoCarSportOutline />
                             <div className="simbol">
                                 <p>{data[0].garage} Vagas</p>
+                            </div>
+                        </div>
+                        }
+                          {data[0].pet === "não" ? "" :
+                        <div className="iconUnic">
+                                <TbBone />
+                            <div className="simbol">
+                            <p>{data[0].pet} Aceita pets</p>
+                            </div>
+                        </div>
+                        }
+                         {data[0].furnished === "não" ? "" :
+                        <div className="iconUnic">
+                                <TbSofa />
+                            <div className="simbol">
+                                <p>Mobilhado</p>
                             </div>
                         </div>
                         }
@@ -246,7 +280,7 @@ export function Property() {
                      }
                      {ResultBRL === "" ? "" :
                    <div className="pricingTotal">
-                       <h4>Total encargos</h4>
+                       <h4>Total</h4>
                         <h4>{ResultBRL}</h4>
                     </div>
                    }
@@ -305,7 +339,7 @@ export function Property() {
                      }
                       {ResultBRL === "" ? "" :
                     <div className="pricingTotal">
-                        <h4>Total encargos</h4>
+                        <h4>Total</h4>
                          <h4>{ResultBRL}</h4>
                      </div>
                     }
@@ -344,7 +378,7 @@ export function Property() {
                     }
                      {ResultBRL === "" ? "" :
                    <div className="pricingTotal">
-                       <h4>Total encargos</h4>
+                       <h4>Total</h4>
                         <h4>{ResultBRL}</h4>
                     </div>
                    }
