@@ -45,10 +45,14 @@ export function BrokerList() {
                 return (
             <div className="BrokerUnicFavorite">
                     <div className="image">
+                    <a href={`/imobiliaria/${broker.id}`}>
                     <img src={broker.logo} alt="" />
+                    </a>
                     </div>
                     <div className="text">
+                    <a href={`/imobiliaria/${broker.id}`}>
                     <h3>{broker.fantasyName}</h3>
+                    </a>
                     <h5><IoLocationOutline />{broker.road}, Nº {broker.number}, {broker.district} - {broker.city} - {broker.uf}</h5>
                     <div className="iconsBroker">
                         <div className="iconBrokerUnic">

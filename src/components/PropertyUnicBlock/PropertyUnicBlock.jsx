@@ -4,11 +4,12 @@ import { MdOutlineShower } from "react-icons/md";
 
 
 import { NewFavorite } from "../NewFavorite/NewFavorite";
+import { SliderBox } from "../SliderBox/SliderBox";
 import api from "../../services/api";
 import { useEffect, useState } from "react";
 import { NewShareBox } from "../NewShareBox/NewShareBox";
-import { TbBath, TbBone, TbDogBowl, TbSofa } from "react-icons/tb";
-import { GiHollowCat, GiSniffingDog } from "react-icons/gi";
+import { TbBath, TbBone, TbSofa } from "react-icons/tb";
+
 
 export function PropertyUnicBlock({id}) {
     const [property, setProperty] = useState([])
@@ -29,9 +30,8 @@ export function PropertyUnicBlock({id}) {
     return (
         <div className="PropertyUnicBlock">
                     <div className="image">
-                        <a href={`/imovel/${property?.id}`}>
-                    <img src={property?.featuredImage} alt="" />
-                        </a>
+                    <SliderBox images={property?.images} idProperty={property?.id}/>
+                        
                     </div>
                     {new Date(property?.created_at).getDate() === new Date().getDate() &&
                     new Date(property?.created_at).getMonth() === new Date().getMonth() &&
@@ -59,11 +59,13 @@ export function PropertyUnicBlock({id}) {
                     </div>
                     </div>
                     <div className="text">
+                    <div className="textInfos">
                     <a href={`/imovel/${property?.id}`}>
                     <h4>{titleProperty !== undefined ? titleProperty.slice(0,27) : titleProperty}</h4>
                         </a>
                     <h5>{cityProperty}</h5>
                     <h6><IoLocationOutline />{property?.district} - {property?.city} - {property?.uf}</h6>
+                    </div>
                     <div className="icons">
                     {property?.bedroom === "" || property?.bedroom === "0"? "" :
                         <div className="iconUnic">
@@ -97,11 +99,11 @@ export function PropertyUnicBlock({id}) {
                             </div>
                         </div>
                         }
-                        {property?.pet === "não" ? "" :
+                        {property?.pets === "não" ? "" :
                         <div className="iconUnic">
                                 <TbBone />
                             <div className="simbol">
-                            <p>{property?.pet} Aceita pets</p>
+                            <p>Aceita pets</p>
                             </div>
                         </div>
                         }

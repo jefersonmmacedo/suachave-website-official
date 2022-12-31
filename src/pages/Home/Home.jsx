@@ -13,6 +13,8 @@ import { IoBusiness, IoCloseOutline, IoSearch, IoPersonCircleOutline, IoCheckbox
 import { ToHire } from "../../components/ToHire/ToHire";
 import { FaBuilding, FaHome, FaStore } from "react-icons/fa";
 import { Finance } from "../../components/Finance/Finance";
+import { TopHeadHome } from "../../components/TopHeadHome/TopHeadHome";
+import { ProcessProperty } from "../../components/ProcessProperty/ProcessProperty";
 
 
 export function Home() {
@@ -35,14 +37,15 @@ export function Home() {
     return (
         <div className="Home">
             <Navbar2 />
-            <SliderHome />
+            {/* <SliderHome />
             <div className="searchView">
             <SearchProperty openModal={handleOpenModalSearchProperty}/>
-            </div>
-            <div className="searchViewButton">
+            </div> */}
+            <TopHeadHome />
+            {/* <div className="searchViewButton">
             <button onClick={handleOpenModalSearchProperty}><IoSearch/>Buscar Imóveis</button>
-            </div>
-            <div className="iconsHomeProperties">
+            </div> */}
+            {/* <div className="iconsHomeProperties">
                 <div className="unic">
                     <FaHome />
                     Casas
@@ -59,7 +62,8 @@ export function Home() {
                     <FaStore />
                     Lojas
                 </div>
-            </div>
+            </div> */}
+           <ExploreIconsProperties />
             <div className="textFeature">
             <h3>Imóveis à venda</h3>
             </div>
@@ -68,14 +72,14 @@ export function Home() {
             <PropertyCarroussel status={"Venda"}/>
             </div>
             
-            <div className="textHome">
+            <div className="textFeature">
             <h3>Imóveis para alugar</h3>
             </div>
             <div className="carroussel">
             <PropertyCarroussel status={"Aluguel"}/>
             </div>
             <Finance />
-            <ExploreIconsProperties />
+         
             <Cities />
             <ToHire />
             <DownloadApp />

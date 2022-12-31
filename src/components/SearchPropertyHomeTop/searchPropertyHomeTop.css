@@ -2,9 +2,10 @@
 .SearchPropertyHomeTop {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     width: 100%;
+    margin-left: 80px;
 
 }
 .SearchPropertyHomeTop .search {
@@ -12,7 +13,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    width: 95%;
+    width: 80%;
     border-radius: 0 6px 6px 6px;
     border: 1px solid var(--Border);
     background-color: var(--White);
@@ -61,7 +62,7 @@
 }
 
 .SearchPropertyHomeTop .selectButtonsHomeTop {
-    width: 95%;
+    width: 80%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -171,19 +172,52 @@
     color: var(--Gray);
 }
 
+.SearchPropertyHomeTop .textLocation select {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    Background-color:var(--BorderHover);
+    color: var(--Paragraph);
+    font-weight: 500;
+    border: none;
+    margin: 5px;
+    border-radius: 6px;
+}
+
 .SearchPropertyHomeTop .textLocation button {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding: 5px 15px;
-    Background-color: rgba(0,0,0,0.6);
-    color: var(--White);
+    padding: 6px 10px;
+    Background-color:var(--Border);
+    color: var(--Paragraph);
     font-weight: 500;
     border: none;
-    margin: 5px;
-    border-radius: 25px;
+    margin: 5px 10px;
+    border-radius: 6px;
 }
+
+
+.SearchPropertyHomeTop .textLocation .checkDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0px 5px;
+}
+
+.SearchPropertyHomeTop .textLocation .checkDiv h5 {
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: var(--Gray);
+}
+
 
 
 
@@ -227,18 +261,28 @@
 
     @media (max-width: 1000px) {
 
+        .SearchPropertyHomeTop {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            width: 100%;
+            margin-left: 40px;
+        
+        }
+
     @media (max-width: 900px) {
         .SearchPropertyHomeTop .search {
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: center;
-            width: 100%;
+            width: 90%;
 
         }
 
         .SearchPropertyHomeTop .selectButtonsHomeTop {
-            width: 100%;
+            width: 90%;
             display: flex;
             flex-direction: row;
             align-items: center;

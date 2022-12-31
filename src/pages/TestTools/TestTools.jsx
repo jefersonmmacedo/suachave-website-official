@@ -49,7 +49,7 @@ export function TestTools(){
     return (
         <div className="App2"> 
         {/* <ReactFullscreenSlideshow images={images} width="100%" height="100%" cycle={true}/> */}
-        <h2>Vamos testar a entrada do texto</h2>
+        <h2>Seja bem-vindo.<br /> O sua chave é para você!</h2>
 
         <input type="text" value={number} onChange={e => setNumber(e.target.value)} />
 

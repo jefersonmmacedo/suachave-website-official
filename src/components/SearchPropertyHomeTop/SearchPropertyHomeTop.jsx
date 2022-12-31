@@ -4,6 +4,7 @@ import buscaDistrito from '../../services/api-buscaDistrito';
 import { toast } from 'react-toastify';
 import {FaHome, FaBuilding, FaStore} from "react-icons/fa";
 import {IoSearch, IoLocationOutline} from "react-icons/io5";
+import { useFetch } from "../../hooks/useFetch";
 
 export function SearchPropertyHomeTop({openModal}) {
     const LocalCity = localStorage.getItem("suachavecity");
@@ -19,6 +20,9 @@ export function SearchPropertyHomeTop({openModal}) {
     const [bedroom, setBedroom] = useState("");
     const [garage, setGarage] = useState("");
     const [restroom, setRestroom] = useState("");
+
+    const [citySelected, setCitySelected] = useState("");
+    const [ufSelected, setUfSelected] = useState("");
 
     console.log(uf)
     console.log(city)
@@ -37,9 +41,58 @@ export function SearchPropertyHomeTop({openModal}) {
         return
     }
 
-    if(districtAll) {
-        districtAll.sort(function(a,b) {
-            if(a.nome < b.nome ) {
+    const availability = "Disponível";
+    const {data} = useFetch(`/property/all/${availability}`);
+
+    if(data) {
+        console.log(data);
+    }
+
+    var cityList = [];
+    var ufList = [];
+
+    data?.forEach((item) => {
+        var duplicated  = cityList.findIndex(redItem => {
+            return item.city == redItem.city;
+        }) > -1;
+    
+        if(!duplicated) {
+            cityList.push(item);
+        }
+    });
+    
+    data?.forEach((item) => {
+        var duplicated  = ufList.findIndex(redItem => {
+            return item.uf == redItem.uf;
+        }) > -1;
+    
+        if(!duplicated) {
+            ufList.push(item);
+        }
+    });
+    
+    console.log("cityList");
+    console.log(cityList);
+    console.log("ufList");
+    console.log(ufList);
+
+    const filterCity = cityList.filter((item) => item.uf === ufSelected);
+
+
+
+    if(ufList) {
+        ufList.sort(function(a,b) {
+            if(a.uf < b.uf ) {
+                return -1
+            } else {
+                return true
+            }
+        })
+        }
+
+    if(filterCity) {
+        filterCity.sort(function(a,b) {
+            if(a.city < b.city ) {
                 return -1
             } else {
                 return true
@@ -95,6 +148,26 @@ export function SearchPropertyHomeTop({openModal}) {
         setCode(data)
         setStatus(status)
       }
+
+      function handleSetectUfSelected(e) {
+        setUfSelected(e.target.value)
+        console.log(e.target.value)
+      }
+
+      function handleSetectCitySelected(e) {
+        setCitySelected(e.target.value)
+        console.log(e.target.value)
+      }
+
+        function handleClearAddress(e) {
+            e.preventDefault();
+            setUf("")
+            setCity("")
+            setUfSelected("")
+            setCitySelected("")
+        }
+
+
     return (
         <div className="SearchPropertyHomeTop">
             <div className="selectButtonsHomeTop">
@@ -167,7 +240,7 @@ export function SearchPropertyHomeTop({openModal}) {
                         <option value="Área">Área</option>
                         <option value="Terreno/Lote">Terreno/Lote</option>
                         </>
-                        :  <option value="">Selecione o tipo</option>
+                        :  <option value="">Subtipo</option>
                         }
                     </select>
                     <select value={bedroom} onChange={handleBedroom} className={bedroom === "" ? "" : "select"}>
@@ -199,79 +272,64 @@ export function SearchPropertyHomeTop({openModal}) {
                     </select>
 
                     <select value={garage} onChange={handleGarage} className={garage === "" ? "" : "select"}>
-                        <option value="">Vagas de garagem</option>
-                        <option value="1">1 Vaga de garagem</option>
-                        <option value="2">2 Vagas de garagem</option>
-                        <option value="3">3 Vagas de garagem</option>
-                        <option value="4">4 Vagas de garagem</option>
-                        <option value="5">5 Vagas de garagem</option>
-                        <option value="6">6 Vagas de garagem</option>
-                        <option value="7">7 Vagas de garagem</option>
-                        <option value="8">8 Vagas de garagem</option>
-                        <option value="9">9 Vagas de garagem</option>
-                        <option value="10">10 Vagas de garagem</option>
+                        <option value="">Garagem</option>
+                        <option value="1">1 Vaga</option>
+                        <option value="2">2 Vagas</option>
+                        <option value="3">3 Vagas</option>
+                        <option value="4">4 Vagas</option>
+                        <option value="5">5 Vagas</option>
+                        <option value="6">6 Vagas</option>
+                        <option value="7">7 Vagas</option>
+                        <option value="8">8 Vagas</option>
+                        <option value="9">9 Vagas</option>
+                        <option value="10">10 Vagas</option>
                     </select>
                 </>
                     :
                     <input type="text" className="primary" placeholder="Digite o código" />
                 }
-            {/* <select value={uf} onChange={handleSetectUf}> 
-                            <option value="">Escolha seu estado</option>
-                            <option value="AC">Acre</option>
-                            <option value="AL">Alagoas</option>
-                            <option value="AP">Amapá</option>
-                            <option value="AM">Amazonas</option>
-                            <option value="BA">Bahia</option>
-                            <option value="CE">Ceará</option>
-                            <option value="DF">Distrito Federal</option>
-                            <option value="ES">Espírito Santo</option>
-                            <option value="GO">Goiás</option>
-                            <option value="MA">Maranhão</option>
-                            <option value="MT">Mato Grosso</option>
-                            <option value="MS">Mato Grosso do Sul</option>
-                            <option value="MG">Minas Gerais</option>
-                            <option value="PA">Pará</option>
-                            <option value="PB">Paraíba</option>
-                            <option value="PR">Paraná</option>
-                            <option value="PE">Pernambuco</option>
-                            <option value="PI">Piauí</option>
-                            <option value="RJ">Rio de Janeiro</option>
-                            <option value="RN">Rio Grande do Norte</option>
-                            <option value="RS">Rio Grande do Sul</option>
-                            <option value="RO">Rondônia</option>
-                            <option value="RR">Roraima</option>
-                            <option value="SC">Santa Catarina</option>
-                            <option value="SP">São Paulo</option>
-                            <option value="SE">Sergipe</option>
-                            <option value="TO">Tocantins</option>
-                            <option value="EX">Estrangeiro</option>     
+          
+                     <button onClick={handleSearchProfessional}><IoSearch /></button>
+            </div>
+
+            <div className="textLocation">
+                <div className="checkDiv">
+                    <input type="checkbox" name="" id="" />
+                    <h5>Aceita pets</h5>
+                </div>
+                <div className="checkDiv">
+                    <input type="checkbox" name="" id="" />
+                    <h5>Com mobilha</h5>
+                </div>
+            </div>
+
+            <div className="textLocation">
+                <h4>Onde?</h4>
+                <select value={ufSelected} onChange={handleSetectUfSelected}> 
+                            <option value="">Estado</option>
+                            {ufList?.map((uf) => {
+                                return (
+                                    <option value={uf.uf}>{uf.uf}</option>
+                                )
+                            })}
+                                
                     </select>
-                    <select value={city} onChange={handleSetectCity}> 
-                    {districtAll.length === 0 ?
-                    <option value={city}>{city}</option>
+                    <select value={citySelected} onChange={handleSetectCitySelected}> 
+                    {filterCity.length === 0 ?
+                    <option value="">Cidade</option>
                     :
                     <>
-                    {districtAll?.map((district) => {
+                    <option value="">Escolha sua cidade</option>
+                    {filterCity?.map((district) => {
                             return (
-                                <option autocomplete="off" key={district.id} value={district.nome}>{district.nome}</option>
+                                <option autocomplete="off" key={district.id} value={district.city}>{district.city}</option>
                             )
                         })}
                     </>
                     }     
-                    </select> */}
-                     <button onClick={handleSearchProfessional}><IoSearch /></button>
+                    </select>
+                    {/* <button onClick={handleClearAddress}>X Limpar</button> */}
             </div>
-
-            {userCity === null || userCity === undefined || userCity === "" ? 
-            <div className="textLocation">
-                <button>Definir cidade</button>
-            </div>
-             : 
-             <div className="textLocation">
-             <h4><IoLocationOutline /> {city} - {uf}</h4> 
-             <button onClick={openModal}>Alterar</button>
-         </div>
-             }
 
         </div>
     )

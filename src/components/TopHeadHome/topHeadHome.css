@@ -42,12 +42,16 @@
   }
 
   .TopHeadHome .blockTop .SearchText .TextTopSearch h1 {
-    font-weight: 700;
-    color: var(--Primary);
-    font-size: 55px;
+    font-weight: 800;
+    color: var(--Description);
+    font-size: 45px;
     line-height: 2.8rem;
     margin-bottom:10px;
   }
+  .TopHeadHome .blockTop .SearchText .TextTopSearch h1 span {
+    color: var(--Primary);
+  }
+
   .TopHeadHome .blockTop .SearchText .TextTopSearch h4 {
     font-weight: 500;
     color: var(--Gray);
@@ -130,9 +134,8 @@
   
 
     .TopHeadHome .blockTop .SearchText .TextTopSearch h1 {
-      font-weight: 700;
-      color: var(--Primary);
-      font-size: 40px;
+      font-weight: 900;
+      font-size: 30px;
       line-height: 2.0rem;
       margin-bottom:10px;
     }

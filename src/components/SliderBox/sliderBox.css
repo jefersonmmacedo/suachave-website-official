@@ -1,0 +1,40 @@
+﻿
+.each-slide-effectBox .imageTop {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+  object-fit: cover;
+  z-index: 0;
+  background-color: var(--BorderInput);
+}
+
+.each-slide-effectBox .imageTop img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+
+.each-slide-effectBoxLoading  .imageTopLoading  {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  height:150px;
+}
+
+.each-slide-effectBoxLoading  .imageTopLoading  .imageLoading  {
+  width: 100%;
+  height:150px;
+  object-fit:cover ;
+  
+}
+.each-slide-effectBoxLoading  .imageTopLoading  .imageLoading  img {
+  width: 100%;
+  height:150px;
+  object-fit:cover ;
+}

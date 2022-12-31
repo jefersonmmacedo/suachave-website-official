@@ -161,6 +161,9 @@
     color: var(--Primary);
 }
 
+.CompanyList .listProperties .propertyUnicFavorite .text a {
+    text-decoration: none;
+}
 .CompanyList .listProperties .propertyUnicFavorite .text h3 {
     color: var(--Primary);
     font-weight: 700;

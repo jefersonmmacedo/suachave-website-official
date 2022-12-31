@@ -177,6 +177,18 @@ const Navbar2 = () => {
   function handleLogOut() {
     logout()
   }
+
+  if(user !== null ) {
+    readyType()
+  }
+
+  function readyType() {
+    if (user?.type === "Imobiliária" || user?.type === "Corretor") {
+      handleLogOut()
+    }
+  }
+
+
   function HandleOpenLink(data) {
     window.open(`${data}`, "_self")
   }

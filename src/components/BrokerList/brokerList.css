@@ -171,6 +171,9 @@
     color: var(--Gray);
     margin: 0 10px;
 }
+.BrokerList .listBroker .BrokerUnicFavorite .text a {
+    text-decoration: none;
+}
 .BrokerList .listBroker .BrokerUnicFavorite .text h3 {
     color: var(--Primary);
     font-weight: 700;

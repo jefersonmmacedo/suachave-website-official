@@ -2,7 +2,7 @@
 import { SearchPropertyHomeTop } from "../SearchPropertyHomeTop/SearchPropertyHomeTop";
 import image1 from "../../assets/images/background13.jpg";
 import image2 from "../../assets/images/background11.jpg";
-import image3 from "../../assets/images/background12.jpg";
+import image3 from "../../assets/images/background18.jpg";
 
 export function TopHeadHome() {
     return (
@@ -10,9 +10,9 @@ export function TopHeadHome() {
             <div className="blockTop">
             <div className="SearchText">
                 <div className="TextTopSearch">
-                <h1>Seu novo imóvel, você encontra aqui!</h1>
+                <h1>Seu <span>novo imóvel</span>, <br /> você encontra aqui!</h1>
                 <h4>Mais de 5000 imóveis disponíveis para você!</h4>
-                <h4>Casas, apartamentos, fazendas lotes, lojas, salas comerciais e muito mais.</h4>
+               
 
                 {/* <button>Anunciar imóvel</button> */}
                 </div>

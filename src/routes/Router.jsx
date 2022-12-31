@@ -61,8 +61,9 @@ function PrivateRoute({children} ) {
             <Route path="/termos" element={<TermsOfUse />}/>
             <Route path="/imovel/:id" element={<Property />}/>
             <Route path="/imobiliarias" element={<Companies />}/>
-            <Route path="/imobiliaria" element={<Company />}/>
+            <Route path="/imobiliaria/:id" element={<Company />}/>
             <Route path="/corretores" element={<Brokers />}/>
+            <Route path="/corretor/:id" element={<Company />}/>
             <Route path="/financiamento" element={<Simulator />}/>
             <Route path="/sobre" element={<About />}/>
             <Route path="/planos" element={<Pricing />}/>

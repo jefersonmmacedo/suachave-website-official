@@ -40,12 +40,14 @@ export function CompanyList() {
                 return (
             <div className="propertyUnicFavorite">
                     <div className="image">
-                        <a href="/imobiliaria">
+                        <a href={`/imobiliaria/${company.id}`}>
                     <img src={company.logo} alt="" />
                         </a>
                     </div>
                     <div className="text">
+                    <a href={`/imobiliaria/${company.id}`}>
                     <h3>{company.fantasyName}</h3>
+                    </a>
                     <h5><IoLocationOutline />{company.road}, Nº {company.number}, {company.district} - {company.city} - {company.uf}</h5>
 
                     <div className="icons">

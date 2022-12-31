@@ -66,10 +66,10 @@ export function Property() {
               const plusRent = sale3 < 1000 ? 0 : "Não"
 
     const valuesRent =[
-        {
-        id: "rent",
-        value: data[0].priceRent === "" ? parseFloat(data[0].priceSale) * plusSale : parseFloat(data[0].priceRent) * plusRent
-        },
+        // {
+        // id: "rent",
+        // value: data[0].priceRent === "" ? parseFloat(data[0].priceSale) * plusSale : parseFloat(data[0].priceRent) * plusRent
+        // },
         {
         id: "condominium",
         value: data[0].condominium
@@ -280,7 +280,7 @@ export function Property() {
                      }
                      {ResultBRL === "" ? "" :
                    <div className="pricingTotal">
-                       <h4>Total</h4>
+                       <h4>Total encargos</h4>
                         <h4>{ResultBRL}</h4>
                     </div>
                    }
@@ -339,7 +339,7 @@ export function Property() {
                      }
                       {ResultBRL === "" ? "" :
                     <div className="pricingTotal">
-                        <h4>Total</h4>
+                        <h4>Total encargos</h4>
                          <h4>{ResultBRL}</h4>
                      </div>
                     }
@@ -378,7 +378,7 @@ export function Property() {
                     }
                      {ResultBRL === "" ? "" :
                    <div className="pricingTotal">
-                       <h4>Total</h4>
+                       <h4>Total encargos</h4>
                         <h4>{ResultBRL}</h4>
                     </div>
                    }
