@@ -9,6 +9,9 @@ import { Link } from 'react-router-dom';
 import ReactTooltip from 'react-tooltip';
 import { AuthContext } from '../../contexts/Auth';
 import { useContext } from 'react';
+import { ChatCounter } from '../ButtonsCounter/ChatCounter/ChatCounter';
+import { SchedulingCounter } from '../ButtonsCounter/SchedulingCounter/SchedulingCounter';
+import { NotificationCounter } from '../ButtonsCounter/NotificationCounter/NotificationCounter';
 
 const Nav = styled.nav`
   width: 100%;
@@ -217,27 +220,9 @@ const Navbar2 = () => {
         </>
       : user !== "" || user !== null || user !== undefined ?
         <>
-
-{user.type === "Imobiliária" && user !== null && user !== undefined && user !== "" ?
-                <>
-                <button className='iconUnicAdm' onClick={() => HandleOpenLink2("https://adm.suachave.com.br/")}><IoSpeedometerOutline/> Acessar o painel</button>
-                </>
-            :
-               <>
-                <button className='iconUnic' onClick={() => HandleOpenLink("/mensagens")} data-tip data-for='Chat'><IoChatboxEllipsesOutline/></button>
-                <ReactTooltip id='Chat' place="bottom" type="dark" effect="solid">
-                     <span>Chat</span>
-                </ReactTooltip>
-                <button className='iconUnic' onClick={() => HandleOpenLink("/agendamentos")} data-tip data-for='Agendamentos'><IoCalendarOutline/></button>
-                <ReactTooltip id='Agendamentos' place="bottom" type="dark" effect="solid">
-                     <span>Agendamentos</span>
-                </ReactTooltip>
-
-                <button className='iconUnic' onClick={() => HandleOpenLink("/notificacoes")} data-tip data-for='Notificações'><IoNotificationsOutline/></button>
-                <ReactTooltip id='Notificações' place="bottom" type="dark" effect="solid">
-                     <span>Notificações</span>
-                </ReactTooltip>
-
+             <ChatCounter />
+             <SchedulingCounter />
+              <NotificationCounter />
                 <button className='iconUnic' onClick={() => HandleOpenLink("/favoritos")} data-tip data-for='Favoritos'><IoHeartOutline/></button>
                 <ReactTooltip id='Favoritos' place="bottom" type="dark" effect="solid">
                      <span>Favoritos</span>
@@ -248,10 +233,6 @@ const Navbar2 = () => {
                 </ReactTooltip>
 
                </>
-                  }
-
-                <button className='iconOut' onClick={handleLogOut}><IoLogOutOutline /></button>
-        </>
         : ""
     }
       </div>

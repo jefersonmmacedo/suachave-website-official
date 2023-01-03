@@ -51,7 +51,14 @@ export function TestTools(){
         {/* <ReactFullscreenSlideshow images={images} width="100%" height="100%" cycle={true}/> */}
         <h2>Seja bem-vindo.<br /> O sua chave é para você!</h2>
 
-        <input type="text" value={number} onChange={e => setNumber(e.target.value)} />
+        <input type="text" className="primary" placeholder="Digite o código" list="brow"/>
+                    <datalist id="brow">
+                        <option value="Internet Explorer"></option>
+                        <option value="Firefox"></option>
+                        <option value="Chrome"></option>
+                        <option value="Opera"></option>
+                        <option value="Safari"></option>
+                        </datalist>
 
         {number < 20000 ?
         <h3>Menor: {number}</h3>

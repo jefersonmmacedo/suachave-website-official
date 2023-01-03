@@ -12,17 +12,8 @@
     padding-bottom: 5px;
 }
 
-.PropertyUnicBlock .image {
-    width: 100%; 
-    height: 150px;
-    border-radius: 6px 6px 0 0;
-      object-fit: cover;
-}
-.PropertyUnicBlock .image img {
-    width: 100%; 
-    height: 150px;
-    border-radius: 6px 6px 0 0;
-      object-fit: cover;
+.PropertyUnicBlock .imageSlider {
+    width: 100%;
 }
 
 

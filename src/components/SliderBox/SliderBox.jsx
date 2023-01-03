@@ -12,11 +12,9 @@ function SliderBox({images, idProperty}) {
         return (
             <div className="each-slide-effectBoxLoading">
             <div className="imageTopLoading">
-            <div className="imageLoading">
                  <a href="">
                     <img src={imageBack} alt="" />
                 </a>
-            </div>
             </div>
             </div>
         )

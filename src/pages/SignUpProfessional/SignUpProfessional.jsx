@@ -6,11 +6,13 @@ import { useContext } from "react";
 import { AuthContext } from "../../contexts/Auth";
 import buscaDistrito from "../../services/api-buscaDistrito";
 import { toast } from 'react-toastify';
-import {IoEyeOutline, IoEyeOffOutline} from 'react-icons/io5';
+import {IoEyeOutline, IoEyeOffOutline, IoSearchOutline} from 'react-icons/io5';
 import { mask as masker, unMask } from "remask";
 import { storage } from '../../services/firebaseConnection';
 import { ref, getDownloadURL, uploadBytes} from 'firebase/storage';
 import { v4 as uuidv4 } from 'uuid';
+import buscaCNPJ from "../../services/api-buscaCNPJ";
+import buscaCep from "../../services/api-buscaCep";
 
 export function SignUpProfessional() {
     const {createAccountCompany} = useContext(AuthContext);
@@ -18,13 +20,14 @@ export function SignUpProfessional() {
     const [data, setData] = useState("1");
     const [avatarUrl, setAvatarUrl] = useState(null);
     const [imageAvatar, setImageAvatar] = useState('');
-    const profile = "https://firebasestorage.googleapis.com/v0/b/foursome4-b925c.appspot.com/o/avatar.png?alt=media&token=f3b1f0bc-3885-4296-8363-ec1c3d43e240"
+    const profile = "https://media.istockphoto.com/id/931643150/vector/picture-icon.jpg?b=1&s=170667a&w=0&k=20&c=7WCqA9IZcIhn6UQbi6Kx1EtdnhEgVOOHwLi0rTMtbCo="
 
     const [passwordView, setPasswordView] = useState(false)
-    const [districtAll, setDistrictAll] = useState([]);
 
     const [type, setType] = useState("");
     const [cnpj, setCnpj] = useState("");
+    const [cnpj2, setCnpj2] = useState("");
+    const [situation, setSituation] = useState("");
     const [socialReason, setSocialReason] = useState("");
     const [fantasyName, setFantasyName] = useState("");
     const [creci, setCreci] = useState("");
@@ -77,40 +80,8 @@ export function SignUpProfessional() {
         setType(e.target.value)
     }
 
-    async function handleSearchDistrict(ufSelect) {
-        console.log(ufSelect)
-        try {
-          const res = await buscaDistrito.get(`${ufSelect}/distritos`) 
-            console.log(res.data)
-            setDistrictAll(res.data)
-            console.log(res.data[0].municipio.nome);
-            return;
-          }catch{
-            console.log("error")
-            toast.error("Escolha um estado e clica em buscar cidades")
-        }
-        return
-    }
 
-    if(districtAll) {
-        districtAll.sort(function(a,b) {
-            if(a.nome < b.nome ) {
-                return -1
-            } else {
-                return true
-            }
-        })
-        }
- 
-    function handleSetectCity(e) {
-        console.log(e.target.value)
-        setCity(e.target.value)
-      }
-      function handleSetectUf(e) {
-          console.log(e.target.value)
-          handleSearchDistrict(e.target.value)
-          setUf(e.target.value)
-      }
+
 
       async function handleNewAccount(e) {
         e.preventDefault();
@@ -163,6 +134,7 @@ export function SignUpProfessional() {
         setWhatsappResponsible(maskedValue)
       }
     function ChangeMaskCNPJ(e) {
+      setCnpj2(e.target.value)
         const originalValue = unMask(e.target.value);
         const maskedValue = masker(originalValue, [
             "999.999.999-99",
@@ -191,6 +163,47 @@ export function SignUpProfessional() {
           setPasswordView(false)
         }
       }
+      async function handleSearchCnpj(e) {
+        e.preventDefault();
+        const formatCNPJ1 = cnpj2.replace(".", "")
+        const formatCNPJ2 = formatCNPJ1.replace(".", "")
+        const formatCNPJ3 = formatCNPJ2.replace("/", "")
+        const formatCNPJ4 = formatCNPJ3.replace("-", "")
+        console.log(formatCNPJ4)
+        try {
+          const res = await buscaCNPJ.get(`${formatCNPJ4}`) 
+            console.log(res.data.estabelecimento.situacao_cadastral);
+            setSituation(res.data.estabelecimento.situacao_cadastral)
+            return;
+          }catch{
+            console.log("error")
+            toast.error("Escolha um estado e clica em buscar cidades")
+        }
+        return
+      }
+
+      async function handleSearchCep(e) {
+        e.preventDefault();
+        try {
+          const res = await buscaCep.get(`${cep}/json`) 
+            console.log(res.data);
+
+            setRoad(res.data.logradouro);
+            setDistrict(res.data.bairro);
+            setCity(res.data.localidade);
+            setUf(res.data.uf);
+            return;
+          }catch{
+            console.log("error")
+        }
+        return
+    }
+
+
+      function handleRedirectAfterError(e) {
+        e.preventDefault();
+        window.open("/", "_self")
+      }
 
 
 
@@ -204,21 +217,53 @@ export function SignUpProfessional() {
                 <form action="">
                 <img src={Logo} alt="Logo GPS Buscador" />
                     <div className="data">
-                        {data === "1" ?
+                        {
+                        data === "1" ?
                         <>
+                        
                         <select value={account} onChange={handleSelectAccount}>
-                            <option value="imobiliária">Sou Imobiliária</option>
-                            <option value="corretor">Sou Corretor</option>
-                        </select>
+                        <option value="imobiliária">Sou Imobiliária</option>
+                        <option value="corretor">Sou Corretor</option>
+                         </select>
+
                         {account === "imobiliária" ?
                         <>
                         <input type="text" placeholder="CNPJ" value={cnpj} onChange={ChangeMaskCNPJ} />
+                        <button className="btn" onClick={handleSearchCnpj}>Verificar</button>
+
+                            {situation === "" ? ""
+                            : situation === "Inapta" || situation === "Irregular" || situation === "Extinto" || situation === "Cancelado"  ?
+                             <div className="situationCnpj2">
+                             <h4>Ops! Encontramos um problema com o CNPJ.</h4>
+                             <h3>Situação: {situation}</h3>
+                             <h5>Verifique e tente novamente em outro momento!</h5>
+                             <button className="btn1" onClick={handleRedirectAfterError}>Sair</button>
+                           </div>
+                            : situation === "Ativa" || situation === "Regular" ?
+                            <div className="situationCnpj">
+                              <h4>Parabéns</h4>
+                              <h3>CNPJ Validado!</h3>
+                              <button className="btn3" onClick={() => handleSelectStepe("2")}>Avançar</button>
+                            </div>
+                            : ""
+                            }
+                        </>
+                        : 
+                        <>
+                        <input type="text" placeholder="CPF" value={cnpj} onChange={ChangeMaskCNPJ} />
+                        <button className="btn" onClick={() => handleSelectStepe("2")}>Avançar</button>
+                        </>}
+                        </>
+
+                        :data === "2" ?
+                        <>
+                        {account === "imobiliária" ?
+                        <>
                         <input type="text" placeholder="Razão Social" value={socialReason} onChange={(e) => setSocialReason(e.target.value)} />
                         <input type="text" placeholder="Nome Fantasia" value={fantasyName} onChange={(e) => setFantasyName(e.target.value)} />
                         </>
                         : 
                         <>
-                        <input type="text" placeholder="CPF" value={cnpj} onChange={ChangeMaskCNPJ} />
                         <input type="text" placeholder="Nome Completo" value={socialReason} onChange={(e) => setSocialReason(e.target.value)} />
                         <input type="text" placeholder="Nome Profissional" value={fantasyName} onChange={(e) => setFantasyName(e.target.value)} />
                         </>
@@ -238,27 +283,28 @@ export function SignUpProfessional() {
                         <div className="icon"onClick={handlePasswordView}>{passwordView === false ? <IoEyeOutline /> : <IoEyeOffOutline /> }
                             </div>
                         </div>
-                        <button className="btn" onClick={() => handleSelectStepe("2")}>Avançar</button>
+                        <button className="btn" onClick={() => handleSelectStepe("3")}>Avançar</button>
+                        <button className="btn3" onClick={() => handleSelectStepe("1")}>Voltar</button>
                         </>
-                        : data === "2" ?
+                        : data === "3" ?
                         <>
                          <input type="text" placeholder="Nome Responsável" value={responsibleName} onChange={(e) => setResponsibleName(e.target.value)} />
                         <input type="email" placeholder="E-mail" value={emailResponsible} onChange={(e) => setEmailResponsible(e.target.value)} />
                         <input type="text" placeholder="Whatsapp" value={whatsappResponsible} onChange={ChangeMaskWhatsappResp} />
-                        <button className="btn3" onClick={() => handleSelectStepe("1")}>Voltar</button>
-                        <button className="btn" onClick={() => handleSelectStepe("3")}>Avançar</button>
+                        <button className="btn" onClick={() => handleSelectStepe("4")}>Avançar</button>
+                        <button className="btn3" onClick={() => handleSelectStepe("2")}>Voltar</button>
                         </>
-                        : data === "3" ?
+                        : data === "4" ?
                         <>
                         <input type="text" placeholder="Website" value={website} onChange={(e) => setWebsite(e.target.value)} />
                         <input type="text" placeholder="Facebook" value={facebook} onChange={(e) => setFacebook(e.target.value)} />
                         <input type="text" placeholder="Instagram" value={instagram} onChange={(e) => setInstagram(e.target.value)} />
                         <input type="text" placeholder="LinkedIn" value={linkedin} onChange={(e) => setLinkedin(e.target.value)} />
                         <input type="text" placeholder="Youtube" value={youtube} onChange={(e) => setYoutube(e.target.value)} />
-                        <button className="btn3" onClick={() => handleSelectStepe("2")}>Voltar</button>
-                        <button className="btn" onClick={() => handleSelectStepe("4")}>Avançar</button>
+                        <button className="btn" onClick={() => handleSelectStepe("5")}>Avançar</button>
+                        <button className="btn3" onClick={() => handleSelectStepe("3")}>Voltar</button>
                         </>
-                        : data === "4" ?
+                        : data === "5" ?
                          <>
                         <label className="label-avatar">
                             <span><FiUpload color="#f65" size={25} /></span>
@@ -266,62 +312,21 @@ export function SignUpProfessional() {
                             <img src={avatarUrl === null ? profile : avatarUrl} alt="Avatar" height={100} width={100}/>
                         </label>
                         
+                        <div className="BuscaCep">
+                        <input type="text" placeholder="CEP" value={cep} onChange={(e) => setCep(e.target.value)}  />
+                        <button onClick={handleSearchCep}><IoSearchOutline /></button>
+                        </div>
 
                          <input type="text" placeholder="Rua" value={road} onChange={(e) => setRoad(e.target.value)}  />
                          <input type="text" placeholder="Número" value={number} onChange={(e) => setNumber(e.target.value)}  />
-                        <input type="text" placeholder="Bairro" value={district} onChange={(e) => setDistrict(e.target.value)}  />
-
-
-                        <select value={uf} onChange={handleSetectUf}> 
-                            <option value="">Escolha seu estado</option>
-                            <option value="AC">Acre</option>
-                            <option value="AL">Alagoas</option>
-                            <option value="AP">Amapá</option>
-                            <option value="AM">Amazonas</option>
-                            <option value="BA">Bahia</option>
-                            <option value="CE">Ceará</option>
-                            <option value="DF">Distrito Federal</option>
-                            <option value="ES">Espírito Santo</option>
-                            <option value="GO">Goiás</option>
-                            <option value="MA">Maranhão</option>
-                            <option value="MT">Mato Grosso</option>
-                            <option value="MS">Mato Grosso do Sul</option>
-                            <option value="MG">Minas Gerais</option>
-                            <option value="PA">Pará</option>
-                            <option value="PB">Paraíba</option>
-                            <option value="PR">Paraná</option>
-                            <option value="PE">Pernambuco</option>
-                            <option value="PI">Piauí</option>
-                            <option value="RJ">Rio de Janeiro</option>
-                            <option value="RN">Rio Grande do Norte</option>
-                            <option value="RS">Rio Grande do Sul</option>
-                            <option value="RO">Rondônia</option>
-                            <option value="RR">Roraima</option>
-                            <option value="SC">Santa Catarina</option>
-                            <option value="SP">São Paulo</option>
-                            <option value="SE">Sergipe</option>
-                            <option value="TO">Tocantins</option>
-                            <option value="EX">Estrangeiro</option>     
-                    </select>
-                    <select value={city} onChange={handleSetectCity}> 
-                    {districtAll.length === 0 ?
-                    <option value={city}>{city}</option>
-                    :
-                    <>
-                    <option value="">Escolha sua cidade</option>
-                    {districtAll?.map((district) => {
-                            return (
-                                <option autocomplete="off" key={district.id} value={district.nome}>{district.nome}</option>
-                            )
-                        })}
-                    </>
-                    }     
-                    </select>
+                        <input type="text" placeholder="Bairro" value={district} onChange={(e) => setDistrict(e.target.value)}  />  
+                        <input type="text" placeholder="Cidade" value={city} onChange={(e) => setCity(e.target.value)}  />
+                        <input type="text" placeholder="Estado(UF)" value={uf} onChange={(e) => setUf(e.target.value)}  />
 
 
 
-                        <button className="btn3" onClick={() => handleSelectStepe("3")}>Voltar</button>
                         <button className="btn1" onClick={handleNewAccount}>Cadastrar</button>
+                        <button className="btn3" onClick={() => handleSelectStepe("4")}>Voltar</button>
                          </>
                          :""}
                         {/* <div className="links">

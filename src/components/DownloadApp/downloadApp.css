@@ -1,17 +1,36 @@
 ﻿.DownloadApp {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     flex-direction: row;
     width: 90%;
     border-radius: 20px;
-    height: 300px;
-    background-image: url("../../assets/images/background2.jpg"); /* The image used */
-    background-color: #cccccc; /* Used if the image is unavailable */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover; /* Resize the background image to cover the entire container */
+    height: 100%;
+    /* background-image: url("../../assets/images/background2.jpg");
+    background-color: #cccccc; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; */
     margin: 80px auto;
+}
+
+.DownloadApp .imageAuto1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 90%;
+}
+.DownloadApp .imageAuto1 img {
+    width: 100%;
+}
+
+.DownloadApp .imageAuto2 {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 90%;
 }
 
 .DownloadApp .back {
@@ -166,7 +185,23 @@
                 padding: 10px;
             }
 
-            @media (max-width: 900px) {
+            @media (max-width: 800px) {
+                .DownloadApp .imageAuto1 {
+                    display: none;
+                }
+                .DownloadApp .imageAuto2 {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: row;
+                    width:70%;
+                }
+
+                .DownloadApp .imageAuto2 img {
+                    width: 100%;
+                }
+                
+            @media (max-width: 800px) {
                 .DownloadApp .imageApp {
                     display: none;
                 }
@@ -179,6 +214,14 @@
                     .DownloadApp {
                         width: 95%;
                         height: 100%;
+                    }
+
+                    .DownloadApp .imageAuto2 {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: row;
+                        width:90%;
                     }
                    
                       .DownloadApp .textSession {
@@ -202,6 +245,7 @@
 
             
             
+        }
         }
             
         }

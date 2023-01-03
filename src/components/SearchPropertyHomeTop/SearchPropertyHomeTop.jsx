@@ -1,18 +1,15 @@
 ﻿import "./searchPropertyHomeTop.css";
 import { useState } from "react";
-import buscaDistrito from '../../services/api-buscaDistrito';
-import { toast } from 'react-toastify';
-import {FaHome, FaBuilding, FaStore} from "react-icons/fa";
-import {IoSearch, IoLocationOutline} from "react-icons/io5";
+import {IoSearch, IoAddOutline, IoRemoveOutline} from "react-icons/io5";
 import { useFetch } from "../../hooks/useFetch";
 
-export function SearchPropertyHomeTop({openModal}) {
+export function SearchPropertyHomeTop() {
+    const altura = window.screen.height;
+    const largura = window.screen.width;
+    console.log(altura);
+    console.log(largura);
     const LocalCity = localStorage.getItem("suachavecity");
     const userCity = JSON.parse(LocalCity);
-    const [uf, setUf] = useState(userCity === null || userCity === undefined || userCity === ""? "" : userCity.uf);
-    const [city, setCity] = useState(userCity === null || userCity === undefined || userCity === ""? "" : userCity.city);
-    const [districtAll, setDistrictAll] = useState([]);
-    const [professional, setProfessional] = useState("");
     const [code, setCode] = useState(false);
     const [status, setStatus] = useState("venda");
     const [subType, setSubType] = useState("");
@@ -21,32 +18,20 @@ export function SearchPropertyHomeTop({openModal}) {
     const [garage, setGarage] = useState("");
     const [restroom, setRestroom] = useState("");
 
+    const [filter, setFilter] = useState(false);
+
     const [citySelected, setCitySelected] = useState("");
     const [ufSelected, setUfSelected] = useState("");
 
-    console.log(uf)
-    console.log(city)
-    async function handleSearchDistrict(ufSelect) {
-        console.log(ufSelect)
-        try {
-          const res = await buscaDistrito.get(`${ufSelect}/distritos`) 
-            console.log(res.data)
-            setDistrictAll(res.data)
-            console.log(res.data[0].municipio.nome);
-            return;
-          }catch{
-            console.log("error")
-            toast.error("Escolha um estado e clica em buscar cidades");
-        }
-        return
-    }
+
+    const cityOffUf =citySelected?.slice(-5)
+    const cityNew = citySelected.replace(cityOffUf, "")
+    const ufNew = citySelected?.slice(-2)
+
+
 
     const availability = "Disponível";
     const {data} = useFetch(`/property/all/${availability}`);
-
-    if(data) {
-        console.log(data);
-    }
 
     var cityList = [];
     var ufList = [];
@@ -70,15 +55,8 @@ export function SearchPropertyHomeTop({openModal}) {
             ufList.push(item);
         }
     });
-    
-    console.log("cityList");
-    console.log(cityList);
-    console.log("ufList");
-    console.log(ufList);
 
     const filterCity = cityList.filter((item) => item.uf === ufSelected);
-
-
 
     if(ufList) {
         ufList.sort(function(a,b) {
@@ -123,49 +101,19 @@ export function SearchPropertyHomeTop({openModal}) {
             console.log(e.target.value)
         }
 
-
-    function handleSetectCity(e) {
-        setCity(e.target.value)
-        console.log(e.target.value)
-      }
-      function handleSetectUf(e) {
-        setUf(e.target.value)
-        console.log(e.target.value)
-        handleSearchDistrict(e.target.value)
-      }
-      function handleSearchProfessional(e) {
-        console.log(e.target.value)
-        toast.info(`Você escolheu: ${professional}, na cidade ${city} - ${uf}`)
-        const suachave = {
-            city: city,
-            uf: uf,
-          };
-
-        localStorage.setItem("suachavecity", JSON.stringify(suachave));
-      }
-
       function handleActiveCode(data, status) {
         setCode(data)
         setStatus(status)
       }
 
-      function handleSetectUfSelected(e) {
-        setUfSelected(e.target.value)
-        console.log(e.target.value)
-      }
-
-      function handleSetectCitySelected(e) {
+      function handleSelectAddress(e) {
         setCitySelected(e.target.value)
         console.log(e.target.value)
       }
-
-        function handleClearAddress(e) {
-            e.preventDefault();
-            setUf("")
-            setCity("")
-            setUfSelected("")
-            setCitySelected("")
-        }
+      function handleFilter(e) {
+        e.preventDefault()
+        setFilter(!filter)
+      }
 
 
     return (
@@ -173,9 +121,6 @@ export function SearchPropertyHomeTop({openModal}) {
             <div className="selectButtonsHomeTop">
             <button className={status === "venda" ? "btn" : "btn1"} onClick={() => handleActiveCode(false, "venda")}>Venda</button>
             <button className={status === "aluguel" ? "btn2" : ""} onClick={() => handleActiveCode(false, "aluguel")}>Aluguel</button>
-            {/* <button className={status === "temporada" ? "btn2" : ""} onClick={() => handleActiveCode(false, "temporada")}>Temporada</button> */}
-            {/* <button className={status === "temporada" ? "btn" : ""} onClick={() => handleActiveCode(false, "temporada")}>Temporada</button>
-            <button className={status === "diária" ? "btn" : ""} onClick={() => handleActiveCode(false, "diária")}>Diária</button> */}
             <button className={status === "codigo" ? "btn3" : "btn4"} onClick={() => handleActiveCode(true, "codigo")}>Código</button>
                 </div>   
             <div className="search">
@@ -243,54 +188,105 @@ export function SearchPropertyHomeTop({openModal}) {
                         :  <option value="">Subtipo</option>
                         }
                     </select>
-                    <select value={bedroom} onChange={handleBedroom} className={bedroom === "" ? "" : "select"}>
-                        <option value="">Quartos</option>
-                        <option value="1">1 Quarto</option>
-                        <option value="2">2 Quartos</option>
-                        <option value="3">3 Quartos</option>
-                        <option value="4">4 Quartos</option>
-                        <option value="5">5 Quartos</option>
-                        <option value="6">6 Quartos</option>
-                        <option value="7">7 Quartos</option>
-                        <option value="8">8 Quartos</option>
-                        <option value="9">9 Quartos</option>
-                        <option value="10">10 Quartos</option>
-                    </select>
 
-                    <select value={restroom} onChange={handleRestroom} className={restroom === "" ? "" : "select"}>
-                        <option value="">Banheiros</option>
-                        <option value="1">1 Banheiro</option>
-                        <option value="2">2 Banheiros</option>
-                        <option value="3">3 Banheiros</option>
-                        <option value="4">4 Banheiros</option>
-                        <option value="5">5 Banheiros</option>
-                        <option value="6">6 Banheiros</option>
-                        <option value="7">7 Banheiros</option>
-                        <option value="8">8 Banheiros</option>
-                        <option value="9">9 Banheiros</option>
-                        <option value="10">10 Banheiros</option>
-                    </select>
 
-                    <select value={garage} onChange={handleGarage} className={garage === "" ? "" : "select"}>
-                        <option value="">Garagem</option>
-                        <option value="1">1 Vaga</option>
-                        <option value="2">2 Vagas</option>
-                        <option value="3">3 Vagas</option>
-                        <option value="4">4 Vagas</option>
-                        <option value="5">5 Vagas</option>
-                        <option value="6">6 Vagas</option>
-                        <option value="7">7 Vagas</option>
-                        <option value="8">8 Vagas</option>
-                        <option value="9">9 Vagas</option>
-                        <option value="10">10 Vagas</option>
-                    </select>
+                    <input type="text" placeholder="Digite a cidade" list="brow" value={citySelected} onChange={handleSelectAddress} />
+                    <datalist id="brow" >
+                    {cityList?.map((district) => {
+                            return (
+                                <option autocomplete="off" key={district.id} value={`${district.city} - ${district.uf}`}>{district.city} - {district.uf}</option>
+                            )
+                        })}
+                    </datalist>
                 </>
                     :
-                    <input type="text" className="primary" placeholder="Digite o código" />
+                    <>
+                    <input type="text" className="primary" placeholder="Digite o código" list="brow"/>
+                    <datalist id="brow">
+                    {cityList?.map((district) => {
+                            return (
+                                <option autocomplete="off" key={district.id} value={district.city}>{district.city} - {district.uf}</option>
+                            )
+                        })}
+                    </datalist>
+                    </>
                 }
           
-                     <button onClick={handleSearchProfessional}><IoSearch /></button>
+                     {filter ===  true ?
+                     <button className="filter" onClick={handleFilter}><IoRemoveOutline/> filtros </button>
+                     :
+                     <button className="filter" onClick={handleFilter}><IoAddOutline/> filtros </button>
+                    }
+                     {filter ===  true ? "" :
+                     <button className="btnSearch" onClick={""}><IoSearch /></button>
+                    }
+                    <button className="mobile" onClick={""}><IoSearch /></button>
             </div>
+
+            {filter === true ? 
+            <div className="viewFilter">
+                            <div className="search">
+                                 <select value={bedroom} onChange={handleBedroom} className={bedroom === "" ? "" : "select"}>
+                                    <option value="">Quartos</option>
+                                    <option value="1">1 Quarto</option>
+                                    <option value="2">2 Quartos</option>
+                                    <option value="3">3 Quartos</option>
+                                    <option value="4">4 Quartos</option>
+                                    <option value="5">5 Quartos</option>
+                                    <option value="6">6 Quartos</option>
+                                    <option value="7">7 Quartos</option>
+                                    <option value="8">8 Quartos</option>
+                                    <option value="9">9 Quartos</option>
+                                    <option value="10">10 Quartos</option>
+                                </select>
+                                 <select value={bedroom} onChange={handleBedroom} className={bedroom === "" ? "" : "select"}>
+                                    <option value="">Suites</option>
+                                    <option value="1">1 Suite</option>
+                                    <option value="2">2 Suites</option>
+                                    <option value="3">3 Suites</option>
+                                    <option value="4">4 Suites</option>
+                                    <option value="5">5 Suites</option>
+                                    <option value="6">6 Suites</option>
+                                    <option value="7">7 Suites</option>
+                                    <option value="8">8 Suites</option>
+                                    <option value="9">9 Suites</option>
+                                    <option value="10">10 Suites</option>
+                                </select>
+            
+                                <select value={restroom} onChange={handleRestroom} className={restroom === "" ? "" : "select"}>
+                                    <option value="">Banheiros</option>
+                                    <option value="1">1 Banheiro</option>
+                                    <option value="2">2 Banheiros</option>
+                                    <option value="3">3 Banheiros</option>
+                                    <option value="4">4 Banheiros</option>
+                                    <option value="5">5 Banheiros</option>
+                                    <option value="6">6 Banheiros</option>
+                                    <option value="7">7 Banheiros</option>
+                                    <option value="8">8 Banheiros</option>
+                                    <option value="9">9 Banheiros</option>
+                                    <option value="10">10 Banheiros</option>
+                                </select>
+            
+                                <select value={garage} onChange={handleGarage} className={garage === "" ? "" : "select"}>
+                                    <option value="">Garagem</option>
+                                    <option value="1">1 Vaga</option>
+                                    <option value="2">2 Vagas</option>
+                                    <option value="3">3 Vagas</option>
+                                    <option value="4">4 Vagas</option>
+                                    <option value="5">5 Vagas</option>
+                                    <option value="6">6 Vagas</option>
+                                    <option value="7">7 Vagas</option>
+                                    <option value="8">8 Vagas</option>
+                                    <option value="9">9 Vagas</option>
+                                    <option value="10">10 Vagas</option>
+                                </select>
+            
+
+                                 <button className="btnSearch" onClick={""}><IoSearch /></button>
+                        </div>
+            </div>
+            :
+            ""}
 
             <div className="textLocation">
                 <div className="checkDiv">
@@ -303,33 +299,7 @@ export function SearchPropertyHomeTop({openModal}) {
                 </div>
             </div>
 
-            <div className="textLocation">
-                <h4>Onde?</h4>
-                <select value={ufSelected} onChange={handleSetectUfSelected}> 
-                            <option value="">Estado</option>
-                            {ufList?.map((uf) => {
-                                return (
-                                    <option value={uf.uf}>{uf.uf}</option>
-                                )
-                            })}
-                                
-                    </select>
-                    <select value={citySelected} onChange={handleSetectCitySelected}> 
-                    {filterCity.length === 0 ?
-                    <option value="">Cidade</option>
-                    :
-                    <>
-                    <option value="">Escolha sua cidade</option>
-                    {filterCity?.map((district) => {
-                            return (
-                                <option autocomplete="off" key={district.id} value={district.city}>{district.city}</option>
-                            )
-                        })}
-                    </>
-                    }     
-                    </select>
-                    {/* <button onClick={handleClearAddress}>X Limpar</button> */}
-            </div>
+
 
         </div>
     )

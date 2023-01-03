@@ -6,6 +6,7 @@ import { ToolBarClient } from "../../components/ToolBarClient/ToolBarClient";
 import api from "../../services/api";
 import { useEffect, useState } from "react";
 import { DataMenssageChat } from "../../components/DataMenssageChat/DataMenssageChat";
+import { MessagesCounter } from "../../components/ButtonsCounter/MessagesCounter/MessagesCounter";
 
 export function MessagesProperty() {
     const Local = localStorage.getItem("suachave");
@@ -88,6 +89,7 @@ if(dateMessage) {
                             <img src={chat.imageProperty} alt="" />
                         </div>
                        <DataMenssageChat idProperty={chat.idProperty} room={chat.room}/>
+                        <MessagesCounter room={chat.room}/>
                     </div>
                     </a>
                     )

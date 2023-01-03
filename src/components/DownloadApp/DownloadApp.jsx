@@ -1,12 +1,12 @@
 ﻿import "./downloadApp.css";
 import {IoLogoGooglePlaystore, IoLogoApple} from 'react-icons/io5';
-import iphone from '../../assets/images/iphone.png'
-import iphone2 from '../../assets/images/iphone2.png'
+import auto1 from '../../assets/images/auto1.png'
+import auto2 from '../../assets/images/auto2.png'
 
 export function DownloadApp() {
     return (
         <div className="DownloadApp">
-            <div className="back">
+            {/* <div className="back">
             <div className="textSession">
                 <h1>As melhores ofertas de imóveis na palma da sua mão!</h1>
                 <h4>Em breve nas melhores lojas de aplicativos.</h4>
@@ -34,6 +34,12 @@ export function DownloadApp() {
             <div className="imageApp">
                 <img src={iphone2} alt="iPhone" />
             </div>
+            </div> */}
+            <div className="imageAuto1">
+                <img src={auto1} alt="" />
+            </div>
+            <div className="imageAuto2">
+                <img src={auto2} alt="" />
             </div>
         </div>
     )

@@ -85,6 +85,7 @@
     flex-direction: row;
     margin: 5px 10px;
 }
+
 .MessagesProperty .main .text .chat .image{
     border-radius: 4px 0 0 4px;
     width: 80px;
@@ -128,15 +129,22 @@
 
 @media (max-width: 800px) {
     .MessagesProperty .main .text .chat{
-        width: 500px;
-        margin: 5px;
+        width: 450px;
+        margin: 5px 0px;
     }
 
     .MessagesProperty .main .text .textTop {
-        width: 500px;
+        width: 450px;
     }
+    @media (max-width: 735px) {
+        .MessagesProperty .main .text .chat{
+            width: 400px;
+            margin: 5px 0px;
+        }
     
-
+        .MessagesProperty .main .text .textTop {
+            width: 400px;
+        }
     @media (max-width: 700px) {
         .MessagesProperty .main {
             margin-top: 50px;
@@ -155,7 +163,7 @@
         @media (max-width: 530px) {
 
             .MessagesProperty .main .text .chat{
-                width: 100%;
+                width:400px;
             }
 
             .MessagesProperty .main .text .textTop {
@@ -172,11 +180,23 @@
               .MessagesProperty .main .text .chat .textChat h6 {
                 font-size: 10px;
               }
+              @media (max-width: 430px) {
 
+                .MessagesProperty .main .text .chat{
+                    width:350px;
+                }
 
+              @media (max-width: 380px) {
+
+                .MessagesProperty .main .text .chat{
+                    width:300px;
+                }
+        }
+        }
         }
 
 
+    }
     }
 }
 

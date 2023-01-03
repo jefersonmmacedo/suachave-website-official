@@ -38,6 +38,83 @@
     margin: 20px 0;
     padding: 10px;
 }
+.SignUpProfessional .login form .data .BuscaCep {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0 20px 0;
+    padding:0px 20px;
+    text-align: center;
+}
+
+.SignUpProfessional .login form .data .BuscaCep button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: var(--Primary);
+    color: var(--White);
+    border-radius: 6px;
+    margin-left: 5px;
+}
+.SignUpProfessional .login form .data .situationCnpj {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: var(--BorderInput2);
+    border-radius: 6px;
+        text-align: center;
+}
+
+.SignUpProfessional .login form .data .situationCnpj h4 {
+    color: var(--Gray);
+    margin-bottom: 5px;
+        text-align: center;
+}
+.SignUpProfessional .login form .data .situationCnpj h3 {
+    color: var(--Aproved);
+    font-weight: 700;
+    margin-bottom: -20px;
+        text-align: center;
+}
+
+.SignUpProfessional .login form .data .situationCnpj2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: var(--BorderInput2);
+    border-radius: 6px;
+    text-align: center;
+}
+
+.SignUpProfessional .login form .data .situationCnpj2 h4 {
+    color: var(--Gray);
+    font-weight: 700;
+    margin-bottom: 5px;
+    text-align: center;
+}
+.SignUpProfessional .login form .data .situationCnpj2 h3 {
+    color: var(--Primary);
+    font-weight: 700;
+    text-align: center;
+}
+
+.SignUpProfessional .login form .data .situationCnpj2 h5 {
+    color: var(--Gray);
+    margin: 10px;
+    text-align: center;
+}
+
+
 
 .SignUpProfessional .login form .data input {
     width: 80%;

@@ -29,7 +29,7 @@ export function PropertyUnicBlock({id}) {
     const cityProperty = `${property?.subType} ${property?.status === "Venda" ? "à venda" : "para aluguel"}`
     return (
         <div className="PropertyUnicBlock">
-                    <div className="image">
+                    <div className="imageSlider">
                     <SliderBox images={property?.images} idProperty={property?.id}/>
                         
                     </div>

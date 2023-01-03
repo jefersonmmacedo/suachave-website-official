@@ -80,9 +80,9 @@ export function Home() {
             </div>
             <Finance />
          
-            <Cities />
-            <ToHire />
+            {/* <Cities /> */}
             <DownloadApp />
+            <ToHire />
             <Footer />
 
             <Modal isOpen={isOpenModalSearchProperty} onRequestClose={handleCloseModalSearchProperty}

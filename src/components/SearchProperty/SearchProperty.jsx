@@ -279,7 +279,16 @@ export function SearchProperty({openModal}) {
                     </select>
                 </>
                     :
-                    <input type="text" className="primary" placeholder="Digite o código" />
+                    <>
+                <input type="text" className="primary" placeholder="Digite o código" list="brow"/>
+                    <datalist id="brow">
+                        <option value="Internet Explorer"></option>
+                        <option value="Firefox"></option>
+                        <option value="Chrome"></option>
+                        <option value="Opera"></option>
+                        <option value="Safari"></option>
+                    </datalist>
+                    </>
                 }
           
                      <button onClick={handleLinkSearchProperty}>Buscar</button>

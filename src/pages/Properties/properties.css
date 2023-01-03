@@ -43,6 +43,456 @@
     box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
   }
 
+  .Properties .listPage .ListProperty {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Properties .listPage .ListProperty .topList {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.Properties .listPage .ListProperty .topList button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 15px;
+    Background-color: var(--White);
+    color: var(--Paragraph);
+    font-weight: 500;
+    border: 1px solid var(--Gray);
+    border-radius: 6px;
+    font-size: 12px;
+}
+
+
+.Properties .listPage .ListProperty .searchItens {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    flex-flow: column nowrap;
+    background: var(--BorderHover);
+    border-left: 1px solid var(--Border);
+    backdrop-filter: blur(4px);
+    position: fixed;
+    transform: translateX(0);
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 650px;
+    padding-top: 3.5rem;
+    transition: transform 0.3s ease-in-out;
+    z-index: 99;
+    box-shadow: 1px 1px 20px 0px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 1px 1px 20px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: 1px 1px 20px 0px rgba(0,0,0,0.3);
+}
+.Properties .listPage .ListProperty .searchItensNone {
+    transform: translateX(100%);
+    flex-flow: column nowrap;
+    background: var(--White);
+    border-left: 1px solid var(--Border);
+    backdrop-filter: blur(4px);
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 500px;
+    padding-top: 3.5rem;
+    transition: transform 0.3s ease-in-out;
+    z-index: 99;
+}
+.Properties .listPage .ListProperty .searchItens .buttons {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.Properties .listPage .ListProperty .searchItens .buttons button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 15px;
+    Background-color: var(--White);
+    color: var(--Paragraph);
+    font-weight: 500;
+    border: 1px solid var(--Gray);
+    border-radius: 6px;
+    font-size: 12px;
+    margin-top: -50px;
+}
+
+.Properties .listPage .ListProperty .searchItens .searchOptions {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.Properties .listPage .ListProperty .searchItensNone .searchOptions {
+    width: 95%;
+    display: none;
+}
+
+.Properties .listPage .ListProperty .searchItensNone .buttons {
+    width: 95%;
+    display: none;
+}
+
+.Properties .listPage .ListProperty .searchItens .searchOptions button svg {
+    margin-right: 5px;
+}
+.Properties .listPage .ListProperty .searchItens .searchOptions .dataSearchOptions {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 5px;
+}
+.Properties .listPage .ListProperty .searchItens .searchOptions .dataSearchOptions .dataSelects {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 0;
+}
+
+.Properties .listPage .ListProperty .searchItens .searchOptions .dataSearchOptions .dataSelects h4 {
+    width: 20%;
+    color: var(--Paragraph);
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+.Properties .listPage .ListProperty .searchItens .searchOptions .dataSearchOptions .dataSelects input {
+    border: 1px solid var(--Gray);
+    background-color: var(--White);
+    color: var(--Paragraph);
+    border-radius: 6px;
+    padding: 15px;
+    width: 100%;
+    margin: 10px 0 30px 0;
+}
+.Properties .listPage .ListProperty .searchItens .searchOptions .dataSearchOptions .dataSelects .selectInput {
+    border: 1px solid var(--Primary);
+    background-color: var(--White);
+    color: var(--Primary);
+    border-radius: 6px;
+    padding: 15px;
+    width: 100%;
+    margin: 10px 0 30px 0;
+}
+.Properties .listPage .ListProperty .searchItens .searchOptions .dataSearchOptions .dataSelects select {
+    border: 1px solid var(--Gray);
+    background-color: var(--White);
+    color: var(--Paragraph);
+    border-radius: 6px;
+    padding: 10px 20px;
+    width: 100%;
+}
+.Properties .listPage .ListProperty .searchItens .searchOptions .dataSearchOptions .dataSelects .select {
+    border: 1px solid var(--Primary);
+    background-color: var(--White);
+    color: var(--Primary);
+    border-radius: 6px;
+    padding: 10px 20px;
+    width: 100%;
+}
+
+.Properties .listPage .ListProperty .searchItens .searchOptions .dataSearchOptions .dataSelectsButtons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+
+.Properties .listPage .ListProperty .searchItens .searchOptions .dataSearchOptions .dataSelectsButtons button {
+    background-color: var(--White);
+    padding:20px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    border: 1px solid var(--Primary);
+    border-radius: 6px;
+    color: var(--Primary);
+    font-size: 14px;
+    width: 50%;
+    margin: 5px;
+}
+.Properties .listPage .ListProperty .searchItens .searchOptions .dataSearchOptions .dataSelectsButtons .btn {
+    background-color: var(--White);
+    padding:20px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    border: 1px solid var(--Gray2);
+    border-radius: 6px;
+    color: var(--Paragraph);
+    font-size: 14px;
+    width: 50%;
+    margin: 5px;
+}
+.Properties .listPage .ListProperty .searchItens .searchOptions .dataSearchOptions .dataSelectsButtonsAction {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+
+.Properties .listPage .ListProperty .searchItens .searchOptions .dataSearchOptions .dataSelectsButtonsAction button {
+    background-color: var(--Primary);
+    padding:10px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    border: 1px solid var(--Primary);
+    border-radius: 6px;
+    color: var(--White);
+    font-size: 14px;
+    width: 50%;
+    margin: 5px;
+}
+.Properties .listPage .ListProperty .searchItens .searchOptions .dataSearchOptions .dataSelectsButtonsAction .btn {
+    background-color: var(--White);
+    padding:10px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    border: 1px solid var(--Gray2);
+    border-radius: 6px;
+    color: var(--Paragraph);
+    font-size: 14px;
+    width: 50%;
+    margin: 5px;
+}
+
+
+.Properties .listPage .ListProperty .searchItens .searchOptions .dataSearchOptions  .textLocation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    margin: 5px 0;
+}
+
+
+.Properties .listPage .ListProperty .searchItens .searchOptions .dataSearchOptions  .textLocation h4 {
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: var(--Paragraph);
+    font-weight: 700;
+}
+
+.Properties .listPage .ListProperty .searchItens .searchOptions .dataSearchOptions  .textLocation select {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    Background-color:var(--BorderInput2);
+    color: var(--Paragraph);
+    font-weight: 500;
+    border: none;
+    margin: 5px;
+    border-radius: 6px;
+}
+
+.Properties .listPage .ListProperty .searchItens .searchOptions .dataSearchOptions  .textLocation button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    Background-color:var(--BorderInput2);
+    color: var(--Paragraph);
+    font-weight: 500;
+    border: none;
+    margin: 5px 10px;
+    border-radius: 6px;
+}
+
+
+.Properties .listPage .ListProperty .topList .textItens {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+}
+
+.Properties .listPage .ListProperty .MainAbout{
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-itens: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.Properties .listPage .ListProperty .MainAbout img {
+    width: 550px;
+    margin: 40px auto;
+}
+
+.Properties .listPage .ListProperty .MainAbout h3 {
+    font-weight: 600;
+    text-align: center;
+    color: var(--Paragraph);
+    margin: 10px 0;
+    text-align: center;
+}
+
+@media (max-width: 750px) {
+    .Properties .listPage .ListProperty .MainAbout img {
+        width: 60%;
+        margin: 40px auto 0 auto;
+    }
+
+    .Properties .listPage .ListProperty .MainAbout h3 {
+        margin: 40px;
+    }
+    
+
+    @media (max-width: 550px) {
+        .Properties .listPage .ListProperty .MainAbout img {
+            width: 70%;
+        }
+    }
+}
+
+
+
+
+
+.Properties .listPage .ListProperty .itens {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+
+
+@media (max-width: 980px) {
+
+    .Properties .listPage .ListProperty {
+        width: 100%;
+    }
+    .Properties .listPage .ListProperty .itens {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+
+@media (max-width: 670px) {
+    .Properties .listPage .ListProperty .searchItens {
+        width: 100%;
+        padding: 20px 10px;
+    }
+
+    .Properties .listPage .ListProperty .searchItens .buttons button {
+        margin-top:0px;
+    }
+
+    .Properties .listPage .ListProperty .searchItens .searchOptions .dataSearchOptions .dataSelects h4 {
+        color: var(--Paragraph);
+        font-weight: 600;
+        margin-right: 5px;
+    }
+
+
+@media (max-width: 600px) {
+    .Properties .listPage .ListProperty .itens {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .Properties .listPage .ListProperty .searchItens .searchOptions .dataSearchOptions .dataSelects h4 {
+        width: 30%;
+        color: var(--Paragraph);
+        font-weight: 600;
+        margin-right: 5px;
+    }
+
+
+@media (max-width: 450px) {
+    .Properties .listPage .ListProperty .searchItens .searchOptions {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .Properties .listPage .ListProperty .searchItens .searchOptions button {
+        width: 70%;
+        padding: 7px;
+        margin: 5px 0;
+    }
+    .Properties .listPage .ListProperty .topList .textItens{
+        margin: 10px 0;
+    }
+
+    .Properties .listPage .ListProperty {
+    width: 100%;
+    margin-top: 0px;
+}
+
+
+.Properties .listPage .ListProperty .searchItens .searchOptions .dataSearchOptions .dataSelects h4 {
+    width: 40%;
+    color: var(--Paragraph);
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+}
+}
+}
+}
+
 @media (max-width: 880px)  {
     .Properties .listPage {
         padding:40px 0px;
