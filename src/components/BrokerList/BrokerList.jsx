@@ -1,6 +1,6 @@
 ﻿import "./brokerList.css";
 import {FaBed, FaShower, FaCar} from 'react-icons/fa';
-import {IoCallOutline, IoLogoWhatsapp, IoMailOutline, IoGlobeOutline, IoLocationOutline} from 'react-icons/io5'
+import {IoCallOutline, IoLogoWhatsapp, IoMailOutline, IoGlobeOutline, IoLocationOutline, IoHomeOutline} from 'react-icons/io5'
 import imobiliária from "../../assets/images/corretor1.jpg";
 import imobiliária2 from "../../assets/images/corretor2.jpg";
 import imobiliária3 from "../../assets/images/corretor3.jpg";
@@ -43,43 +43,21 @@ export function BrokerList() {
             
             {broker.map((broker) => {
                 return (
-            <div className="BrokerUnicFavorite">
+                <div className="BrokerUnicFavorite">
                     <div className="image">
-                    <a href={`/imobiliaria/${broker.id}`}>
+                        <a href={`/imobiliaria/${broker.id}`}>
                     <img src={broker.logo} alt="" />
-                    </a>
+                        </a>
                     </div>
                     <div className="text">
                     <a href={`/imobiliaria/${broker.id}`}>
                     <h3>{broker.fantasyName}</h3>
                     </a>
-                    <h5><IoLocationOutline />{broker.road}, Nº {broker.number}, {broker.district} - {broker.city} - {broker.uf}</h5>
-                    <div className="iconsBroker">
-                        <div className="iconBrokerUnic">
-                            <div className="simbolBroker">
-                                <IoCallOutline />
-                                <p>{broker.phone}</p>
-                            </div>
-                        </div>
-                        <div className="iconBrokerUnic">
-                            <div className="simbolBroker">
-                                <IoLogoWhatsapp />
-                                <p>{broker.whatsapp}</p>
-                            </div>
-                        </div>
-                        <div className="iconBrokerUnic">
-                            <div className="simbolBroker">
-                                <IoMailOutline />
-                                <p>{broker.email}</p>
-                            </div>
-                        </div>                        
-                        <div className="iconBrokerUnic">
-                            <div className="simbolBroker">
-                                <IoGlobeOutline />
-                                <p>{broker.website}</p>
-                            </div>
-                        </div>                        
-                    </div>
+                    <h5>{broker.road}, Nº {broker.number}, {broker.district} - {broker.city} - {broker.uf}</h5>
+                    <h5><IoHomeOutline />55 Anuncios</h5>
+                    <a className="LinkCompany" href={`/imobiliaria/${broker.id}`}>
+                        Ver empresa
+                    </a>
                     </div>
                 </div> 
                 )

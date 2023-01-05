@@ -47,12 +47,12 @@ export function SignIn() {
                         <input type="password" placeholder="Senha" value={password} onChange={(e) => setPassword(e.target.value)}/>
                         {loading === true ? "" :
                          <div className="message">
-                         <h5><IoAlertCircleOutline /> Login ou senha incorretos.</h5>
+                         <h5><IoAlertCircleOutline /> Email/Id ou senha incorretos.</h5>
                          <h5> Caso sua conta seja empresarial, clique no botão Imobiliária acima.</h5>
                        </div>
                         }
                         <div className="links">
-                            <p>Recuperar senha</p>
+                            <p> <a className="link" href="/recuperar">Recuperar senha</a></p>
                         </div>
                         <button onClick={handleLogin}>Entrar</button>
                         <a href="/cadastrar">Cadastre-se aqui!</a>

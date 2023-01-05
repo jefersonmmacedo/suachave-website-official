@@ -66,51 +66,51 @@ export function PropertyUnicBlock({id}) {
                     <h5>{cityProperty}</h5>
                     <h6><IoLocationOutline />{property?.district} - {property?.city} - {property?.uf}</h6>
                     </div>
-                    <div className="icons">
+                    <div className="iconsBox">
                     {property?.bedroom === "" || property?.bedroom === "0"? "" :
-                        <div className="iconUnic">
+                        <div className="iconUnicBox">
                                 <IoBedOutline />
-                            <div className="simbol">
+                            <div className="simbolBox">
                                 <p>{property?.bedroom} {property?.bedroom < 2 ? " Quarto" : " Quartos"}</p>
                             </div>
                         </div>
                         }
                         {property?.restroom === "" || property?.restroom === "0"? "" :
-                        <div className="iconUnic">
+                        <div className="iconUnicBox">
                                 <MdOutlineShower />
-                            <div className="simbol">
+                            <div className="simbolBox">
                                 <p>{property?.restroom} {property?.restroom < 2 ? " Banheiro" : " Banheiros"}</p>
                             </div>
                         </div>
                         }
                         {property?.suite === "" || property?.suite === "0" ? "" :
-                        <div className="iconUnic">
+                        <div className="iconUnicBox">
                                 <TbBath />
-                            <div className="simbol">
+                            <div className="simbolBox">
                                 <p>{property?.suite} Suítes</p>
                             </div>
                         </div>
                         }
                          {property?.garage === "" || property?.garage === "0" ? "" :
-                        <div className="iconUnic">
+                        <div className="iconUnicBox">
                                 <IoCarSportOutline />
-                            <div className="simbol">
+                            <div className="simbolBox">
                                 <p>{property?.garage} {property?.garage < 2 ? " Vaga" : " Vagas"}</p>
                             </div>
                         </div>
                         }
                         {property?.pets === "não" ? "" :
-                        <div className="iconUnic">
+                        <div className="iconUnicBox">
                                 <TbBone />
-                            <div className="simbol">
+                            <div className="simbolBox">
                             <p>Aceita pets</p>
                             </div>
                         </div>
                         }
                          {property?.furnished === "não" ? "" :
-                        <div className="iconUnic">
+                        <div className="iconUnicBox">
                                 <TbSofa />
-                            <div className="simbol">
+                            <div className="simbolBox">
                                 <p>Mobilhado</p>
                             </div>
                         </div>

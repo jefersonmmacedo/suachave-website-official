@@ -135,67 +135,67 @@ export function Property() {
                     : ""}
                     <h4 className="description">{data[0].description}</h4>
 
-                    <div className="icons">
+                    <div className="iconsBox">
                     {data[0].bedroom === "" ? "" :
-                        <div className="iconUnic">
+                        <div className="iconUnicBox">
                                 <IoBedOutline />
-                            <div className="simbol">
+                            <div className="simbolBox">
                             <p>{data[0].bedroom} Quartos</p>
                             </div>
                         </div>
                     }
                         {data[0].suite === "" ? "" :
-                        <div className="iconUnic">
+                        <div className="iconUnicBox">
                                 <TbBath />
-                            <div className="simbol">
+                            <div className="simbolBox">
                             <p>{data[0].suite} Suítes</p>
                             </div>
                         </div>
                         }
                         {data[0].restroom === "" ? "" :
-                        <div className="iconUnic">
+                        <div className="iconUnicBox">
                                 <MdOutlineShower />
-                            <div className="simbol">
+                            <div className="simbolBox">
                             <p>{data[0].restroom} Banheiro</p>
                             </div>
                         </div>
                         }
                         {data[0].garage === "" ? "" :
-                        <div className="iconUnic">
+                        <div className="iconUnicBox">
                                 <IoCarSportOutline />
-                            <div className="simbol">
+                            <div className="simbolBox">
                                 <p>{data[0].garage} Vagas</p>
                             </div>
                         </div>
                         }
                           {data[0].pet === "não" ? "" :
-                        <div className="iconUnic">
+                        <div className="iconUnicBox">
                                 <TbBone />
-                            <div className="simbol">
+                            <div className="simbolBox">
                             <p>{data[0].pet} Aceita pets</p>
                             </div>
                         </div>
                         }
                          {data[0].furnished === "não" ? "" :
-                        <div className="iconUnic">
+                        <div className="iconUnicBox">
                                 <TbSofa />
-                            <div className="simbol">
+                            <div className="simbolBox">
                                 <p>Mobilhado</p>
                             </div>
                         </div>
                         }
                         {data[0].totalArea === "" ? "" :
-                        <div className="iconUnic">
+                        <div className="iconUnicBox">
                                 <TfiRulerAlt2 />
-                            <div className="simbol">
+                            <div className="simbolBox">
                                 <p>{data[0].totalArea} M<sup>2</sup></p>
                             </div>
                         </div>
                             }
                         {data[0].buildingArea === "" ? "" :
-                        <div className="iconUnic">
+                        <div className="iconUnicBox">
                                 <IoCrop />
-                            <div className="simbol">
+                            <div className="simbolBox">
                                 <p>{data[0].buildingArea} M<sup>2</sup></p>
                             </div>
                         </div>

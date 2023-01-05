@@ -31,6 +31,9 @@
     width:50%;
     border-radius: 6px 0 0 6px;
 }
+.SearchPropertyHomeTop .search .address {
+    width:100%;
+}
 .SearchPropertyHomeTop .search input {
     width: 100%;
     background-color: var(--White);
@@ -267,6 +270,10 @@
     align-items: center;
     justify-content: center;
     color: var(--Gray);
+}
+
+.SearchPropertyHomeTop .textLocation .checkDiv h5 svg {
+    margin-right: 3px;
 }
 
 

@@ -156,7 +156,9 @@
 }
 
 .Contact .map {
-    width: 100%;
+    width: 90%;
+    border-radius: 6px;
+    margin-bottom: 40px;
 }
 
 @media (max-width: 1000px) {

@@ -19,6 +19,7 @@ import { ProcessProperty } from "../../components/ProcessProperty/ProcessPropert
 
 export function Home() {
     const [isOpenModalSearchProperty, setIsOpenModaSearchProperty] = useState(false);
+    const [filter, setFilter] = useState(false)
 
     function handleOpenModalSearchProperty(e) {
       e.preventDefault();
@@ -31,20 +32,26 @@ export function Home() {
         setIsOpenModaSearchProperty(false);
       }
 
+      function handleFilterHome() {
+        setFilter(!filter)
 
+      }
+
+console.log("filter")
+console.log(filter)
     Modal.setAppElement('#root');
 
     return (
         <div className="Home">
             <Navbar2 />
-            {/* <SliderHome />
+            {/* <TopHeadHome /> */}
+            <SliderHome />
             <div className="searchView">
-            <SearchProperty openModal={handleOpenModalSearchProperty}/>
-            </div> */}
-            <TopHeadHome />
-            {/* <div className="searchViewButton">
+            <SearchProperty handleFilterhome={handleFilterHome} openModal={handleOpenModalSearchProperty}/>
+            </div>
+            <div className="searchViewButton">
             <button onClick={handleOpenModalSearchProperty}><IoSearch/>Buscar Imóveis</button>
-            </div> */}
+            </div>
             {/* <div className="iconsHomeProperties">
                 <div className="unic">
                     <FaHome />
@@ -63,7 +70,7 @@ export function Home() {
                     Lojas
                 </div>
             </div> */}
-           <ExploreIconsProperties />
+           <ExploreIconsProperties filter={filter}/>
             <div className="textFeature">
             <h3>Imóveis à venda</h3>
             </div>

@@ -3,13 +3,18 @@ import { useState } from "react";
 import buscaDistrito from '../../services/api-buscaDistrito';
 import { toast } from 'react-toastify';
 import {FaHome, FaBuilding, FaStore} from "react-icons/fa";
-import {IoBusiness, IoLocationOutline} from "react-icons/io5";
+import {IoAddOutline, IoBusiness, IoLocationOutline, IoRemoveOutline, IoSearch} from "react-icons/io5";
 import { useFetch } from "../../hooks/useFetch";
+import { TbBone, TbSofa } from "react-icons/tb";
 
-export function SearchProperty({openModal}) {
-    const Local = localStorage.getItem("suachave");
-    const user = JSON.parse(Local);
+export function SearchProperty({openModal, handleFilterhome}) {
+    const [isCheckedPets, setIsCheckedPets] = useState(false);
+    const [isCheckedFurnished, setIsCheckedFurnished] = useState(false);
 
+    const [pets, setPets] = useState("não");
+    const [furnished, setFurnished] = useState("não");
+    const LocalCity = localStorage.getItem("suachavecity");
+    const userCity = JSON.parse(LocalCity);
     const [code, setCode] = useState(false);
     const [status, setStatus] = useState("Venda");
     const [subType, setSubType] = useState("");
@@ -19,19 +24,20 @@ export function SearchProperty({openModal}) {
     const [garage, setGarage] = useState("0");
     const [restroom, setRestroom] = useState("0");
 
-    const [city, setCity] = useState(user !== null ? user?.city : "");
-    const [districtAll, setDistrictAll] = useState([]);
-    const [uf, setUf] = useState(user !== null ? user?.uf : "");
+    const [filter, setFilter] = useState(false);
 
     const [citySelected, setCitySelected] = useState("");
     const [ufSelected, setUfSelected] = useState("");
 
+
+    const cityOffUf =citySelected?.slice(-5)
+    const cityNew = citySelected.replace(cityOffUf, "")
+    const ufNew = citySelected?.slice(-2)
+
+
+
     const availability = "Disponível";
     const {data} = useFetch(`/property/all/${availability}`);
-
-    if(data) {
-        console.log(data);
-    }
 
     var cityList = [];
     var ufList = [];
@@ -55,16 +61,94 @@ export function SearchProperty({openModal}) {
             ufList.push(item);
         }
     });
-    
-    console.log("cityList");
-    console.log(cityList);
-    console.log("ufList");
-    console.log(ufList);
 
     const filterCity = cityList.filter((item) => item.uf === ufSelected);
 
+    if(ufList) {
+        ufList.sort(function(a,b) {
+            if(a.uf < b.uf ) {
+                return -1
+            } else {
+                return true
+            }
+        })
+        }
 
-    function handleLinkSearchProperty(e) {
+    if(filterCity) {
+        filterCity.sort(function(a,b) {
+            if(a.city < b.city ) {
+                return -1
+            } else {
+                return true
+            }
+        })
+        }
+
+        function handleType(e) {
+            setType(e.target.value)
+            console.log(e.target.value)
+        }
+        function handleSubType(e) {
+            setSubType(e.target.value)
+            console.log(e.target.value)
+        }
+
+        function handleBedroom(e) {
+            setBedroom(e.target.value)
+            console.log(e.target.value)
+        }
+        function handleSuite(e) {
+            setSuite(e.target.value)
+            console.log(e.target.value)
+        }
+        function handleRestroom(e) {
+            setRestroom(e.target.value)
+            console.log(e.target.value)
+        }
+    
+        function handleGarage(e) {
+            setGarage(e.target.value)
+            console.log(e.target.value)
+        }
+
+      function handleActiveCode(data, status) {
+        setCode(data)
+        setStatus(status)
+      }
+
+      function handleSelectAddress(e) {
+        setCitySelected(e.target.value)
+        console.log(e.target.value)
+      }
+      function handleFilter(e) {
+        e.preventDefault()
+        setFilter(!filter)
+        handleFilterhome()
+      }
+
+      function handleSelectPets(e) {
+        e.preventDefault();
+        setIsCheckedPets(!isCheckedPets);
+        if(pets === "não") {
+            setPets("sim");
+        } else {
+            setPets("não");
+        }
+        console.log(pets)
+      };
+
+      function handleSelectFurnished(e) {
+        e.preventDefault();
+        setIsCheckedFurnished(!isCheckedFurnished);
+        if(furnished === "não") {
+            setFurnished("sim");
+        } else {
+            setFurnished("não");
+        }
+        console.log(furnished)
+      };
+    
+      function handleLinkSearchProperty(e) {
         if(status === ""){
             toast.error("Venda ou aluguel?");
             return
@@ -73,95 +157,14 @@ export function SearchProperty({openModal}) {
             toast.error("Selecione tipo de imóvel");
             return
         }
-        if(city === "" || uf === "") {
+        if(cityNew === "" || ufNew === "") {
             toast.error("Selecione o local desejado");
             return
         }
         e.preventDefault();
-       window.open(`/imoveis/${status}?city=${city}&uf=${uf}&tipo=${type}&subtipo=${subType}&quartos=${bedroom}&suites=${suite}&banheiros=${restroom}&garagem=${garage}`,"_self")
+       //window.open(`/imoveis/${status}?cityNew=${cityNew}&ufNew=${ufNew}&tipo=${type}&subtipo=${subType}&quartos=${bedroom}&suites=${suite}&banheiros=${restroom}&garagem=${garage}`,"_self")
+       window.open(`/imoveis/${status}?city=${cityNew}&uf=${ufNew}&tipo=${type}&subtipo=${subType}&quartos=${bedroom}&suites=${suite}&banheiros=${restroom}&garagem=${garage}&pets=${pets}&mobilha=${furnished}`,"_self")
     }
-
-      function handleType(e) {
-        setType(e.target.value)
-        console.log(e.target.value)
-    }
-    function handleSubType(e) {
-        setSubType(e.target.value)
-        console.log(e.target.value)
-    }
-
-    function handleBedroom(e) {
-        setBedroom(e.target.value)
-        console.log(e.target.value)
-    }
-    function handleRestroom(e) {
-        setRestroom(e.target.value)
-        console.log(e.target.value)
-    }
-
-    function handleGarage(e) {
-        setGarage(e.target.value)
-        console.log(e.target.value)
-    }
-
-      function handleActiveCode(data, status) {
-        setCode(data)
-        setStatus(status)
-      }
-
-
-      
-      async function handleSearchDistrict(ufSelect) {
-        console.log(ufSelect)
-        try {
-          const res = await buscaDistrito.get(`${ufSelect}/distritos`) 
-            setDistrictAll(res.data)
-            console.log(res.data[0].municipio.nome);
-            return;
-          }catch{
-            console.log("error")
-            toast.error("Escolha um estado e clica em buscar cidades")
-        }
-        return
-    }
-
-    if(districtAll) {
-        districtAll.sort(function(a,b) {
-            if(a.nome < b.nome ) {
-                return -1
-            } else {
-                return true
-            }
-        })
-        }
-
-        
-    function handleSetectCity(e) {
-        setCity(e.target.value)
-        console.log(e.target.value)
-      }
-      function handleSetectUf(e) {
-        setUf(e.target.value)
-        console.log(e.target.value)
-        handleSearchDistrict(e.target.value)
-      }
-      function handleSetectUfSelected(e) {
-        setUfSelected(e.target.value)
-        console.log(e.target.value)
-      }
-
-      function handleSetectCitySelected(e) {
-        setCitySelected(e.target.value)
-        console.log(e.target.value)
-      }
-
-        function handleClearAddress(e) {
-            e.preventDefault();
-            setUf("")
-            setCity("")
-            setUfSelected("")
-            setCitySelected("")
-        }
 
 
     return (
@@ -174,7 +177,7 @@ export function SearchProperty({openModal}) {
             <div className="search">
                 {code === false ?
                 <>
-            <select className="primary" value={type} onChange={handleType}>
+  <select className="primary" value={type} onChange={handleType}>
                         <option value="">Tipo</option>
                         <option value="Residencial">Residencial</option>
                         <option value="Comercial">Comercial</option>
@@ -233,94 +236,113 @@ export function SearchProperty({openModal}) {
                         <option value="Área">Área</option>
                         <option value="Terreno/Lote">Terreno/Lote</option>
                         </>
-                        :  <option value="">Selecione o tipo</option>
+                        :  <option value="">Subtipo</option>
                         }
                     </select>
-                    <select value={bedroom} onChange={handleBedroom} className={bedroom === "" ? "" : "select"}>
-                        <option value="">Quartos</option>
-                        <option value="1">1 Quarto</option>
-                        <option value="2">2 Quartos</option>
-                        <option value="3">3 Quartos</option>
-                        <option value="4">4 Quartos</option>
-                        <option value="5">5 Quartos</option>
-                        <option value="6">6 Quartos</option>
-                        <option value="7">7 Quartos</option>
-                        <option value="8">8 Quartos</option>
-                        <option value="9">9 Quartos</option>
-                        <option value="10">10 Quartos</option>
-                    </select>
 
-                    <select value={restroom} onChange={handleRestroom} className={restroom === "" ? "" : "select"}>
-                        <option value="">Banheiros</option>
-                        <option value="1">1 Banheiro</option>
-                        <option value="2">2 Banheiros</option>
-                        <option value="3">3 Banheiros</option>
-                        <option value="4">4 Banheiros</option>
-                        <option value="5">5 Banheiros</option>
-                        <option value="6">6 Banheiros</option>
-                        <option value="7">7 Banheiros</option>
-                        <option value="8">8 Banheiros</option>
-                        <option value="9">9 Banheiros</option>
-                        <option value="10">10 Banheiros</option>
-                    </select>
 
-                    <select value={garage} onChange={handleGarage} className={garage === "" ? "" : "select"}>
-                        <option value="">Vagas de garagem</option>
-                        <option value="1">1 Vaga de garagem</option>
-                        <option value="2">2 Vagas de garagem</option>
-                        <option value="3">3 Vagas de garagem</option>
-                        <option value="4">4 Vagas de garagem</option>
-                        <option value="5">5 Vagas de garagem</option>
-                        <option value="6">6 Vagas de garagem</option>
-                        <option value="7">7 Vagas de garagem</option>
-                        <option value="8">8 Vagas de garagem</option>
-                        <option value="9">9 Vagas de garagem</option>
-                        <option value="10">10 Vagas de garagem</option>
-                    </select>
+                    <input type="text" placeholder="Digite a cidade" list="brow" value={citySelected} onChange={handleSelectAddress} />
+                    <datalist id="brow" >
+                    {cityList?.map((district) => {
+                            return (
+                                <option autocomplete="off" key={district.id} value={`${district.city} - ${district.uf}`}>{district.city} - {district.uf}</option>
+                            )
+                        })}
+                    </datalist>
                 </>
                     :
                     <>
-                <input type="text" className="primary" placeholder="Digite o código" list="brow"/>
-                    <datalist id="brow">
-                        <option value="Internet Explorer"></option>
-                        <option value="Firefox"></option>
-                        <option value="Chrome"></option>
-                        <option value="Opera"></option>
-                        <option value="Safari"></option>
-                    </datalist>
+                <input type="text" className="primary" placeholder="Digite o código"/>
+                   
                     </>
                 }
           
-                     <button onClick={handleLinkSearchProperty}>Buscar</button>
+          {filter ===  true ?
+                     <button className="filter" onClick={handleFilter}><IoRemoveOutline/> filtros </button>
+                     :
+                     <button className="filter" onClick={handleFilter}><IoAddOutline/> filtros </button>
+                    }
+                     {filter ===  true ? "" :
+                     <button className="btnSearch" onClick={handleLinkSearchProperty}><IoSearch /></button>
+                    }
+                    <button className="mobile" onClick={handleLinkSearchProperty}><IoSearch /></button>
             </div>
 
         
+            {filter === true ? 
+            <div className="viewFilter">
+                            <div className="search">
+                                 <select value={bedroom} onChange={handleBedroom} className={bedroom === "" ? "" : "select"}>
+                                    <option value="">Quartos</option>
+                                    <option value="1">1 Quarto</option>
+                                    <option value="2">2 Quartos</option>
+                                    <option value="3">3 Quartos</option>
+                                    <option value="4">4 Quartos</option>
+                                    <option value="5">5 Quartos</option>
+                                    <option value="6">6 Quartos</option>
+                                    <option value="7">7 Quartos</option>
+                                    <option value="8">8 Quartos</option>
+                                    <option value="9">9 Quartos</option>
+                                    <option value="10">10 Quartos</option>
+                                </select>
+                                 <select value={suite} onChange={handleSuite} className={suite === "" ? "" : "select"}>
+                                    <option value="">Suites</option>
+                                    <option value="1">1 Suite</option>
+                                    <option value="2">2 Suites</option>
+                                    <option value="3">3 Suites</option>
+                                    <option value="4">4 Suites</option>
+                                    <option value="5">5 Suites</option>
+                                    <option value="6">6 Suites</option>
+                                    <option value="7">7 Suites</option>
+                                    <option value="8">8 Suites</option>
+                                    <option value="9">9 Suites</option>
+                                    <option value="10">10 Suites</option>
+                                </select>
+            
+                                <select value={restroom} onChange={handleRestroom} className={restroom === "" ? "" : "select"}>
+                                    <option value="">Banheiros</option>
+                                    <option value="1">1 Banheiro</option>
+                                    <option value="2">2 Banheiros</option>
+                                    <option value="3">3 Banheiros</option>
+                                    <option value="4">4 Banheiros</option>
+                                    <option value="5">5 Banheiros</option>
+                                    <option value="6">6 Banheiros</option>
+                                    <option value="7">7 Banheiros</option>
+                                    <option value="8">8 Banheiros</option>
+                                    <option value="9">9 Banheiros</option>
+                                    <option value="10">10 Banheiros</option>
+                                </select>
+            
+                                <select value={garage} onChange={handleGarage} className={garage === "" ? "" : "select"}>
+                                    <option value="">Garagem</option>
+                                    <option value="1">1 Vaga</option>
+                                    <option value="2">2 Vagas</option>
+                                    <option value="3">3 Vagas</option>
+                                    <option value="4">4 Vagas</option>
+                                    <option value="5">5 Vagas</option>
+                                    <option value="6">6 Vagas</option>
+                                    <option value="7">7 Vagas</option>
+                                    <option value="8">8 Vagas</option>
+                                    <option value="9">9 Vagas</option>
+                                    <option value="10">10 Vagas</option>
+                                </select>
+            
+
+                                 <button className="btnSearch" onClick={handleLinkSearchProperty}><IoSearch /></button>
+                        </div>
+            </div>
+            :
+            ""}
+
             <div className="textLocation">
-                <h4>Local:</h4>
-                <select value={ufSelected} onChange={handleSetectUfSelected}> 
-                            <option value="">Escolha seu estado</option>
-                            {ufList?.map((uf) => {
-                                return (
-                                    <option value={uf.uf}>{uf.uf}</option>
-                                )
-                            })}
-                                
-                    </select>
-                    <select value={citySelected} onChange={handleSetectCitySelected}> 
-                    {filterCity.length === 0 ?
-                    <option value={citySelected}>{citySelected}</option>
-                    :
-                    <>
-                    <option value="">Escolha sua cidade</option>
-                    {filterCity?.map((district) => {
-                            return (
-                                <option autocomplete="off" key={district.id} value={district.city}>{district.city}</option>
-                            )
-                        })}
-                    </>
-                    }     
-                    </select>
-                    <button onClick={handleClearAddress}>X Limpar</button>
+                <div className="checkDiv">
+                    <input type="checkbox" value={pets} onChange={handleSelectPets} checked={isCheckedPets}/>
+                    <h5><TbBone />Aceita pets</h5>
+                </div>
+                <div className="checkDiv">
+                    <input type="checkbox" value={furnished} onChange={handleSelectFurnished} checked={isCheckedFurnished}/>
+                    <h5><TbSofa />Com mobilha</h5>
+                </div>
             </div>
 
         </div>

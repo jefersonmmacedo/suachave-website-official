@@ -2,21 +2,25 @@
 import { useState } from "react";
 import {IoSearch, IoAddOutline, IoRemoveOutline} from "react-icons/io5";
 import { useFetch } from "../../hooks/useFetch";
+import { toast } from "react-toastify";
+import { TbBone, TbSofa } from "react-icons/tb";
 
 export function SearchPropertyHomeTop() {
-    const altura = window.screen.height;
-    const largura = window.screen.width;
-    console.log(altura);
-    console.log(largura);
+    const [isCheckedPets, setIsCheckedPets] = useState(false);
+    const [isCheckedFurnished, setIsCheckedFurnished] = useState(false);
+
+    const [pets, setPets] = useState("não");
+    const [furnished, setFurnished] = useState("não");
     const LocalCity = localStorage.getItem("suachavecity");
     const userCity = JSON.parse(LocalCity);
     const [code, setCode] = useState(false);
-    const [status, setStatus] = useState("venda");
+    const [status, setStatus] = useState("Venda");
     const [subType, setSubType] = useState("");
     const [type, setType] = useState("");
-    const [bedroom, setBedroom] = useState("");
-    const [garage, setGarage] = useState("");
-    const [restroom, setRestroom] = useState("");
+    const [bedroom, setBedroom] = useState("0");
+    const [suite, setSuite] = useState("0");
+    const [garage, setGarage] = useState("0");
+    const [restroom, setRestroom] = useState("0");
 
     const [filter, setFilter] = useState(false);
 
@@ -91,6 +95,10 @@ export function SearchPropertyHomeTop() {
             setBedroom(e.target.value)
             console.log(e.target.value)
         }
+        function handleSuite(e) {
+            setSuite(e.target.value)
+            console.log(e.target.value)
+        }
         function handleRestroom(e) {
             setRestroom(e.target.value)
             console.log(e.target.value)
@@ -115,13 +123,52 @@ export function SearchPropertyHomeTop() {
         setFilter(!filter)
       }
 
+      function handleSelectPets(e) {
+        e.preventDefault();
+        setIsCheckedPets(!isCheckedPets);
+        if(pets === "não") {
+            setPets("sim");
+        } else {
+            setPets("não");
+        }
+        console.log(pets)
+      };
+
+      function handleSelectFurnished(e) {
+        e.preventDefault();
+        setIsCheckedFurnished(!isCheckedFurnished);
+        if(furnished === "não") {
+            setFurnished("sim");
+        } else {
+            setFurnished("não");
+        }
+        console.log(furnished)
+      };
+    
+      function handleLinkSearchProperty(e) {
+        if(status === ""){
+            toast.error("Venda ou aluguel?");
+            return
+        }
+        if(type === "" || subType === "") {
+            toast.error("Selecione tipo de imóvel");
+            return
+        }
+        if(cityNew === "" || ufNew === "") {
+            toast.error("Selecione o local desejado");
+            return
+        }
+        e.preventDefault();
+       //window.open(`/imoveis/${status}?cityNew=${cityNew}&ufNew=${ufNew}&tipo=${type}&subtipo=${subType}&quartos=${bedroom}&suites=${suite}&banheiros=${restroom}&garagem=${garage}`,"_self")
+       window.open(`/imoveis/${status}?city=${cityNew}&uf=${ufNew}&tipo=${type}&subtipo=${subType}&quartos=${bedroom}&suites=${suite}&banheiros=${restroom}&garagem=${garage}&pets=${pets}&mobilha=${furnished}`,"_self")
+    }
 
     return (
         <div className="SearchPropertyHomeTop">
             <div className="selectButtonsHomeTop">
-            <button className={status === "venda" ? "btn" : "btn1"} onClick={() => handleActiveCode(false, "venda")}>Venda</button>
-            <button className={status === "aluguel" ? "btn2" : ""} onClick={() => handleActiveCode(false, "aluguel")}>Aluguel</button>
-            <button className={status === "codigo" ? "btn3" : "btn4"} onClick={() => handleActiveCode(true, "codigo")}>Código</button>
+            <button className={status === "Venda" ? "btn" : "btn1"} onClick={() => handleActiveCode(false, "Venda")}>Venda</button>
+            <button className={status === "Aluguel" ? "btn2" : ""} onClick={() => handleActiveCode(false, "Aluguel")}>Aluguel</button>
+            <button className={status === "Codigo" ? "btn3" : "btn4"} onClick={() => handleActiveCode(true, "Codigo")}>Código</button>
                 </div>   
             <div className="search">
                 {code === false ?
@@ -201,7 +248,7 @@ export function SearchPropertyHomeTop() {
                 </>
                     :
                     <>
-                    <input type="text" className="primary" placeholder="Digite o código" list="brow"/>
+                    <input type="text" className="address" placeholder="Digite o código" list="brow"/>
                     <datalist id="brow">
                     {cityList?.map((district) => {
                             return (
@@ -218,9 +265,9 @@ export function SearchPropertyHomeTop() {
                      <button className="filter" onClick={handleFilter}><IoAddOutline/> filtros </button>
                     }
                      {filter ===  true ? "" :
-                     <button className="btnSearch" onClick={""}><IoSearch /></button>
+                     <button className="btnSearch" onClick={handleLinkSearchProperty}><IoSearch /></button>
                     }
-                    <button className="mobile" onClick={""}><IoSearch /></button>
+                    <button className="mobile" onClick={handleLinkSearchProperty}><IoSearch /></button>
             </div>
 
             {filter === true ? 
@@ -239,7 +286,7 @@ export function SearchPropertyHomeTop() {
                                     <option value="9">9 Quartos</option>
                                     <option value="10">10 Quartos</option>
                                 </select>
-                                 <select value={bedroom} onChange={handleBedroom} className={bedroom === "" ? "" : "select"}>
+                                 <select value={suite} onChange={handleSuite} className={suite === "" ? "" : "select"}>
                                     <option value="">Suites</option>
                                     <option value="1">1 Suite</option>
                                     <option value="2">2 Suites</option>
@@ -282,7 +329,7 @@ export function SearchPropertyHomeTop() {
                                 </select>
             
 
-                                 <button className="btnSearch" onClick={""}><IoSearch /></button>
+                                 <button className="btnSearch" onClick={handleLinkSearchProperty}><IoSearch /></button>
                         </div>
             </div>
             :
@@ -290,16 +337,17 @@ export function SearchPropertyHomeTop() {
 
             <div className="textLocation">
                 <div className="checkDiv">
-                    <input type="checkbox" name="" id="" />
-                    <h5>Aceita pets</h5>
+                    <input type="checkbox" value={pets} onChange={handleSelectPets} checked={isCheckedPets}/>
+                    <h5><TbBone />Aceita pets</h5>
                 </div>
                 <div className="checkDiv">
-                    <input type="checkbox" name="" id="" />
-                    <h5>Com mobilha</h5>
+                    <input type="checkbox" value={furnished} onChange={handleSelectFurnished} checked={isCheckedFurnished}/>
+                    <h5><TbSofa />Com mobilha</h5>
                 </div>
             </div>
 
-
+            
+      
 
         </div>
     )

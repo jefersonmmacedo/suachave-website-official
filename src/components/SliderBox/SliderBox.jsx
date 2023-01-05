@@ -5,9 +5,6 @@ import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
 
 function SliderBox({images, idProperty}) {
-    console.log("images");
-    console.log(images);
-
     if(!images) {
         return (
             <div className="each-slide-effectBoxLoading">

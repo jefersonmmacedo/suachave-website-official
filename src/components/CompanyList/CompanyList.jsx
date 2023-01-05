@@ -1,6 +1,6 @@
 ﻿import "./companyList.css";
 import {FaBed, FaShower, FaCar} from 'react-icons/fa';
-import {IoCallOutline, IoLogoWhatsapp, IoMailOutline, IoGlobeOutline, IoLocationOutline, IoHome} from 'react-icons/io5'
+import {IoCallOutline, IoLogoWhatsapp, IoMailOutline, IoGlobeOutline, IoLocationOutline, IoHomeOutline} from 'react-icons/io5'
 import imobiliária from "../../assets/images/imob1.png";
 import imobiliária2 from "../../assets/images/imob2.png";
 import { useState } from "react";
@@ -48,35 +48,11 @@ export function CompanyList() {
                     <a href={`/imobiliaria/${company.id}`}>
                     <h3>{company.fantasyName}</h3>
                     </a>
-                    <h5><IoLocationOutline />{company.road}, Nº {company.number}, {company.district} - {company.city} - {company.uf}</h5>
-
-                    <div className="icons">
-                        <div className="iconUnic">
-                            <div className="simbol">
-                                <IoCallOutline />
-                                <p>{company.phone}</p>
-                            </div>
-                        </div>
-                        <div className="iconUnic">
-                            <div className="simbol">
-                                <IoLogoWhatsapp />
-                                <p>{company.whatsapp}</p>
-                            </div>
-                        </div>
-                        <div className="iconUnic">
-                            <div className="simbol">
-                                <IoMailOutline />
-                                <p>{company.email}</p>
-                            </div>
-                        </div>                        
-                        <div className="iconUnic">
-                            <div className="simbol">
-                                <IoGlobeOutline />
-                                <p>{company.website}</p>
-                            </div>
-                        </div>                        
-                    </div>
-                    <h5><IoHome />55 Anuncios</h5>
+                    <h5>{company.road}, Nº {company.number}, {company.district} - {company.city} - {company.uf}</h5>
+                    <h5><IoHomeOutline />55 Anuncios</h5>
+                    <a className="LinkCompany" href={`/imobiliaria/${company.id}`}>
+                        Ver empresa
+                    </a>
                     </div>
                 </div> 
                 )

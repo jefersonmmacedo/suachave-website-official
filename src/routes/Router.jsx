@@ -19,7 +19,7 @@ import { Company } from '../pages/Company/Company';
 import { Schedules } from '../pages/Schedules/Schedules';
 import { MessagesProperty } from '../pages/MessagesProperty/MessagesProperty';
 import { Simulator } from '../pages/Simulator/Simulator';
-import { SignInCompany } from '../pages/SignInCompany/SignInCompany';
+import { Recuperation } from '../pages/Recuperation/Recuperation';
 import { MyAccount } from '../pages/MyAccount/MyAccount';
 import { Scheduling } from '../pages/Scheduling/Scheduling';
 import { ComingSoon } from '../pages/CommingSoom/ComingSoon';
@@ -34,6 +34,8 @@ import { Negociations } from '../pages/Negociations/Negociations';
 import { TestTools } from '../pages/TestTools/TestTools';
 import { Evaluation } from '../pages/Evaluation/Evaluation';
 import { ChatMessage } from '../pages/ChatMessage/ChatMessage';
+import { RecuperationCode } from '../pages/RecuperartionCode/RecuperartionCode';
+import { RecuperationPassword } from '../pages/RecuperartionPassword/RecuperartionPassword';
 
 function Router () {
 const Local = localStorage.getItem("suachave");
@@ -47,11 +49,13 @@ function PrivateRoute({children} ) {
             <Routes>
             {/* Rotas abertas */}
             <Route path="*" element={<NotFound />}/>
-            <Route path="/" element={<ComingSoon />}/>
+            <Route path="/home" element={<ComingSoon />}/>
             <Route path="/up" element={<UploadPage />}/>
-            <Route path="/home" element={<Home />}/>
+            <Route path="/" element={<Home />}/>
             <Route path="/entrar" element={<SignIn />}/>
-            <Route path="/entrar-empresa" element={<SignInCompany />}/>
+            <Route path="/recuperar" element={<Recuperation />}/>
+            <Route path="/recuperar-codigo" element={<RecuperationCode />}/>
+            <Route path="/recuperar-nova-senha" element={<RecuperationPassword />}/>
             <Route path="/cadastrar" element={<ChooseYourAccount />}/>
             <Route path="/cadastro-profissional" element={<SignUpProfessional />}/>
             <Route path="/cadastro-cliente" element={<SignUpClient />}/>

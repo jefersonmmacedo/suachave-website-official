@@ -148,7 +148,7 @@ margin-top: -20px;
     margin: 2px 8px 5px 8px; 
     font-weight: 700;
 }
-.PropertyUnicBlock .text .icons {
+.PropertyUnicBlock .text .iconsBox {
     width: 100%;
     height: 100%;
     display: flex;
@@ -159,7 +159,7 @@ margin-top: -20px;
     flex-wrap: wrap;
 }
 
-.PropertyUnicBlock .text .icons .iconUnic {
+.PropertyUnicBlock .text .iconsBox .iconUnicBox {
     width: 74px;
     display: flex;
     flex-direction: column;
@@ -170,13 +170,13 @@ margin-top: -20px;
     margin: 0px 5px;
     color: var(--Gray);
 }
-.PropertyUnicBlock .text .icons .iconUnic svg {
+.PropertyUnicBlock .text .iconsBox .iconUnicBox svg {
     font-size: 16px;
     margin-right: 10px;
     color: var(--Primary);
 }
 
-.PropertyUnicBlock .text .icons .iconUnic .simbol {
+.PropertyUnicBlock .text .iconsBox .iconUnicBox .simbolBox {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -185,7 +185,7 @@ margin-top: -20px;
     text-align: center;
     margin-top: 3px;
 }
-.PropertyUnicBlock .text .icons .iconUnic .simbol  p {
+.PropertyUnicBlock .text .iconsBox .iconUnicBox .simbolBox  p {
     color: var(--Gray);
     font-weight: 600;
     font-size: 10px;
@@ -245,7 +245,7 @@ margin-top: -20px;
             width: 80%;
         }
        
-        .PropertyUnicBlock .text .icons .iconUnic {
+        .PropertyUnicBlock .text .iconsBox .iconUnicBox {
             width: 20%;
         }
 
@@ -255,7 +255,7 @@ margin-top: -20px;
             width: 95%;
         }
 
-        .PropertyUnicBlock .text .icons .iconUnic {
+        .PropertyUnicBlock .text .iconsBox .iconUnicBox {
             width: 30%;
         }
     }

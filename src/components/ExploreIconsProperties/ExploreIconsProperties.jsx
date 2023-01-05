@@ -6,11 +6,13 @@ import {RiStore2Line} from "react-icons/ri";
 import {HiOutlineHome} from "react-icons/hi";
 import {MdOutlineMapsHomeWork} from "react-icons/md";
 import {TbTractor, TbMap2, TbBuildingFactory} from "react-icons/tb";
+import { useState } from "react";
 
 
-export function ExploreIconsProperties() {
+export function ExploreIconsProperties({filter}) {
     return (
         <div className="ExploreIconsProperties">
+            <div className={filter === true ? "FilterActived" : "FilterInactive"}></div>
             <div className="mainExplorer">
             <div className="textExplore">
                 <h2>Explore mais imóveis</h2>
