@@ -82,7 +82,7 @@ export function Footer() {
                 </div>
                 <div className="copy">
                     <h5>© Sua Chave {date}. Todos os direitos reservados</h5>
-                    <h5><a href="/sobre">Anunciar imóvel</a></h5>
+                    <h5><a href="/anunciar">Anunciar imóvel</a></h5>
                 </div>
         </div>
     )

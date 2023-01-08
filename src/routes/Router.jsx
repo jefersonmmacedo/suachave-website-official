@@ -36,6 +36,7 @@ import { Evaluation } from '../pages/Evaluation/Evaluation';
 import { ChatMessage } from '../pages/ChatMessage/ChatMessage';
 import { RecuperationCode } from '../pages/RecuperartionCode/RecuperartionCode';
 import { RecuperationPassword } from '../pages/RecuperartionPassword/RecuperartionPassword';
+import { Announce } from '../pages/Announce/Announce';
 
 function Router () {
 const Local = localStorage.getItem("suachave");
@@ -70,6 +71,7 @@ function PrivateRoute({children} ) {
             <Route path="/corretor/:id" element={<Company />}/>
             <Route path="/financiamento" element={<Simulator />}/>
             <Route path="/sobre" element={<About />}/>
+            <Route path="/anunciar" element={<Announce />}/>
             <Route path="/planos" element={<Pricing />}/>
             <Route path="/faleconosco" element={<Contact />}/>
             <Route path="/faq" element={<Faq />}/>

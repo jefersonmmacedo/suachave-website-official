@@ -29,7 +29,7 @@ export function ToHire() {
                         <h5>Chat único por anúncio</h5>
                     </div>
                 </div>
-                <a href="/sobre">Quero anunciar</a>
+                <a href="/anunciar">Quero anunciar</a>
             </div>
         </div>
     )

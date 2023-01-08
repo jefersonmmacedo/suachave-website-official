@@ -1,6 +1,6 @@
 ﻿import "./comingSoon.css"
-import Logo from "../../assets/images/Logo2.png";
-import Notebook from "../../assets/images/Laptop.png";
+import Logo from "../../assets/images/Logo.png";
+import Notebook from "../../assets/images/svg/comming2.svg";
 
 export function ComingSoon() {
     return(
@@ -13,7 +13,7 @@ export function ComingSoon() {
 
             <img src={Notebook} alt="Notebook" />
             <div className="coming">
-                <h4>Lançamento em 2023</h4>
+                <h4>Estamos quase prontos...</h4>
             </div>
             
 
