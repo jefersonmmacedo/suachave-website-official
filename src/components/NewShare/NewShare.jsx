@@ -9,6 +9,7 @@ export function NewShare({idProperty, title}) {
       <RWebShare
         data={{
           text: `${title}`,
+          image: `https://img.freepik.com/fotos-gratis/bela-praia-tropical-mar-e-mar-com-palmeira-de-coco-na-hora-do-nascer-do-sol_74190-7454.jpg?w=2000`,
           url: `https://www.suachave.com.br/imovel/${idProperty}`,
           title: `${title}`,
         }}

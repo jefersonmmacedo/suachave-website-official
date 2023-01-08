@@ -105,14 +105,14 @@
 
 
 
-@media (max-width: 1020px) {
+@media (max-width: 1120px) {
     .ExploreIconsProperties .mainExplorer {
-        width: 100%;
+        width: 95%;
     }
     
-    @media (max-width: 900px) {
+    @media (max-width: 1000px) {
         .ExploreIconsProperties .mainExplorer {
-            width: 100%;
+            width: 95%;
             display: flex;
             flex-direction: column;
             align-items: center;

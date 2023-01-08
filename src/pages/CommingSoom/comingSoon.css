@@ -8,10 +8,10 @@
     flex-direction: column;
 }
 
-.ComingSoon h1 {
+.ComingSoon h2 {
     text-align: center;
     color: var(--Primary);
-    font-weight: 800;
+    font-weight: 900;
     margin: 10px;
 }
 .ComingSoon img {
@@ -31,6 +31,11 @@
     color: var(--Gray);
     font-weight: 700;
 }
+.ComingSoon .coming h4 svg {
+    margin-right: 3px;
+    margin-bottom: -2px;
+    margin-top: 0px;
+}
 .ComingSoon .logo {
     width: 150px;
     margin: 20px;
@@ -42,7 +47,7 @@
 
 @media (max-width: 600px) {
 
-    .ComingSoon h1 {
+    .ComingSoon h2 {
         font-size: 20px;
     }
 

@@ -248,7 +248,7 @@ export function SearchPropertyHomeTop() {
                 </>
                     :
                     <>
-                    <input type="text" className="address" placeholder="Digite o código" />
+                    <input type="text" className="inputCode" placeholder="Digite o código" />
                     </>
                 }
           
