@@ -1,27 +1,18 @@
 ﻿import "./properties.css";
 import Navbar2 from "../../components/Nav/Navbar";
-import { SearchPropertyListing } from "../../components/SearchPropertyHomeTop/SearchPropertyHomeTop";
 import { Footer } from "../../components/Footer/Footer";
 import { FiArrowUpCircle } from "react-icons/fi";
-import { SearchProperty } from "../../components/SearchProperty/SearchProperty";
-import { IoClose, IoCloseOutline, IoSearch, IoSearchOutline } from "react-icons/io5";
-import Modal from 'react-modal';
-import { useState } from "react";
-import { useParams, useLocation, useSearchParams, useRoutes} from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useQuery } from "../../hooks/useQuery";
 import notFoundImage from "../../assets/images/svg/404property.svg";
 import { PropertyUnicBlockLoader } from "../../components/PropertyUnicBlockLoader/PropertyUnicBlockLoader";
 import { useFetch } from "../../hooks/useFetch";
 import { PropertyUnicBlock } from "../../components/PropertyUnicBlock/PropertyUnicBlock";
-import api from "../../services/api";
-import { useEffect } from "react";
 import { FilterPropertiesList } from "../../components/FilterPropertiesList/FilterPropertiesList";
 
 export function Properties(){
     const {status} = useParams();
     const query = useQuery();
-
-    const [isOpenModalSearch, setIsOpenModaSearch] = useState(false);
 
     const availability = "Disponível";
     const type = query.get("tipo") === null ? "" : query.get("tipo")
@@ -38,15 +29,19 @@ export function Properties(){
 
 
     const {data} = useFetch(
-        type !== "" && subType !== "" ?
+        type !== "" ?
+        `property/listtype/${availability}?type=${type}`
+        : type !== "" && city === null && uf === null ?
+        `property/listtype/${availability}?type=${type}&city=${city}&uf=${uf}`
+        : type !== "" && subType !== "" ?
+        `property/listsadressfull/${availability}/${status}?&type=${type}&subType=${subType}&bedroom=${bedroom}&restroom=${restroom}&garage=${garage}&suite=${suite}`
+        : type !== "" && subType !== "" && city === null && uf === null ?
         `property/listsadressfull/${availability}/${status}?city=${city}&uf=${uf}&type=${type}&subType=${subType}&bedroom=${bedroom}&restroom=${restroom}&garage=${garage}&suite=${suite}`
         :status === undefined ?
         `/property/all/${availability}`
-        :
-        status !== undefined && city === null && uf === null ?
+        : status !== undefined ?
         `/property/lists/${availability}/${status}`
-        :
-        status !== undefined && city !== null && uf !== null ?
+        : status !== undefined && city !== null && uf !== null ?
         `/property/listsadress/${availability}/${status}?city=${city}&uf=${uf}`
        :"");
 

@@ -74,6 +74,9 @@
     align-items: center;
     justify-content: center;
 }
+.ExploreIconsProperties .mainExplorer  .iconsExplore a {
+    text-decoration: none;
+}
 .ExploreIconsProperties .mainExplorer  .iconsExplore .IconUnicExplore {
     width: 130px;
     height: 130px;

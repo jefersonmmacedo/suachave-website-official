@@ -1,6 +1,6 @@
 ﻿import "./footer.css";
 import logo from '../../assets/images/Logo.png';
-import {IoCallOutline, IoLogoWhatsapp, IoMailOutline, IoLogoFacebook, IoLogoInstagram, IoLogoTwitter, IoLogoLinkedin, IoLogoYoutube} from 'react-icons/io5';
+import { IoLogoWhatsapp, IoMailOutline, IoLogoFacebook, IoLogoInstagram, IoLogoLinkedin, IoLogoYoutube} from 'react-icons/io5';
 import google from "../../assets/images/google.png";
 import apple from "../../assets/images/apple.png";
 

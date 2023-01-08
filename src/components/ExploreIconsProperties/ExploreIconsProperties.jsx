@@ -1,15 +1,15 @@
 ﻿import "./exploreIconsProperties.css";
-import {FaHome, FaBuilding, FaStore, FaMapMarkedAlt} from "react-icons/fa";
-import {IoBusiness, IoArrowForward, IoHomeOutline, IoMapOutline} from "react-icons/io5";
-import {GiFactory, GiFarmTractor} from "react-icons/gi";
+import { IoArrowForward} from "react-icons/io5";
 import {RiStore2Line} from "react-icons/ri";
-import {HiOutlineHome} from "react-icons/hi";
 import {MdOutlineMapsHomeWork} from "react-icons/md";
 import {TbTractor, TbMap2, TbBuildingFactory} from "react-icons/tb";
-import { useState } from "react";
+import { useFetch } from "../../hooks/useFetch";
 
 
 export function ExploreIconsProperties({filter}) {
+    const availability = "Disponível";
+    const {data} = useFetch(`/property/all/${availability}`);
+
     return (
         <div className="ExploreIconsProperties">
             <div className={filter === true ? "FilterActived" : "FilterInactive"}></div>
@@ -18,30 +18,40 @@ export function ExploreIconsProperties({filter}) {
                 <h2>Explore mais imóveis</h2>
                 <h4>Veja os tipos de imóveis mais procurados</h4>
 
-                <a href="/imoveis/all">+ 1.500 imóveis <IoArrowForward /> </a>
+                <a href="/imoveis">+ {data?.length} imóveis <IoArrowForward /> </a>
             </div>
 
             <div className="iconsExplore">
+            <a href="/imoveis?tipo=Residencial">
                 <div className="IconUnicExplore">
                     <MdOutlineMapsHomeWork />
                     <h5>Residenciais</h5>
                 </div>
+            </a>
+            <a href="/imoveis?tipo=Comercial">
                 <div className="IconUnicExplore">
                     <RiStore2Line />
                     <h5>Comerciais</h5>
                 </div>
+                </a>
+                <a href="/imoveis?tipo=Rural">
                 <div className="IconUnicExplore">
                     <TbTractor />
                     <h5>Rurais</h5>
                 </div>
+                </a>
+                <a href="/imoveis?tipo=Industrial">
                 <div className="IconUnicExplore">
                     <TbBuildingFactory />
                     <h5>Industriais</h5>
                 </div>
+                </a>
+                <a href="/imoveis?tipo=Terrenos e Lotes">
                 <div className="IconUnicExplore">
                     <TbMap2 />
                     <h5>Terrenos</h5>
                 </div>
+                </a>
             </div>
             </div>
 
