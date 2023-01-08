@@ -15,7 +15,7 @@
     flex-wrap: wrap;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
     .Favorite .listFavorite {
         width: 100%;
     }

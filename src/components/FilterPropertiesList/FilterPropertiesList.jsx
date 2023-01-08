@@ -1,5 +1,6 @@
 ﻿import { useState } from "react";
 import { IoClose, IoSearchOutline } from "react-icons/io5";
+import { TbBath, TbBone, TbSofa } from "react-icons/tb";
 import { useFetch } from "../../hooks/useFetch";
 import "./filterPropertiesList.css"
 
@@ -240,16 +241,16 @@ export function FilterPropertiesList({status, typeProperty, subTypeProperty, cit
                 <h4>Quartos: </h4>
             <select value={bedroom} onChange={handleBedroom} className={bedroom === "0" ? "" : "select"}>
                 <option value="0">Quartos</option>
-                <option value="1">1 Quarto</option>
-                <option value="2">2 Quartos</option>
-                <option value="3">3 Quartos</option>
-                <option value="4">4 Quartos</option>
-                <option value="5">5 Quartos</option>
-                <option value="6">6 Quartos</option>
-                <option value="7">7 Quartos</option>
-                <option value="8">8 Quartos</option>
-                <option value="9">9 Quartos</option>
-                <option value="10">10 Quartos</option>
+                <option value="1">1 ou + Quartos</option>
+                <option value="2">2 ou + Quartos</option>
+                <option value="3">3 ou + Quartos</option>
+                <option value="4">4 ou + Quartos</option>
+                <option value="5">5 ou + Quartos</option>
+                <option value="6">6 ou + Quartos</option>
+                <option value="7">7 ou + Quartos</option>
+                <option value="8">8 ou + Quartos</option>
+                <option value="9">9 ou + Quartos</option>
+                <option value="10">10 ou + Quartos</option>
             </select>
             </div>
 
@@ -257,16 +258,16 @@ export function FilterPropertiesList({status, typeProperty, subTypeProperty, cit
             <h4>Suítes: </h4>
             <select value={suite} onChange={handleSuite} className={suite === "0" ? "" : "select"}>
                 <option value="0">Suítes</option>
-                <option value="1">1 Suíte</option>
-                <option value="2">2 Suítes</option>
-                <option value="3">3 Suítes</option>
-                <option value="4">4 Suítes</option>
-                <option value="5">5 Suítes</option>
-                <option value="6">6 Suítes</option>
-                <option value="7">7 Suítes</option>
-                <option value="8">8 Suítes</option>
-                <option value="9">9 Suítes</option>
-                <option value="10">10 Suítes</option>
+                <option value="1">1 ou + Suítes</option>
+                <option value="2">2 ou + Suítes</option>
+                <option value="3">3 ou + Suítes</option>
+                <option value="4">4 ou + Suítes</option>
+                <option value="5">5 ou + Suítes</option>
+                <option value="6">6 ou + Suítes</option>
+                <option value="7">7 ou + Suítes</option>
+                <option value="8">8 ou + Suítes</option>
+                <option value="9">9 ou + Suítes</option>
+                <option value="10">10 ou + Suítes</option>
             </select>
             </div>
             
@@ -274,16 +275,16 @@ export function FilterPropertiesList({status, typeProperty, subTypeProperty, cit
             <h4>Banheiros: </h4>
             <select value={restroom} onChange={handleRestroom} className={restroom === "0" ? "" : "select"}>
                 <option value="0">Banheiros</option>
-                <option value="1">1 Banheiro</option>
-                <option value="2">2 Banheiros</option>
-                <option value="3">3 Banheiros</option>
-                <option value="4">4 Banheiros</option>
-                <option value="5">5 Banheiros</option>
-                <option value="6">6 Banheiros</option>
-                <option value="7">7 Banheiros</option>
-                <option value="8">8 Banheiros</option>
-                <option value="9">9 Banheiros</option>
-                <option value="10">10 Banheiros</option>
+                <option value="1">1 ou + Banheiros</option>
+                <option value="2">2 ou + Banheiros</option>
+                <option value="3">3 ou + Banheiros</option>
+                <option value="4">4 ou + Banheiros</option>
+                <option value="5">5 ou + Banheiros</option>
+                <option value="6">6 ou + Banheiros</option>
+                <option value="7">7 ou + Banheiros</option>
+                <option value="8">8 ou + Banheiros</option>
+                <option value="9">9 ou + Banheiros</option>
+                <option value="10">10 ou + Banheiros</option>
             </select>
             </div>
                                
@@ -291,23 +292,23 @@ export function FilterPropertiesList({status, typeProperty, subTypeProperty, cit
             <h4>Garagem: </h4>
             <select value={garage} onChange={handleGarage} className={garage === "0" ? "" : "select"}>
                 <option value="0">Vagas de garagem</option>
-                <option value="1">1 Vaga de garagem</option>
-                <option value="2">2 Vagas de garagem</option>
-                <option value="3">3 Vagas de garagem</option>
-                <option value="4">4 Vagas de garagem</option>
-                <option value="5">5 Vagas de garagem</option>
-                <option value="6">6 Vagas de garagem</option>
-                <option value="7">7 Vagas de garagem</option>
-                <option value="8">8 Vagas de garagem</option>
-                <option value="9">9 Vagas de garagem</option>
-                <option value="10">10 Vagas de garagem</option>
+                <option value="1">1 ou + Vagas de garagem</option>
+                <option value="2">2 ou + Vagas de garagem</option>
+                <option value="3">3 ou + Vagas de garagem</option>
+                <option value="4">4 ou + Vagas de garagem</option>
+                <option value="5">5 ou + Vagas de garagem</option>
+                <option value="6">6 ou + Vagas de garagem</option>
+                <option value="7">7 ou + Vagas de garagem</option>
+                <option value="8">8 ou + Vagas de garagem</option>
+                <option value="9">9 ou + Vagas de garagem</option>
+                <option value="10">10 ou + Vagas de garagem</option>
             </select>
             </div>
             
     
             <div className="dataSelectsButtons">
-             <button className={pets === "sim" ? "" : "btn"} onClick={handleNewPets}>Aceita Pets</button>
-             <button className={furnished === "sim" ? "" : "btn"} onClick={handleNewFurnished}>Mobilhado</button>
+             <button className={pets === "sim" ? "" : "btn"} onClick={handleNewPets}><TbBone />Aceita Pets</button>
+             <button className={furnished === "sim" ? "" : "btn"} onClick={handleNewFurnished}><TbSofa />Mobilhado</button>
              </div>
 
             <div className="dataSelectsButtonsAction">

@@ -34,7 +34,6 @@ export function Home() {
 
       function handleFilterHome() {
         setFilter(!filter)
-
       }
 
 console.log("filter")
@@ -44,14 +43,14 @@ console.log(filter)
     return (
         <div className="Home">
             <Navbar2 />
-            {/* <TopHeadHome /> */}
-            <SliderHome />
+            <TopHeadHome />
+            {/* <SliderHome />
             <div className="searchView">
             <SearchProperty handleFilterhome={handleFilterHome} openModal={handleOpenModalSearchProperty}/>
             </div>
             <div className="searchViewButton">
             <button onClick={handleOpenModalSearchProperty}><IoSearch/>Buscar Imóveis</button>
-            </div>
+            </div> */}
             {/* <div className="iconsHomeProperties">
                 <div className="unic">
                     <FaHome />

@@ -49,6 +49,9 @@
         justify-content: flex-start;
         padding: 5px;
     }
+    .Favorites .main .aside {
+        width: 100%;
+    }
     .viewFooter {
        display: none;
     }

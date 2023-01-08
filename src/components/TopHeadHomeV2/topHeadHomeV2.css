@@ -1,4 +1,4 @@
-﻿.TopHeadHomeClient {
+﻿.TopHeadHomeV2 {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -12,59 +12,52 @@
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire container */
   }
-  .TopHeadHomeClient .blockTop{
+  .TopHeadHomeV2 .blockTop{
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     height: 600px; 
-    background-color: rgba(255, 255, 255, 0.80);
+    background-color: rgba(255, 255, 255, 0.90);
     backdrop-filter: blur(5px);
     padding: 0 20px;
     border-bottom: 1px solid var(--Border);
   }
-.TopHeadHomeClient .blockTop .SearchText{
-    width: 100%;
+.TopHeadHomeV2 .blockTop .SearchText{
+    width: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 600px; 
   }
-.TopHeadHomeClient .blockTop .searchHome{
-    width: 950px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-.TopHeadHomeClient .blockTop .SearchText .TextTopSearch{
+.TopHeadHomeV2 .blockTop .SearchText .TextTopSearch{
     width: 90%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     margin: 40px 0;
   }
 
-  .TopHeadHomeClient .blockTop .SearchText .TextTopSearch h1 {
+  .TopHeadHomeV2 .blockTop .SearchText .TextTopSearch h1 {
     font-weight: 800;
     color: var(--Description);
     font-size: 45px;
     line-height: 2.8rem;
     margin-bottom:10px;
   }
-  .TopHeadHomeClient .blockTop .SearchText .TextTopSearch h1 span {
+  .TopHeadHomeV2 .blockTop .SearchText .TextTopSearch h1 span {
     color: var(--Primary);
   }
 
-  .TopHeadHomeClient .blockTop .SearchText .TextTopSearch h4 {
+  .TopHeadHomeV2 .blockTop .SearchText .TextTopSearch h4 {
     font-weight: 500;
     color: var(--Gray);
   }
 
-  .TopHeadHomeClient .blockTop .SearchText .TextTopSearch button {
+  .TopHeadHomeV2 .blockTop .SearchText .TextTopSearch button {
     border: none;
     border-radius: 6px;
     background-color: var(--Primary);
@@ -72,7 +65,7 @@
     padding: 10px 20px;
     margin-top: 20px;
   }
-.TopHeadHomeClient .blockTop .ImagesTop{
+.TopHeadHomeV2 .blockTop .ImagesTop{
     width: 40%;
     display: flex;
     flex-direction: row;
@@ -80,7 +73,7 @@
     justify-content: center;
     height: 600px; 
   }
-.TopHeadHomeClient .blockTop .ImagesTop .imagesLeft{
+.TopHeadHomeV2 .blockTop .ImagesTop .imagesLeft{
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -89,7 +82,7 @@
     height: 100%; 
   }
 
-  .TopHeadHomeClient .blockTop .ImagesTop .imagesLeft .image{
+  .TopHeadHomeV2 .blockTop .ImagesTop .imagesLeft .image{
     box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
     width: 95%;
     height: 200px;
@@ -97,7 +90,7 @@
     border-radius: 6px;
     margin: 10px;
   }
-.TopHeadHomeClient .blockTop .ImagesTop .imagesLeft .image img{
+.TopHeadHomeV2 .blockTop .ImagesTop .imagesLeft .image img{
     width: 100%;
     height: 200px;
     object-fit: cover;
@@ -105,7 +98,7 @@
   }
 
 
-.TopHeadHomeClient .blockTop .ImagesTop .imagesRigth{
+.TopHeadHomeV2 .blockTop .ImagesTop .imagesRigth{
     width: 50%;
     display: flex;
     flex-direction: row;
@@ -113,7 +106,7 @@
     justify-content: center;
     height: 100%; 
   }
-.TopHeadHomeClient .blockTop .ImagesTop .imagesRigth .image{
+.TopHeadHomeV2 .blockTop .ImagesTop .imagesRigth .image{
   box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
     width: 95%;
     height: 200px;
@@ -121,26 +114,16 @@
     border-radius: 6px;
     margin: 10px;
   }
-.TopHeadHomeClient .blockTop .ImagesTop .imagesRigth .image img{
+.TopHeadHomeV2 .blockTop .ImagesTop .imagesRigth .image img{
     width: 100%;
     height: 200px;
     object-fit: cover;
     border-radius: 6px;
   }
 
-  @media (max-width: 1010px){
-    .TopHeadHomeClient .blockTop .searchHome{
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
   @media (max-width: 850px){
-
-
     
-    .TopHeadHomeClient .blockTop .SearchText .TextTopSearch{
+    .TopHeadHomeV2 .blockTop .SearchText .TextTopSearch{
       width: 90%;
       display: flex;
       flex-direction: column;
@@ -150,7 +133,7 @@
     }
   
 
-    .TopHeadHomeClient .blockTop .SearchText .TextTopSearch h1 {
+    .TopHeadHomeV2 .blockTop .SearchText .TextTopSearch h1 {
       font-weight: 900;
       font-size: 30px;
       line-height: 2.0rem;
@@ -158,7 +141,7 @@
     }
 
 
-    .TopHeadHomeClient .blockTop .ImagesTop{
+    .TopHeadHomeV2 .blockTop .ImagesTop{
       width: 40%;
       display: flex;
       flex-direction: column;
@@ -169,7 +152,7 @@
     }
 
     
-.TopHeadHomeClient .blockTop .ImagesTop .imagesLeft{
+.TopHeadHomeV2 .blockTop .ImagesTop .imagesLeft{
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -178,7 +161,7 @@
   height: 100%; 
 }
 
-.TopHeadHomeClient .blockTop .ImagesTop .imagesLeft .image{
+.TopHeadHomeV2 .blockTop .ImagesTop .imagesLeft .image{
   box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
   width: 95%;
   height: 150px;
@@ -186,7 +169,7 @@
   border-radius: 6px;
   margin: 10px;
 }
-.TopHeadHomeClient .blockTop .ImagesTop .imagesLeft .image img{
+.TopHeadHomeV2 .blockTop .ImagesTop .imagesLeft .image img{
   width: 100%;
   height: 150px;
   object-fit: cover;
@@ -194,7 +177,7 @@
 }
 
 
-.TopHeadHomeClient .blockTop .ImagesTop .imagesRigth{
+.TopHeadHomeV2 .blockTop .ImagesTop .imagesRigth{
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -202,7 +185,7 @@
   justify-content: flex-start;
   height: 100%; 
 }
-.TopHeadHomeClient .blockTop .ImagesTop .imagesRigth .image{
+.TopHeadHomeV2 .blockTop .ImagesTop .imagesRigth .image{
 box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
   width: 95%;
   height: 150px;
@@ -210,7 +193,7 @@ box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
   border-radius: 6px;
   margin: 10px;
 }
-.TopHeadHomeClient .blockTop .ImagesTop .imagesRigth .image img{
+.TopHeadHomeV2 .blockTop .ImagesTop .imagesRigth .image img{
   width: 100%;
   height: 150px;
   object-fit: cover;
@@ -218,14 +201,13 @@ box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 600px) {
-  .TopHeadHomeClient .blockTop .SearchText{
+  .TopHeadHomeV2 .blockTop .SearchText{
     width: 100%;
   }
 
-  .TopHeadHomeClient .blockTop .ImagesTop{
+  .TopHeadHomeV2 .blockTop .ImagesTop{
     display: none;
   }
 }
-  }
   }
   

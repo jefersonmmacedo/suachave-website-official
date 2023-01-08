@@ -20,7 +20,7 @@ function SliderBox({images, idProperty}) {
 const buttonStyle = {
   padding: '5px',
   borderRadius: '50%',
-  background: 'rgba(237,50,55, 0.5)',
+  background: 'rgba(128,128,128, 0.5)',
   color: '#fff',
   border: '0px',
   margin: '10px',

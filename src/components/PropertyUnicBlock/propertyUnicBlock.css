@@ -12,6 +12,8 @@
     padding-bottom: 5px;
 }
 
+
+
 .PropertyUnicBlock .imageSlider {
     width: 100%;
 }
@@ -257,6 +259,13 @@ margin-top: -20px;
 
         .PropertyUnicBlock .text .iconsBox .iconUnicBox {
             width: 30%;
+        }
+    }
+
+    @media (max-width: 350px) {
+        .PropertyUnicBlock {
+            width: 90%;
+            height: 390px;
         }
     }
 }

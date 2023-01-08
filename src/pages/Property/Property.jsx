@@ -5,6 +5,7 @@ import {IoCrop, IoLocationOutline, IoBedOutline, IoCarSportOutline, IoCheckmarkS
 import {TfiRulerAlt2} from 'react-icons/tfi';
 import {MdOutlineShower} from 'react-icons/md';
 import {TbBath, TbBone, TbSofa} from 'react-icons/tb';
+import {HiOutlineBellAlert} from 'react-icons/hi2';
 import { Footer } from "../../components/Footer/Footer";
 import { CompanyInfo } from "../../components/CompanyInfo/CompanyInfo";
 import { NewScheduling } from "../../components/NewScheduling/NewScheduling";
@@ -307,6 +308,10 @@ export function Property() {
                             </iframe>
                            <h6> * Endereço aproximado</h6>
                         </div> 
+
+                        <button className="alertproperty">
+                            <HiOutlineBellAlert /> Quero receber alerta de imóveis similares
+                        </button>
                     </div>
                 </div>
 

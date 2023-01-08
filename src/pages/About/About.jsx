@@ -66,7 +66,7 @@ export function About() {
             <div className="moviePlay">
                 <div className="box1"></div>
                 <div className="play">
-                    <FaPlay onClick={handleOpenModal}/>
+                    <FaPlay />
                 </div>
                 <div className="box2"></div>
             </div>
@@ -156,7 +156,7 @@ export function About() {
                 <h4>Escolha o pacote que mais se adequa ao momento atual de seu negócio</h4>
             </div>
             <div className="iconWork">
-                <IoHome />
+                <IoHomeOutline />
                 <h3>Adicione seus imóveis</h3>
                 <h4>Cadastre seus imóveis e aproveite nossas ferramentas para alcancar mais clientes </h4>
             </div>

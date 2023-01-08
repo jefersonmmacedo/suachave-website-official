@@ -248,14 +248,7 @@ export function SearchPropertyHomeTop() {
                 </>
                     :
                     <>
-                    <input type="text" className="address" placeholder="Digite o código" list="brow"/>
-                    <datalist id="brow">
-                    {cityList?.map((district) => {
-                            return (
-                                <option autocomplete="off" key={district.id} value={district.city}>{district.city} - {district.uf}</option>
-                            )
-                        })}
-                    </datalist>
+                    <input type="text" className="address" placeholder="Digite o código" />
                     </>
                 }
           
