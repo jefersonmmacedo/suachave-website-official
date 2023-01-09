@@ -4,6 +4,7 @@ import { useState } from "react";
 import Modal from 'react-modal';
 import { useFetch } from "../../hooks/useFetch";
 import api from "../../services/api";
+import { useEffect } from "react";
 
 export function NewFavorite({idProperty, idCompany, page}) {
 
@@ -13,7 +14,9 @@ export function NewFavorite({idProperty, idCompany, page}) {
   const [isOpenModal, setIsOpenModa] = useState(false);
   const idClient = user === null ? "000000" : user.id;
 
+
   const {data} = useFetch(`/favorite/filter/${idProperty}/${idClient}`);
+
 
     function handleOpenModal(e) {
         e.preventDefault();

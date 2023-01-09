@@ -1,7 +1,7 @@
 ﻿import "./property.css"
 import { SliderImages } from '../../components/SliderImages/SliderImages';
 import Navbar2 from "../../components/Nav/Navbar";
-import {IoCrop, IoLocationOutline, IoBedOutline, IoCarSportOutline, IoCheckmarkSharp} from 'react-icons/io5';
+import {IoCrop, IoLocationOutline, IoBedOutline, IoCarSportOutline, IoCheckmarkSharp, IoHomeOutline} from 'react-icons/io5';
 import {TfiRulerAlt2} from 'react-icons/tfi';
 import {MdOutlineShower} from 'react-icons/md';
 import {TbBath, TbBone, TbSofa} from 'react-icons/tb';
@@ -29,24 +29,6 @@ export function Property() {
             <>Carregando...</>
         )
     }
-    if(data) {
-         newView(data[0].id, data[0].idCompany );
-    }
-
-        async function newView(property, company) {
-            const data = {
-                idProperty: property ,
-                idCompany: company ,
-                idClient: user === null ? null : user.id
-            }
-            await api.post("/viewproperty", data).then((res) => {
-                return
-            }).catch((err) => {
-                console.log(err)
-            });
-            return
-        }
-
 
             console.log("data[0].priceSale")
             console.log(parseInt(data[0].priceSale))
@@ -127,6 +109,7 @@ export function Property() {
             </div>
                 <div className="text">
                     <h2>{data[0].title}</h2>
+                    <h5><IoHomeOutline />{data[0].status} - {data[0].type} - {data[0].subType}</h5>
                     <h5><IoLocationOutline />{data[0].road} - {data[0].district} - {data[0].city} - {data[0].uf}</h5>
                     <h4>ID: {data[0].id}</h4>
                     {data[0].financing === "Sim" ?

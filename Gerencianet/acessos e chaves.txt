@@ -1,0 +1,25 @@
+Assinatura eletronica
+CAROL
+
+ACESSOS API
+
+Par de credenciais de Produção
+Chave Client ID
+
+Client_Id_84d7b60dae3d330fe41411b0944b7552374450f3
+
+
+Chave Secret
+
+Client_Secret_bab9b3533c2759dbff9242fc7a11f50542523943
+
+
+Par de credenciais de Homologação
+Chave Client ID
+
+Client_Id_2a6e4d84b2729122c144b5740acb5e9813b82cc7
+
+
+Chave Secret
+
+Client_Secret_4a9985be73dbd22044f9cb39c6f41d61f470eb63

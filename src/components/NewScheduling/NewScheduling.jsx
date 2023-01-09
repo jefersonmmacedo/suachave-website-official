@@ -51,6 +51,26 @@ export function NewScheduling({idProperty, idCompany, title, image}) {
       loadCompany()
     },[])
 
+    
+  useEffect(() => {
+    async function newView() {
+      const data = {
+        idProperty,
+        idCompany,
+        idClient: user === null ? "00000000" : user.id
+    }
+
+    await api.post("/viewproperty", data).then((res) => {
+      return
+    }).catch((err) => {
+        console.log(err)
+    });
+    
+    }
+
+    newView()
+  },[])
+
     function handleNewScheduling() {
         const status = "Pendente"
         newScheduling({

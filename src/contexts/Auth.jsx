@@ -387,7 +387,12 @@ async function newVisit(idAccount, username, idFriend) {
         const data = {type, nameFantasy, whatsapp, email, cep, city, uf}
 
         await api.post("/waitinglist/", data).then((res) => {
-            window.location.reload(false);
+            toast.success("Cadastrado na lista de espera com sucesso!");
+            
+
+            setTimeout(() => {
+                window.location.reload(false);
+              }, "5000")
         }).catch((error) => {
             console.log(error)
         })
