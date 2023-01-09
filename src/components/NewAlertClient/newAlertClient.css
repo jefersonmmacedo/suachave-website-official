@@ -1,0 +1,18 @@
+﻿.NewAlertClient {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    border-radius: 6px;
+    padding: 15px 20px;
+    border: none;
+    color: var(--White);
+    background-color: var(--ButtonDisabled);
+}
+
+.NewAlertClient svg {
+    margin-right: 5px;
+    font-size: 16px;
+    transform: rotate(-25deg);
+}

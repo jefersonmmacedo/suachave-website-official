@@ -15,6 +15,7 @@ import { useParams } from "react-router-dom";
 import { useFetch } from "../../hooks/useFetch";
 import { NewShare } from "../../components/NewShare/NewShare";
 import api from "../../services/api";
+import { NewAlertClient } from "../../components/NewAlertClient/NewAlertClient";
 
 
 export function Property() {
@@ -292,9 +293,7 @@ export function Property() {
                            <h6> * Endereço aproximado</h6>
                         </div> 
 
-                        <button className="alertproperty">
-                            <HiOutlineBellAlert /> Quero receber alerta de imóveis similares
-                        </button>
+                        <NewAlertClient />
                     </div>
                 </div>
 
