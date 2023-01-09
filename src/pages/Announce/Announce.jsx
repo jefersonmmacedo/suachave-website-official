@@ -1,18 +1,16 @@
 ﻿import "./announce.css"
 import Navbar2 from "../../components/Nav/Navbar";
 import { Footer } from "../../components/Footer/Footer";
-import {IoPlayCircle, IoLogoWhatsapp, IoHome, IoQrCodeOutline, IoIdCardOutline, IoPhonePortraitOutline,
+import {IoLogoWhatsapp, IoQrCodeOutline, IoIdCardOutline, IoPhonePortraitOutline,
         IoLayersOutline, IoChatbubblesOutline, IoCropOutline, IoLaptopOutline, IoPlayOutline, IoCallOutline,
         IoCloseOutline, IoCalendarOutline, IoHomeOutline, IoOptionsOutline, IoChatboxEllipsesOutline,
-        IoPersonAddOutline, IoCheckboxOutline, IoFunnelOutline} from "react-icons/io5"
-import { Plains } from "../../components/Plains/Plains";
+        IoCheckboxOutline, IoFunnelOutline} from "react-icons/io5";
 import SmartPhone from "../../assets/images/iphone.png";
 import Modal from 'react-modal';
 import { useState } from "react";
 import imgFamily from "../../assets/images/background14.jpg"
 import Mackbook from "../../assets/images/Mockup.png"
 import { FaPlay } from "react-icons/fa";
-import { FiPlay } from "react-icons/fi";
 
 export function Announce() {
     const [isOpenModal, setIsOpenModa] = useState(false);

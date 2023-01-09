@@ -1,5 +1,6 @@
 ﻿import ImageContract from "../../assets/images/background8.jpg";
-import {IoCalendarOutline, IoChatboxEllipsesOutline, IoHomeOutline, IoOptionsOutline} from "react-icons/io5"
+import {IoCalendarOutline, IoChatboxEllipsesOutline, IoDesktopOutline, IoFunnelOutline, IoHomeOutline, IoOptionsOutline} from "react-icons/io5"
+import {SlScreenDesktop} from "react-icons/sl"
 import "./toHire.css";
 export function ToHire() {
     return (
@@ -21,13 +22,18 @@ export function ToHire() {
                         <h5>Agenda de visitas</h5>
                     </div>
                     <div className="ToHireUnic">
-                        <IoOptionsOutline />
-                        <h5>Controle de alugueis e vendas</h5>
-                    </div>
-                    <div className="ToHireUnic">
                     <IoChatboxEllipsesOutline />
                         <h5>Chat único por anúncio</h5>
                     </div>
+                    <div className="ToHireUnic">
+                        <IoFunnelOutline />
+                        <h5>Leads qualificados</h5>
+                    </div>
+                    <div className="ToHireUnic">
+                        <SlScreenDesktop />
+                        <h5>Site responsivo</h5>
+                    </div>
+                   
                 </div>
                 <a href="/anunciar">Quero anunciar</a>
             </div>

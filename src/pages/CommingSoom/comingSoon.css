@@ -30,6 +30,7 @@
     text-align: center;
     color: var(--Gray);
     font-weight: 700;
+    margin-bottom: 20px;
 }
 .ComingSoon .coming h4 svg {
     margin-right: 3px;

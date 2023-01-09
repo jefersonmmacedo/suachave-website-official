@@ -383,6 +383,17 @@ async function newVisit(idAccount, username, idFriend) {
     }
 
 
+    async function newWaitingList({type, nameFantasy, whatsapp, email, cep, city, uf}) {
+        const data = {type, nameFantasy, whatsapp, email, cep, city, uf}
+
+        await api.post("/waitinglist/", data).then((res) => {
+            window.location.reload(false);
+        }).catch((error) => {
+            console.log(error)
+        })
+          
+    }
+
   // Deslogandop após tempo de inatividade
    function inactivityTime() {
        let time;
@@ -446,6 +457,7 @@ function newLocation(cityLocation, ufLocation) {
             newLocation,
             cityLocation,
             ufLocation,
+            newWaitingList,
         }}>
             {children}
         </AuthContext.Provider>
