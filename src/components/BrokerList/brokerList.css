@@ -42,6 +42,25 @@
     margin: 0 20px 40px 20px;
 }
 
+.BrokerList .listBroker .empyt{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.BrokerList .listBroker .empyt img {
+    height: 250px;
+}
+
+.BrokerList .listBroker .empyt h4 {
+    color: var(--Gray);
+    margin: 10px 0;
+    text-align: center;
+}
+
 .BrokerList .listBroker .BrokerUnicFavorite {
     width: 700px;
     display: flex;

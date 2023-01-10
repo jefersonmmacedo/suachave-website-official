@@ -14,6 +14,24 @@
     justify-content: center;
     margin:0 20px 40px 20px;
 }
+.CompanyList .listProperties .empyt{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.CompanyList .listProperties .empyt img {
+    height: 250px;
+}
+
+.CompanyList .listProperties .empyt h4 {
+    color: var(--Gray);
+    margin: 10px 0;
+    text-align: center;
+}
 
 .CompanyList .searchCompanies {
     width: 700px;
