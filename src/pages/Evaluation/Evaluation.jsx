@@ -1,5 +1,5 @@
 ﻿import "./evaluation.css";
-import { IoArrowForward, IoArrowUpCircle, IoArrowUpCircleOutline, IoBusinessOutline, IoCheckboxOutline, IoLocationOutline, IoSearch } from "react-icons/io5";
+import { IoArrowForward, IoArrowUpCircle, IoArrowUpCircleOutline, IoBusinessOutline, IoCheckboxOutline, IoLocationOutline, IoSearch, IoStar, IoStarOutline, IoTrash } from "react-icons/io5";
 import { useState } from "react";
 import buscaCep from "../../services/api-buscaCep";
 import { toast } from 'react-toastify';
@@ -8,6 +8,10 @@ import { toNumber } from "vanilla-masker";
 import { useEffect } from "react";
 import api from "../../services/api";
 import buscaDistrito from "../../services/api-buscaDistrito";
+import { MyButtonComponent } from "../../components/UploadFiles/UploadFiles";
+import {v4 as uuidv4} from 'uuid';
+import Navbar2 from "../../components/Nav/Navbar";
+import { Footer } from "../../components/Footer/Footer";
 
 export function Evaluation() {
     const [stepes, setStepes] = useState("1");
@@ -22,7 +26,7 @@ export function Evaluation() {
     const [suite, setSuite] = useState("");
     const [garage, setGarage] = useState("");
 
-    const [images, setImages] = useState("");
+    const [images, setImages] = useState([]);
     const [company, setCompany] = useState("");
 
     const [number, setNumber] = useState("");
@@ -39,6 +43,7 @@ export function Evaluation() {
     const [typeCompany, setTypeCompany] = useState("Imobiliária");
     const searchLower = search.toLowerCase()
 
+    const [featuredImage, setFeaturedImage] = useState("");
 
     useEffect(() => {
         async function companiesLoad() {
@@ -157,6 +162,38 @@ export function Evaluation() {
         setSearch("")
     }
 
+    const idv4 = uuidv4();
+    const idProperty = idv4.substring(0,8);
+
+    console.log(idv4)
+    console.log(idProperty)
+
+    function uploadFiles2(data) {
+        setImages(images.concat(data))
+        if(images.length === 0) {
+            setFeaturedImage(data[0].link)
+        }
+    }
+
+    function handleFeaturedImage(data) {
+        setFeaturedImage(data)
+    }
+
+    function handleDeleteImage(dado) {
+        const findImages = images.find(item => item.link === dado);
+        if(findImages) {
+        const filterImages = images.filter((item) => item.link !== dado);
+        setImages(filterImages);
+
+        if(dado === images[0].link) {
+            setFeaturedImage(images[0].link);
+            return;
+        }
+        return;
+        } 
+    }
+    
+
 
     const locationFilter = companies.filter((companies) => companies.city === cityCompany && companies.uf === ufCompany)
     const searchFilter = companies.filter((companies) => companies.fantasyName.toLowerCase().includes(searchLower))
@@ -167,32 +204,32 @@ export function Evaluation() {
 
     return (
         <div className="Evaluation">
-            <img src={LogoImg} alt="Logotipo Sua Chave" className="img"/>
+           <Navbar2 />
             <div className="stepes">
                 <div className={toNumber(stepes) >= 1  ? "stepeUnicSelect" : "stepeUnic"}>
-                    <h3>1</h3>
+                    <h4>1</h4>
                 </div>
                     <h5><IoArrowForward /></h5>
                 <div className={toNumber(stepes) >= 2  ? "stepeUnicSelect" : "stepeUnic"}>
-                    <h3>2</h3>
+                    <h4>2</h4>
                 </div>
                 <h5><IoArrowForward /></h5>
                 <div className={toNumber(stepes) >= 3  ? "stepeUnicSelect" : "stepeUnic"}>
-                    <h3>3</h3>
+                    <h4>3</h4>
                 </div>
                 <h5><IoArrowForward /></h5>
                 <div className={toNumber(stepes) >= 4  ? "stepeUnicSelect" : "stepeUnic"}>
-                    <h3>4</h3>
+                    <h4>4</h4>
                 </div>
                 <h5><IoArrowForward /></h5>
                 <div className={toNumber(stepes) >= 5  ? "stepeUnicSelect" : "stepeUnic"}>
-                    <h3>5</h3>
+                    <h4>5</h4>
                 </div>
             </div>
             {stepes === "1" ? 
             <>
             <div className="Address">
-            <h3>Digite o Cep do imóvel</h3>
+            <h4>Digite o Cep do imóvel</h4>
             <div className="cep">
                 <input type="text" placeholder="XXXXX-XXX" value={cep} onChange={e => setCep(e.target.value)}/>
                 <button onClick={handleNewCep}><IoSearch/></button>
@@ -210,8 +247,8 @@ export function Evaluation() {
             <input type="text" placeholder="Estado" value={uf} onChange={e => setUf(e.target.value)}/>
             </div>
             </div>
-            <div className="buttons">
-                <a href="/" className="btnCancel">X Fechar</a>
+            <div className="buttonsStepesPage">
+                <a className="linkCompany" href="/" >X Fechar</a>
                 {city !== "" && uf !== "" ? 
                 <button className="btn" onClick={() => handleSelectStepe("2")}>Avançar</button>
                 : ""}
@@ -358,7 +395,7 @@ export function Evaluation() {
 
             </div>
             </div>
-            <div className="buttons">
+            <div className="buttonsStepesPage">
                 <button className="btn" onClick={() => handleSelectStepe("1")}>Voltar</button>
                 <button className="btn" onClick={() => handleSelectStepe("3")}>Avançar</button>
             </div>
@@ -368,11 +405,24 @@ export function Evaluation() {
                <div className="Address">
               
                <div className={"data"}>
-               <button onClick={handleNewCep}><IoArrowUpCircleOutline /> Adicionar imagens</button>   
+               <MyButtonComponent id={idProperty} uploadFiles2={uploadFiles2}/>
+
+                {images.length === 0 ? "" : <span>Clique em uma imagem para definir a imagem principal</span>}
+                <div className="myImages">
+                {images?.map((files) => {
+                    return (
+                <div className={files.link === featuredImage ? "imageUnicFeatured" : "imageUnic"} key={files.id}>
+                <img src={files.link} alt="" />
+                <button className="btnImage" onClick={() => handleDeleteImage(files.link)}><IoTrash/></button> 
+                <button className="featuredImage" onClick={() => handleFeaturedImage(files.link)}>{files.link === featuredImage ? <IoStar/> : <IoStarOutline/>  }</button>
+                </div> 
+                    )
+                })}
+                </div>  
                </div>
 
                </div>
-               <div className="buttons">
+               <div className="buttonsStepesPage">
                    <button className="btn" onClick={() => handleSelectStepe("2")}>Voltar</button>
                    <button className="btn" onClick={() => handleSelectStepe("4")}>Avançar</button>
                </div>
@@ -380,9 +430,9 @@ export function Evaluation() {
                   : stepes === "4" ? 
                   <>
                   <div className="CompaniesEvaluation">
-                    <h3>Escolha uma imobiliária/corretor para avaliar e publicar seu imóvel</h3>  
+                    <h4>Escolha uma imobiliária/corretor para avaliar e publicar seu imóvel</h4>  
 
-                     <div className="buttons">
+                     <div className="buttonsStepesPage">
                       <button className={typeCompany === "Imobiliária" ? "btnSelect" : "btnSelect2"} onClick={() => handleSelectTypeCompany("Imobiliária")}>Imobiliárias</button>
                       <button className={typeCompany === "Corretor" ? "btnSelect" : "btnSelect2"} onClick={() => handleSelectTypeCompany("Corretor")}>Corretores</button>
                   </div> 
@@ -446,7 +496,7 @@ export function Evaluation() {
                                 </div>
                                 <div className="text">
                                 <h3>{company.fantasyName}</h3>
-                                <h5><IoLocationOutline />{company.road}, Nº {company.number}, {company.district} - {company.city} - {company.uf}</h5>
+                                <h5>{company.road}, Nº {company.number}, {company.district} - {company.city} - {company.uf}</h5>
                                 <h5><IoBusinessOutline />{company.type}</h5>
                                 </div>
                                 <div className="buttonCompany">
@@ -460,7 +510,7 @@ export function Evaluation() {
 
    
                   </div>
-                  <div className="buttons">
+                  <div className="buttonsStepesPage">
                       <button className="btn" onClick={() => handleSelectStepe("3")}>Voltar</button>
                       <button className="btn" onClick={() => handleSelectStepe("5")}>Avançar</button>
                   </div>
@@ -474,13 +524,14 @@ export function Evaluation() {
                     </div>
      
                     </div>
-                    <div className="buttons">
+                    <div className="buttonsStepesPage">
                         <button className="btn" onClick={() => handleSelectStepe("4")}>Voltar</button>
                         <button className="btn" onClick={() => handleSelectStepe("5")}>Enviar</button>
                     </div>
                     </>
             : ""
             }
+            <Footer />
         </div>
     )
 }

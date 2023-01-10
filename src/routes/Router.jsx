@@ -28,7 +28,6 @@ import { PaymentCompleted } from '../pages/PaymentCompleted/PaymentCompleted';
 import { Contact } from '../pages/Contact/Contact';
 import { Faq } from '../pages/Faq/Faq';
 import { UpdateAccount } from '../pages/UpdateAccount/UpdateAccount';
-import { UploadPage } from '../pages/UploadPage/UploadPage';
 import { NotFound } from '../pages/NotFound/NotFound';
 import { Negociations } from '../pages/Negociations/Negociations';
 import { TestTools } from '../pages/TestTools/TestTools';
@@ -51,7 +50,6 @@ function PrivateRoute({children} ) {
             {/* Rotas abertas */}
             <Route path="*" element={<NotFound />}/>
             <Route path="/" element={<ComingSoon />}/>
-            <Route path="/up" element={<UploadPage />}/>
             <Route path="/home" element={<Home />}/>
             <Route path="/entrar" element={<SignIn />}/>
             <Route path="/recuperar" element={<Recuperation />}/>
