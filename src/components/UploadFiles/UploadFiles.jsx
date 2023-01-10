@@ -72,7 +72,7 @@ const user = JSON.parse(Local);
                   }
                 }}>
     {({onClick}) =>
-      <button onClick={onClick}>
+      <button className="btnUpload" onClick={onClick}>
         <IoArrowUpCircle/> Adicionar imagens 
       </button>
     }

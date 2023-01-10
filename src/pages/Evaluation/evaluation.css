@@ -159,6 +159,7 @@
 .Evaluation button {
     padding: 10px 15px;
     border: 1px solid var(--Border);
+    background-color: var(--White);
     border-radius: 6px;
     margin: 5px;
     color: var(--Primary);
