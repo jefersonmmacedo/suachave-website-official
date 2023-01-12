@@ -42,8 +42,12 @@ export function Plains() {
                     plain?.status === "Inativo" ? "" :
                     <div className="plain">
                     <h3>{plain?.name}</h3>
-                    <div className="title">
+                    <div className="title2">
                     <h1>R$ {plain?.value}</h1>
+                    <h6>/mês</h6>
+                    </div>
+                    <div className="title">
+                    <h1>R$ {plain?.valueNew}</h1>
                     <h4>/mês</h4>
                     </div>
                     <div className="text">

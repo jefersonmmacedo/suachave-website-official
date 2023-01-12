@@ -9,7 +9,6 @@ import { SignUpClient } from '../pages/SignUpClient/SignUpClient';
 import { SignUpProfessional } from '../pages/SignUpProfessional/SignUpProfessional';
 import { PrivacyPolicy } from '../pages/PrivacyPolicy/PrivacyPolicy';
 import { TermsOfUse } from '../pages/TermsOfUse/TermsOfUse';
-import { Message } from '../pages/Message/Message';
 import { Properties } from '../pages/Properties/Properties';
 import { Property } from '../pages/Property/Property';
 import { About } from '../pages/About/About';
@@ -73,7 +72,6 @@ function PrivateRoute({children} ) {
             <Route path="/planos" element={<Pricing />}/>
             <Route path="/faleconosco" element={<Contact />}/>
             <Route path="/faq" element={<Faq />}/>
-            <Route path="/conversa" element={<Message />}/>
             <Route path="/avaliacao" element={<Evaluation />}/>
             <Route path="/test" element={<TestTools />}/>
             

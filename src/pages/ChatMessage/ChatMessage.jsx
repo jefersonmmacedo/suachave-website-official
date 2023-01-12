@@ -13,6 +13,7 @@ import { v4 as uuidv4 } from 'uuid'
 import { useFetch } from '../../hooks/useFetch';
 import { toast } from 'react-toastify';
 import { IoArrowBackOutline, IoAttachOutline, IoBusinessOutline, IoChatboxOutline, IoHomeOutline, IoImageOutline, IoEllipsisVerticalOutline, IoVideocamOutline } from 'react-icons/io5';
+import { useEffect } from 'react';
 
    
 export function ChatMessage() {
@@ -21,13 +22,48 @@ export function ChatMessage() {
   const {room,idProperty, idCompany, idClient} = useParams();
   const messageRef = useRef(null);
 
+  const [idReadData, setIdReadData] = useState()
 
+useEffect(() => {
+  async function loadMessages() {
+    await api.get(`/dateready/rooms/user/${room}/${user.id}`).then((res) => {
+      HandleOpenLink(res.data[0]?.id)
+      setIdReadData(res.data[0]?.id)
+    }).catch((err) => {
+      console.log(err)
+    });
+  }
+
+  async function HandleOpenLink(idDate) {
+    const data = {
+      idUser: user.id,
+      dateReady: new Date()
+    }
+      await api.patch(`/dateready/rooms/update/${idDate}`, data).then(() =>{
+      }).catch((err) => {
+        console.log(err)
+      });
+    }
+
+    loadMessages()
+}, [])
+
+async function handleViewMessageRoom() {
+  const data = {
+    idUser: user.id,
+    dateReady: new Date()
+  }
+    await api.patch(`/dateready/rooms/update/${idReadData}`, data).then(() =>{
+    }).catch((err) => {
+      console.log(err)
+    });
+  }
 //   const { deleteConversation} = useContext(AuthContext);
 
-console.log(`Room: ${room}`)
-console.log(`idProperty: ${idProperty}`)
-console.log(`idCompany: ${idCompany}`)
-console.log(`idClient: ${idClient}`)
+// console.log(`Room: ${room}`)
+// console.log(`idProperty: ${idProperty}`)
+// console.log(`idCompany: ${idCompany}`)
+// console.log(`idClient: ${idClient}`)
 
   const [text, setText] = useState('');
   const [avatarUrl, setAvatarUrl] = useState(null);
@@ -133,6 +169,7 @@ async function handleUploadAccount(img) {
     id: uuidv4(),
     room: room,
     idAccount: user.id,
+    idFriend: idCompany,
     type: "photo",
     text,
     link: photoUrlAvatar,
@@ -167,6 +204,7 @@ async function handleUploadAccountVideo(img) {
     id: uuidv4(),
     room: room,
     idAccount: user.id,
+    idFriend: idCompany,
     type: "video",
     text,
     link: photoUrlAvatar,
@@ -191,6 +229,7 @@ async function handleUploadAccountVideo(img) {
       id: uuidv4(),
       room: room,
       idAccount: user.id,
+      idFriend: idCompany,
       type: "text",
       text,
       link: "",
@@ -410,7 +449,8 @@ const profile = "https://firebasestorage.googleapis.com/v0/b/foursome4-b925c.app
 
               {media === true ? "" :
               <>
-                <textarea value={text} autoFocus  autoComplete='off' placeholder='Digite uma mensagem' onChange={(e) => setText(e.target.value)}></textarea>
+                <textarea value={text} autoFocus  autoComplete='off' placeholder='Digite uma mensagem'
+                onClick={handleViewMessageRoom} onChange={(e) => setText(e.target.value)}></textarea>
                 <button className="button1" onClick={handleNewMessage} disabled={text === "" ? "disabled" : ""}> <FiSend /></button>
               </>
               }

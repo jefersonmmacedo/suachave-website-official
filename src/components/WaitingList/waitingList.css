@@ -19,6 +19,10 @@
     font-size: 12px;
 }
 
+.WaitingList button svg {
+    margin-right: 2px;
+}
+
 .WaitingList .ListItens {
     padding: 20px;
     display: flex;

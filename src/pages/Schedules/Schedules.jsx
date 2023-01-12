@@ -22,6 +22,13 @@ export function Schedules() {
         )
     }
 
+    const filterNow = data?.filter((filterData) => new Date(filterData.created_at).getDate() === new Date().getDate()
+                                                && new Date(filterData.created_at).getMonth()+1  === new Date().getMonth()+1
+                                                && new Date(filterData.created_at).getFullYear() === new Date().getFullYear())
+
+    const filterNext = data?.filter((filterData) => new Date(filterData.created_at) > new Date())
+
+    const filterPassed = data?.filter((filterData) => new Date(filterData.created_at) < new Date())
 
     return (
         <div className="Schedules">
@@ -31,8 +38,44 @@ export function Schedules() {
 
                 <div className="text">
                 <h2>Meus agendamentos</h2>
+                
 
-                {data?.map((sheduling) => {
+                {filterNow?.length === 0 ? ""
+                :
+                <div className="ListSchedules">
+                <div className="textTitle">
+                    <h5>Agendamentos de hoje</h5>
+                </div>
+                {filterNow?.map((sheduling) => {
+                    return (
+                        <div className="chat" key={sheduling.id}>
+                            <a href={`/agendamento/${sheduling.id}`}>
+                        <div className="image">
+                            <img src={sheduling.imageProperty} alt="" />
+                        </div>
+                        </a>
+                        <div className="textChat">
+                        <a href={`/agendamento/${sheduling.id}`}>
+                        <h5>{sheduling.titleProperty}</h5>
+                        </a>
+                        <h5><IoCalendarOutline />{sheduling.day}/{sheduling.month}/{sheduling.year} - {sheduling.hour}</h5>
+                        <h6><IoBusinessOutline />{sheduling.location}</h6>
+                        <h6><IoLocationOutline />{sheduling.address}</h6>
+                        </div>
+                    </div>
+                    )
+                })}
+                </div>
+                }
+                                
+                
+                {filterNext?.length === 0 ? ""
+                :
+                <div className="ListSchedules2">
+                <div className="textTitle">
+                    <h5>Próximos agendamentos</h5>
+                </div>
+                {filterNext?.map((sheduling) => {
                     return (
                         <div className="chat" key={sheduling.id}>
                             <a href={`/agendamento/${sheduling.id}`}>
@@ -51,6 +94,37 @@ export function Schedules() {
                     </div>
                     )
                 })}
+                </div>
+                }
+
+                {filterPassed?.length === 0 ? ""
+                :
+                <div className="ListSchedules3">
+                <div className="textTitle">
+                    <h5>Agendamentos passados</h5>
+                </div>
+                {filterPassed?.map((sheduling) => {
+                    return (
+                        <div className="chat" key={sheduling.id}>
+                            <a href={`/agendamento/${sheduling.id}`}>
+                        <div className="image">
+                            <img src={sheduling.imageProperty} alt="" />
+                        </div>
+                        </a>
+                        <div className="textChat">
+                        <a href={`/agendamento/${sheduling.id}`}>
+                        <h4>{sheduling.titleProperty}</h4>
+                        </a>
+                        <h5><IoCalendarOutline />{sheduling.day}/{sheduling.month}/{sheduling.year} - {sheduling.hour}</h5>
+                        <h6><IoBusinessOutline />{sheduling.location}</h6>
+                        <h6><IoLocationOutline />{sheduling.address}</h6>
+                        </div>
+                    </div>
+                    )
+                })}
+                </div>
+                }
+
 
                 </div>
             </div>
