@@ -1,9 +1,22 @@
 ﻿import "./recuperation.css";
 import Logo from "../../assets/images/Logo.png";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { AuthContext } from "../../contexts/Auth";
+import { v4 as uuidv4 } from 'uuid'
+import { IoAlertCircleOutline } from "react-icons/io5";
 
 export function Recuperation() {
-    const [email, setEmail] = useState()
+    const  {gerateCodeRecuperation} = useContext(AuthContext)
+    const [email, setEmail] = useState("");
+
+    function handleCreateCodeRecuperation(e) {
+        e.preventDefault();
+        const generateCode = uuidv4()
+        const code = generateCode.substring(0, 6)
+       gerateCodeRecuperation(email.replace(/\s+/g, ''), code)
+      }
+
+
     return (
         <div className="Recuperation">
             <div className="professional">
@@ -16,7 +29,11 @@ export function Recuperation() {
                     <div className="data">
                         <input type="text" placeholder="Email" value={email} onChange={e => setEmail(e.target.value)}/>
 
-                        <button>Enviar código</button>
+                        <div className="message">
+                         <h5>Enviaremos um código de recuperação <br /> para o e-mail informado.</h5>
+                       </div>
+
+                        <button onClick={handleCreateCodeRecuperation}>Enviar código</button>
                     </div>
                 </form>
 

@@ -208,7 +208,7 @@ async function recuperationUserForEmail(email) {
 
 async function gerateCodeRecuperation(email, code) {
     console.log(email)
-    const account =  await api.get(`/accounts/find/${email}`);
+    const account =  await api.get(`/client/unic/${email}`);
     console.log(account)
     
     if(account.data.length === 0) {
@@ -234,20 +234,29 @@ async function validadeCodeRecuperation(code, email) {
        return
    } 
 
-   window.open(`/recoverpassword/${email}`,"_self")
+   window.open(`/recuperar-nova-senha/${email}`,"_self")
 }
 
 
 async function recoverPasswordNew(email, password) {
     console.log(email, password)
-    await api.patch(`accounts/recover/${email}`, {password}).then(() => {
+    await api.patch(`client/update/${email}`, {password}).then(() => {
         toast.info("Senha atualizada com sucesso");
-        window.open("/","_self")
+        passwordRecoverOk(email)
+       
     }).catch((error) => {
         toast.error("Erro ao atualiza senha");
         console.log(error)
     })
 }
+
+async function passwordRecoverOk(email) {
+    const res = await api.post("/mail/newpassword", {mail: email});
+    if(res.status === 200) {
+        window.open(`/`,"_self")
+    }
+}
+
 
 // Fim recuperações
 
@@ -281,8 +290,7 @@ async function notifications(idPatrono, text,idAccount, idFriend, type,idPost) {
         console.log(email, code)
         const res = await api.post("/mail/passwordcode", {mail: email, code: code});
         if(res.status === 200) {
-            toast.info("Nome de usuário encontrado. Verifique seu e-mail!");
-            window.open(`/recuperationcode/${email}`,"_self")
+            window.open(`/recuperar-codigo/${email}`,"_self")
         }
     }
 

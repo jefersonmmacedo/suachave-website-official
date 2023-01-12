@@ -52,8 +52,8 @@ function PrivateRoute({children} ) {
             <Route path="/home" element={<Home />}/>
             <Route path="/entrar" element={<SignIn />}/>
             <Route path="/recuperar" element={<Recuperation />}/>
-            <Route path="/recuperar-codigo" element={<RecuperationCode />}/>
-            <Route path="/recuperar-nova-senha" element={<RecuperationPassword />}/>
+            <Route path="/recuperar-codigo/:email" element={<RecuperationCode />}/>
+            <Route path="/recuperar-nova-senha/:email" element={<RecuperationPassword />}/>
             <Route path="/cadastrar" element={<ChooseYourAccount />}/>
             <Route path="/cadastro-profissional" element={<SignUpProfessional />}/>
             <Route path="/cadastro-cliente" element={<SignUpClient />}/>

@@ -1,10 +1,24 @@
 ﻿import "./recuperationCode.css";
 import Logo from "../../assets/images/Logo.png";
 import { useState } from "react";
+import { useParams } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../../contexts/Auth";
 
 export function RecuperationCode() {
-    const [code, setCode] = useState()
+    const {email} = useParams();
 
+    const  {validadeCodeRecuperation} = useContext(AuthContext)
+
+    const [code, setCode] = useState("");
+
+
+    function handleRecuperationCode(e) {
+        e.preventDefault();
+       validadeCodeRecuperation(code.toLocaleLowerCase(), email);
+      }
+
+      
     return (
         <div className="RecuperationCode">
             <div className="professional">
@@ -15,9 +29,13 @@ export function RecuperationCode() {
                 <form action="">
                 <img src={Logo} alt="Logo GPS Buscador" />
                     <div className="data">
-                    <input type="text" placeholder="######" value={code} onChange={e => setCode(e.target.value)}/>
+                    <input type="text" placeholder="######" value={code.toLocaleLowerCase()} onChange={e => setCode(e.target.value)}/>
 
-                        <button>Confirmar código</button>
+                    <div className="message">
+                         <h5>Digite o código que enviamos para o seu e-mail.</h5>
+                       </div>
+
+                        <button onClick={handleRecuperationCode}>Confirmar código</button>
                     </div>
                 </form>
 
